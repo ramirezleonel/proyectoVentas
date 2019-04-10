@@ -1,0 +1,250 @@
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Bunifu_UI_v1.5.3.dll
+C:\Users\LEO\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarra.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEgreso.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+C:\Users\LEO\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarra.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEgreso.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarraExistente.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpEtiquetas.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll.config
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpArticulo.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmPventa.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.ResolveComReference.cache
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaCliente.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Interop.FiscalPrinterLib.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAsignarPrecio.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmGuardarVenta.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCaja.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll.config
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Interop.FiscalPrinterLib.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.ResolveComReference.cache
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAsignarPrecio.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaCliente.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCaja.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarraExistente.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmGuardarVenta.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpArticulo.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpEtiquetas.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmPventa.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.ResolveComReference.cache
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAsignarPrecio.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaCliente.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCaja.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarraExistente.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmGuardarVenta.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpArticulo.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpEtiquetas.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmPventa.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll.config
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmPrecio.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.ResolveComReference.cache
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAsignarPrecio.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaCliente.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCaja.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarraExistente.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmGuardarVenta.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpArticulo.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpEtiquetas.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmPventa.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmDetallesDeStock.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmConfig.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmConsulta.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUsuario.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAperturacaja.resources
+C:\Users\leo\Downloads\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCerrarCaja.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csprojResolveAssemblyReference.cache
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Interop.FiscalPrinterLib.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.ResolveComReference.cache
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Acerca.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAperturacaja.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmArticulos.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAsignarPrecio.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaArticulo.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaCliente.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmBusquedaAvaProveedor.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCaja.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecio.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCategoria.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCerrarCaja.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmClientes.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCodigoBarraExistente.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmConfig.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmDetallesDeStock.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmEtiquetas.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmGuardarVenta.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpArticulo.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpEtiquetas.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmMovStock1.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmConsulta.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.frmPventa.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmSeleccionarProductos.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmProveedor.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUnidades.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmUsuario.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.Properties.Resources.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmCambiarPrecioSel.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmImpVenta.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll.config
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmAsignarValores.resources

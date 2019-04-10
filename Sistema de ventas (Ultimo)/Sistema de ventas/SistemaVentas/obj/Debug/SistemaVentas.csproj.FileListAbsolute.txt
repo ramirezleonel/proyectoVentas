@@ -1,0 +1,166 @@
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\LEO\documents\visual studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+C:\repositorioLeo\temp\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\repositorioLeo\temp\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\repositorioLeo\temp\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+E:\repositorioRamirez\sis\sistemaventas\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.SplashScreen.resources
+C:\Users\LEOX\Documents\Visual Studio 2012\Projects\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Form1.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Form1.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.SplashScreen.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+C:\Desarrollo\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Form1.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.SplashScreen.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+C:\Users\leo\Downloads\backup sistema de leo\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Form1.resources
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.SplashScreen.resources
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.manifest
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.application
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe.manifest
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.application
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\Users\leo\Downloads\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmLogin.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.config
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe.manifest
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.application
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.exe
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\SistemaVentas.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\BarcodeLib.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.Common.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Microsoft.ReportViewer.WebForms.DLL
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\PlaceholderTextBox.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.dll
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Datos.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Capa_Presentacion.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\Capa_negocio.pdb
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csprojResolveAssemblyReference.cache
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Form1.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmLogin.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.SplashScreen.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.FrmInicio.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.Properties.Resources.resources
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe.manifest
+C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.application
