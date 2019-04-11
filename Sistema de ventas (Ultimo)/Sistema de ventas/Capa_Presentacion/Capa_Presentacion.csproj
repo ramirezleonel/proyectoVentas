@@ -517,6 +517,7 @@
     <None Include="Resources\Add User Male_50px.png" />
     <None Include="Resources\Find User Male_50px.png" />
     <None Include="Resources\Add Shopping Cart_15px.png" />
+    <None Include="Resources\Help_15px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

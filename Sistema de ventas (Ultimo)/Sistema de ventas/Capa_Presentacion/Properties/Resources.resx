@@ -121,8 +121,8 @@
   <data name="fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Plus_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Plus_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sweep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sweep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="fondo-azul-836335-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-azul-836335-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -166,6 +166,9 @@
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="User Male_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Male_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Search_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -174,9 +177,6 @@
   </data>
   <data name="Minus_15px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minus_15px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pantallaPrincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pantallaPrincipal1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Broom_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Broom_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,14 +187,14 @@
   <data name="limpiar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\limpiar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Add Shopping Cart_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Shopping Cart_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Plus_15px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus_15px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="limpiar3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\limpiar3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User Account_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Account_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,17 +202,20 @@
   <data name="search-magnifier-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-magnifier-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="limpiar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\limpiar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imagen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_40623" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_40623.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="limpiar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\limpiar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User Male_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User Male_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Plus_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="list1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\list1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,10 +223,10 @@
   <data name="lista" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lista.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sweep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sweep.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pantallaPrincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pantallaPrincipal1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add Shopping Cart_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add Shopping Cart_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Help_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Help_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

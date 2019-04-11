@@ -13,10 +13,10 @@ namespace Capa_Presentacion
     public partial class FrmAsignarPrecio : Form
     {
         private string producto;
-        private float  precio;
+        private decimal  precio;
         private bool isCerro = false;
 
-        private float  descuento;
+        private decimal  descuento;
 
         public FrmAsignarPrecio()
         {
@@ -34,8 +34,8 @@ namespace Capa_Presentacion
        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Precio = Convert.ToSingle (txtPrecio.Text);
-            Descuento = Convert.ToSingle (txtDescuento.Text);
+            Precio = Convert.ToDecimal (txtPrecio.Text);
+            Descuento = Convert.ToDecimal (txtDescuento.Text);
             if (txtPrecio.Text == string.Empty || txtPrecio.Text == "0,00" || txtPrecio.Text == ",00" || txtPrecio.Text == ",0" || txtPrecio.Text == "0,0")
             {
                 UtilityFrm.mensajeError("el precio no puede ser 0");
@@ -50,13 +50,13 @@ namespace Capa_Presentacion
             get { return producto; }
             set { producto = value; }
         }
-        public float  Precio
+        public decimal  Precio
         {
             get { return precio; }
             set { precio = value; }
         }
 
-        public float  Descuento
+        public decimal  Descuento
         {
             get { return descuento; }
             set { descuento = value; }

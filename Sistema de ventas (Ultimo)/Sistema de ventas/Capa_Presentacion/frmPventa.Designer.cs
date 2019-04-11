@@ -71,6 +71,7 @@
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnAyuda = new System.Windows.Forms.Button();
             this.grpboxProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVenta)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
@@ -145,7 +146,7 @@
             this.txtTotalPagar.ReadOnly = true;
             this.txtTotalPagar.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTotalPagar.Size = new System.Drawing.Size(265, 40);
-            this.txtTotalPagar.TabIndex = 43;
+            this.txtTotalPagar.TabIndex = 59;
             this.txtTotalPagar.Text = "0,00";
             // 
             // btnCliente
@@ -167,7 +168,7 @@
             this.txtIdCliente.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtIdCliente.Name = "txtIdCliente";
             this.txtIdCliente.Size = new System.Drawing.Size(252, 26);
-            this.txtIdCliente.TabIndex = 53;
+            this.txtIdCliente.TabIndex = 1;
             this.txtIdCliente.TextChanged += new System.EventHandler(this.txtIdCliente_TextChanged);
             this.txtIdCliente.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtIdCliente_KeyDown);
             this.txtIdCliente.Leave += new System.EventHandler(this.txtIdCliente_Leave);
@@ -179,7 +180,7 @@
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.ReadOnly = true;
             this.txtRazonSocial.Size = new System.Drawing.Size(252, 26);
-            this.txtRazonSocial.TabIndex = 55;
+            this.txtRazonSocial.TabIndex = 60;
             this.txtRazonSocial.TextChanged += new System.EventHandler(this.txtRazonSocial_TextChanged);
             // 
             // lblRazonSocial
@@ -205,12 +206,13 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Location = new System.Drawing.Point(178, 589);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(134, 40);
-            this.btnCancelar.TabIndex = 50;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -224,8 +226,8 @@
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(130, 40);
-            this.btnGuardar.TabIndex = 49;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TabIndex = 7;
+            this.btnGuardar.Text = "Guardar(F2)";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -254,9 +256,10 @@
             this.DGVenta.RowHeadersWidth = 38;
             this.DGVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVenta.Size = new System.Drawing.Size(947, 275);
-            this.DGVenta.TabIndex = 46;
+            this.DGVenta.TabIndex = 6;
             this.DGVenta.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DGVenta_RowsAdded);
             this.DGVenta.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DGVenta_RowsRemoved);
+            this.DGVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DGVenta_KeyDown);
             // 
             // Codigo
             // 
@@ -330,7 +333,7 @@
             this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Size = new System.Drawing.Size(26, 28);
-            this.btnNuevo.TabIndex = 62;
+            this.btnNuevo.TabIndex = 4;
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnNuevo.UseVisualStyleBackColor = true;
             this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
@@ -391,9 +394,10 @@
             this.TxtPrecio.Location = new System.Drawing.Point(535, 67);
             this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.TxtPrecio.Name = "TxtPrecio";
+            this.TxtPrecio.ReadOnly = true;
             this.TxtPrecio.Size = new System.Drawing.Size(276, 26);
-            this.TxtPrecio.TabIndex = 40;
-            this.TxtPrecio.Text = "0,0";
+            this.TxtPrecio.TabIndex = 56;
+            this.TxtPrecio.Text = "0,00";
             this.TxtPrecio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtPrecio_KeyDown);
             this.TxtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtPrecio_KeyPress);
             this.TxtPrecio.Leave += new System.EventHandler(this.TxtPrecio_Leave);
@@ -416,7 +420,7 @@
             this.TxtDesc.MaxLength = 3;
             this.TxtDesc.Name = "TxtDesc";
             this.TxtDesc.Size = new System.Drawing.Size(55, 26);
-            this.TxtDesc.TabIndex = 38;
+            this.TxtDesc.TabIndex = 5;
             this.TxtDesc.Text = "0";
             this.TxtDesc.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtDesc_KeyDown);
             this.TxtDesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDesc_KeyPress);
@@ -439,8 +443,8 @@
             this.TxtSubtotal.Name = "TxtSubtotal";
             this.TxtSubtotal.ReadOnly = true;
             this.TxtSubtotal.Size = new System.Drawing.Size(276, 26);
-            this.TxtSubtotal.TabIndex = 31;
-            this.TxtSubtotal.Text = "0,0";
+            this.TxtSubtotal.TabIndex = 57;
+            this.TxtSubtotal.Text = "0,00";
             this.TxtSubtotal.Leave += new System.EventHandler(this.TxtSubtotal_Leave);
             // 
             // lblPrecioVenta
@@ -461,7 +465,7 @@
             this.TxtDetalle.Name = "TxtDetalle";
             this.TxtDetalle.ReadOnly = true;
             this.TxtDetalle.Size = new System.Drawing.Size(307, 26);
-            this.TxtDetalle.TabIndex = 12;
+            this.TxtDetalle.TabIndex = 55;
             this.TxtDetalle.TextChanged += new System.EventHandler(this.TxtDetalle_TextChanged);
             // 
             // lblPrecioCompra
@@ -482,18 +486,19 @@
             this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.btnProducto.Name = "btnProducto";
             this.btnProducto.Size = new System.Drawing.Size(26, 28);
-            this.btnProducto.TabIndex = 10;
+            this.btnProducto.TabIndex = 3;
             this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnProducto.UseVisualStyleBackColor = true;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // txtNombreProducto
             // 
+            this.txtNombreProducto.Enabled = false;
             this.txtNombreProducto.Location = new System.Drawing.Point(100, 23);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(273, 26);
-            this.txtNombreProducto.TabIndex = 1;
+            this.txtNombreProducto.TabIndex = 2;
             this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged_1);
             this.txtNombreProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreProducto_KeyDown);
             // 
@@ -597,19 +602,30 @@
             // 
             // btnCalculadora
             // 
-            this.btnCalculadora.Location = new System.Drawing.Point(771, 47);
+            this.btnCalculadora.Location = new System.Drawing.Point(771, 48);
             this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(105, 30);
+            this.btnCalculadora.Size = new System.Drawing.Size(105, 28);
             this.btnCalculadora.TabIndex = 58;
             this.btnCalculadora.Text = "Calculadora";
             this.btnCalculadora.UseVisualStyleBackColor = true;
             this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
+            // 
+            // btnAyuda
+            // 
+            this.btnAyuda.Image = global::Capa_Presentacion.Properties.Resources.Help_15px;
+            this.btnAyuda.Location = new System.Drawing.Point(981, 47);
+            this.btnAyuda.Name = "btnAyuda";
+            this.btnAyuda.Size = new System.Drawing.Size(26, 28);
+            this.btnAyuda.TabIndex = 59;
+            this.btnAyuda.UseVisualStyleBackColor = true;
+            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
             // 
             // frmPventa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1020, 733);
+            this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnCalculadora);
             this.Controls.Add(this.panelHorizontal);
             this.Controls.Add(this.grpboxProveedor);
@@ -621,7 +637,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Venta";
             this.Load += new System.EventHandler(this.frmPventa_Load);
-            this.Click += new System.EventHandler(this.frmPventa_Click);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmPventa_KeyDown);
             this.grpboxProveedor.ResumeLayout(false);
             this.grpboxProveedor.PerformLayout();
@@ -676,13 +691,14 @@
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
         private System.Windows.Forms.Button btnCalculadora;
+        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
-        private System.Windows.Forms.Button btnNuevo;
+        private System.Windows.Forms.Button btnAyuda;
 
     }
 }

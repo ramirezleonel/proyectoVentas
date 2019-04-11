@@ -440,7 +440,7 @@ namespace Capa_Datos
 
 
             SqlCommand cmd = new SqlCommand(query, cn);
-            cmd.Parameters.AddWithValue("@id", Convert.ToInt32(codArticulo));
+            cmd.Parameters.AddWithValue("@id", Convert.ToInt64(codArticulo));
             SqlDataReader reader = cmd.ExecuteReader();
 
             if (reader.Read())
