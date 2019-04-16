@@ -25,6 +25,81 @@ namespace SistemaVentas
             InitializeComponent();
             t.Abort();
         }
+
+        private void FrmInicio_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FrmInicio_KeyDown(object sender, KeyEventArgs e)
+        {
+           
+            if (e.KeyCode == Keys.F1)
+            {
+                //AYUDAS DE TECLADO
+                if (lbl1.Visible == true)
+                {
+                    lbl1.Visible = false;
+                    lbl2.Visible = false;
+                    lbl1.SendToBack();
+                    lbl2.SendToBack();
+                }
+                else
+                {
+
+                    lbl1.Visible = true;
+                    lbl2.Visible = true;
+                    lbl1.BringToFront();
+                    lbl2.BringToFront();
+                }  
+
+            }
+            //dependiendo del boton ingresa se presiona el boton automaticamente para abrir el formulario
+
+            //
+            if(e.KeyCode==Keys.F1){
+              
+                
+
+            }
+            else if (e.KeyCode == Keys.NumPad2) {
+
+                btnVentas.PerformClick();
+
+            }
+            else if (e.KeyCode == Keys.NumPad3)
+            {
+
+                btnProveedor.PerformClick();
+
+            }
+            else if (e.KeyCode == Keys.NumPad4)
+            {
+                btnClientes.PerformClick();
+
+
+            }
+            else if (e.KeyCode == Keys.NumPad5)
+            {
+                btnCaja.PerformClick();
+
+
+            }
+            else if (e.KeyCode == Keys.NumPad6)
+            {
+                btnUsuarios.PerformClick();
+
+
+            }
+            else if (e.KeyCode == Keys.NumPad7)
+            {
+                btnStock.PerformClick();
+
+
+            }
+        }
+
+
         public void abrirFormulario()
         {
 
@@ -349,6 +424,8 @@ namespace SistemaVentas
             FrmUsuario usuario = new FrmUsuario();
             abrirMDIParent(usuario);
         }
+
+      
 
        
 

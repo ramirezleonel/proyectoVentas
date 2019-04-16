@@ -57,8 +57,6 @@
             this.lblPrecio = new System.Windows.Forms.Label();
             this.TxtDesc = new System.Windows.Forms.TextBox();
             this.lblDesc = new System.Windows.Forms.Label();
-            this.TxtSubtotal = new System.Windows.Forms.TextBox();
-            this.lblPrecioVenta = new System.Windows.Forms.Label();
             this.TxtDetalle = new System.Windows.Forms.TextBox();
             this.lblPrecioCompra = new System.Windows.Forms.Label();
             this.btnProducto = new System.Windows.Forms.Button();
@@ -123,6 +121,7 @@
             // cbTipoComprobante
             // 
             this.cbTipoComprobante.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbTipoComprobante.Enabled = false;
             this.cbTipoComprobante.FormattingEnabled = true;
             this.cbTipoComprobante.Items.AddRange(new object[] {
             "PRESUPUESTO",
@@ -311,8 +310,6 @@
             this.gbDetalleMovimento.Controls.Add(this.lblPrecio);
             this.gbDetalleMovimento.Controls.Add(this.TxtDesc);
             this.gbDetalleMovimento.Controls.Add(this.lblDesc);
-            this.gbDetalleMovimento.Controls.Add(this.TxtSubtotal);
-            this.gbDetalleMovimento.Controls.Add(this.lblPrecioVenta);
             this.gbDetalleMovimento.Controls.Add(this.TxtDetalle);
             this.gbDetalleMovimento.Controls.Add(this.lblPrecioCompra);
             this.gbDetalleMovimento.Controls.Add(this.btnProducto);
@@ -405,7 +402,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(451, 71);
+            this.lblPrecio.Location = new System.Drawing.Point(451, 70);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(61, 20);
@@ -415,7 +412,7 @@
             // TxtDesc
             // 
             this.TxtDesc.Enabled = false;
-            this.TxtDesc.Location = new System.Drawing.Point(884, 67);
+            this.TxtDesc.Location = new System.Drawing.Point(535, 111);
             this.TxtDesc.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.TxtDesc.MaxLength = 3;
             this.TxtDesc.Name = "TxtDesc";
@@ -429,33 +426,12 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(818, 70);
+            this.lblDesc.Location = new System.Drawing.Point(451, 114);
             this.lblDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(58, 20);
             this.lblDesc.TabIndex = 37;
             this.lblDesc.Text = "Desc. :";
-            // 
-            // TxtSubtotal
-            // 
-            this.TxtSubtotal.Location = new System.Drawing.Point(535, 109);
-            this.TxtSubtotal.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.TxtSubtotal.Name = "TxtSubtotal";
-            this.TxtSubtotal.ReadOnly = true;
-            this.TxtSubtotal.Size = new System.Drawing.Size(276, 26);
-            this.TxtSubtotal.TabIndex = 57;
-            this.TxtSubtotal.Text = "0,00";
-            this.TxtSubtotal.Leave += new System.EventHandler(this.TxtSubtotal_Leave);
-            // 
-            // lblPrecioVenta
-            // 
-            this.lblPrecioVenta.AutoSize = true;
-            this.lblPrecioVenta.Location = new System.Drawing.Point(451, 113);
-            this.lblPrecioVenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrecioVenta.Name = "lblPrecioVenta";
-            this.lblPrecioVenta.Size = new System.Drawing.Size(81, 20);
-            this.lblPrecioVenta.TabIndex = 30;
-            this.lblPrecioVenta.Text = "SubTotal :";
             // 
             // TxtDetalle
             // 
@@ -464,14 +440,14 @@
             this.TxtDetalle.MaxLength = 10;
             this.TxtDetalle.Name = "TxtDetalle";
             this.TxtDetalle.ReadOnly = true;
-            this.TxtDetalle.Size = new System.Drawing.Size(307, 26);
+            this.TxtDetalle.Size = new System.Drawing.Size(404, 26);
             this.TxtDetalle.TabIndex = 55;
             this.TxtDetalle.TextChanged += new System.EventHandler(this.TxtDetalle_TextChanged);
             // 
             // lblPrecioCompra
             // 
             this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(451, 27);
+            this.lblPrecioCompra.Location = new System.Drawing.Point(451, 26);
             this.lblPrecioCompra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecioCompra.Name = "lblPrecioCompra";
             this.lblPrecioCompra.Size = new System.Drawing.Size(67, 20);
@@ -538,7 +514,7 @@
             this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
             this.panelHorizontal.Name = "panelHorizontal";
-            this.panelHorizontal.Size = new System.Drawing.Size(1020, 41);
+            this.panelHorizontal.Size = new System.Drawing.Size(1012, 41);
             this.panelHorizontal.TabIndex = 43;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
@@ -548,7 +524,7 @@
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Location = new System.Drawing.Point(904, 6);
+            this.btnMinimizar.Location = new System.Drawing.Point(896, 6);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
             this.btnMinimizar.TabIndex = 1;
@@ -562,7 +538,7 @@
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Location = new System.Drawing.Point(985, 6);
+            this.btnCerrar.Location = new System.Drawing.Point(977, 6);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(25, 25);
             this.btnCerrar.TabIndex = 0;
@@ -576,7 +552,7 @@
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(945, 7);
+            this.btnMaximizar.Location = new System.Drawing.Point(937, 7);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
             this.btnMaximizar.TabIndex = 5;
@@ -590,7 +566,7 @@
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
             this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRestaurar.Location = new System.Drawing.Point(945, 6);
+            this.btnRestaurar.Location = new System.Drawing.Point(937, 6);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
             this.btnRestaurar.TabIndex = 2;
@@ -624,7 +600,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 733);
+            this.ClientSize = new System.Drawing.Size(1012, 733);
             this.Controls.Add(this.btnAyuda);
             this.Controls.Add(this.btnCalculadora);
             this.Controls.Add(this.panelHorizontal);
@@ -677,8 +653,6 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label lblTotalPagar;
-        public System.Windows.Forms.TextBox TxtSubtotal;
-        private System.Windows.Forms.Label lblPrecioVenta;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.ComboBox cbTipoComprobante;
         private System.Windows.Forms.Label lblTComprobante;

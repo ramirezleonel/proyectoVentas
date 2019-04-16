@@ -88,7 +88,7 @@ namespace Capa_Presentacion
 
               decimal  totalPagar = Convert.ToDecimal(txtTotalPagar.Text);
               totalPagar =  (cantidadProducto * precioProducto) + (totalPagar);
-                  DGVenta.Rows.Add(TxtCodigo.Text, TxtDetalle.Text, TxtPrecio.Text, TxtDesc.Text, TxtSubtotal.Text,cantidadProducto.ToString(), Convert.ToString(Convert.ToSingle (TxtSubtotal.Text) * Convert.ToInt32(cantidadProducto)));
+                  DGVenta.Rows.Add(TxtCodigo.Text, TxtDetalle.Text, TxtPrecio.Text, TxtDesc.Text,cantidadProducto.ToString());
 
                   txtTotalPagar.Text = totalPagar.ToString() ;
               txtNombreProducto.Text = "";
@@ -263,6 +263,7 @@ namespace Capa_Presentacion
             btnNuevo.Enabled = false;
             btnProducto.Enabled = false;
             txtNombreProducto.Enabled = false;
+            cbTipoComprobante.Enabled = false;
 
         }
         private void frmPventa_KeyDown(object sender, KeyEventArgs e)
@@ -318,32 +319,36 @@ namespace Capa_Presentacion
 
 
             Negociocaja objcaja = new Negociocaja();
-            FrmGuardarVenta venta = new FrmGuardarVenta(decimal.Round(Convert.ToDecimal( txtTotalPagar.Text),2));
+            FrmGuardarVenta venta = new FrmGuardarVenta(decimal.Round(Convert.ToDecimal( txtTotalPagar.Text),2),Convert.ToInt32( txtIdCliente.Text));
             
-            //objcaja.extrestadocaja(1, "");
-            //if (objcaja.Codcuenta == 9100002)
-            //{ MessageBox.Show("La caja esta cerrada, para facturar realizar la apertura correspondiente"); }
-            //else
-            //{
+            objcaja.extrestadocaja(1, "");
+            //codigo de cuenta para cierre de caja
+            //si está cerrado no permite generar la venta hasta no abrir la caja
+            if (objcaja.Codcuenta == 9100002)
+            { UtilityFrm.mensajeError("La caja esta cerrada, para facturar realizar la apertura correspondiente");
+            }
+            else
+            {
                 venta.ListadoDeProducto = DGVenta;
                 venta.ShowDialog();
-                //if (venta.Trans == "ok")
-                //{
-                //    UtilityFrm.limpiarTextbox(txtNombreProducto, TxtPrecio, TxtDesc, TxtCodigo, TxtSubtotal, TxtDetalle);
-                //    txtTotalPagar.Text = "0,0";
-                //    //limpia la grilla de productos
-                //    txtNombreProducto.Enabled = true;
-                //    TxtDesc.Enabled = true;
-                //    TxtPrecio.Enabled = true;
-                //    btnProducto.Enabled = true;
-                //    DGVenta.Rows.Clear();
-                //    txtNombreProducto.Focus();
-                //}
-                //else
-                //{
+                if (venta.Trans == "ok")
+                {
+                    UtilityFrm.limpiarTextbox(txtNombreProducto, TxtPrecio, TxtDesc, TxtCodigo, TxtDetalle);
+                    txtTotalPagar.Text = "0,00";
+                    //limpia la grilla de productos
+                    DGVenta.Rows.Clear();
+                    txtNombreProducto.Enabled = true;
+                    TxtDesc.Enabled = true;
+                    TxtPrecio.Enabled = true;
+                    btnProducto.Enabled = true;
+                    txtNombreProducto.Focus();
+                   
+                }
+                else
+                {
 
-                //}
-            //}
+                }
+            }
         }
 
         private void txtNombreProducto_TextChanged_1(object sender, EventArgs e)
@@ -421,7 +426,7 @@ namespace Capa_Presentacion
                 totalPagar = (totalPagar- precio);
                 txtTotalPagar.Text = totalPagar.ToString();
 
-                UtilityFrm.limpiarTextbox(txtNombreProducto, TxtPrecio, TxtDesc, TxtCodigo, TxtSubtotal, TxtDetalle);
+                UtilityFrm.limpiarTextbox(txtNombreProducto, TxtPrecio, TxtDesc, TxtCodigo, TxtDetalle);
 
             }
             catch (Exception ex)
@@ -526,6 +531,7 @@ namespace Capa_Presentacion
                      {
                            TxtDesc.Text = "0";
                       }
+                    txtNombreProducto.Focus();
              }
           
         }
@@ -618,7 +624,7 @@ namespace Capa_Presentacion
             DGVenta.Rows.Clear();
             txtTotalPagar.Text = "0,00";
             TxtPrecio.Text = "0,00";
-            TxtSubtotal.Text = "0,00";
+       
             TxtDesc.Text = "0";
             TxtDesc.Enabled = false;
             btnGuardar.Enabled = false;
@@ -628,6 +634,7 @@ namespace Capa_Presentacion
             txtIdCliente.Focus();
             txtNombreProducto.Enabled = false;
             cbTipoComprobante.SelectedIndex = -1;
+            cbTipoComprobante.Enabled = false;
 
         }
         private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
@@ -676,7 +683,7 @@ namespace Capa_Presentacion
                 TxtDesc.Enabled = true;
                 TxtPrecio.Enabled = true;
                 btnProducto.Enabled = true;
-            
+                cbTipoComprobante.Enabled = true;
             
             }
         }
@@ -858,7 +865,7 @@ namespace Capa_Presentacion
         
         }
         public void limpiarCampos() {
-            UtilityFrm.limpiarTextbox(TxtDesc,TxtPrecio,TxtDetalle,TxtSubtotal,TxtCodigo);
+            UtilityFrm.limpiarTextbox(TxtDesc,TxtPrecio,TxtDetalle,TxtCodigo);
             if ((DGVenta.Rows.Count > 0))
             {
                 //si no hay productos agregados cambian los botones de guardado y cancelar a disabled

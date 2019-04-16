@@ -8,71 +8,65 @@ namespace Capa_Datos
 {
     public class DDetalle_Venta
     {
-        private int idarticulo;
 
+        //Campos
+        private int idarticulo;
+        private decimal precioVenta;
+        private int iddetalle_venta;
+        private int cantidad;
+        private int idventa;
+        private decimal descuento;
+        private decimal importe;
+
+
+        //Propiedades
         public int Idarticulo
         {
             get { return idarticulo; }
             set { idarticulo = value; }
         }
-
-
-        private decimal subtotal;
-
-
-        public decimal Subtotal
-        {
-            get { return subtotal; }
-            set { subtotal = value; }
-        }
-
-        private int iddetalle_venta;
-
         public int Iddetalle_venta
         {
             get { return iddetalle_venta; }
             set { iddetalle_venta = value; }
         }
-        private int idventa;
-
         public int Idventa
         {
             get { return idventa; }
             set { idventa = value; }
         }
-        private int cantidad;
-
         public int Cantidad
         {
             get { return cantidad; }
             set { cantidad = value; }
         }
-        private decimal precio_venta;
-
-        public decimal Precio_venta
+        public decimal PrecioVenta
         {
-            get { return precio_venta; }
-            set { precio_venta = value; }
+            get { return precioVenta; }
+            set { precioVenta = value; }
         }
-        private decimal descuento;
-
         public decimal Descuento
         {
             get { return descuento; }
             set { descuento = value; }
         }
+        public decimal Importe
+        {
+            get { return importe; }
+            set { importe = value; }
+        }
         public DDetalle_Venta()
         {
 
         }
-        public DDetalle_Venta(int iddetalle_venta, int idventa, int cantidad, decimal precio_venta, decimal descuento, decimal subtotal, int idarticulo)
+        public DDetalle_Venta(int iddetalle_venta, int idventa, int cantidad, decimal precio_venta, decimal descuento, decimal importe, int idarticulo)
         {
             this.iddetalle_venta = iddetalle_venta;
             this.idventa = idventa;
             this.cantidad = cantidad;
-            this.precio_venta = precio_venta;
+            this.precioVenta = precio_venta;
             this.descuento = descuento;
-            this.subtotal = subtotal;
+            this.importe = importe;
             this.idarticulo = idarticulo;
 
 
@@ -99,8 +93,8 @@ namespace Capa_Datos
                 SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Int, Detalle_Venta.cantidad);
                 sqlcmd.Parameters.Add(parcantidad);
 
-                SqlParameter parsubtotal = ProcAlmacenado.asignarParametros("@subtotal", SqlDbType.Decimal, Detalle_Venta.subtotal);
-                sqlcmd.Parameters.Add(parsubtotal);
+                SqlParameter parImporte = ProcAlmacenado.asignarParametros("@importe", SqlDbType.Decimal, Detalle_Venta.Importe);
+                sqlcmd.Parameters.Add(parImporte);
 
                 SqlParameter pardescuento = ProcAlmacenado.asignarParametros("@descuento", SqlDbType.Decimal, Detalle_Venta.descuento);
                 sqlcmd.Parameters.Add(pardescuento);
@@ -108,7 +102,7 @@ namespace Capa_Datos
                 SqlParameter paridarticulo = ProcAlmacenado.asignarParametros("@id_articulo", SqlDbType.Int, Detalle_Venta.idarticulo);
                 sqlcmd.Parameters.Add(pardescuento);
 
-                SqlParameter parPrecio = ProcAlmacenado.asignarParametros("@precio", SqlDbType.Int, Detalle_Venta.precio_venta);
+                SqlParameter parPrecio = ProcAlmacenado.asignarParametros("@precio", SqlDbType.Int, Detalle_Venta.precioVenta);
                 sqlcmd.Parameters.Add(parPrecio);
 
 

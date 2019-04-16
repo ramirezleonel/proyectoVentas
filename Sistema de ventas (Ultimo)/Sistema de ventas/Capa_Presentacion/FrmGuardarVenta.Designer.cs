@@ -58,7 +58,7 @@
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(720, 59);
             this.btnGuardar.TabIndex = 4;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Guardar(F2)";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -231,6 +231,7 @@
             this.Controls.Add(this.lblEfectivo);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.btnGuardar);
+            this.KeyPreview = true;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmGuardarVenta";
@@ -238,6 +239,7 @@
             this.Text = "Guardar Venta";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmGuardarVenta_FormClosing);
             this.Load += new System.EventHandler(this.FrmGuardarVenta_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmGuardarVenta_KeyDown);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.tbEfectivo.ResumeLayout(false);

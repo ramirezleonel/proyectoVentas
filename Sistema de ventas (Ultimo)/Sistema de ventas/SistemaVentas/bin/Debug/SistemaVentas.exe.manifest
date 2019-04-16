@@ -184,7 +184,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>78ORWtS8GlQgBtBqQdjf4Xl8qMjP8E9ORZK9ASUgAXI=</dsig:DigestValue>
+        <dsig:DigestValue>ZMNh13tQV+ABVI303Y1/oyzLnUZ1qU1cLJz09rlxyFs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -196,7 +196,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>72cP3YvdBIyYKI48bod1UYDUd3ggPs+mOTMljypC2hs=</dsig:DigestValue>
+        <dsig:DigestValue>TmGT1GFw4g83DCuTAeqQoqe5mAmSoZ+vUsMOr4KJ/lw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -208,7 +208,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>rbnlAbVaDyn5+HAVc0/zhLwAV/M+XFkKsyugAY0xv74=</dsig:DigestValue>
+        <dsig:DigestValue>E28zjbzrXAejWtkkGpXjlwASN5Fd+EZWxINKvlWMHd0=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -249,18 +249,6 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.SqlServer.Types.resources.dll" size="48216">
-      <assemblyIdentity name="Microsoft.SqlServer.Types.resources" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="es" processorArchitecture="msil" />
-      <hash>
-        <dsig:Transforms>
-          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-        </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DoTuq5xRkGy/ib9FBhtk7+vcvxVMvzHN1bxkJjgpm4E=</dsig:DigestValue>
-      </hash>
-    </dependentAssembly>
-  </dependency>
-  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="PlaceholderTextBox.dll" size="7168">
       <assemblyIdentity name="PlaceholderTextBox" version="0.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -273,14 +261,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11559936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11560960">
       <assemblyIdentity name="SistemaVentas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>g2FX7oEQ74qxlTU0cxPuSiWHG5mxXGUdfwqaQ57BiBU=</dsig:DigestValue>
+        <dsig:DigestValue>1r01MkxMlDWwcXLlIKwOBgowt+dYNlPKkg9ySljomac=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -401,13 +389,13 @@
       <dsig:DigestValue>KQZ9VcDq9cHLZgP/U6rqlTUlf6caOYOG/NujIYEwak8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SistemaVentas.exe.config" size="630">
+  <file name="SistemaVentas.exe.config" size="629">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>didv8SQ4NogWFVmBY3P2PVnc95tpdQGJdDuJg6/A6xI=</dsig:DigestValue>
+      <dsig:DigestValue>QdohjDAjL9P6UEXm903G5v2XYrHaCS1ft2DJ8I/bQ0U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="softIntegralIcon.ico" size="268286">

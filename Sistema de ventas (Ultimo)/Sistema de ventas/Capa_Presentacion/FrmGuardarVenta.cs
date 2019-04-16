@@ -8,39 +8,42 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_negocio;
-using System.Data;
-using System.Data.SqlClient;
+
+
 namespace Capa_Presentacion
 {
     public partial class FrmGuardarVenta : Form
     {
         private string trans;
+        private int idCliente;
+        private DataGridView listadoDeProducto;
+        private bool isCerro = false;
+        private decimal totalAPagar = 0;
+
+        public bool IsCerro
+        {
+            get { return isCerro; }
+            set { isCerro = value; }
+        }
 
         public string Trans
         {
             get { return trans; }
             set { trans = value; }
         }
-        private int idCliente;
-        private DataGridView listadoDeProducto;
-        private bool isCerro = false;
-        private decimal totalAPagar = 0;
-        public bool IsCerro
-        {
-            get { return isCerro; }
-            set { isCerro = value; }
-        }
         public DataGridView ListadoDeProducto
         {
             get { return listadoDeProducto; }
             set { listadoDeProducto = value; }
         }
-        public FrmGuardarVenta(decimal totalAPagar)
+        public FrmGuardarVenta(decimal totalAPagar,int idCliente)
         {
            
             InitializeComponent();
+            //redondeo 2 digitos
             this.totalAPagar = decimal.Round(totalAPagar, 2);
             txtTotalAPagar.Text = Convert.ToString(totalAPagar);
+            this.idCliente = idCliente;
             
            
         }
@@ -98,48 +101,53 @@ namespace Capa_Presentacion
             DataTable dt = new DataTable();
             dt.Columns.Add("Codigo", typeof(string));
             dt.Columns.Add("Precio", typeof(decimal));
+            dt.Columns.Add("Cantidad", typeof(string));
             dt.Columns.Add("Descuento", typeof(decimal));
             dt.Columns.Add("Importe", typeof(decimal));
-            dt.Columns.Add("Cantidad", typeof(string));
-            dt.Columns.Add("Subtotal", typeof(string));
 
+            decimal IVA= 21+'M';
+           
+            //LISTA DE PRODUCTOS SE LE ASIGNA EN EL MOMENTO QUE SE MUESTRA EL FORMULARIO
 
             foreach (DataGridViewRow fila in listadoDeProducto.Rows)
-            {
+           {
 
-
-                dt.Rows.Add(fila.Cells[0].Value, fila.Cells[2].Value, fila.Cells[3].Value, fila.Cells[4].Value, fila.Cells[5].Value, fila.Cells[6].Value);
+                //recorro la lista pasado por paramentro y asigno al datatable para generar la transaccion
+               dt.Rows.Add(fila.Cells["Codigo"].Value, fila.Cells["Precio"].Value, fila.Cells["Cantidad"].Value, fila.Cells["Descuento"].Value, fila.Cells["Importe"].Value);
 
                 
                
             }
 
 
-            if (MessageBox.Show("Desea Imprimir Venta?", "Imprimir"
-               , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
-            {
-                FrmImpVenta venta = new FrmImpVenta(totalAPagar);
-                venta.Show();
-            }
-            else {
-                this.Close();
-            }
-            
-
-           // string Rta = NegocioVenta.Insertar(1, DateTime.Today , "TICKET", "", "", 0, dt,objventa );
-            
-            //if (Rta == "OK")
+            //if (MessageBox.Show("Desea Imprimir Venta?", "Imprimir"
+            //   , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
             //{
-            //   Rta = Negociocaja.insertarmovcaja(4110107, Convert.ToSingle(txtTotalAPagar.Text), 0, Convert.ToString(DateTime.Today), "usuario", 1, "mañana", "Venta nro : " +  objventa.Idventa.ToString (), objventa.Idventa, true);
-
-            //   if (Rta == "ok")
-            //   {
-            //       trans = Rta;
-            //       this.Close();
-            //   }
-    
+            //    FrmImpVenta venta = new FrmImpVenta(totalAPagar);
+            //    venta.Show();
             //}
+            //else {
+            //    this.Close();
+            //}
+            
 
+           string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today , "V", "0000", "00000001",IVA, dt );
+            
+            if (Rta == "OK")
+            {
+               Rta = Negociocaja.insertarmovcaja(4110107, Convert.ToSingle(txtTotalAPagar.Text), 0, Convert.ToString(DateTime.Today), "usuario", 1, "mañana", "Venta nro : " +  objventa.Idventa.ToString (), objventa.Idventa, true);
+
+               if (Rta == "ok")
+               {
+                   trans = Rta;
+                   this.Close();
+               }
+    
+            }
+
+
+
+            /*CONTROLADOR FISCAL*/
            // if (MessageBox.Show("Desea Imprimir Ticket?", "Imprimir"
            //     , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
            // {
@@ -240,6 +248,14 @@ namespace Capa_Presentacion
         private void txtAbono_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void FrmGuardarVenta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.F2){
+                btnGuardar.PerformClick();
+                    
+            }
         }
     }
 }

@@ -60,6 +60,8 @@
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
             this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.lbl2 = new System.Windows.Forms.Label();
+            this.lbl1 = new System.Windows.Forms.Label();
             this.panelHorizontal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -278,12 +280,14 @@
             // 
             this.panelVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panelVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelVertical.Controls.Add(this.btnProductos);
+            this.panelVertical.Controls.Add(this.btnListaProducto);
+            this.panelVertical.Controls.Add(this.lbl2);
             this.panelVertical.Controls.Add(this.btnTecnico);
             this.panelVertical.Controls.Add(this.pnConsultas);
             this.panelVertical.Controls.Add(this.pnCategoria);
             this.panelVertical.Controls.Add(this.btnConsultas);
             this.panelVertical.Controls.Add(this.pnStock);
-            this.panelVertical.Controls.Add(this.btnListaProducto);
             this.panelVertical.Controls.Add(this.btnStock);
             this.panelVertical.Controls.Add(this.pnlistaProducto);
             this.panelVertical.Controls.Add(this.pnUsuarios);
@@ -295,11 +299,11 @@
             this.panelVertical.Controls.Add(this.pnProveedor);
             this.panelVertical.Controls.Add(this.pnVentas);
             this.panelVertical.Controls.Add(this.pnProductos);
-            this.panelVertical.Controls.Add(this.btnProductos);
             this.panelVertical.Controls.Add(this.pictureBox1);
             this.panelVertical.Controls.Add(this.btnCategoria);
             this.panelVertical.Controls.Add(this.btnProveedor);
             this.panelVertical.Controls.Add(this.btnVentas);
+            this.panelVertical.Controls.Add(this.lbl1);
             this.panelVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelVertical.Location = new System.Drawing.Point(0, 41);
             this.panelVertical.Name = "panelVertical";
@@ -518,6 +522,30 @@
             this.panelPrincipal.Size = new System.Drawing.Size(728, 682);
             this.panelPrincipal.TabIndex = 2;
             // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.OldLace;
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(274, 173);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(28, 20);
+            this.lbl2.TabIndex = 1;
+            this.lbl2.Text = "(2)";
+            this.lbl2.Visible = false;
+            // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.OldLace;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(274, 121);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(28, 20);
+            this.lbl1.TabIndex = 0;
+            this.lbl1.Text = "(1)";
+            this.lbl1.Visible = false;
+            // 
             // FrmInicio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -527,9 +555,12 @@
             this.Controls.Add(this.panelVertical);
             this.Controls.Add(this.panelHorizontal);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.KeyPreview = true;
             this.Name = "FrmInicio";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Sistema De Ventas";
+            this.Load += new System.EventHandler(this.FrmInicio_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInicio_KeyDown);
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
@@ -537,6 +568,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.panelVertical.ResumeLayout(false);
+            this.panelVertical.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -575,5 +607,7 @@
         private System.Windows.Forms.Button btnConsultas;
         private System.Windows.Forms.Panel pnConsultas;
         private System.Windows.Forms.Button btnTecnico;
+        private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label lbl1;
     }
 }

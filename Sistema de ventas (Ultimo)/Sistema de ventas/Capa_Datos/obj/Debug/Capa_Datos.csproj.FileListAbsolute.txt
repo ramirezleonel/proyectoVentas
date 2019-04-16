@@ -51,3 +51,10 @@ C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\b
 C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\bin\Debug\PlaceholderTextBox.dll
 C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\obj\Debug\Capa_Datos.dll
 C:\Users\leo\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\obj\Debug\Capa_Datos.pdb
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\bin\Debug\Capa_Datos.dll
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\bin\Debug\Capa_Datos.pdb
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\bin\Debug\BarcodeLib.dll
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\bin\Debug\PlaceholderTextBox.dll
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\obj\Debug\Capa_Datos.csprojResolveAssemblyReference.cache
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\obj\Debug\Capa_Datos.dll
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Datos\obj\Debug\Capa_Datos.pdb
