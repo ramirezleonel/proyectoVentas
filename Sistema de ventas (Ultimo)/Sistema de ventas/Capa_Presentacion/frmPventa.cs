@@ -330,6 +330,7 @@ namespace Capa_Presentacion
                 venta.ShowDialog();
                 if (venta.Trans == "ok")
                 {
+                    UtilityFrm.mensajeConfirm("La venta se realizó correctamente");
                     UtilityFrm.limpiarTextbox(txtNombreProducto, TxtPrecio, TxtDesc, TxtCodigo, TxtDetalle);
                     txtTotalPagar.Text = "0,00";
                     //limpia la grilla de productos
@@ -343,7 +344,7 @@ namespace Capa_Presentacion
                 }
                 else
                 {
-
+                    UtilityFrm.mensajeError("Ha ocurrido un error: "+venta.Trans);
                 }
             }
         }

@@ -22,14 +22,77 @@ namespace Capa_Datos
         private Boolean sindatos;
         private decimal utilidad;
         private decimal precioCompra;
+        private int pesable;
 
+
+        //getters and setters
+        public decimal PrecioCompra
+        {
+            get { return precioCompra; }
+            set { precioCompra = value; }
+        }
+        public Boolean Sindatos
+        {
+            get { return sindatos; }
+            set { sindatos = value; }
+        }
+        public string Codigo
+        {
+            get { return codigo; }
+            set { codigo = value; }
+        }
+        public int IdArticulo
+        {
+            get { return idArticulo; }
+            set { idArticulo = value; }
+        }
+        public string Nombre
+        {
+            get { return nombre; }
+            set { nombre = value; }
+        }
+        public string Descripcion
+        {
+            get { return descripcion; }
+            set { descripcion = value; }
+        }
+        public int IdCategoria
+        {
+            get { return idCategoria; }
+            set { idCategoria = value; }
+        }
+        public string BuscarArticulo
+        {
+            get { return buscarArticulo; }
+            set { buscarArticulo = value; }
+        }
+        public decimal Precio
+        {
+            get { return precio; }
+            set { precio = value; }
+        }
+        public int StockActual
+        {
+            get { return stockActual; }
+            set { stockActual = value; }
+        }
+        public decimal Utilidad
+        {
+            get { return utilidad; }
+            set { utilidad = value; }
+        }
+        public int Pesable
+        {
+            get { return pesable; }
+            set { pesable = value; }
+        }
        
       
         //constructores
         public DatosArticulo() { 
         
         }
-        public DatosArticulo(string nombre,string codigo,string descripcion,int idCategoria,decimal precio,int cantInicial)
+        public DatosArticulo(string nombre,string codigo,string descripcion,int idCategoria,decimal precio,int cantInicial, int pesable)
         {
             this.idCategoria = idCategoria;
             this.nombre = nombre;
@@ -37,10 +100,10 @@ namespace Capa_Datos
             this.descripcion = descripcion;
             this.precio = precio;
             this.StockActual = cantInicial;
+            this.pesable = pesable;
          }
         public DatosArticulo(int idArticulo,decimal precio)
         {
-          
             this.idArticulo = idArticulo;
             this.precio = precio;
         }
@@ -99,6 +162,9 @@ namespace Capa_Datos
                 SqlParameter parStockActual = ProcAlmacenado.asignarParametros("@stockActual", SqlDbType.Int, articulo.StockActual);
                 comando.Parameters.Add(parStockActual);
 
+                SqlParameter parPesable = ProcAlmacenado.asignarParametros("@pesable", SqlDbType.Bit, articulo.Pesable);
+                comando.Parameters.Add(parPesable);
+
                 if (comando.ExecuteNonQuery() == 1)
                 {
                     respuesta = "ok";
@@ -156,7 +222,8 @@ namespace Capa_Datos
                 SqlParameter parIdCategoria = ProcAlmacenado.asignarParametros("@idcategoria", SqlDbType.Int, articulo.idCategoria);
                 comando.Parameters.Add(parIdCategoria);
 
-                
+                SqlParameter parPesable = ProcAlmacenado.asignarParametros("@pesable", SqlDbType.Bit, articulo.Pesable);
+                comando.Parameters.Add(parPesable);
 
                 if (comando.ExecuteNonQuery() == 1)
                 {
@@ -461,66 +528,7 @@ namespace Capa_Datos
 
         }
 
-        //getters and setters
-        public decimal PrecioCompra
-        {
-            get { return precioCompra; }
-            set { precioCompra = value; }
-        }
-      
-        public Boolean Sindatos
-        {
-            get { return sindatos; }
-            set { sindatos = value; }
-        }
-
-        public string Codigo
-        {
-            get { return codigo; }
-            set { codigo = value; }
-        }
-        public int IdArticulo
-        {
-            get { return idArticulo; }
-            set { idArticulo = value; }
-        }
-        public string Nombre
-        {
-            get { return nombre; }
-            set { nombre = value; }
-        }
-        public string Descripcion
-        {
-            get { return descripcion; }
-            set { descripcion = value; }
-        }
-        public int IdCategoria
-        {
-            get { return idCategoria; }
-            set { idCategoria = value; }
-        }
-      
-        public string BuscarArticulo
-        {
-            get { return buscarArticulo; }
-            set { buscarArticulo = value; }
-        }
-        public decimal Precio
-        {
-            get { return precio; }
-            set { precio = value; }
-        }
-        public int StockActual
-        {
-            get { return stockActual; }
-            set { stockActual = value; }
-        }
-
-        public decimal Utilidad
-        {
-            get { return utilidad; }
-            set { utilidad = value; }
-        }
+       
         public string editarPrecio(DatosArticulo articulo)
         {
             //modo 9 para DB

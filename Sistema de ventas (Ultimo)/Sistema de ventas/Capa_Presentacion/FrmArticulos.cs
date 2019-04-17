@@ -365,6 +365,7 @@ namespace Capa_Presentacion
             //limpio textbox
             UtilityFrm.limpiarTextbox(txtDescripcion, txtNombreConfig, txtNombre, txtCodigo,txtCodigoBarra);
             //habilitar botones
+            this.cbxPesable.Enabled = true;
             this.btnGuardar.Enabled = true;
             this.btnEditar.Enabled = false;
             this.btnCancelar.Enabled = true;
@@ -378,6 +379,7 @@ namespace Capa_Presentacion
             this.txtDescripcion.Enabled = true;
             this.txtNombreConfig.Enabled = true;
             this.txtCantInicial.Enabled = true;
+          
             this.txtCodigoBarra.Focus();
             isEditar = false;
             isNuevo = true;
@@ -400,7 +402,7 @@ namespace Capa_Presentacion
             this.txtNombreConfig.Enabled = false;
             this.txtDescripcion.Enabled = false;
             this.txtCantInicial.Enabled = false;
-
+            this.cbxPesable.Enabled = false;
             UtilityFrm.limpiarTextbox(txtDescripcion, txtNombreConfig, txtNombre, txtCodigo, txtCodigoBarra, txtCantInicial);
             UtilityFrm.limpiarTextbox(txtPrecio);
             UtilityFrm.limpiarErrorProvider(txtPrecio,txtNombreConfig,txtCantInicial, errorIcono);
@@ -409,6 +411,7 @@ namespace Capa_Presentacion
         }
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 string respuesta = "";
@@ -426,11 +429,12 @@ namespace Capa_Presentacion
                 }
                 else
                 {
-                
+                    int pesable = cbxPesable.Checked == true ? 1 : 0;
                     if (isNuevo == true)
                     {
-
-                        respuesta = NegocioArticulo.insertar(txtNombreConfig.Text.Trim(), txtCodigoBarra.Text.Trim(), txtDescripcion.Text.Trim(), Convert.ToInt32(cbxCategoria.SelectedValue), Convert.ToDecimal(txtPrecio.Text.Trim()),Convert.ToInt32(txtCantInicial.Text.Trim()));
+                        //pesable es un bit que representa un producto si es pesable (KG) o no
+                       
+                        respuesta = NegocioArticulo.insertar(txtNombreConfig.Text.Trim(), txtCodigoBarra.Text.Trim(), txtDescripcion.Text.Trim(), Convert.ToInt32(cbxCategoria.SelectedValue), Convert.ToDecimal(txtPrecio.Text.Trim()),Convert.ToInt32(txtCantInicial.Text.Trim()),pesable);
 
                         if (respuesta.Equals("ok"))
                         {
@@ -449,7 +453,7 @@ namespace Capa_Presentacion
                     {
 
                         //respuesta = NegocioArticulo.editar(Convert.ToInt32(txtCodigo.Text.Trim()), Convert.ToString(txtNombreConfig.Text.Trim()), txtCodigoBarra.Text.Trim(), Convert.ToString(txtDescripcion.Text.Trim()), Convert.ToInt32(cbxCategoria.SelectedValue));
-                        respuesta = NegocioArticulo.editar(Convert.ToInt32(txtCodigo.Text.Trim()), Convert.ToString(txtNombreConfig.Text.Trim()), txtCodigoBarra.Text.Trim(), Convert.ToString(txtDescripcion.Text.Trim()), Convert.ToInt32(cbxCategoria.SelectedValue), Convert.ToDecimal(txtPrecio.Text.Trim()),Convert.ToInt32(txtCantInicial.Text.Trim()));
+                        respuesta = NegocioArticulo.editar(Convert.ToInt32(txtCodigo.Text.Trim()), Convert.ToString(txtNombreConfig.Text.Trim()), txtCodigoBarra.Text.Trim(), Convert.ToString(txtDescripcion.Text.Trim()), Convert.ToInt32(cbxCategoria.SelectedValue), Convert.ToDecimal(txtPrecio.Text.Trim()),Convert.ToInt32(txtCantInicial.Text.Trim()),pesable);
 
                         if (respuesta.Equals("ok"))
                         {
@@ -480,7 +484,7 @@ namespace Capa_Presentacion
                     txtCantInicial.Enabled = false;
                     cbxCategoria.Enabled=false;
                     btnNuevoCodBar.Enabled = false;
-
+                    this.cbxPesable.Enabled = false;
                     UtilityFrm.limpiarTextbox(txtDescripcion, txtNombreConfig, txtNombre, txtCodigo, txtCodigoBarra, txtCantInicial);
                     UtilityFrm.limpiarTextbox(txtPrecio);
                     UtilityFrm.limpiarErrorProvider(txtCantInicial, txtPrecio, txtNombreConfig,errorIcono);
@@ -517,7 +521,7 @@ namespace Capa_Presentacion
                 txtDescripcion.Enabled = true;
                 txtCantInicial.Enabled = false;
                 txtPrecio.Enabled = true;
-              
+                cbxPesable.Enabled = true;
                 isEditar = true;
                 isNuevo = false;
                 //habilitarTextbox();
@@ -927,7 +931,8 @@ namespace Capa_Presentacion
             //comparo el evento pasado como parametro y el enum keys.enter
             if (e.KeyCode == Keys.Enter)
             {
-                this.btnGuardar.Focus();
+                //this.btnGuardar.Focus();
+                this.cbxPesable.Focus();
                 //se pasa el control permitiendo eliminar el beep
                 e.SuppressKeyPress = true;
             }
@@ -941,6 +946,18 @@ namespace Capa_Presentacion
         private void panelHorizontal_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void cbxPesable_KeyDown(object sender, KeyEventArgs e)
+        {
+            //comparo el evento pasado como parametro y el enum keys.enter
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.btnGuardar.Focus();
+
+                //se pasa el control permitiendo eliminar el beep
+                e.SuppressKeyPress = true;
+            }
         }
         
        

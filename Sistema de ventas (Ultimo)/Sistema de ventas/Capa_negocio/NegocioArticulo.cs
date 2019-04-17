@@ -24,9 +24,9 @@ namespace Capa_negocio
         private int stockActual;
         private Boolean sindatos;
 
-        public static string insertar(string nombre, string codigo, string descripcion, int idCategoria, decimal precio,int cantInicial)
+        public static string insertar(string nombre, string codigo, string descripcion, int idCategoria, decimal precio,int cantInicial,int pesable)
         {
-            DatosArticulo dArticulo= new DatosArticulo(nombre,codigo,descripcion,idCategoria,precio,cantInicial);
+            DatosArticulo dArticulo= new DatosArticulo(nombre,codigo,descripcion,idCategoria,precio,cantInicial,pesable);
             return dArticulo.agregar(dArticulo);
 
         }
@@ -37,9 +37,9 @@ namespace Capa_negocio
             dArticulo.IdArticulo = idArticulo;
             return dArticulo.eliminar(dArticulo);
         }
-        public static string editar(int idArticulo,string nombre, string codigo, string descripcion, int idCategoria,decimal precio,int cantInicial)
+        public static string editar(int idArticulo,string nombre, string codigo, string descripcion, int idCategoria,decimal precio,int cantInicial,int pesable)
         {
-            DatosArticulo dArticulo = new DatosArticulo(nombre, codigo, descripcion,idCategoria,precio,cantInicial);
+            DatosArticulo dArticulo = new DatosArticulo(nombre, codigo, descripcion,idCategoria,precio,cantInicial,pesable);
             dArticulo.IdArticulo= idArticulo;
             return dArticulo.editar(dArticulo);
         }

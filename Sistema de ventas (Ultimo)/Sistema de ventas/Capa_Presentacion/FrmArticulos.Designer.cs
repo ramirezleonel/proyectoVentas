@@ -76,6 +76,7 @@
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnGenerarCodigo = new System.Windows.Forms.Button();
+            this.cbxPesable = new System.Windows.Forms.CheckBox();
             this.tabLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.grpboxCategoria.SuspendLayout();
@@ -267,7 +268,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(194, 261);
+            this.txtDescripcion.Location = new System.Drawing.Point(194, 247);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -278,7 +279,7 @@
             // txtNombreConfig
             // 
             this.txtNombreConfig.Enabled = false;
-            this.txtNombreConfig.Location = new System.Drawing.Point(194, 187);
+            this.txtNombreConfig.Location = new System.Drawing.Point(194, 175);
             this.txtNombreConfig.MaxLength = 100;
             this.txtNombreConfig.Name = "txtNombreConfig";
             this.txtNombreConfig.Size = new System.Drawing.Size(323, 31);
@@ -298,7 +299,7 @@
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(18, 259);
+            this.lblDescripcion.Location = new System.Drawing.Point(18, 249);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(116, 22);
             this.lblDescripcion.TabIndex = 12;
@@ -307,7 +308,7 @@
             // lblNomArticulo
             // 
             this.lblNomArticulo.AutoSize = true;
-            this.lblNomArticulo.Location = new System.Drawing.Point(18, 187);
+            this.lblNomArticulo.Location = new System.Drawing.Point(18, 179);
             this.lblNomArticulo.Name = "lblNomArticulo";
             this.lblNomArticulo.Size = new System.Drawing.Size(84, 22);
             this.lblNomArticulo.TabIndex = 11;
@@ -316,7 +317,7 @@
             // lblCodigo
             // 
             this.lblCodigo.AutoSize = true;
-            this.lblCodigo.Location = new System.Drawing.Point(18, 43);
+            this.lblCodigo.Location = new System.Drawing.Point(18, 42);
             this.lblCodigo.Name = "lblCodigo";
             this.lblCodigo.Size = new System.Drawing.Size(78, 22);
             this.lblCodigo.TabIndex = 10;
@@ -366,6 +367,7 @@
             this.grpboxCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.grpboxCategoria.Controls.Add(this.cbxPesable);
             this.grpboxCategoria.Controls.Add(this.btnNuevoCodBar);
             this.grpboxCategoria.Controls.Add(this.txtCantInicial);
             this.grpboxCategoria.Controls.Add(this.lblCantInicial);
@@ -396,9 +398,9 @@
             // 
             this.btnNuevoCodBar.Enabled = false;
             this.btnNuevoCodBar.Image = global::Capa_Presentacion.Properties.Resources.Plus_15px;
-            this.btnNuevoCodBar.Location = new System.Drawing.Point(436, 111);
+            this.btnNuevoCodBar.Location = new System.Drawing.Point(436, 106);
             this.btnNuevoCodBar.Name = "btnNuevoCodBar";
-            this.btnNuevoCodBar.Size = new System.Drawing.Size(22, 31);
+            this.btnNuevoCodBar.Size = new System.Drawing.Size(27, 31);
             this.btnNuevoCodBar.TabIndex = 25;
             this.btnNuevoCodBar.UseVisualStyleBackColor = true;
             this.btnNuevoCodBar.Click += new System.EventHandler(this.btnGenerar_Click);
@@ -406,7 +408,7 @@
             // txtCantInicial
             // 
             this.txtCantInicial.Enabled = false;
-            this.txtCantInicial.Location = new System.Drawing.Point(670, 184);
+            this.txtCantInicial.Location = new System.Drawing.Point(670, 175);
             this.txtCantInicial.MaxLength = 50;
             this.txtCantInicial.Name = "txtCantInicial";
             this.txtCantInicial.Size = new System.Drawing.Size(168, 31);
@@ -418,7 +420,7 @@
             // lblCantInicial
             // 
             this.lblCantInicial.AutoSize = true;
-            this.lblCantInicial.Location = new System.Drawing.Point(546, 188);
+            this.lblCantInicial.Location = new System.Drawing.Point(546, 179);
             this.lblCantInicial.Name = "lblCantInicial";
             this.lblCantInicial.Size = new System.Drawing.Size(118, 22);
             this.lblCantInicial.TabIndex = 23;
@@ -427,7 +429,7 @@
             // txtPrecio
             // 
             this.txtPrecio.Enabled = false;
-            this.txtPrecio.Location = new System.Drawing.Point(670, 112);
+            this.txtPrecio.Location = new System.Drawing.Point(670, 106);
             this.txtPrecio.MaxLength = 60;
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(182, 31);
@@ -439,7 +441,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(545, 115);
+            this.lblPrecio.Location = new System.Drawing.Point(545, 110);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(66, 22);
             this.lblPrecio.TabIndex = 21;
@@ -468,7 +470,7 @@
             // txtCodigoBarra
             // 
             this.txtCodigoBarra.Enabled = false;
-            this.txtCodigoBarra.Location = new System.Drawing.Point(194, 111);
+            this.txtCodigoBarra.Location = new System.Drawing.Point(194, 106);
             this.txtCodigoBarra.MaxLength = 13;
             this.txtCodigoBarra.Name = "txtCodigoBarra";
             this.txtCodigoBarra.Size = new System.Drawing.Size(236, 31);
@@ -480,7 +482,7 @@
             // lblCodigoBar
             // 
             this.lblCodigoBar.AutoSize = true;
-            this.lblCodigoBar.Location = new System.Drawing.Point(18, 115);
+            this.lblCodigoBar.Location = new System.Drawing.Point(18, 110);
             this.lblCodigoBar.Name = "lblCodigoBar";
             this.lblCodigoBar.Size = new System.Drawing.Size(162, 22);
             this.lblCodigoBar.TabIndex = 17;
@@ -649,6 +651,18 @@
             this.btnGenerarCodigo.UseVisualStyleBackColor = false;
             this.btnGenerarCodigo.Click += new System.EventHandler(this.btnGenerarCodigo_Click);
             // 
+            // cbxPesable
+            // 
+            this.cbxPesable.AutoSize = true;
+            this.cbxPesable.Enabled = false;
+            this.cbxPesable.Location = new System.Drawing.Point(550, 247);
+            this.cbxPesable.Name = "cbxPesable";
+            this.cbxPesable.Size = new System.Drawing.Size(100, 26);
+            this.cbxPesable.TabIndex = 26;
+            this.cbxPesable.Text = "Pesable";
+            this.cbxPesable.UseVisualStyleBackColor = true;
+            this.cbxPesable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbxPesable_KeyDown);
+            // 
             // FrmArticulos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -735,6 +749,7 @@
         private System.Windows.Forms.TextBox txtCantInicial;
         private System.Windows.Forms.Label lblCantInicial;
         private System.Windows.Forms.Button btnNuevoCodBar;
+        private System.Windows.Forms.CheckBox cbxPesable;
 
     }
 }
