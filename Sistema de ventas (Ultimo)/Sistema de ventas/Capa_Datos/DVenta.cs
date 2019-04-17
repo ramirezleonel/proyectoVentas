@@ -93,16 +93,20 @@ using Capa_Datos;
                 sqlcon.ConnectionString = Conexion.conexion;
                 sqlcon.Open();
 
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.Connection = sqlcon;
-                sqlcmd.CommandText = "spdisminuir_stock";
-                sqlcmd.CommandType = CommandType.StoredProcedure;
+                //Creo un procedimiento almacenado y se pasa al sqlCommand
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(sqlcon, "SP_DETALLEMOVSTOCK");
 
                 SqlParameter paridarticulo = ProcAlmacenado.asignarParametros("@idarticulo", SqlDbType.Int,idarticulo );
                 sqlcmd.Parameters.Add(paridarticulo );
 
+                SqlParameter paridDetalleMovStock = ProcAlmacenado.asignarParametros("@iddetalle_movStock", SqlDbType.Int);
+                sqlcmd.Parameters.Add(paridDetalleMovStock);
+
                 SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Int, cantidad );
                 sqlcmd.Parameters.Add(parcantidad);
+
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 3);
+                sqlcmd.Parameters.Add(parModo);
 
                 rpta = sqlcmd.ExecuteNonQuery() == 1 ? "OK" : "No se actualizo el stock";
 
@@ -126,15 +130,11 @@ using Capa_Datos;
 
                 SqlTransaction sqltra = sqlcon.BeginTransaction();
 
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.Connection = sqlcon;
-                sqlcmd.Transaction = sqltra;
-                sqlcmd.CommandText = "spinsertar_venta";
-                sqlcmd.CommandType = CommandType.StoredProcedure;
-
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(sqlcon, "SP_VENTA",sqltra);
+       
                 SqlParameter paridventa = ProcAlmacenado.asignarParametros("@idventa", SqlDbType.Int);
                 sqlcmd.Parameters.Add(paridventa);
-
+                
                 SqlParameter paridcliente = ProcAlmacenado.asignarParametros("@idcliente", SqlDbType.Int, Venta.idcliente);
                 sqlcmd.Parameters.Add(paridcliente);
 
@@ -153,6 +153,9 @@ using Capa_Datos;
                 SqlParameter pariva = ProcAlmacenado.asignarParametros("@iva", SqlDbType.Decimal, Venta.iva);
                 sqlcmd.Parameters.Add(pariva);
 
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 1);
+                sqlcmd.Parameters.Add(parModo);
+
                 rpta = sqlcmd.ExecuteNonQuery() == 1 ? "OK" : "No se ingreso el registro";
 
                 if (rpta.Equals("OK"))
@@ -163,7 +166,6 @@ using Capa_Datos;
                     foreach (DDetalle_Venta det in Detalle)
                     {
                         det.Idventa = Venta.idventa;
-                        int probando = det.Idarticulo;
                         rpta = det.Insertar(det, ref sqlcon, ref sqltra);
                         if (!rpta.Equals("OK"))
                         {
@@ -225,8 +227,8 @@ using Capa_Datos;
             
             }
             catch
-            { 
-            
+            {
+                
             }
             return rpta;
         }

@@ -47,6 +47,8 @@
             this.pnCategoria = new System.Windows.Forms.Panel();
             this.pnlistaProducto = new System.Windows.Forms.Panel();
             this.panelVertical = new System.Windows.Forms.Panel();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.lbl2 = new System.Windows.Forms.Label();
             this.btnTecnico = new System.Windows.Forms.Button();
             this.pnConsultas = new System.Windows.Forms.Panel();
             this.btnConsultas = new System.Windows.Forms.Button();
@@ -55,13 +57,11 @@
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnCaja = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
-            this.btnProductos = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnProveedor = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.lbl2 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelHorizontal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -310,6 +310,37 @@
             this.panelVertical.Size = new System.Drawing.Size(300, 682);
             this.panelVertical.TabIndex = 1;
             // 
+            // btnProductos
+            // 
+            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(4, 102);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(296, 46);
+            this.btnProductos.TabIndex = 4;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.BackColor = System.Drawing.Color.OldLace;
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.Location = new System.Drawing.Point(274, 173);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(28, 20);
+            this.lbl2.TabIndex = 1;
+            this.lbl2.Text = "(2)";
+            this.lbl2.Visible = false;
+            // 
             // btnTecnico
             // 
             this.btnTecnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -442,25 +473,6 @@
             this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
             // 
-            // btnProductos
-            // 
-            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(4, 102);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(296, 46);
-            this.btnProductos.TabIndex = 4;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::SistemaVentas.Properties.Resources.SoftIntegral;
@@ -510,30 +522,6 @@
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelPrincipal.BackgroundImage = global::SistemaVentas.Properties.Resources.fondo;
-            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(300, 41);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(728, 682);
-            this.panelPrincipal.TabIndex = 2;
-            // 
-            // lbl2
-            // 
-            this.lbl2.AutoSize = true;
-            this.lbl2.BackColor = System.Drawing.Color.OldLace;
-            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(274, 173);
-            this.lbl2.Name = "lbl2";
-            this.lbl2.Size = new System.Drawing.Size(28, 20);
-            this.lbl2.TabIndex = 1;
-            this.lbl2.Text = "(2)";
-            this.lbl2.Visible = false;
-            // 
             // lbl1
             // 
             this.lbl1.AutoSize = true;
@@ -545,6 +533,18 @@
             this.lbl1.TabIndex = 0;
             this.lbl1.Text = "(1)";
             this.lbl1.Visible = false;
+            // 
+            // panelPrincipal
+            // 
+            this.panelPrincipal.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelPrincipal.BackgroundImage = global::SistemaVentas.Properties.Resources.fondo;
+            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(300, 41);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(728, 682);
+            this.panelPrincipal.TabIndex = 2;
             // 
             // FrmInicio
             // 

@@ -97,15 +97,12 @@ namespace Capa_Presentacion
 
           public void Buscar_producto(long codproducto, string tipo)
           {
-            
-            
+
               decimal  precio;
               decimal  descuento;
               decimal  importe;
               decimal  total = 0;
               int cantidadActual = 0;
-
-
 
               objnart.extraerdatos(codproducto, tipo);
 

@@ -78,12 +78,9 @@ namespace Capa_Datos
 
             try
             {
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.Connection = sqlcon;
-                sqlcmd.Transaction = sqltra;
-                sqlcmd.CommandText = "spinsertar_detalle_venta";
-                sqlcmd.CommandType = CommandType.StoredProcedure;
-
+                //asigno el procedimiento almacenado y la transaccion al sqlcmd
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(sqlcon,"SP_DETALLEVENTA",sqltra);
+ 
                 SqlParameter pariddetallev = ProcAlmacenado.asignarParametros("@iddetalle_venta", SqlDbType.Int);
                 sqlcmd.Parameters.Add(pariddetallev);
 
@@ -93,18 +90,20 @@ namespace Capa_Datos
                 SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Int, Detalle_Venta.cantidad);
                 sqlcmd.Parameters.Add(parcantidad);
 
-                SqlParameter parImporte = ProcAlmacenado.asignarParametros("@importe", SqlDbType.Decimal, Detalle_Venta.Importe);
+                SqlParameter parImporte = ProcAlmacenado.asignarParametros("@importe", SqlDbType.Money, Detalle_Venta.Importe);
                 sqlcmd.Parameters.Add(parImporte);
 
                 SqlParameter pardescuento = ProcAlmacenado.asignarParametros("@descuento", SqlDbType.Decimal, Detalle_Venta.descuento);
                 sqlcmd.Parameters.Add(pardescuento);
 
                 SqlParameter paridarticulo = ProcAlmacenado.asignarParametros("@id_articulo", SqlDbType.Int, Detalle_Venta.idarticulo);
-                sqlcmd.Parameters.Add(pardescuento);
+                sqlcmd.Parameters.Add(paridarticulo);
 
-                SqlParameter parPrecio = ProcAlmacenado.asignarParametros("@precio", SqlDbType.Int, Detalle_Venta.precioVenta);
+                SqlParameter parPrecio = ProcAlmacenado.asignarParametros("@precio", SqlDbType.Money, Detalle_Venta.precioVenta);
                 sqlcmd.Parameters.Add(parPrecio);
 
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 1);
+                sqlcmd.Parameters.Add(parModo);
 
                 rpta = sqlcmd.ExecuteNonQuery() == 1 ? "OK" : "NO se ingreso el registro";
 

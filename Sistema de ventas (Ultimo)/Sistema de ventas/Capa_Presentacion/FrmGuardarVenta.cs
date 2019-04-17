@@ -105,7 +105,7 @@ namespace Capa_Presentacion
             dt.Columns.Add("Descuento", typeof(decimal));
             dt.Columns.Add("Importe", typeof(decimal));
 
-            decimal IVA= 21+'M';
+            decimal IVA= 21;
            
             //LISTA DE PRODUCTOS SE LE ASIGNA EN EL MOMENTO QUE SE MUESTRA EL FORMULARIO
 
@@ -131,7 +131,7 @@ namespace Capa_Presentacion
             //}
             
 
-           string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today , "V", "0000", "00000001",IVA, dt );
+           string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today , "V", "0000", "0000001",IVA, dt );
             
             if (Rta == "OK")
             {

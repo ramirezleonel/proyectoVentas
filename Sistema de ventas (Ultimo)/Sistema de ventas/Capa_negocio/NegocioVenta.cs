@@ -99,8 +99,9 @@ namespace Capa_negocio
                detalle.Cantidad = Convert.ToInt32(row["cantidad"].ToString());
                detalle.PrecioVenta = Convert.ToDecimal(row["precio"].ToString());
                detalle.Descuento = Convert.ToDecimal(row["descuento"].ToString());
-               detalle.Importe = Convert.ToDecimal(row["descuento"].ToString());
-  
+               detalle.Importe = Convert.ToDecimal(row["Importe"].ToString());
+               //agrego el item a la lista detalles
+               detalles.Add(detalle);
            }
 
            //le paso como parametro la lista de detalles de ventas y el objeto venta previamente inicializado
