@@ -29,6 +29,7 @@ namespace Capa_Presentacion
 
         private void FrmReporteEtiqueta_Load(object sender, EventArgs e)
         {
+		//genera la etiqueta y le paso por parametro al reporte el codigo de barra
             //DataTable datos = new DataTable("CodigoDeBarra");
             //datos.Columns.Add("Nombre", typeof(int));
             //datos.Columns.Add("CodigoBarra", typeof(string));
