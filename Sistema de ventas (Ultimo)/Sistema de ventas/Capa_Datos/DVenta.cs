@@ -236,15 +236,17 @@ using Capa_Datos;
         public DataTable Mostrar()
         {
             DataTable DtResultado = new DataTable("venta");
-            SqlConnection sqlcon = new SqlConnection();
+            SqlConnection cn = new SqlConnection(Conexion.conexion);
 
             try
             {
-                sqlcon.ConnectionString = Conexion.conexion;
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.Connection = sqlcon;
-                sqlcmd.CommandText = "spmostrar_venta";
-                sqlcmd.CommandType = CommandType.StoredProcedure;
+
+
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(cn, "SP_VENTA");
+                //Modo 4 Mostrar
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("modo", SqlDbType.Int, 4);
+                sqlcmd.Parameters.Add(parModo);
+
 
                 SqlDataAdapter sqldat = new SqlDataAdapter(sqlcmd);
                 sqldat.Fill(DtResultado );
@@ -259,20 +261,21 @@ using Capa_Datos;
         public DataTable  BuscarFechas(string TextoBuscar, string TextoBuscar2)
         {
             DataTable DtResultado = new DataTable("venta");
-            SqlConnection sqlcon = new SqlConnection();
+            SqlConnection sqlcon = new SqlConnection(Conexion.conexion);
             try
             {
 
-                sqlcon.ConnectionString = Conexion.conexion;
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.Connection = sqlcon;
-                sqlcmd.CommandText = "spbuscar_venta_fecha";
-                sqlcmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter partextobuscar = ProcAlmacenado.asignarParametros("@textobuscar", SqlDbType.Int, TextoBuscar );
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(sqlcon, "SP_VENTA");
+
+                //modo 2 para la busqueda
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("modo", SqlDbType.Int,2);
+                sqlcmd.Parameters.Add( parModo);
+
+                SqlParameter partextobuscar = ProcAlmacenado.asignarParametros("textobuscar", SqlDbType.VarChar, TextoBuscar );
                 sqlcmd.Parameters.Add(partextobuscar);
 
-                SqlParameter partextobuscar2 = ProcAlmacenado.asignarParametros("@idventa", SqlDbType.Int, TextoBuscar2 );
+                SqlParameter partextobuscar2 = ProcAlmacenado.asignarParametros("textobuscar2", SqlDbType.VarChar, TextoBuscar2 );
                 sqlcmd.Parameters.Add(partextobuscar2);
 
                 SqlDataAdapter sqldat = new SqlDataAdapter(sqlcmd);
@@ -282,6 +285,9 @@ using Capa_Datos;
             catch (Exception ex)
             { 
                DtResultado = null ;
+               sqlcon.Close();
+               //lanzo una excepcion en el caso de problemas con bd
+               throw ex;
             }
 
             return DtResultado;
@@ -324,10 +330,12 @@ using Capa_Datos;
               
                SqlCommand comando= ProcAlmacenado.CrearProc(cn, "SP_VENTA");
                 //Modo 5 nota de venta
-                SqlParameter parModo =ProcAlmacenado.asignarParametros("modo", SqlDbType.Int,5);
+                SqlParameter parModo =ProcAlmacenado.asignarParametros("modo", SqlDbType.Int,2);
                 comando.Parameters.Add(parModo);
+
                 SqlParameter paridVenta = ProcAlmacenado.asignarParametros("idventa", SqlDbType.Int);
                 comando.Parameters.Add(paridVenta);
+
                 SqlDataAdapter datosResult = new SqlDataAdapter(comando);
                 //los resultados los actualizo en el datatable dtResult
                 datosResult.Fill(dtResultado);

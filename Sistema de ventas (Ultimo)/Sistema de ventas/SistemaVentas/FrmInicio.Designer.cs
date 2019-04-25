@@ -31,7 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.panelHorizontal = new System.Windows.Forms.Panel();
             this.pnlSeparacion = new System.Windows.Forms.Panel();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.lblSistemaVenta = new System.Windows.Forms.Label();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnProductos = new System.Windows.Forms.Panel();
             this.pnVentas = new System.Windows.Forms.Panel();
             this.pnProveedor = new System.Windows.Forms.Panel();
@@ -43,36 +47,32 @@
             this.pnCategoria = new System.Windows.Forms.Panel();
             this.pnlistaProducto = new System.Windows.Forms.Panel();
             this.panelVertical = new System.Windows.Forms.Panel();
+            this.pnListaVenta = new System.Windows.Forms.Panel();
+            this.pnGenerarVenta = new System.Windows.Forms.Panel();
+            this.btnListaVenta = new System.Windows.Forms.Button();
+            this.btnProductos = new System.Windows.Forms.Button();
+            this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.pnConsultas = new System.Windows.Forms.Panel();
+            this.btnTecnico = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.pnStock = new System.Windows.Forms.Panel();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.btnProductos = new System.Windows.Forms.Button();
-            this.btnTecnico = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnCaja = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnProveedor = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.pnListaVenta = new System.Windows.Forms.Panel();
-            this.btnListaVenta = new System.Windows.Forms.Button();
-            this.pnGenerarVenta = new System.Windows.Forms.Panel();
-            this.btnGenerarVenta = new System.Windows.Forms.Button();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.pnConsultas = new System.Windows.Forms.Panel();
+            this.btnProveedor = new System.Windows.Forms.Button();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
             this.panelHorizontal.SuspendLayout();
-            this.panelVertical.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panelVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelHorizontal
@@ -106,6 +106,20 @@
             this.pnlSeparacion.Size = new System.Drawing.Size(1026, 2);
             this.pnlSeparacion.TabIndex = 0;
             // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.BackgroundImage = global::SistemaVentas.Properties.Resources.maximize_Checkbox_16px;
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(960, 5);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMaximizar.TabIndex = 5;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
+            this.btnMaximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMaximizar_MouseMove);
+            // 
             // lblSistemaVenta
             // 
             this.lblSistemaVenta.AutoSize = true;
@@ -118,6 +132,50 @@
             this.lblSistemaVenta.TabIndex = 3;
             this.lblSistemaVenta.Text = "SISTEMA DE VENTAS";
             this.lblSistemaVenta.Click += new System.EventHandler(this.lblSistemaVenta_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackgroundImage = global::SistemaVentas.Properties.Resources.Restore_Window_20px;
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(959, 5);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
+            this.btnRestaurar.TabIndex = 2;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
+            this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = global::SistemaVentas.Properties.Resources.Minus_20px;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(925, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = global::SistemaVentas.Properties.Resources.Delete_20px;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
+            this.btnCerrar.Location = new System.Drawing.Point(993, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
             // pnProductos
             // 
@@ -261,6 +319,81 @@
             this.panelVertical.Size = new System.Drawing.Size(300, 686);
             this.panelVertical.TabIndex = 1;
             // 
+            // pnListaVenta
+            // 
+            this.pnListaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.pnListaVenta.Location = new System.Drawing.Point(41, 257);
+            this.pnListaVenta.Name = "pnListaVenta";
+            this.pnListaVenta.Size = new System.Drawing.Size(5, 46);
+            this.pnListaVenta.TabIndex = 29;
+            this.pnListaVenta.Visible = false;
+            // 
+            // pnGenerarVenta
+            // 
+            this.pnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.pnGenerarVenta.Location = new System.Drawing.Point(41, 204);
+            this.pnGenerarVenta.Name = "pnGenerarVenta";
+            this.pnGenerarVenta.Size = new System.Drawing.Size(5, 46);
+            this.pnGenerarVenta.TabIndex = 31;
+            this.pnGenerarVenta.Visible = false;
+            // 
+            // btnListaVenta
+            // 
+            this.btnListaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnListaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnListaVenta.FlatAppearance.BorderSize = 0;
+            this.btnListaVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnListaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListaVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListaVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnListaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnListaVenta.Location = new System.Drawing.Point(46, 257);
+            this.btnListaVenta.Name = "btnListaVenta";
+            this.btnListaVenta.Size = new System.Drawing.Size(252, 46);
+            this.btnListaVenta.TabIndex = 28;
+            this.btnListaVenta.Text = "Lista de Venta";
+            this.btnListaVenta.UseVisualStyleBackColor = false;
+            this.btnListaVenta.Visible = false;
+            this.btnListaVenta.Click += new System.EventHandler(this.btnListaVenta_Click);
+            // 
+            // btnProductos
+            // 
+            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProductos.FlatAppearance.BorderSize = 0;
+            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
+            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProductos.Location = new System.Drawing.Point(4, 102);
+            this.btnProductos.Name = "btnProductos";
+            this.btnProductos.Size = new System.Drawing.Size(296, 46);
+            this.btnProductos.TabIndex = 4;
+            this.btnProductos.Text = "Productos";
+            this.btnProductos.UseVisualStyleBackColor = false;
+            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
+            // 
+            // btnGenerarVenta
+            // 
+            this.btnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnGenerarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenerarVenta.FlatAppearance.BorderSize = 0;
+            this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnGenerarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGenerarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarVenta.Location = new System.Drawing.Point(46, 204);
+            this.btnGenerarVenta.Name = "btnGenerarVenta";
+            this.btnGenerarVenta.Size = new System.Drawing.Size(252, 46);
+            this.btnGenerarVenta.TabIndex = 30;
+            this.btnGenerarVenta.Text = "Generar Venta";
+            this.btnGenerarVenta.UseVisualStyleBackColor = false;
+            this.btnGenerarVenta.Visible = false;
+            this.btnGenerarVenta.Click += new System.EventHandler(this.btnGenerarVenta_Click);
+            // 
             // lbl2
             // 
             this.lbl2.AutoSize = true;
@@ -273,14 +406,25 @@
             this.lbl2.Text = "(2)";
             this.lbl2.Visible = false;
             // 
-            // pnConsultas
+            // btnTecnico
             // 
-            this.pnConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.pnConsultas.Location = new System.Drawing.Point(42, 256);
-            this.pnConsultas.Name = "pnConsultas";
-            this.pnConsultas.Size = new System.Drawing.Size(5, 46);
-            this.pnConsultas.TabIndex = 23;
-            this.pnConsultas.Visible = false;
+            this.btnTecnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnTecnico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTecnico.FlatAppearance.BorderSize = 0;
+            this.btnTecnico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnTecnico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTecnico.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTecnico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnTecnico.Image = global::SistemaVentas.Properties.Resources.Maintenance_30px;
+            this.btnTecnico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTecnico.Location = new System.Drawing.Point(11, 461);
+            this.btnTecnico.Name = "btnTecnico";
+            this.btnTecnico.Size = new System.Drawing.Size(288, 46);
+            this.btnTecnico.TabIndex = 27;
+            this.btnTecnico.Text = "Tecnico";
+            this.btnTecnico.UseVisualStyleBackColor = false;
+            this.btnTecnico.Visible = false;
+            this.btnTecnico.Click += new System.EventHandler(this.btnTecnico_Click);
             // 
             // btnConsultas
             // 
@@ -308,69 +452,6 @@
             this.pnStock.Name = "pnStock";
             this.pnStock.Size = new System.Drawing.Size(5, 46);
             this.pnStock.TabIndex = 26;
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.OldLace;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(274, 121);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(28, 20);
-            this.lbl1.TabIndex = 0;
-            this.lbl1.Text = "(1)";
-            this.lbl1.Visible = false;
-            // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelPrincipal.BackgroundImage = global::SistemaVentas.Properties.Resources.fondo;
-            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(300, 37);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(728, 686);
-            this.panelPrincipal.TabIndex = 2;
-            // 
-            // btnProductos
-            // 
-            this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnProductos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProductos.FlatAppearance.BorderSize = 0;
-            this.btnProductos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProductos.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProductos.Image = ((System.Drawing.Image)(resources.GetObject("btnProductos.Image")));
-            this.btnProductos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProductos.Location = new System.Drawing.Point(4, 102);
-            this.btnProductos.Name = "btnProductos";
-            this.btnProductos.Size = new System.Drawing.Size(296, 46);
-            this.btnProductos.TabIndex = 4;
-            this.btnProductos.Text = "Productos";
-            this.btnProductos.UseVisualStyleBackColor = false;
-            this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
-            // 
-            // btnTecnico
-            // 
-            this.btnTecnico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnTecnico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTecnico.FlatAppearance.BorderSize = 0;
-            this.btnTecnico.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnTecnico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTecnico.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTecnico.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnTecnico.Image = global::SistemaVentas.Properties.Resources.Maintenance_30px;
-            this.btnTecnico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTecnico.Location = new System.Drawing.Point(11, 461);
-            this.btnTecnico.Name = "btnTecnico";
-            this.btnTecnico.Size = new System.Drawing.Size(288, 46);
-            this.btnTecnico.TabIndex = 27;
-            this.btnTecnico.Text = "Tecnico";
-            this.btnTecnico.UseVisualStyleBackColor = false;
-            this.btnTecnico.Visible = false;
-            this.btnTecnico.Click += new System.EventHandler(this.btnTecnico_Click);
             // 
             // btnStock
             // 
@@ -459,25 +540,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // btnProveedor
-            // 
-            this.btnProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProveedor.FlatAppearance.BorderSize = 0;
-            this.btnProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProveedor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProveedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedor.Image")));
-            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProveedor.Location = new System.Drawing.Point(3, 204);
-            this.btnProveedor.Name = "btnProveedor";
-            this.btnProveedor.Size = new System.Drawing.Size(296, 46);
-            this.btnProveedor.TabIndex = 9;
-            this.btnProveedor.Text = "Proveedores";
-            this.btnProveedor.UseVisualStyleBackColor = false;
-            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
-            // 
             // btnVentas
             // 
             this.btnVentas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -497,117 +559,57 @@
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
-            // btnMaximizar
+            // lbl1
             // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = global::SistemaVentas.Properties.Resources.maximize_Checkbox_16px;
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMaximizar.Location = new System.Drawing.Point(960, 5);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
-            this.btnMaximizar.TabIndex = 5;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
-            this.btnMaximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMaximizar_MouseMove);
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.OldLace;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(274, 121);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(28, 20);
+            this.lbl1.TabIndex = 0;
+            this.lbl1.Text = "(1)";
+            this.lbl1.Visible = false;
             // 
-            // btnRestaurar
+            // pnConsultas
             // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackgroundImage = global::SistemaVentas.Properties.Resources.Restore_Window_20px;
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRestaurar.Location = new System.Drawing.Point(959, 5);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
-            this.btnRestaurar.TabIndex = 2;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
-            this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            this.pnConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.pnConsultas.Location = new System.Drawing.Point(42, 256);
+            this.pnConsultas.Name = "pnConsultas";
+            this.pnConsultas.Size = new System.Drawing.Size(5, 46);
+            this.pnConsultas.TabIndex = 23;
+            this.pnConsultas.Visible = false;
             // 
-            // btnMinimizar
+            // btnProveedor
             // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackgroundImage = global::SistemaVentas.Properties.Resources.Minus_20px;
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMinimizar.Location = new System.Drawing.Point(925, 5);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
-            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            this.btnProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnProveedor.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnProveedor.FlatAppearance.BorderSize = 0;
+            this.btnProveedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnProveedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProveedor.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProveedor.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnProveedor.Image = ((System.Drawing.Image)(resources.GetObject("btnProveedor.Image")));
+            this.btnProveedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProveedor.Location = new System.Drawing.Point(3, 204);
+            this.btnProveedor.Name = "btnProveedor";
+            this.btnProveedor.Size = new System.Drawing.Size(296, 46);
+            this.btnProveedor.TabIndex = 9;
+            this.btnProveedor.Text = "Proveedores";
+            this.btnProveedor.UseVisualStyleBackColor = false;
+            this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
-            // btnCerrar
+            // panelPrincipal
             // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackgroundImage = global::SistemaVentas.Properties.Resources.Delete_20px;
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
-            this.btnCerrar.Location = new System.Drawing.Point(993, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
-            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
-            // 
-            // pnListaVenta
-            // 
-            this.pnListaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.pnListaVenta.Location = new System.Drawing.Point(41, 257);
-            this.pnListaVenta.Name = "pnListaVenta";
-            this.pnListaVenta.Size = new System.Drawing.Size(5, 46);
-            this.pnListaVenta.TabIndex = 29;
-            this.pnListaVenta.Visible = false;
-            // 
-            // btnListaVenta
-            // 
-            this.btnListaVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnListaVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnListaVenta.FlatAppearance.BorderSize = 0;
-            this.btnListaVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnListaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListaVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListaVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnListaVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnListaVenta.Location = new System.Drawing.Point(46, 257);
-            this.btnListaVenta.Name = "btnListaVenta";
-            this.btnListaVenta.Size = new System.Drawing.Size(252, 46);
-            this.btnListaVenta.TabIndex = 28;
-            this.btnListaVenta.Text = "Lista de Venta";
-            this.btnListaVenta.UseVisualStyleBackColor = false;
-            this.btnListaVenta.Visible = false;
-            // 
-            // pnGenerarVenta
-            // 
-            this.pnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.pnGenerarVenta.Location = new System.Drawing.Point(41, 204);
-            this.pnGenerarVenta.Name = "pnGenerarVenta";
-            this.pnGenerarVenta.Size = new System.Drawing.Size(5, 46);
-            this.pnGenerarVenta.TabIndex = 31;
-            this.pnGenerarVenta.Visible = false;
-            // 
-            // btnGenerarVenta
-            // 
-            this.btnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnGenerarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGenerarVenta.FlatAppearance.BorderSize = 0;
-            this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnGenerarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGenerarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarVenta.Location = new System.Drawing.Point(46, 204);
-            this.btnGenerarVenta.Name = "btnGenerarVenta";
-            this.btnGenerarVenta.Size = new System.Drawing.Size(252, 46);
-            this.btnGenerarVenta.TabIndex = 30;
-            this.btnGenerarVenta.Text = "Generar Venta";
-            this.btnGenerarVenta.UseVisualStyleBackColor = false;
-            this.btnGenerarVenta.Visible = false;
+            this.panelPrincipal.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelPrincipal.BackgroundImage = global::SistemaVentas.Properties.Resources.fondo;
+            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(300, 37);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(728, 686);
+            this.panelPrincipal.TabIndex = 2;
             // 
             // FrmInicio
             // 
@@ -626,13 +628,13 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInicio_KeyDown);
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
-            this.panelVertical.ResumeLayout(false);
-            this.panelVertical.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panelVertical.ResumeLayout(false);
+            this.panelVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

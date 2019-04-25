@@ -34,6 +34,7 @@ namespace Capa_Presentacion
 
 
                     dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["serie"], venta["correlativo"], venta["total"]);
+                    //
                 }
 
                 //this.dataLista.Columns["precio"].DefaultCellStyle.Format = "c3";
@@ -50,6 +51,40 @@ namespace Capa_Presentacion
 
 
 
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            this.buscarPorFecha();
+        }
+
+        /*Metodos propios*/
+        public void buscarPorFecha()
+        {
+            dataLista.Rows.Clear();
+            try
+            {
+                DataTable dt = NegocioVenta.BuscarFechas(dtpFechaIni.Value.ToString("dd/MM/yyyy"), dtpFechaFin.Value.ToString("dd/MM/yyyy"));
+                foreach (DataRow venta in dt.Rows)
+                {
+                     dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["serie"], venta["correlativo"], venta["total"]);
+                }
+       
+            }
+
+            catch (Exception ex)
+            {
+                UtilityFrm.mensajeError("Error Con Base de Datos :" + ex.Message);
+
+            }
+           
+           
+
+        }
+
+        private void btnTodos_Click(object sender, EventArgs e)
+        {
+            this.mostrar();
         }
     }
 }

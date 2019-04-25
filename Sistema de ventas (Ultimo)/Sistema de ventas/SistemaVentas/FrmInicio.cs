@@ -384,8 +384,7 @@ namespace SistemaVentas
             }
 
 
-            //frmPventa objventa = new frmPventa();
-            //objventa.ShowDialog();
+            
         }
         private void btnListaProducto_Click(object sender, EventArgs e)
         {
@@ -522,6 +521,18 @@ namespace SistemaVentas
             pnUsuarios.Location = new System.Drawing.Point(0, InicialusuariosY);
             pnStock.Location = new System.Drawing.Point(0, InicialstockY);
         
+        }
+
+        private void btnGenerarVenta_Click(object sender, EventArgs e)
+        {
+            frmPventa objventa = new frmPventa();
+            objventa.ShowDialog();
+        }
+
+        private void btnListaVenta_Click(object sender, EventArgs e)
+        {
+            FrmListadoVentas listadoVentas = new FrmListadoVentas();
+            listadoVentas.ShowDialog();
         }
        
 

@@ -55,6 +55,7 @@
             this.btnTodos.TabIndex = 24;
             this.btnTodos.Text = "Todos";
             this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // label1
             // 
@@ -128,6 +129,7 @@
             this.btnBuscar.TabIndex = 18;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // Codigo
             // 
