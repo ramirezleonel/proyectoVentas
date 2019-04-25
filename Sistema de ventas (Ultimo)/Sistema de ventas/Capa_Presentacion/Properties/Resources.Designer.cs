@@ -123,6 +123,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Calculator_20px {
+            get {
+                object obj = ResourceManager.GetObject("Calculator_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColorProyecto {
             get {
                 object obj = ResourceManager.GetObject("ColorProyecto", resourceCulture);
@@ -386,6 +396,16 @@ namespace Capa_Presentacion.Properties {
         internal static System.Drawing.Bitmap search_magnifier_interface_symbol {
             get {
                 object obj = ResourceManager.GetObject("search-magnifier-interface-symbol", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Search_Property_20px {
+            get {
+                object obj = ResourceManager.GetObject("Search Property_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

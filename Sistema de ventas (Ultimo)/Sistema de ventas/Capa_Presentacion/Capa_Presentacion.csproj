@@ -69,6 +69,7 @@
     </Compile>
     <Compile Include="Class1.cs" />
     <Compile Include="CodigoDeBarra.cs" />
+    <Compile Include="ComponentesFormularios.cs" />
     <Compile Include="DataSet\DetalleVentas.cs">
       <DependentUpon>DetalleVentas.xsd</DependentUpon>
       <SubType>Component</SubType>
@@ -182,6 +183,12 @@
     <Compile Include="FrmDetallesDeStock.Designer.cs">
       <DependentUpon>FrmDetallesDeStock.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmDetalleVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDetalleVentas.Designer.cs">
+      <DependentUpon>FrmDetalleVentas.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmEtiquetas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -217,6 +224,12 @@
     </Compile>
     <Compile Include="FrmImpVenta.Designer.cs">
       <DependentUpon>FrmImpVenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListadoVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListadoVentas.Designer.cs">
+      <DependentUpon>FrmListadoVentas.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmMovStock1.cs">
       <SubType>Form</SubType>
@@ -359,6 +372,9 @@
     <EmbeddedResource Include="FrmDetallesDeStock.resx">
       <DependentUpon>FrmDetallesDeStock.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmDetalleVentas.resx">
+      <DependentUpon>FrmDetalleVentas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmEtiquetas.resx">
       <DependentUpon>FrmEtiquetas.cs</DependentUpon>
     </EmbeddedResource>
@@ -373,6 +389,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmImpVenta.resx">
       <DependentUpon>FrmImpVenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmListadoVentas.resx">
+      <DependentUpon>FrmListadoVentas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMovStock1.resx">
       <DependentUpon>FrmMovStock1.cs</DependentUpon>
@@ -512,6 +531,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Search Property_20px.png" />
     <None Include="Resources\Minus_15px1.png" />
     <None Include="Resources\Plus_15px1.png" />
     <None Include="Resources\User Account_50px.png" />
@@ -519,6 +539,7 @@
     <None Include="Resources\Find User Male_50px.png" />
     <None Include="Resources\Add Shopping Cart_15px.png" />
     <None Include="Resources\Help_15px.png" />
+    <None Include="Resources\Calculator_20px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

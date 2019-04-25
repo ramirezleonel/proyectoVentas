@@ -130,23 +130,29 @@
   <data name="Maintenance_52px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maintenance_52px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Minus_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Minus_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="maximize Checkbox_16px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\maximize Checkbox_16px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SoftIntegral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SoftIntegral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Maintenance_52px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Maintenance_52px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondo-azul" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-azul-836335-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="User Male_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\User Male_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logoMejor7" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoMejor7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="Maintenance_52px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Maintenance_52px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="User Male_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User Male_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -154,8 +160,14 @@
   <data name="logoMejor6" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logoMejor6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logoMejor7" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoMejor7.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Delete_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Delete_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="pantallaPrincipal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pantallaPrincipal.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,7 +175,7 @@
   <data name="Maintenance_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Maintenance_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="User Male_100px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\User Male_100px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Restore Window_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Restore Window_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

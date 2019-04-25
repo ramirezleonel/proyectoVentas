@@ -119,7 +119,7 @@ namespace Capa_Presentacion
                
             }
 
-
+            /*IMPORTANTE HACER NOTA DE VENTA PARA IMPRIMIR*/
             //if (MessageBox.Show("Desea Imprimir Venta?", "Imprimir"
             //   , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
             //{

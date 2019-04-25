@@ -37,8 +37,6 @@
             this.lblProducto = new System.Windows.Forms.Label();
             this.txtProductoNombre = new System.Windows.Forms.TextBox();
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.btnPreCateg = new System.Windows.Forms.Button();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.rbCodigo = new System.Windows.Forms.RadioButton();
             this.rbCategoria = new System.Windows.Forms.RadioButton();
@@ -64,7 +62,6 @@
             this.grpboxConsulta.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbDetalleMovimento.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.panelHorizontal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
@@ -159,7 +156,6 @@
             this.gbDetalleMovimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDetalleMovimento.Controls.Add(this.groupBox2);
             this.gbDetalleMovimento.Controls.Add(this.btnLimpiar);
             this.gbDetalleMovimento.Controls.Add(this.rbCodigo);
             this.gbDetalleMovimento.Controls.Add(this.rbCategoria);
@@ -177,25 +173,6 @@
             this.gbDetalleMovimento.TabIndex = 40;
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles ";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.btnPreCateg);
-            this.groupBox2.Location = new System.Drawing.Point(628, 17);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(296, 83);
-            this.groupBox2.TabIndex = 54;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Cambio de Precio";
-            // 
-            // btnPreCateg
-            // 
-            this.btnPreCateg.Location = new System.Drawing.Point(6, 34);
-            this.btnPreCateg.Name = "btnPreCateg";
-            this.btnPreCateg.Size = new System.Drawing.Size(146, 28);
-            this.btnPreCateg.TabIndex = 53;
-            this.btnPreCateg.Text = "Precio x Categoría";
-            this.btnPreCateg.UseVisualStyleBackColor = true;
             // 
             // btnLimpiar
             // 
@@ -491,7 +468,6 @@
             this.groupBox1.PerformLayout();
             this.gbDetalleMovimento.ResumeLayout(false);
             this.gbDetalleMovimento.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
@@ -535,7 +511,5 @@
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMaximizar;
         private System.Windows.Forms.PictureBox btnRestaurar;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button btnPreCateg;
     }
 }

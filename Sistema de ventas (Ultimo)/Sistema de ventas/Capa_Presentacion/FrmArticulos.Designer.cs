@@ -55,6 +55,7 @@
             this.btnGuardar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.grpboxCategoria = new System.Windows.Forms.GroupBox();
+            this.cbxPesable = new System.Windows.Forms.CheckBox();
             this.btnNuevoCodBar = new System.Windows.Forms.Button();
             this.txtCantInicial = new System.Windows.Forms.TextBox();
             this.lblCantInicial = new System.Windows.Forms.Label();
@@ -76,7 +77,6 @@
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnGenerarCodigo = new System.Windows.Forms.Button();
-            this.cbxPesable = new System.Windows.Forms.CheckBox();
             this.tabLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.grpboxCategoria.SuspendLayout();
@@ -394,6 +394,18 @@
             this.grpboxCategoria.TabStop = false;
             this.grpboxCategoria.Text = "Articulos";
             // 
+            // cbxPesable
+            // 
+            this.cbxPesable.AutoSize = true;
+            this.cbxPesable.Enabled = false;
+            this.cbxPesable.Location = new System.Drawing.Point(550, 247);
+            this.cbxPesable.Name = "cbxPesable";
+            this.cbxPesable.Size = new System.Drawing.Size(100, 26);
+            this.cbxPesable.TabIndex = 26;
+            this.cbxPesable.Text = "Pesable";
+            this.cbxPesable.UseVisualStyleBackColor = true;
+            this.cbxPesable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbxPesable_KeyDown);
+            // 
             // btnNuevoCodBar
             // 
             this.btnNuevoCodBar.Enabled = false;
@@ -650,18 +662,6 @@
             this.btnGenerarCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarCodigo.UseVisualStyleBackColor = false;
             this.btnGenerarCodigo.Click += new System.EventHandler(this.btnGenerarCodigo_Click);
-            // 
-            // cbxPesable
-            // 
-            this.cbxPesable.AutoSize = true;
-            this.cbxPesable.Enabled = false;
-            this.cbxPesable.Location = new System.Drawing.Point(550, 247);
-            this.cbxPesable.Name = "cbxPesable";
-            this.cbxPesable.Size = new System.Drawing.Size(100, 26);
-            this.cbxPesable.TabIndex = 26;
-            this.cbxPesable.Text = "Pesable";
-            this.cbxPesable.UseVisualStyleBackColor = true;
-            this.cbxPesable.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cbxPesable_KeyDown);
             // 
             // FrmArticulos
             // 

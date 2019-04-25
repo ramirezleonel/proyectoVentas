@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPventa));
             this.grpboxProveedor = new System.Windows.Forms.GroupBox();
             this.lblTComprobante = new System.Windows.Forms.Label();
@@ -68,8 +69,10 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnConsultas = new System.Windows.Forms.Button();
             this.btnCalculadora = new System.Windows.Forms.Button();
-            this.btnAyuda = new System.Windows.Forms.Button();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.grpboxProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVenta)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
@@ -79,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // grpboxProveedor
@@ -576,32 +580,40 @@
             this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
             this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
             // 
+            // btnConsultas
+            // 
+            this.btnConsultas.Image = global::Capa_Presentacion.Properties.Resources.Search_Property_20px;
+            this.btnConsultas.Location = new System.Drawing.Point(975, 47);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(28, 28);
+            this.btnConsultas.TabIndex = 60;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            // 
             // btnCalculadora
             // 
-            this.btnCalculadora.Location = new System.Drawing.Point(771, 48);
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(941, 47);
             this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(105, 28);
+            this.btnCalculadora.Size = new System.Drawing.Size(28, 28);
             this.btnCalculadora.TabIndex = 58;
-            this.btnCalculadora.Text = "Calculadora";
             this.btnCalculadora.UseVisualStyleBackColor = true;
             this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
             // 
-            // btnAyuda
+            // errorIcono
             // 
-            this.btnAyuda.Image = global::Capa_Presentacion.Properties.Resources.Help_15px;
-            this.btnAyuda.Location = new System.Drawing.Point(981, 47);
-            this.btnAyuda.Name = "btnAyuda";
-            this.btnAyuda.Size = new System.Drawing.Size(26, 28);
-            this.btnAyuda.TabIndex = 59;
-            this.btnAyuda.UseVisualStyleBackColor = true;
-            this.btnAyuda.Click += new System.EventHandler(this.btnAyuda_Click);
+            this.errorIcono.ContainerControl = this;
+            // 
+            // ttMensajeAyuda
+            // 
+            this.ttMensajeAyuda.AutomaticDelay = 90;
             // 
             // frmPventa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 733);
-            this.Controls.Add(this.btnAyuda);
+            this.Controls.Add(this.btnConsultas);
             this.Controls.Add(this.btnCalculadora);
             this.Controls.Add(this.panelHorizontal);
             this.Controls.Add(this.grpboxProveedor);
@@ -626,6 +638,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -672,7 +685,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
-        private System.Windows.Forms.Button btnAyuda;
+        private System.Windows.Forms.Button btnConsultas;
+        private System.Windows.Forms.ErrorProvider errorIcono;
+        private System.Windows.Forms.ToolTip ttMensajeAyuda;
 
     }
 }

@@ -44,50 +44,50 @@
             // lblNomProducto
             // 
             this.lblNomProducto.AutoSize = true;
-            this.lblNomProducto.Location = new System.Drawing.Point(77, 33);
-            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomProducto.Location = new System.Drawing.Point(100, 50);
+            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNomProducto.Name = "lblNomProducto";
-            this.lblNomProducto.Size = new System.Drawing.Size(43, 13);
+            this.lblNomProducto.Size = new System.Drawing.Size(62, 20);
             this.lblNomProducto.TabIndex = 27;
             this.lblNomProducto.Text = "Fecha :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(322, 33);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(483, 51);
+            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 13);
+            this.label1.Size = new System.Drawing.Size(138, 20);
             this.label1.TabIndex = 28;
             this.label1.Text = "Hora de apertura :";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(87, 77);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(130, 118);
+            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(43, 13);
+            this.label2.Size = new System.Drawing.Size(63, 20);
             this.label2.TabIndex = 29;
             this.label2.Text = "Cajero :";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(93, 103);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(140, 158);
+            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.Size = new System.Drawing.Size(58, 20);
             this.label3.TabIndex = 30;
             this.label3.Text = "Turno :";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(67, 135);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(100, 208);
+            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 13);
+            this.label4.Size = new System.Drawing.Size(100, 20);
             this.label4.TabIndex = 31;
             this.label4.Text = "Saldo inicial :";
             // 
@@ -96,7 +96,8 @@
             this.lblTotalPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalPagar.AutoSize = true;
             this.lblTotalPagar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPagar.Location = new System.Drawing.Point(138, 28);
+            this.lblTotalPagar.Location = new System.Drawing.Point(172, 52);
+            this.lblTotalPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPagar.Name = "lblTotalPagar";
             this.lblTotalPagar.Size = new System.Drawing.Size(58, 19);
             this.lblTotalPagar.TabIndex = 37;
@@ -105,10 +106,10 @@
             // cbCajero
             // 
             this.cbCajero.FormattingEnabled = true;
-            this.cbCajero.Location = new System.Drawing.Point(142, 72);
-            this.cbCajero.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbCajero.Location = new System.Drawing.Point(213, 111);
+            this.cbCajero.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cbCajero.Name = "cbCajero";
-            this.cbCajero.Size = new System.Drawing.Size(181, 21);
+            this.cbCajero.Size = new System.Drawing.Size(270, 28);
             this.cbCajero.TabIndex = 71;
             // 
             // cbTurno
@@ -118,18 +119,18 @@
             "MAÑANA ",
             "TARDE",
             "NOCHE"});
-            this.cbTurno.Location = new System.Drawing.Point(142, 103);
-            this.cbTurno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cbTurno.Location = new System.Drawing.Point(213, 158);
+            this.cbTurno.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cbTurno.Name = "cbTurno";
-            this.cbTurno.Size = new System.Drawing.Size(181, 21);
+            this.cbTurno.Size = new System.Drawing.Size(270, 28);
             this.cbTurno.TabIndex = 72;
             // 
             // txtImporte
             // 
-            this.txtImporte.Location = new System.Drawing.Point(142, 135);
-            this.txtImporte.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtImporte.Location = new System.Drawing.Point(213, 208);
+            this.txtImporte.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtImporte.Name = "txtImporte";
-            this.txtImporte.Size = new System.Drawing.Size(110, 20);
+            this.txtImporte.Size = new System.Drawing.Size(163, 26);
             this.txtImporte.TabIndex = 73;
             // 
             // label5
@@ -137,7 +138,8 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(422, 28);
+            this.label5.Location = new System.Drawing.Point(621, 52);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 19);
             this.label5.TabIndex = 74;
@@ -146,10 +148,10 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(142, 203);
-            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscar.Location = new System.Drawing.Point(122, 300);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(135, 52);
+            this.btnBuscar.Size = new System.Drawing.Size(124, 37);
             this.btnBuscar.TabIndex = 75;
             this.btnBuscar.Text = "Aceptar";
             this.btnBuscar.UseVisualStyleBackColor = true;
@@ -157,9 +159,9 @@
             // 
             // FrmAperturacaja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(671, 329);
+            this.ClientSize = new System.Drawing.Size(732, 455);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtImporte);
@@ -171,6 +173,8 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblNomProducto);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAperturacaja";
             this.Text = "Apertura de caja";
             this.Load += new System.EventHandler(this.FrmAperturacaja_Load);

@@ -203,6 +203,10 @@
   <ItemGroup>
     <None Include="Resources\User Male_50px.png" />
     <None Include="Resources\User Male_100px.png" />
+    <None Include="Resources\Delete_20px.png" />
+    <None Include="Resources\maximize Checkbox_16px.png" />
+    <None Include="Resources\Minus_20px.png" />
+    <None Include="Resources\Restore Window_20px.png" />
     <Content Include="softIntegralIcon.ico" />
     <None Include="Resources\agregar.png" />
     <Content Include="FISCAL.OCX" />

@@ -807,6 +807,22 @@ namespace Capa_Presentacion
 
       
         /*METODOS PROPIOS*/
+        //mensajes de ayuda
+        private void mensajesDeAyuda()
+        {
+
+            //mensaje de ayuda en el textbox nombre
+            this.ttMensajeAyuda.SetToolTip(this.txtNombreProducto, "Ingrese el producto que desea buscar");
+            //mensaje de ayuda en el textbox nombre
+            this.ttMensajeAyuda.SetToolTip(this.TxtCodigo, "Ingrese el Codigo de Cliente");
+            //mensaje de ayuda del boton calculadora
+            this.ttMensajeAyuda.SetToolTip(this.btnCalculadora, "Acceso a la Calculadora de windows");
+            //mensaje de ayuda en el consulta de precios
+            this.ttMensajeAyuda.SetToolTip(this.btnConsultas, "Consulta de precios");
+        }
+
+
+
         public void quitarProducto()
         {
             try
@@ -988,6 +1004,12 @@ namespace Capa_Presentacion
         private void btnAyuda_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            FrmConsulta consultas = new FrmConsulta();
+            consultas.Show();
         }
 
        

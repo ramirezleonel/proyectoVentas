@@ -14,6 +14,18 @@ namespace SistemaVentas
     public partial class FrmInicio : Form
     {
         
+        //sirve para saber si el boton de despliegue está activo
+        Boolean isVentaDesplegado = false;
+        Boolean isProductoDesplegado = false;
+
+        int InicialusuariosY;
+        int InicialproveedorY;
+        int InicialclientesY;
+        int InicialcajaY;
+        int InicialstockY;
+        int InicialconsultasY;
+        int InicialVentasY;
+
         public FrmInicio()
         {
             //le paso al delegado threadStart el metodo abrirformulario
@@ -28,7 +40,17 @@ namespace SistemaVentas
 
         private void FrmInicio_Load(object sender, EventArgs e)
         {
+            panelHorizontal.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
 
+            //posicion inicial
+
+             InicialusuariosY = btnUsuarios.Location.Y;
+            InicialproveedorY = btnProveedor.Location.Y;
+             InicialclientesY = btnClientes.Location.Y;
+            InicialcajaY = btnCaja.Location.Y;
+            InicialstockY = btnStock.Location.Y;
+            InicialconsultasY = btnConsultas.Location.Y;
+            InicialVentasY = btnVentas.Location.Y;
         }
 
         private void FrmInicio_KeyDown(object sender, KeyEventArgs e)
@@ -163,6 +185,7 @@ namespace SistemaVentas
         {
             //cierra
             this.Close();
+            
         }
 
         private void btnMinimizar_Click(object sender, EventArgs e)
@@ -202,7 +225,7 @@ namespace SistemaVentas
 
         private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
-            btnCerrar.BackColor=Color.FromArgb(100, 0, 180);
+            btnCerrar.BackColor=Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
 
         private void btnRestaurar_MouseMove(object sender, MouseEventArgs e)
@@ -212,7 +235,7 @@ namespace SistemaVentas
 
         private void btnRestaurar_MouseLeave(object sender, EventArgs e)
         {
-           btnRestaurar.BackColor = Color.FromArgb(100, 0, 180);
+            btnRestaurar.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
        
 
@@ -223,7 +246,7 @@ namespace SistemaVentas
 
         private void btnMaximizar_MouseLeave(object sender, EventArgs e)
         {
-            btnMaximizar.BackColor = Color.FromArgb(100, 0, 180);
+            btnMaximizar.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
 
         private void btnMinimizar_MouseMove(object sender, MouseEventArgs e)
@@ -233,7 +256,7 @@ namespace SistemaVentas
 
         private void btnMinimizar_MouseLeave(object sender, EventArgs e)
         {
-            btnMinimizar.BackColor = Color.FromArgb(100, 0, 180);
+            btnMinimizar.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
 
 
@@ -245,15 +268,22 @@ namespace SistemaVentas
         int ventasY;
         int stockY;
         int consultasY;
-        //valor constante que se tienen que mover los botones
-        int movimiento=155;
+        
+
         private void btnProductos_Click(object sender, EventArgs e)
         {
-             
 
+            //valor constante que se tienen que mover los botones
+            int movimiento = 155;
             if (btnCategoria.Visible == false && btnListaProducto.Visible == false)
             {
-             
+                
+                if(isVentaDesplegado==true){
+                //si se encuentra desplegado se vuelve al Lugar Inicial
+                    volverAPosicionInicial();
+
+                }
+                isProductoDesplegado = true;
                 //asigno los valores de la coordenadas Y de los botones antes de mover
                 ventasY = btnVentas.Location.Y;
                 proveedorY = btnProveedor.Location.Y;
@@ -291,34 +321,72 @@ namespace SistemaVentas
                
             }
             else {
-
-                btnCategoria.Visible = false;
-                btnListaProducto.Visible = false ;
-                pnCategoria.Visible = false;
-                pnlistaProducto.Visible = false;
-                btnConsultas.Visible = false;
-                pnConsultas.Visible = false;
-               
-                //al hacer click en producto se contrae los submenus
-                //botones
-                btnVentas.Location = new System.Drawing.Point(0, 150);
-                btnUsuarios.Location = new System.Drawing.Point(0, usuariosY);
-                btnCaja.Location = new System.Drawing.Point(0, cajaY);
-                btnClientes.Location = new System.Drawing.Point(0, clientesY);
-                btnProveedor.Location = new System.Drawing.Point(0, proveedorY);
-                btnStock.Location = new System.Drawing.Point(0, (stockY));
-                
-                //paneles
-                pnVentas.Location = new System.Drawing.Point(0, ventasY);
-                pnProveedor.Location = new System.Drawing.Point(0, proveedorY );
-                pnClientes.Location = new System.Drawing.Point(0, clientesY );
-                pnCaja.Location = new System.Drawing.Point(0, cajaY );
-                pnUsuarios.Location = new System.Drawing.Point(0, usuariosY );
-                pnStock.Location = new System.Drawing.Point(0, stockY);
+                volverAPosicionInicial();
           
             }
         }
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
 
+            //valor constante que se tienen que mover los botones
+            int movimiento = 100;
+
+            if (btnGenerarVenta.Visible == false && btnListaVenta.Visible == false)
+            {
+              
+                if (isProductoDesplegado == true)
+                {
+                    //si se encuentra desplegado se vuelve al Lugar Inicial
+                    volverAPosicionInicial();
+
+                }
+                isVentaDesplegado = true;
+                //asigno los valores de la coordenadas Y de los botones antes de mover
+                ventasY = btnVentas.Location.Y;
+                proveedorY = btnProveedor.Location.Y;
+                clientesY = btnClientes.Location.Y;
+                cajaY = btnCaja.Location.Y;
+                usuariosY = btnUsuarios.Location.Y;
+                stockY = btnStock.Location.Y;
+                consultasY = btnConsultas.Location.Y;
+
+                btnGenerarVenta.Visible = true;
+                btnListaVenta.Visible = true;
+                pnGenerarVenta.Visible = true;
+                pnListaVenta.Visible = true;
+
+                
+
+                //al hacer click en producto se desplaza los submenus
+                //sumo la posicion actual más un valor preciso para abarcar la posicion exacta
+                //botones
+
+                btnProveedor.Location = new System.Drawing.Point(0, (proveedorY + movimiento));
+                btnClientes.Location = new System.Drawing.Point(0, (clientesY + movimiento));
+                btnCaja.Location = new System.Drawing.Point(0, (cajaY + movimiento));
+                btnUsuarios.Location = new System.Drawing.Point(0, (usuariosY + movimiento));
+                btnStock.Location = new System.Drawing.Point(0, (stockY + movimiento));
+
+                //paneles
+
+                pnProveedor.Location = new System.Drawing.Point(0, (proveedorY + movimiento));
+                pnClientes.Location = new System.Drawing.Point(0, (clientesY + movimiento));
+                pnCaja.Location = new System.Drawing.Point(0, (cajaY + movimiento));
+                pnUsuarios.Location = new System.Drawing.Point(0, (usuariosY + movimiento));
+                pnStock.Location = new System.Drawing.Point(0, (stockY + movimiento));
+
+            }
+            else
+            {
+
+                volverAPosicionInicial();
+
+            }
+
+
+            //frmPventa objventa = new frmPventa();
+            //objventa.ShowDialog();
+        }
         private void btnListaProducto_Click(object sender, EventArgs e)
         {
             FrmArticulos articulos = new FrmArticulos();
@@ -384,11 +452,7 @@ namespace SistemaVentas
 
         }
 
-        private void btnVentas_Click(object sender, EventArgs e)
-        {
-            frmPventa objventa = new frmPventa();
-            objventa.ShowDialog();
-        }
+      
 
         private void btnCaja_Click(object sender, EventArgs e)
         {
@@ -425,8 +489,40 @@ namespace SistemaVentas
             abrirMDIParent(usuario);
         }
 
-      
 
+        //vuelve a la normalidad todos los botones en el caso de que se encuentren desplegados
+        public void volverAPosicionInicial() {
+            isVentaDesplegado = false;
+            isProductoDesplegado = false;
+
+            btnCategoria.Visible = false;
+            btnListaProducto.Visible = false;
+            pnCategoria.Visible = false;
+            pnlistaProducto.Visible = false;
+            btnConsultas.Visible = false;
+            pnConsultas.Visible = false;
+            btnGenerarVenta.Visible = false;
+            btnListaVenta.Visible = false;
+            pnListaVenta.Visible = false;
+            pnGenerarVenta.Visible = false;
+            //al hacer click en producto se contrae los submenus
+            //botones
+            btnVentas.Location = new System.Drawing.Point(0, InicialVentasY);
+            btnUsuarios.Location = new System.Drawing.Point(0, InicialusuariosY);
+            btnCaja.Location = new System.Drawing.Point(0, InicialcajaY);
+            btnClientes.Location = new System.Drawing.Point(0, InicialclientesY);
+            btnProveedor.Location = new System.Drawing.Point(0, InicialproveedorY);
+            btnStock.Location = new System.Drawing.Point(0, (InicialstockY));
+
+            //paneles
+            pnVentas.Location = new System.Drawing.Point(0, InicialVentasY);
+            pnProveedor.Location = new System.Drawing.Point(0, InicialusuariosY);
+            pnClientes.Location = new System.Drawing.Point(0, InicialclientesY);
+            pnCaja.Location = new System.Drawing.Point(0, InicialcajaY);
+            pnUsuarios.Location = new System.Drawing.Point(0, InicialusuariosY);
+            pnStock.Location = new System.Drawing.Point(0, InicialstockY);
+        
+        }
        
 
      

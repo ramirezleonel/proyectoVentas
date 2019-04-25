@@ -292,3 +292,5 @@ C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presen
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\PlaceholderTextBox.dll
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Datos.pdb
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_negocio.pdb
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmDetalleVentas.resources
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.FrmListadoVentas.resources

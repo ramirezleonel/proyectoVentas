@@ -351,4 +351,10 @@
         3+wAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="errorIcono.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>255, 44</value>
+  </metadata>
+  <metadata name="ttMensajeAyuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>110, 43</value>
+  </metadata>
 </root>

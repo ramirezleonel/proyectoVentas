@@ -1,0 +1,55 @@
+﻿using Capa_negocio;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Capa_Presentacion
+{
+    public partial class FrmListadoVentas : Form
+    {
+        public FrmListadoVentas()
+        {
+            InitializeComponent();
+        }
+
+        private void FrmListadoVentas_Load(object sender, EventArgs e)
+        {
+            this.mostrar();
+        }
+
+        public void mostrar()
+        {
+            try
+            {
+                dataLista.Rows.Clear();
+                DataTable ventas = NegocioVenta.Mostrar();
+                foreach (DataRow venta in ventas.Rows)
+                {
+
+
+                    dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["serie"], venta["correlativo"], venta["total"]);
+                }
+
+                //this.dataLista.Columns["precio"].DefaultCellStyle.Format = "c3";
+                //this.dataLista.Columns["precio"].ValueType = Type.GetType("System.Decimal");
+                //this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("###,##0.00");
+
+            }
+            catch (Exception ex)
+            {
+                UtilityFrm.mensajeError("error con la Base de datos: " + ex.Message);
+            }
+            //datasource el origen de los datos,muestra las categorias en la grilla
+
+
+
+
+        }
+    }
+}
