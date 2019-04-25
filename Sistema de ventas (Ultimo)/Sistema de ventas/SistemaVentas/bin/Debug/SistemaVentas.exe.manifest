@@ -177,14 +177,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="43520">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="44032">
       <assemblyIdentity name="Capa_Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>yOemfvvhjvbV3ymLnSp4S9CygXO1+l/kgM2B38P/+No=</dsig:DigestValue>
+        <dsig:DigestValue>FTEniUQqewKIhpNzkYCJGfMwGbTSe49NxijDDsNSauI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -196,19 +196,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>meU65x2vJQtih5WqVd6jWKNe84f1w4B4f/d03JbL3UA=</dsig:DigestValue>
+        <dsig:DigestValue>h4APp6uLANTceCNu822c+xF7P31VCMvcBqTX6WvHDh8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1861632">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1863168">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XEI86vU7S1dF+sn/FqTnj6FqCkokW7/HEmprsfN/PPA=</dsig:DigestValue>
+        <dsig:DigestValue>z1MCP+1yx+F0+1N0lnN+qcTad1UTeOD9xfluZzs5uIg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -268,7 +268,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>XP4oq5cdk1t6c/eWIPR8Tpf3KlFv2zkA3gzRFjlVZNg=</dsig:DigestValue>
+        <dsig:DigestValue>g9s8r9yHxMgozXHGEheqzVr7mSeLUUytDPoi+MhBJJo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

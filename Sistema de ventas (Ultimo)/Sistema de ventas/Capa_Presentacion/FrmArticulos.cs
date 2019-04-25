@@ -959,6 +959,11 @@ namespace Capa_Presentacion
                 e.SuppressKeyPress = true;
             }
         }
+
+        private void tabLista_Click(object sender, EventArgs e)
+        {
+
+        }
         
        
 

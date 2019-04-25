@@ -17,6 +17,13 @@ using Capa_Datos;
             get { return idventa; }
             set { idventa = value; }
         }
+        private char estado;
+
+        public char Estado
+        {
+            get { return estado; }
+            set { estado = value; }
+        }
         private int idcliente;
 
         public int Idcliente
@@ -240,7 +247,7 @@ using Capa_Datos;
 
             try
             {
-
+                cn.Open();
 
                 SqlCommand sqlcmd = ProcAlmacenado.CrearProc(cn, "SP_VENTA");
                 //Modo 4 Mostrar
@@ -326,7 +333,7 @@ using Capa_Datos;
               SqlConnection cn = new SqlConnection(Conexion.conexion);
             try
             {
-             
+                cn.Open();
               
                SqlCommand comando= ProcAlmacenado.CrearProc(cn, "SP_VENTA");
                 //Modo 5 nota de venta
@@ -349,6 +356,40 @@ using Capa_Datos;
                 throw ex;
             }
             return dtResultado;
+        }
+
+        public string CambiarEstadoFacturacion(Dventa venta)
+        {
+            string resultado="";
+           
+
+            try
+            {
+                SqlConnection cn = new SqlConnection(Conexion.conexion);
+                cn.Open();
+                SqlCommand comando = ProcAlmacenado.CrearProc(cn, "SP_VENTA");
+
+                //modo 6
+                SqlParameter parModo= ProcAlmacenado.asignarParametros("modo",SqlDbType.Int,6);
+                comando.Parameters.Add(parModo);
+
+                SqlParameter parIdVenta = ProcAlmacenado.asignarParametros("idventa", SqlDbType.Int,venta.Idventa);
+                comando.Parameters.Add(parIdVenta);
+
+
+                SqlParameter parEstado = ProcAlmacenado.asignarParametros("estado", SqlDbType.VarChar, venta.Estado);
+                comando.Parameters.Add(parEstado);
+
+                resultado = comando.ExecuteNonQuery() == 1 ? "ok" : "Error";
+
+            }
+            catch (Exception ex)
+            {
+               
+                resultado = "Error: " + ex.Message;
+            }
+
+            return resultado;
         }
     }   
 

@@ -33,8 +33,8 @@
             this.dataLista = new System.Windows.Forms.DataGridView();
             this.btnPagarMovimiento = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.lblNomProducto = new System.Windows.Forms.Label();
-            this.txtFechaMov = new System.Windows.Forms.TextBox();
+            this.lblFechaVenta = new System.Windows.Forms.Label();
+            this.txtFechaVenta = new System.Windows.Forms.TextBox();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
@@ -45,6 +45,10 @@
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblTipo_comprobante = new System.Windows.Forms.Label();
+            this.txtTipoComprobante = new System.Windows.Forms.TextBox();
+            this.lblRazonSocial = new System.Windows.Forms.Label();
+            this.txtRazonSocial = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
             this.SuspendLayout();
@@ -110,6 +114,7 @@
             this.btnPagarMovimiento.TabIndex = 10;
             this.btnPagarMovimiento.Text = "Facturar";
             this.btnPagarMovimiento.UseVisualStyleBackColor = true;
+            this.btnPagarMovimiento.Click += new System.EventHandler(this.btnPagarMovimiento_Click);
             // 
             // lblCodigo
             // 
@@ -121,24 +126,24 @@
             this.lblCodigo.TabIndex = 34;
             this.lblCodigo.Text = "Codigo";
             // 
-            // lblNomProducto
+            // lblFechaVenta
             // 
-            this.lblNomProducto.AutoSize = true;
-            this.lblNomProducto.Location = new System.Drawing.Point(28, 78);
-            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomProducto.Name = "lblNomProducto";
-            this.lblNomProducto.Size = new System.Drawing.Size(123, 20);
-            this.lblNomProducto.TabIndex = 28;
-            this.lblNomProducto.Text = "Fecha de Venta";
+            this.lblFechaVenta.AutoSize = true;
+            this.lblFechaVenta.Location = new System.Drawing.Point(28, 78);
+            this.lblFechaVenta.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFechaVenta.Name = "lblFechaVenta";
+            this.lblFechaVenta.Size = new System.Drawing.Size(123, 20);
+            this.lblFechaVenta.TabIndex = 28;
+            this.lblFechaVenta.Text = "Fecha de Venta";
             // 
-            // txtFechaMov
+            // txtFechaVenta
             // 
-            this.txtFechaMov.Enabled = false;
-            this.txtFechaMov.Location = new System.Drawing.Point(247, 75);
-            this.txtFechaMov.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtFechaMov.Name = "txtFechaMov";
-            this.txtFechaMov.Size = new System.Drawing.Size(209, 26);
-            this.txtFechaMov.TabIndex = 27;
+            this.txtFechaVenta.Enabled = false;
+            this.txtFechaVenta.Location = new System.Drawing.Point(247, 75);
+            this.txtFechaVenta.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtFechaVenta.Name = "txtFechaVenta";
+            this.txtFechaVenta.Size = new System.Drawing.Size(209, 26);
+            this.txtFechaVenta.TabIndex = 27;
             // 
             // txtEstado
             // 
@@ -173,14 +178,18 @@
             this.gbDetalleMovimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDetalleMovimento.Controls.Add(this.lblRazonSocial);
+            this.gbDetalleMovimento.Controls.Add(this.txtRazonSocial);
+            this.gbDetalleMovimento.Controls.Add(this.lblTipo_comprobante);
+            this.gbDetalleMovimento.Controls.Add(this.txtTipoComprobante);
             this.gbDetalleMovimento.Controls.Add(this.txtTotal);
             this.gbDetalleMovimento.Controls.Add(this.lblTotal);
             this.gbDetalleMovimento.Controls.Add(this.dataLista);
             this.gbDetalleMovimento.Controls.Add(this.btnPagarMovimiento);
             this.gbDetalleMovimento.Controls.Add(this.lblCodigo);
-            this.gbDetalleMovimento.Controls.Add(this.lblNomProducto);
+            this.gbDetalleMovimento.Controls.Add(this.lblFechaVenta);
             this.gbDetalleMovimento.Controls.Add(this.txtCodigo);
-            this.gbDetalleMovimento.Controls.Add(this.txtFechaMov);
+            this.gbDetalleMovimento.Controls.Add(this.txtFechaVenta);
             this.gbDetalleMovimento.Controls.Add(this.txtEstado);
             this.gbDetalleMovimento.Controls.Add(this.lblEstado);
             this.gbDetalleMovimento.Location = new System.Drawing.Point(30, 34);
@@ -228,6 +237,44 @@
             this.subTotal.Name = "subTotal";
             this.subTotal.ReadOnly = true;
             // 
+            // lblTipo_comprobante
+            // 
+            this.lblTipo_comprobante.AutoSize = true;
+            this.lblTipo_comprobante.Location = new System.Drawing.Point(472, 39);
+            this.lblTipo_comprobante.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTipo_comprobante.Name = "lblTipo_comprobante";
+            this.lblTipo_comprobante.Size = new System.Drawing.Size(140, 20);
+            this.lblTipo_comprobante.TabIndex = 45;
+            this.lblTipo_comprobante.Text = "Tipo Comprobante";
+            // 
+            // txtTipoComprobante
+            // 
+            this.txtTipoComprobante.Enabled = false;
+            this.txtTipoComprobante.Location = new System.Drawing.Point(631, 36);
+            this.txtTipoComprobante.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTipoComprobante.Name = "txtTipoComprobante";
+            this.txtTipoComprobante.Size = new System.Drawing.Size(154, 26);
+            this.txtTipoComprobante.TabIndex = 44;
+            // 
+            // lblRazonSocial
+            // 
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(472, 81);
+            this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(103, 20);
+            this.lblRazonSocial.TabIndex = 47;
+            this.lblRazonSocial.Text = "Razon Social";
+            // 
+            // txtRazonSocial
+            // 
+            this.txtRazonSocial.Enabled = false;
+            this.txtRazonSocial.Location = new System.Drawing.Point(631, 78);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(154, 26);
+            this.txtRazonSocial.TabIndex = 46;
+            // 
             // FrmDetalleVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -252,8 +299,8 @@
         private System.Windows.Forms.DataGridView dataLista;
         private System.Windows.Forms.Button btnPagarMovimiento;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.Label lblNomProducto;
-        private System.Windows.Forms.TextBox txtFechaMov;
+        private System.Windows.Forms.Label lblFechaVenta;
+        private System.Windows.Forms.TextBox txtFechaVenta;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtCodigo;
@@ -264,5 +311,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
+        private System.Windows.Forms.Label lblTipo_comprobante;
+        private System.Windows.Forms.TextBox txtTipoComprobante;
+        private System.Windows.Forms.Label lblRazonSocial;
+        private System.Windows.Forms.TextBox txtRazonSocial;
     }
 }

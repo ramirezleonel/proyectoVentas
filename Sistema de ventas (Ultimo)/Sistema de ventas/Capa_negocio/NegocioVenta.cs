@@ -142,6 +142,13 @@ namespace Capa_negocio
             return Obj.BuscarFechas(textobuscar, textobuscar2);
 
         }
+
+        public static string cambiarEstadoFacturacion(int idVenta,char estado) {
+            Dventa Obj = new Dventa();
+            Obj.Idventa = idVenta;
+            Obj.Estado = estado;
+            return Obj.CambiarEstadoFacturacion(Obj);
+        }
         public static DataTable NotaDeVenta()
         {
             Dventa Obj = new Dventa();

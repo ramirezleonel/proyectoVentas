@@ -126,6 +126,7 @@
             this.tabLista.Size = new System.Drawing.Size(948, 519);
             this.tabLista.TabIndex = 0;
             this.tabLista.Text = "Lista";
+            this.tabLista.Click += new System.EventHandler(this.tabLista_Click);
             // 
             // rbCategoria
             // 

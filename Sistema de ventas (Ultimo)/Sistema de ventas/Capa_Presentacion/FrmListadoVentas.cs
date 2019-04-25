@@ -32,10 +32,22 @@ namespace Capa_Presentacion
                 foreach (DataRow venta in ventas.Rows)
                 {
 
+                    string estado = venta["estado"].ToString();
+                    if (estado.Equals("F"))
+                    {
+                        estado = "FACTURADO";
 
-                    dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["serie"], venta["correlativo"], venta["total"]);
+                    }
+                    else if(estado.Equals("P")){
+                        estado = "PENDIENTE";
+                    }
+
+
+                    //string tipo_comprobante = venta["tipo_comprobante"].ToString();
+                    //tipo_comprobante = tipo_comprobante == "V" ? "VENTA" : "";
+                    dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["serie"], venta["correlativo"], venta["total"],estado);
                     //
-                }
+                } 
 
                 //this.dataLista.Columns["precio"].DefaultCellStyle.Format = "c3";
                 //this.dataLista.Columns["precio"].ValueType = Type.GetType("System.Decimal");
@@ -85,6 +97,27 @@ namespace Capa_Presentacion
         private void btnTodos_Click(object sender, EventArgs e)
         {
             this.mostrar();
+        }
+
+        private void dataLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataLista_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataLista.Rows.Count > 0)
+            {
+                DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+
+                FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
+                    Convert.ToString(this.dataLista.CurrentRow.Cells["Razon_social"].Value),
+                    date.ToShortDateString(),
+                     Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
+                    Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
+                    Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
+                venta.ShowDialog();
+            }
         }
     }
 }
