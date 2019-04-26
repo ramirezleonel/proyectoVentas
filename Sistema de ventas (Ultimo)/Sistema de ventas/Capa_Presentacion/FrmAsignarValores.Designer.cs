@@ -36,11 +36,11 @@
             // txtValor
             // 
             this.txtValor.Location = new System.Drawing.Point(56, 80);
-            this.txtValor.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtValor.Margin = new System.Windows.Forms.Padding(6);
             this.txtValor.MaxLength = 3;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(364, 26);
-            this.txtValor.TabIndex = 26;
+            this.txtValor.TabIndex = 1;
             this.txtValor.Text = "0";
             this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             this.txtValor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtValor_KeyDown);
@@ -59,11 +59,11 @@
             // btnGuardar
             // 
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnGuardar.Location = new System.Drawing.Point(0, 159);
+            this.btnGuardar.Location = new System.Drawing.Point(0, 163);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(445, 50);
-            this.btnGuardar.TabIndex = 28;
+            this.btnGuardar.Size = new System.Drawing.Size(445, 46);
+            this.btnGuardar.TabIndex = 2;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);

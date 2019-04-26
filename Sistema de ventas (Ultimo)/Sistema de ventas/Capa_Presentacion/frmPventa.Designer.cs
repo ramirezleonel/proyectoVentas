@@ -69,10 +69,10 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnConsultas = new System.Windows.Forms.Button();
-            this.btnCalculadora = new System.Windows.Forms.Button();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.btnConsultas = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
             this.grpboxProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVenta)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
@@ -260,6 +260,7 @@
             this.DGVenta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVenta.Size = new System.Drawing.Size(947, 275);
             this.DGVenta.TabIndex = 6;
+            this.DGVenta.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVenta_CellContentDoubleClick);
             this.DGVenta.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.DGVenta_RowsAdded);
             this.DGVenta.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.DGVenta_RowsRemoved);
             this.DGVenta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.DGVenta_KeyDown);
@@ -580,6 +581,14 @@
             this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
             this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
             // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
+            // ttMensajeAyuda
+            // 
+            this.ttMensajeAyuda.AutomaticDelay = 90;
+            // 
             // btnConsultas
             // 
             this.btnConsultas.Image = global::Capa_Presentacion.Properties.Resources.Search_Property_20px;
@@ -599,14 +608,6 @@
             this.btnCalculadora.TabIndex = 58;
             this.btnCalculadora.UseVisualStyleBackColor = true;
             this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
-            // 
-            // errorIcono
-            // 
-            this.errorIcono.ContainerControl = this;
-            // 
-            // ttMensajeAyuda
-            // 
-            this.ttMensajeAyuda.AutomaticDelay = 90;
             // 
             // frmPventa
             // 

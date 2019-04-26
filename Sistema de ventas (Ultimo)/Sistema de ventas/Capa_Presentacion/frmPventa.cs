@@ -21,6 +21,7 @@ namespace Capa_Presentacion
         {
             this.DGVenta.Columns["Precio"].DefaultCellStyle.Format = String.Format("$###,##0.00");
             DGVenta.Columns["Importe"].DefaultCellStyle.Format = String.Format("$###,##0.00");
+            this.mensajesDeAyuda();     
         }
         public frmPventa()
         {
@@ -286,6 +287,28 @@ namespace Capa_Presentacion
                   btnGuardar.PerformClick();
 
             }
+              else if (e.KeyCode == Keys.F5)
+              {
+                  //Cambiar la cantidad manualmente
+                  if (DGVenta.Rows.Count > 0)
+                  {
+                      FrmAsignarValores asignarValor = new FrmAsignarValores("Cantidad");
+                      asignarValor.ShowDialog();
+                      //modifico la cantidad del row seleccionado
+
+                      if (asignarValor.Cantidad != 0)
+                      {
+                          DGVenta.CurrentRow.Cells["Cantidad"].Value = asignarValor.Cantidad;
+                          Decimal PrecioTotal = Convert.ToDecimal(DGVenta.CurrentRow.Cells["Precio"].Value);
+                          PrecioTotal = PrecioTotal * asignarValor.Cantidad;
+                          DGVenta.CurrentRow.Cells["Importe"].Value = PrecioTotal;
+                      }
+                     
+
+                  }
+                 
+
+              }
               else if (e.KeyCode == Keys.Delete)
               {
                   quitarProducto();
@@ -1010,6 +1033,26 @@ namespace Capa_Presentacion
         {
             FrmConsulta consultas = new FrmConsulta();
             consultas.Show();
+        }
+
+        private void DGVenta_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DGVenta.Rows.Count > 0)
+            {
+                FrmAsignarValores asignarValor = new FrmAsignarValores("Cantidad");
+                asignarValor.ShowDialog();
+                //modifico la cantidad del row seleccionado
+             
+
+                if (asignarValor.Cantidad != 0)
+                {
+                    DGVenta.CurrentRow.Cells["Cantidad"].Value = asignarValor.Cantidad;
+                    Decimal PrecioTotal = Convert.ToDecimal( DGVenta.CurrentRow.Cells["Precio"].Value);
+                    PrecioTotal = PrecioTotal * asignarValor.Cantidad;
+                    DGVenta.CurrentRow.Cells["Importe"].Value = PrecioTotal;
+                }
+                
+            }
         }
 
        
