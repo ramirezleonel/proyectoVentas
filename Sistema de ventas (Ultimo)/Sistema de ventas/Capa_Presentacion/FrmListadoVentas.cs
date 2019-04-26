@@ -21,6 +21,20 @@ namespace Capa_Presentacion
         private void FrmListadoVentas_Load(object sender, EventArgs e)
         {
             this.mostrar();
+            this.actualizarTotal();
+            this.mensajesDeAyuda();
+        }
+        //mensajes de ayuda
+        private void mensajesDeAyuda()
+        {
+
+            //mensaje de ayuda en el textbox total
+            this.ttMensajeAyuda.SetToolTip(this.txtTotal, "Total de ventas");
+            //mensaje de ayuda en el textbox buscar
+            this.ttMensajeAyuda.SetToolTip(this.btnBuscar, "Buscar por fecha seleccionada");
+            //mensaje de ayuda del boton listar ventas
+            this.ttMensajeAyuda.SetToolTip(this.btnTodos, "Listar todas las ventas");
+         
         }
 
         public void mostrar()
@@ -65,9 +79,26 @@ namespace Capa_Presentacion
 
         }
 
+        public void actualizarTotal() {
+            decimal totalVendido= Convert.ToDecimal("0,00");
+            
+            if (dataLista.Rows.Count > 0)
+            {
+                foreach (DataGridViewRow venta in dataLista.Rows)
+                {
+                    totalVendido = totalVendido+ decimal.Round( Convert.ToDecimal( venta.Cells["Total"].Value),2);
+                }
+                txtTotal.Text = totalVendido.ToString();
+            }
+            else {
+
+                txtTotal.Text = "0,00";
+            }
+        }
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             this.buscarPorFecha();
+            this.actualizarTotal();
         }
 
         /*Metodos propios*/

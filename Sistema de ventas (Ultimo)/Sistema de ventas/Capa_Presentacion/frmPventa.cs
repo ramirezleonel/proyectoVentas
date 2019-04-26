@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_negocio;
 using System.Diagnostics;
+using System.Threading;
 
 namespace Capa_Presentacion
 {
@@ -173,8 +174,15 @@ namespace Capa_Presentacion
               }
               else
               {
-                  MessageBox.Show ("No es una clave valida");
-              
+                 // UtilityFrm.mensajeError( "No es una clave valida");
+
+                  FrmMensajeAutoCierre.Show("No es una clave valida", "Error", 1000);
+
+
+        
+               
+                  txtNombreProducto.SelectAll();
+                 
               }
           }
 
@@ -185,7 +193,12 @@ namespace Capa_Presentacion
         {
 
         }
+          
 
+        private void OnTimer(object state)
+        {
+            MessageBox.Show("Se ejecuto el evento");
+        }
         public bool IsNumeric(string input)
         {
             long test;
@@ -302,6 +315,8 @@ namespace Capa_Presentacion
                           Decimal PrecioTotal = Convert.ToDecimal(DGVenta.CurrentRow.Cells["Precio"].Value);
                           PrecioTotal = PrecioTotal * asignarValor.Cantidad;
                           DGVenta.CurrentRow.Cells["Importe"].Value = PrecioTotal;
+
+                          actualizarPrecioTotal();
                       }
                      
 
@@ -309,19 +324,30 @@ namespace Capa_Presentacion
                  
 
               }
+              else if (e.KeyCode == Keys.F11)
+              {
+                  //CONSULTA DE PRECIO
+                  btnCalculadora.PerformClick();
+              }
+              else if (e.KeyCode == Keys.F12)
+              { 
+              //CONSULTA DE PRECIO
+                  btnConsultas.PerformClick();
+              }
               else if (e.KeyCode == Keys.Delete)
               {
                   quitarProducto();
 
 
               }
-              else if (e.KeyCode == Keys.Down && txtNombreProducto.Focused==true&&dataGridView1.Visible==false)
+              else if (e.KeyCode == Keys.Down && txtNombreProducto.Focused == true && dataGridView1.Visible == false)
               {
                   //si se presiona el boton down y se encuentre el foco en la caja de texto de nombre de producto
                   //y la grilla de busqueda no está visible
-                  
+
                   //el foco se pasa a la grilla
-                  if(DGVenta.Rows.Count>0){
+                  if (DGVenta.Rows.Count > 0)
+                  {
                       //y existen elementos en la grilla
                       DGVenta.Focus();
                   }
@@ -602,20 +628,11 @@ namespace Capa_Presentacion
         {
             try
             {
-                int idArticulo = Convert.ToInt32(this.dataGridView1.CurrentRow.Cells["idarticulo"].Value);
-                string nombreProducto = Convert.ToString(this.dataGridView1.CurrentRow.Cells["nombre"].Value);
-                FrmAsignarPrecio asignarPrecio = new FrmAsignarPrecio(nombreProducto);
-                asignarPrecio.ShowDialog();
-                //si se ha cerrado que no haga nada
-                if (asignarPrecio.IsCerro)
-                {
 
-                }
-                else
-                {
-                    //agregar_producto(Convert.ToInt32(txtNombreProducto.Text), "poridarticulo",);
-                    agregar_producto(idArticulo, asignarPrecio.Precio, asignarPrecio.Descuento);
-                }
+                    Buscar_producto(Convert.ToInt32(this.dataGridView1.CurrentRow.Cells["idarticulo"].Value), "poridarticulo");
+                    dataGridView1.Visible = false;
+                    txtNombreProducto.Focus();
+                
             }
             catch (Exception ex)
             {
@@ -839,9 +856,9 @@ namespace Capa_Presentacion
             //mensaje de ayuda en el textbox nombre
             this.ttMensajeAyuda.SetToolTip(this.TxtCodigo, "Ingrese el Codigo de Cliente");
             //mensaje de ayuda del boton calculadora
-            this.ttMensajeAyuda.SetToolTip(this.btnCalculadora, "Acceso a la Calculadora de windows");
+            this.ttMensajeAyuda.SetToolTip(this.btnCalculadora, "Acceso a la Calculadora de windows(F11)");
             //mensaje de ayuda en el consulta de precios
-            this.ttMensajeAyuda.SetToolTip(this.btnConsultas, "Consulta de precios");
+            this.ttMensajeAyuda.SetToolTip(this.btnConsultas, "Consulta de precios (F12)");
         }
 
 

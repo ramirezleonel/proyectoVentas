@@ -263,6 +263,26 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap List_View_15px {
+            get {
+                object obj = ResourceManager.GetObject("List View_15px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap List_View_15px1 {
+            get {
+                object obj = ResourceManager.GetObject("List View_15px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap list1 {
             get {
                 object obj = ResourceManager.GetObject("list1", resourceCulture);
@@ -446,6 +466,16 @@ namespace Capa_Presentacion.Properties {
         internal static System.Drawing.Bitmap User_Male_50px {
             get {
                 object obj = ResourceManager.GetObject("User Male_50px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap View_All_15px {
+            get {
+                object obj = ResourceManager.GetObject("View All_15px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

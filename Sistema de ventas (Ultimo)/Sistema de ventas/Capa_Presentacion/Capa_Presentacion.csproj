@@ -231,6 +231,12 @@
     <Compile Include="FrmListadoVentas.Designer.cs">
       <DependentUpon>FrmListadoVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmMensajeAutoCierre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMensajeAutoCierre.Designer.cs">
+      <DependentUpon>FrmMensajeAutoCierre.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMovStock1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -393,6 +399,9 @@
     <EmbeddedResource Include="FrmListadoVentas.resx">
       <DependentUpon>FrmListadoVentas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMensajeAutoCierre.resx">
+      <DependentUpon>FrmMensajeAutoCierre.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmMovStock1.resx">
       <DependentUpon>FrmMovStock1.cs</DependentUpon>
     </EmbeddedResource>
@@ -531,6 +540,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\List View_15px1.png" />
+    <None Include="Resources\List View_15px.png" />
+    <None Include="Resources\View All_15px.png" />
     <None Include="Resources\Search Property_20px.png" />
     <None Include="Resources\Minus_15px1.png" />
     <None Include="Resources\Plus_15px1.png" />

@@ -254,7 +254,10 @@ namespace Capa_Presentacion
         {
             if(e.KeyCode==Keys.F2){
                 btnGuardar.PerformClick();
-                    
+
+            }
+            else if (e.KeyCode == Keys.Escape) {
+                this.Close();
             }
         }
     }

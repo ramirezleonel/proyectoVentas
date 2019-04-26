@@ -265,6 +265,11 @@ namespace Capa_Presentacion
                 txtProducto.Text = "";
                 txtProducto.Focus();
             }
+            else if (e.KeyCode == Keys.Escape)
+            {
+                this.Close();
+
+            }
             
         }
 

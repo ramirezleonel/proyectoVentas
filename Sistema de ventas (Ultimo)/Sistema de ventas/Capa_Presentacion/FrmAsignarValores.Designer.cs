@@ -37,7 +37,7 @@
             // 
             this.txtValor.Location = new System.Drawing.Point(56, 80);
             this.txtValor.Margin = new System.Windows.Forms.Padding(6);
-            this.txtValor.MaxLength = 3;
+            this.txtValor.MaxLength = 5;
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(364, 26);
             this.txtValor.TabIndex = 1;
