@@ -29,9 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCaja));
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.lblNomProducto = new System.Windows.Forms.Label();
             this.gbMovimento = new System.Windows.Forms.GroupBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.TxtConcepto = new System.Windows.Forms.TextBox();
             this.cbTipoMov = new System.Windows.Forms.ComboBox();
@@ -52,16 +54,27 @@
             this.lblTotalIngreso = new System.Windows.Forms.Label();
             this.dataLista = new System.Windows.Forms.DataGridView();
             this.grpboxConsulta = new System.Windows.Forms.GroupBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.BtnCerrar = new System.Windows.Forms.Button();
+            this.BtnCerrarCaja = new System.Windows.Forms.Button();
             this.BtnApertura = new System.Windows.Forms.Button();
             this.dtpFechaCaja = new System.Windows.Forms.DateTimePicker();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Menudelete = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCaja = new System.Windows.Forms.Label();
+            this.pnlSeparacion = new System.Windows.Forms.Panel();
+            this.panelHorizontal = new System.Windows.Forms.Panel();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.gbMovimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.grpboxConsulta.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            this.panelHorizontal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomProducto
@@ -79,6 +92,7 @@
             this.gbMovimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbMovimento.Controls.Add(this.label4);
             this.gbMovimento.Controls.Add(this.label3);
             this.gbMovimento.Controls.Add(this.TxtConcepto);
             this.gbMovimento.Controls.Add(this.cbTipoMov);
@@ -98,19 +112,29 @@
             this.gbMovimento.Controls.Add(this.lblTotalEgreso);
             this.gbMovimento.Controls.Add(this.lblTotalIngreso);
             this.gbMovimento.Controls.Add(this.dataLista);
-            this.gbMovimento.Location = new System.Drawing.Point(35, 68);
+            this.gbMovimento.Location = new System.Drawing.Point(26, 68);
             this.gbMovimento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gbMovimento.Name = "gbMovimento";
             this.gbMovimento.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.gbMovimento.Size = new System.Drawing.Size(1014, 593);
+            this.gbMovimento.Size = new System.Drawing.Size(940, 570);
             this.gbMovimento.TabIndex = 40;
             this.gbMovimento.TabStop = false;
             this.gbMovimento.Text = "Movimientos de Caja";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(41, 75);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(145, 20);
+            this.label4.TabIndex = 72;
+            this.label4.Text = "Tipo de movimiento";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 194);
+            this.label3.Location = new System.Drawing.Point(40, 196);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
@@ -119,7 +143,7 @@
             // 
             // TxtConcepto
             // 
-            this.TxtConcepto.Location = new System.Drawing.Point(194, 196);
+            this.TxtConcepto.Location = new System.Drawing.Point(193, 193);
             this.TxtConcepto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TxtConcepto.Name = "TxtConcepto";
             this.TxtConcepto.Size = new System.Drawing.Size(241, 26);
@@ -128,7 +152,7 @@
             // cbTipoMov
             // 
             this.cbTipoMov.FormattingEnabled = true;
-            this.cbTipoMov.Location = new System.Drawing.Point(193, 68);
+            this.cbTipoMov.Location = new System.Drawing.Point(193, 72);
             this.cbTipoMov.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbTipoMov.Name = "cbTipoMov";
             this.cbTipoMov.Size = new System.Drawing.Size(327, 28);
@@ -138,14 +162,14 @@
             // btnAgregar
             // 
             this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregar.Location = new System.Drawing.Point(528, 194);
+            this.btnAgregar.Image = global::Capa_Presentacion.Properties.Resources.Add_List_20px1;
+            this.btnAgregar.Location = new System.Drawing.Point(321, 233);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(135, 52);
+            this.btnAgregar.Size = new System.Drawing.Size(28, 30);
             this.btnAgregar.TabIndex = 69;
-            this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
-            this.btnAgregar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // rbEgreso
             // 
@@ -176,7 +200,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 237);
+            this.label2.Location = new System.Drawing.Point(41, 233);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 20);
@@ -185,7 +209,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(194, 234);
+            this.textBox2.Location = new System.Drawing.Point(192, 233);
             this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(110, 26);
@@ -198,7 +222,7 @@
             "Mañana",
             "Tarde",
             "Noche"});
-            this.cbxTurno.Location = new System.Drawing.Point(193, 156);
+            this.cbxTurno.Location = new System.Drawing.Point(193, 153);
             this.cbxTurno.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxTurno.Name = "cbxTurno";
             this.cbxTurno.Size = new System.Drawing.Size(240, 28);
@@ -207,7 +231,7 @@
             // lblTurno
             // 
             this.lblTurno.AutoSize = true;
-            this.lblTurno.Location = new System.Drawing.Point(45, 160);
+            this.lblTurno.Location = new System.Drawing.Point(40, 156);
             this.lblTurno.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTurno.Name = "lblTurno";
             this.lblTurno.Size = new System.Drawing.Size(50, 20);
@@ -217,7 +241,7 @@
             // cbxPlanCuenta
             // 
             this.cbxPlanCuenta.FormattingEnabled = true;
-            this.cbxPlanCuenta.Location = new System.Drawing.Point(193, 112);
+            this.cbxPlanCuenta.Location = new System.Drawing.Point(193, 114);
             this.cbxPlanCuenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cbxPlanCuenta.Name = "cbxPlanCuenta";
             this.cbxPlanCuenta.Size = new System.Drawing.Size(327, 28);
@@ -226,7 +250,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 112);
+            this.label1.Location = new System.Drawing.Point(40, 117);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(118, 20);
@@ -236,11 +260,12 @@
             // txtTotal
             // 
             this.txtTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.txtTotal.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.txtTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotal.Location = new System.Drawing.Point(796, 547);
+            this.txtTotal.Location = new System.Drawing.Point(704, 524);
             this.txtTotal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTotal.Name = "txtTotal";
-            this.txtTotal.Size = new System.Drawing.Size(159, 29);
+            this.txtTotal.Size = new System.Drawing.Size(215, 29);
             this.txtTotal.TabIndex = 60;
             this.txtTotal.Text = "0";
             // 
@@ -249,7 +274,7 @@
             this.lblTotal.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(792, 518);
+            this.lblTotal.Location = new System.Drawing.Point(700, 495);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(66, 24);
@@ -260,7 +285,7 @@
             // 
             this.txtTotalIngreso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtTotalIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTotalIngreso.Location = new System.Drawing.Point(517, 547);
+            this.txtTotalIngreso.Location = new System.Drawing.Point(425, 524);
             this.txtTotalIngreso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTotalIngreso.Name = "txtTotalIngreso";
             this.txtTotalIngreso.Size = new System.Drawing.Size(252, 29);
@@ -271,7 +296,7 @@
             // 
             this.txtToltaEgreso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.txtToltaEgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtToltaEgreso.Location = new System.Drawing.Point(234, 547);
+            this.txtToltaEgreso.Location = new System.Drawing.Point(142, 524);
             this.txtToltaEgreso.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtToltaEgreso.Name = "txtToltaEgreso";
             this.txtToltaEgreso.Size = new System.Drawing.Size(252, 29);
@@ -283,7 +308,7 @@
             this.lblTotalEgreso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblTotalEgreso.AutoSize = true;
             this.lblTotalEgreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalEgreso.Location = new System.Drawing.Point(524, 518);
+            this.lblTotalEgreso.Location = new System.Drawing.Point(432, 495);
             this.lblTotalEgreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalEgreso.Name = "lblTotalEgreso";
             this.lblTotalEgreso.Size = new System.Drawing.Size(127, 24);
@@ -295,7 +320,7 @@
             this.lblTotalIngreso.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblTotalIngreso.AutoSize = true;
             this.lblTotalIngreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalIngreso.Location = new System.Drawing.Point(230, 518);
+            this.lblTotalIngreso.Location = new System.Drawing.Point(138, 495);
             this.lblTotalIngreso.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalIngreso.Name = "lblTotalIngreso";
             this.lblTotalIngreso.Size = new System.Drawing.Size(129, 24);
@@ -312,14 +337,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataLista.Location = new System.Drawing.Point(31, 288);
+            this.dataLista.Location = new System.Drawing.Point(20, 288);
             this.dataLista.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.dataLista.MultiSelect = false;
             this.dataLista.Name = "dataLista";
             this.dataLista.ReadOnly = true;
             this.dataLista.RowHeadersWidth = 38;
             this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataLista.Size = new System.Drawing.Size(961, 200);
+            this.dataLista.Size = new System.Drawing.Size(902, 177);
             this.dataLista.TabIndex = 46;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dataLista_MouseClick);
@@ -329,43 +354,32 @@
             this.grpboxConsulta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.grpboxConsulta.Controls.Add(this.label4);
-            this.grpboxConsulta.Controls.Add(this.BtnCerrar);
+            this.grpboxConsulta.Controls.Add(this.BtnCerrarCaja);
             this.grpboxConsulta.Controls.Add(this.BtnApertura);
             this.grpboxConsulta.Controls.Add(this.gbMovimento);
             this.grpboxConsulta.Controls.Add(this.dtpFechaCaja);
             this.grpboxConsulta.Controls.Add(this.lblNomProducto);
-            this.grpboxConsulta.Location = new System.Drawing.Point(16, 20);
+            this.grpboxConsulta.Location = new System.Drawing.Point(16, 43);
             this.grpboxConsulta.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.grpboxConsulta.Name = "grpboxConsulta";
             this.grpboxConsulta.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.grpboxConsulta.Size = new System.Drawing.Size(1553, 698);
+            this.grpboxConsulta.Size = new System.Drawing.Size(991, 675);
             this.grpboxConsulta.TabIndex = 63;
             this.grpboxConsulta.TabStop = false;
             this.grpboxConsulta.Text = "Caja";
             this.grpboxConsulta.Enter += new System.EventHandler(this.grpboxConsulta_Enter);
             // 
-            // label4
+            // BtnCerrarCaja
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 138);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(145, 20);
-            this.label4.TabIndex = 72;
-            this.label4.Text = "Tipo de movimiento";
-            // 
-            // BtnCerrar
-            // 
-            this.BtnCerrar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCerrar.Location = new System.Drawing.Point(662, 14);
-            this.BtnCerrar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnCerrar.Name = "BtnCerrar";
-            this.BtnCerrar.Size = new System.Drawing.Size(135, 52);
-            this.BtnCerrar.TabIndex = 71;
-            this.BtnCerrar.Text = "Cerrar caja";
-            this.BtnCerrar.UseVisualStyleBackColor = true;
-            this.BtnCerrar.Click += new System.EventHandler(this.BtnCerrar_Click);
+            this.BtnCerrarCaja.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCerrarCaja.Location = new System.Drawing.Point(662, 14);
+            this.BtnCerrarCaja.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnCerrarCaja.Name = "BtnCerrarCaja";
+            this.BtnCerrarCaja.Size = new System.Drawing.Size(135, 52);
+            this.BtnCerrarCaja.TabIndex = 71;
+            this.BtnCerrarCaja.Text = "Cerrar caja";
+            this.BtnCerrarCaja.UseVisualStyleBackColor = true;
+            this.BtnCerrarCaja.Click += new System.EventHandler(this.BtnCerrarCaja_Click);
             // 
             // BtnApertura
             // 
@@ -406,6 +420,106 @@
             this.Menudelete.Text = "Eliminar movimiento";
             this.Menudelete.Click += new System.EventHandler(this.Menudelete_Click);
             // 
+            // lblCaja
+            // 
+            this.lblCaja.AutoSize = true;
+            this.lblCaja.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblCaja.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCaja.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblCaja.Location = new System.Drawing.Point(0, 0);
+            this.lblCaja.Name = "lblCaja";
+            this.lblCaja.Size = new System.Drawing.Size(62, 23);
+            this.lblCaja.TabIndex = 3;
+            this.lblCaja.Text = "CAJA";
+            // 
+            // pnlSeparacion
+            // 
+            this.pnlSeparacion.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlSeparacion.BackColor = System.Drawing.Color.Thistle;
+            this.pnlSeparacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pnlSeparacion.Location = new System.Drawing.Point(1, 36);
+            this.pnlSeparacion.Name = "pnlSeparacion";
+            this.pnlSeparacion.Size = new System.Drawing.Size(1018, 2);
+            this.pnlSeparacion.TabIndex = 0;
+            // 
+            // panelHorizontal
+            // 
+            this.panelHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
+            this.panelHorizontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelHorizontal.Controls.Add(this.btnMaximizar);
+            this.panelHorizontal.Controls.Add(this.btnRestaurar);
+            this.panelHorizontal.Controls.Add(this.btnMinimizar);
+            this.panelHorizontal.Controls.Add(this.btnCerrar);
+            this.panelHorizontal.Controls.Add(this.pnlSeparacion);
+            this.panelHorizontal.Controls.Add(this.lblCaja);
+            this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
+            this.panelHorizontal.Name = "panelHorizontal";
+            this.panelHorizontal.Size = new System.Drawing.Size(1020, 37);
+            this.panelHorizontal.TabIndex = 64;
+            this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
+            this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(960, 5);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMaximizar.TabIndex = 5;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
+            this.btnMaximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMaximizar_MouseMove);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(959, 5);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
+            this.btnRestaurar.TabIndex = 2;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
+            this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(927, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
+            this.btnCerrar.Location = new System.Drawing.Point(993, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
+            // 
             // FrmCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -413,12 +527,13 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1079, 733);
+            this.ClientSize = new System.Drawing.Size(1020, 733);
+            this.Controls.Add(this.panelHorizontal);
             this.Controls.Add(this.grpboxConsulta);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.Color.Black;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -432,6 +547,12 @@
             this.grpboxConsulta.ResumeLayout(false);
             this.grpboxConsulta.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panelHorizontal.ResumeLayout(false);
+            this.panelHorizontal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -459,7 +580,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Button btnAgregar;
-        private System.Windows.Forms.Button BtnCerrar;
+        private System.Windows.Forms.Button BtnCerrarCaja;
         private System.Windows.Forms.Button BtnApertura;
         private System.Windows.Forms.ComboBox cbTipoMov;
         private System.Windows.Forms.Label label4;
@@ -467,6 +588,13 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Menudelete;
+        private System.Windows.Forms.Label lblCaja;
+        private System.Windows.Forms.Panel pnlSeparacion;
+        private System.Windows.Forms.Panel panelHorizontal;
+        private System.Windows.Forms.PictureBox btnMaximizar;
+        private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnCerrar;
 
     }
 }

@@ -168,10 +168,10 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnTodos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAB2SURBVDhPYxhyQAGIG0jEID04gQMQ/wfiA0RikFqQHpwAZiCxYGANlABiASDmAGJQOCFjkBwI
-        kGQgKIxAgQ4TQ8YgORAAsQfOhRVAHADEGkC8AA2D5EBgYA0cgZFCDBg4A0FhRAwmaCAofJCLJmIwSM+Q
-        AQwMAOlsVc2RaqWKAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAHZJREFUOE9j
+        GHJAAYgbSMQgPTiBAxD/B+IDRGKQWpAenABmILFgYA2UAGIBIOYAYlA4IWOQHAiQZCAojECBDhNDxiA5
+        EACxB86FFUAcAMQaQLwADYPkQGBgDRyBkUIMGDgDQWFEDCZoICh8kIsmYjBIz5ABDAwA6WxVzZFqpYoA
+        AAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="errorIcono.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

@@ -237,9 +237,16 @@ namespace Capa_Presentacion
            //el foco se posa en abono
             txtAbono.Select();
             txtAbono.Focus();
-
+            llenarComboBoxTarjeta();
         }
+        public void llenarComboBoxTarjeta() {
 
+            this.cbxTarjeta.DataSource = NegocioFormaDePago.mostrarTarjetas();
+            //valor real de la DB
+            this.cbxTarjeta.ValueMember = "cod_forma_pago";
+            //lo que se muestra
+            this.cbxTarjeta.DisplayMember = "nombre";
+        }
         private void FrmGuardarVenta_FormClosing(object sender, FormClosingEventArgs e)
         {
              isCerro=true;

@@ -43,8 +43,10 @@
             // 
             // lblNomProducto
             // 
+            this.lblNomProducto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblNomProducto.AutoSize = true;
-            this.lblNomProducto.Location = new System.Drawing.Point(100, 50);
+            this.lblNomProducto.Location = new System.Drawing.Point(140, 34);
             this.lblNomProducto.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.lblNomProducto.Name = "lblNomProducto";
             this.lblNomProducto.Size = new System.Drawing.Size(62, 20);
@@ -53,8 +55,10 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(483, 51);
+            this.label1.Location = new System.Drawing.Point(339, 34);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 20);
@@ -64,7 +68,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 118);
+            this.label2.Location = new System.Drawing.Point(66, 103);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 20);
@@ -74,7 +78,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(140, 158);
+            this.label3.Location = new System.Drawing.Point(76, 148);
             this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(58, 20);
@@ -84,7 +88,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(100, 208);
+            this.label4.Location = new System.Drawing.Point(36, 193);
             this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(100, 20);
@@ -93,10 +97,11 @@
             // 
             // lblTotalPagar
             // 
-            this.lblTotalPagar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblTotalPagar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotalPagar.AutoSize = true;
             this.lblTotalPagar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotalPagar.Location = new System.Drawing.Point(172, 52);
+            this.lblTotalPagar.Location = new System.Drawing.Point(212, 34);
             this.lblTotalPagar.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotalPagar.Name = "lblTotalPagar";
             this.lblTotalPagar.Size = new System.Drawing.Size(58, 19);
@@ -106,7 +111,7 @@
             // cbCajero
             // 
             this.cbCajero.FormattingEnabled = true;
-            this.cbCajero.Location = new System.Drawing.Point(213, 111);
+            this.cbCajero.Location = new System.Drawing.Point(149, 96);
             this.cbCajero.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cbCajero.Name = "cbCajero";
             this.cbCajero.Size = new System.Drawing.Size(270, 28);
@@ -119,7 +124,7 @@
             "MAÑANA ",
             "TARDE",
             "NOCHE"});
-            this.cbTurno.Location = new System.Drawing.Point(213, 158);
+            this.cbTurno.Location = new System.Drawing.Point(149, 144);
             this.cbTurno.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.cbTurno.Name = "cbTurno";
             this.cbTurno.Size = new System.Drawing.Size(270, 28);
@@ -127,7 +132,7 @@
             // 
             // txtImporte
             // 
-            this.txtImporte.Location = new System.Drawing.Point(213, 208);
+            this.txtImporte.Location = new System.Drawing.Point(149, 192);
             this.txtImporte.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.txtImporte.Name = "txtImporte";
             this.txtImporte.Size = new System.Drawing.Size(163, 26);
@@ -135,10 +140,11 @@
             // 
             // label5
             // 
-            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(621, 52);
+            this.label5.Location = new System.Drawing.Point(487, 35);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(46, 19);
@@ -148,7 +154,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(122, 300);
+            this.btnBuscar.Location = new System.Drawing.Point(583, 345);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 37);
@@ -161,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 455);
+            this.ClientSize = new System.Drawing.Size(732, 402);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtImporte);

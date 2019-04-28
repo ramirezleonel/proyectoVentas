@@ -184,7 +184,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>FTEniUQqewKIhpNzkYCJGfMwGbTSe49NxijDDsNSauI=</dsig:DigestValue>
+        <dsig:DigestValue>IsdeLFvPSb0oueDGjj+K068zyZoRNno7zEai8T0IIOc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -196,19 +196,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>h4APp6uLANTceCNu822c+xF7P31VCMvcBqTX6WvHDh8=</dsig:DigestValue>
+        <dsig:DigestValue>UhbFe5fkPh9ZRZxjDgoU2QUr8ez1/Rs0zXH/DGqG3yQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1869824">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1909248">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kVWC3mc7eGLdXG0VCoejdqlrlS0BJRQe6rAfBzRQ4nY=</dsig:DigestValue>
+        <dsig:DigestValue>1OvYqtmVSFUTbPfafcMxjX24TcuOEYjmUa9OB87S8iQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -261,14 +261,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11553792">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11592192">
       <assemblyIdentity name="SistemaVentas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>guIjagf1dGU2jQo/Qb2mrr43zfymFmv+LqjsCJ07uQA=</dsig:DigestValue>
+        <dsig:DigestValue>/Cv8XAcfVIvaPguo9AsLbvyJYCfUb2BmGtOXzIX2i78=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

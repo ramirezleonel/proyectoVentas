@@ -53,6 +53,7 @@
     <Compile Include="DatosCategoria.cs" />
     <Compile Include="DatosCliente.cs" />
     <Compile Include="DatosDetalleMovStock.cs" />
+    <Compile Include="DatosFormaDePago.cs" />
     <Compile Include="DatosMovStock.cs" />
     <Compile Include="DatosProveedor.cs" />
     <Compile Include="DatosUnidades.cs" />

@@ -31,7 +31,7 @@ namespace Capa_Presentacion
             }
             else
             {
-                importe = Convert.ToSingle( TxtConcepto.Text ) -  Convert.ToSingle(label3.Text) ;
+                importe = Convert.ToSingle( TxtConcepto.Text ) -  Convert.ToSingle(lblsaldoActual.Text) ;
 
                 if (importe < 0)
                 {
@@ -58,7 +58,7 @@ namespace Capa_Presentacion
             Negociocaja objcaja = new Negociocaja();
             objcaja.extrestadocaja(1, "");
             objcaja.extrestadocaja(2, objcaja.Fecha);
-            label3.Text = Convert.ToString(objcaja.Ingreso -  objcaja.Egreso);
+            lblsaldoActual.Text = Convert.ToString(objcaja.Ingreso -  objcaja.Egreso);
         }
     }
 }

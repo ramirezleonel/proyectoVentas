@@ -410,7 +410,7 @@
             // btnNuevoCodBar
             // 
             this.btnNuevoCodBar.Enabled = false;
-            this.btnNuevoCodBar.Image = global::Capa_Presentacion.Properties.Resources.Plus_15px;
+            this.btnNuevoCodBar.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevoCodBar.Image")));
             this.btnNuevoCodBar.Location = new System.Drawing.Point(436, 106);
             this.btnNuevoCodBar.Name = "btnNuevoCodBar";
             this.btnNuevoCodBar.Size = new System.Drawing.Size(27, 31);
@@ -548,7 +548,7 @@
             this.lblClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.lblClientes.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClientes.ForeColor = System.Drawing.Color.Snow;
-            this.lblClientes.Image = global::Capa_Presentacion.Properties.Resources.fondo1;
+            this.lblClientes.Image = ((System.Drawing.Image)(resources.GetObject("lblClientes.Image")));
             this.lblClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.lblClientes.Location = new System.Drawing.Point(31, 61);
             this.lblClientes.Name = "lblClientes";
@@ -652,7 +652,7 @@
             this.btnGenerarCodigo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnGenerarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarCodigo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarCodigo.Image = global::Capa_Presentacion.Properties.Resources.scan_barcode_with_scanner_tool;
+            this.btnGenerarCodigo.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarCodigo.Image")));
             this.btnGenerarCodigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnGenerarCodigo.Location = new System.Drawing.Point(671, 61);
             this.btnGenerarCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -669,7 +669,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(39)))), ((int)(((byte)(60)))));
-            this.BackgroundImage = global::Capa_Presentacion.Properties.Resources.fondo;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(980, 700);
             this.Controls.Add(this.btnGenerarCodigo);
             this.Controls.Add(this.panelHorizontal);

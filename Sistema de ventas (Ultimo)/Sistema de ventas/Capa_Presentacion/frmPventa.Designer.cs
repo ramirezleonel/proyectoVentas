@@ -34,7 +34,6 @@
             this.lblTComprobante = new System.Windows.Forms.Label();
             this.cbTipoComprobante = new System.Windows.Forms.ComboBox();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
-            this.btnCliente = new System.Windows.Forms.Button();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.lblNomProducto = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
@@ -60,29 +58,31 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.TxtDetalle = new System.Windows.Forms.TextBox();
             this.lblPrecioCompra = new System.Windows.Forms.Label();
-            this.btnProducto = new System.Windows.Forms.Button();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.panelHorizontal = new System.Windows.Forms.Panel();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.btnConsultas = new System.Windows.Forms.Button();
             this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnNuevo = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.grpboxProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVenta)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panelHorizontal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.SuspendLayout();
             // 
             // grpboxProveedor
@@ -151,19 +151,6 @@
             this.txtTotalPagar.Size = new System.Drawing.Size(265, 40);
             this.txtTotalPagar.TabIndex = 59;
             this.txtTotalPagar.Text = "0,00";
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(470, 26);
-            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(26, 28);
-            this.btnCliente.TabIndex = 57;
-            this.btnCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // txtIdCliente
             // 
@@ -328,18 +315,6 @@
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles ";
             // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::Capa_Presentacion.Properties.Resources.Add_Shopping_Cart_15px;
-            this.btnNuevo.Location = new System.Drawing.Point(408, 22);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(26, 28);
-            this.btnNuevo.TabIndex = 4;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
-            // 
             // lblNomProducto
             // 
             this.lblNomProducto.AutoSize = true;
@@ -459,19 +434,6 @@
             this.lblPrecioCompra.TabIndex = 28;
             this.lblPrecioCompra.Text = "Detalle :";
             // 
-            // btnProducto
-            // 
-            this.btnProducto.Enabled = false;
-            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnProducto.Location = new System.Drawing.Point(378, 22);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(26, 28);
-            this.btnProducto.TabIndex = 3;
-            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProducto.UseVisualStyleBackColor = true;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Enabled = false;
@@ -523,6 +485,34 @@
             this.panelHorizontal.TabIndex = 43;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
+            // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
+            // ttMensajeAyuda
+            // 
+            this.ttMensajeAyuda.AutomaticDelay = 90;
+            // 
+            // btnConsultas
+            // 
+            this.btnConsultas.Image = global::Capa_Presentacion.Properties.Resources.Search_Property_20px;
+            this.btnConsultas.Location = new System.Drawing.Point(975, 47);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(28, 28);
+            this.btnConsultas.TabIndex = 60;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            // 
+            // btnCalculadora
+            // 
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(941, 47);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(28, 28);
+            this.btnCalculadora.TabIndex = 58;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
             // 
             // btnMinimizar
             // 
@@ -581,33 +571,43 @@
             this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
             this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
             // 
-            // errorIcono
+            // btnCliente
             // 
-            this.errorIcono.ContainerControl = this;
+            this.btnCliente.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(470, 26);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(26, 28);
+            this.btnCliente.TabIndex = 57;
+            this.btnCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // ttMensajeAyuda
+            // btnNuevo
             // 
-            this.ttMensajeAyuda.AutomaticDelay = 90;
+            this.btnNuevo.Image = global::Capa_Presentacion.Properties.Resources.Add_Shopping_Cart_15px;
+            this.btnNuevo.Location = new System.Drawing.Point(408, 22);
+            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnNuevo.Name = "btnNuevo";
+            this.btnNuevo.Size = new System.Drawing.Size(26, 28);
+            this.btnNuevo.TabIndex = 4;
+            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
-            // btnConsultas
+            // btnProducto
             // 
-            this.btnConsultas.Image = global::Capa_Presentacion.Properties.Resources.Search_Property_20px;
-            this.btnConsultas.Location = new System.Drawing.Point(975, 47);
-            this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(28, 28);
-            this.btnConsultas.TabIndex = 60;
-            this.btnConsultas.UseVisualStyleBackColor = true;
-            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
-            // 
-            // btnCalculadora
-            // 
-            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
-            this.btnCalculadora.Location = new System.Drawing.Point(941, 47);
-            this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(28, 28);
-            this.btnCalculadora.TabIndex = 58;
-            this.btnCalculadora.UseVisualStyleBackColor = true;
-            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
+            this.btnProducto.Enabled = false;
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.Location = new System.Drawing.Point(378, 22);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 3;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // frmPventa
             // 
@@ -635,11 +635,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.ResumeLayout(false);
 
         }

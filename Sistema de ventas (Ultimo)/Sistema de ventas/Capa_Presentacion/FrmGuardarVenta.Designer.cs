@@ -42,11 +42,19 @@
             this.lblCambio = new System.Windows.Forms.Label();
             this.txtAbono = new System.Windows.Forms.TextBox();
             this.lblAbono = new System.Windows.Forms.Label();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabTarjeta = new System.Windows.Forms.TabControl();
+            this.tbTarjeta = new System.Windows.Forms.TabPage();
+            this.gbxTarjeta = new System.Windows.Forms.GroupBox();
+            this.cbxTarjeta = new System.Windows.Forms.ComboBox();
+            this.lblTarjeta = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.tbEfectivo.SuspendLayout();
             this.gbxEfectivo.SuspendLayout();
-            this.tabControl1.SuspendLayout();
+            this.tabTarjeta.SuspendLayout();
+            this.tbTarjeta.SuspendLayout();
+            this.gbxTarjeta.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGuardar
@@ -158,9 +166,9 @@
             this.gbxEfectivo.Controls.Add(this.txtAbono);
             this.gbxEfectivo.Controls.Add(this.lblAbono);
             this.gbxEfectivo.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxEfectivo.Location = new System.Drawing.Point(36, 44);
+            this.gbxEfectivo.Location = new System.Drawing.Point(25, 44);
             this.gbxEfectivo.Name = "gbxEfectivo";
-            this.gbxEfectivo.Size = new System.Drawing.Size(258, 181);
+            this.gbxEfectivo.Size = new System.Drawing.Size(276, 201);
             this.gbxEfectivo.TabIndex = 0;
             this.gbxEfectivo.TabStop = false;
             this.gbxEfectivo.Text = "Efectivo";
@@ -206,18 +214,81 @@
             this.lblAbono.TabIndex = 53;
             this.lblAbono.Text = "Abona con $ :";
             // 
-            // tabControl1
+            // tabTarjeta
             // 
-            this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Right;
-            this.tabControl1.Controls.Add(this.tbEfectivo);
-            this.tabControl1.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(23, 30);
-            this.tabControl1.Multiline = true;
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(361, 278);
-            this.tabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
-            this.tabControl1.TabIndex = 1;
+            this.tabTarjeta.Alignment = System.Windows.Forms.TabAlignment.Right;
+            this.tabTarjeta.Controls.Add(this.tbEfectivo);
+            this.tabTarjeta.Controls.Add(this.tbTarjeta);
+            this.tabTarjeta.Font = new System.Drawing.Font("Century", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tabTarjeta.Location = new System.Drawing.Point(23, 30);
+            this.tabTarjeta.Multiline = true;
+            this.tabTarjeta.Name = "tabTarjeta";
+            this.tabTarjeta.SelectedIndex = 0;
+            this.tabTarjeta.Size = new System.Drawing.Size(361, 278);
+            this.tabTarjeta.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
+            this.tabTarjeta.TabIndex = 1;
+            // 
+            // tbTarjeta
+            // 
+            this.tbTarjeta.BackColor = System.Drawing.Color.NavajoWhite;
+            this.tbTarjeta.Controls.Add(this.gbxTarjeta);
+            this.tbTarjeta.Location = new System.Drawing.Point(4, 4);
+            this.tbTarjeta.Name = "tbTarjeta";
+            this.tbTarjeta.Padding = new System.Windows.Forms.Padding(3);
+            this.tbTarjeta.Size = new System.Drawing.Size(328, 270);
+            this.tbTarjeta.TabIndex = 1;
+            this.tbTarjeta.Text = "DEBITO";
+            // 
+            // gbxTarjeta
+            // 
+            this.gbxTarjeta.Controls.Add(this.cbxTarjeta);
+            this.gbxTarjeta.Controls.Add(this.lblTarjeta);
+            this.gbxTarjeta.Controls.Add(this.textBox2);
+            this.gbxTarjeta.Controls.Add(this.label2);
+            this.gbxTarjeta.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxTarjeta.Location = new System.Drawing.Point(23, 15);
+            this.gbxTarjeta.Name = "gbxTarjeta";
+            this.gbxTarjeta.Size = new System.Drawing.Size(286, 236);
+            this.gbxTarjeta.TabIndex = 1;
+            this.gbxTarjeta.TabStop = false;
+            this.gbxTarjeta.Text = "Tarjeta";
+            // 
+            // cbxTarjeta
+            // 
+            this.cbxTarjeta.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.cbxTarjeta.FormattingEnabled = true;
+            this.cbxTarjeta.Location = new System.Drawing.Point(27, 121);
+            this.cbxTarjeta.Name = "cbxTarjeta";
+            this.cbxTarjeta.Size = new System.Drawing.Size(215, 31);
+            this.cbxTarjeta.TabIndex = 56;
+            // 
+            // lblTarjeta
+            // 
+            this.lblTarjeta.AutoSize = true;
+            this.lblTarjeta.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTarjeta.Location = new System.Drawing.Point(79, 90);
+            this.lblTarjeta.Name = "lblTarjeta";
+            this.lblTarjeta.Size = new System.Drawing.Size(104, 28);
+            this.lblTarjeta.TabIndex = 55;
+            this.lblTarjeta.Text = "Tarjeta :";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 15F);
+            this.textBox2.Location = new System.Drawing.Point(27, 52);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(215, 32);
+            this.textBox2.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(46, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 28);
+            this.label2.TabIndex = 53;
+            this.label2.Text = "Abona con $ :";
             // 
             // FrmGuardarVenta
             // 
@@ -229,7 +300,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lblPrecioEfectivo);
             this.Controls.Add(this.lblEfectivo);
-            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.tabTarjeta);
             this.Controls.Add(this.btnGuardar);
             this.KeyPreview = true;
             this.MaximizeBox = false;
@@ -245,7 +316,10 @@
             this.tbEfectivo.ResumeLayout(false);
             this.gbxEfectivo.ResumeLayout(false);
             this.gbxEfectivo.PerformLayout();
-            this.tabControl1.ResumeLayout(false);
+            this.tabTarjeta.ResumeLayout(false);
+            this.tbTarjeta.ResumeLayout(false);
+            this.gbxTarjeta.ResumeLayout(false);
+            this.gbxTarjeta.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,6 +341,12 @@
         private System.Windows.Forms.Label lblCambio;
         private System.Windows.Forms.TextBox txtAbono;
         private System.Windows.Forms.Label lblAbono;
-        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabControl tabTarjeta;
+        private System.Windows.Forms.TabPage tbTarjeta;
+        private System.Windows.Forms.GroupBox gbxTarjeta;
+        private System.Windows.Forms.ComboBox cbxTarjeta;
+        private System.Windows.Forms.Label lblTarjeta;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

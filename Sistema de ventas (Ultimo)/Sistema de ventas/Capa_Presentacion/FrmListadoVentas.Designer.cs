@@ -205,7 +205,7 @@
             this.gbxConsultasAvanzadas.Controls.Add(this.btnBuscar);
             this.gbxConsultasAvanzadas.Location = new System.Drawing.Point(22, 12);
             this.gbxConsultasAvanzadas.Name = "gbxConsultasAvanzadas";
-            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(930, 102);
+            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 102);
             this.gbxConsultasAvanzadas.TabIndex = 62;
             this.gbxConsultasAvanzadas.TabStop = false;
             this.gbxConsultasAvanzadas.Text = "Consultas Avanzadas";
@@ -244,7 +244,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 697);
+            this.ClientSize = new System.Drawing.Size(1012, 697);
             this.Controls.Add(this.gbxConsultasAvanzadas);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);

@@ -155,23 +155,7 @@ namespace SistemaVentas
    
 
        
-        int posY = 0;
-        int posX = 0;
-        private void panelHorizontal_MouseMove(object sender, MouseEventArgs e)
-        {
-            //mientra no se apreta el boton izquierdo del mouse actualiza el valor posX Y posY 
-            if(e.Button!= MouseButtons.Left){
-                posY = e.Y;
-                posX = e.X;
-            
-            }else{
-                //Left tiene la distancia que hay entre el borde izq y el fondo de la pantalla
-                Left = Left + (e.X - posX);
-                //top tiene la distancia que hay entre el borde sup y el fondo de la pantalla
-                Top= Top + (e.Y - posY);
-            
-            }
-        }
+      
 
         //VENTANA Y PANEL SUPERIOR
         private void btnRestaurar_Click(object sender, EventArgs e)
@@ -187,7 +171,26 @@ namespace SistemaVentas
             this.Close();
             
         }
+        int posY = 0;
+        int posX = 0;
+        private void panelHorizontal_MouseMove(object sender, MouseEventArgs e)
+        {
+            //mientra no se apreta el boton izquierdo del mouse actualiza el valor posX Y posY 
+            if (e.Button != MouseButtons.Left)
+            {
+                posY = e.Y;
+                posX = e.X;
 
+            }
+            else
+            {
+                //Left tiene la distancia que hay entre el borde izq y el fondo de la pantalla
+                Left = Left + (e.X - posX);
+                //top tiene la distancia que hay entre el borde sup y el fondo de la pantalla
+                Top = Top + (e.Y - posY);
+
+            }
+        }
         private void btnMinimizar_Click(object sender, EventArgs e)
         {
             //minimiza

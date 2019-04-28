@@ -28,114 +28,137 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNomProducto = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.TxtConcepto = new System.Windows.Forms.TextBox();
-            this.BtnApertura = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.gbxCajas = new System.Windows.Forms.GroupBox();
+            this.lblsaldoActual = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.BtnApertura = new System.Windows.Forms.Button();
+            this.TxtConcepto = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblNomProducto = new System.Windows.Forms.Label();
+            this.gbxCajas.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblNomProducto
+            // gbxCajas
             // 
-            this.lblNomProducto.AutoSize = true;
-            this.lblNomProducto.Location = new System.Drawing.Point(85, 34);
-            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomProducto.Name = "lblNomProducto";
-            this.lblNomProducto.Size = new System.Drawing.Size(69, 13);
-            this.lblNomProducto.TabIndex = 27;
-            this.lblNomProducto.Text = "Saldo inicial :";
+            this.gbxCajas.Controls.Add(this.lblsaldoActual);
+            this.gbxCajas.Controls.Add(this.label4);
+            this.gbxCajas.Controls.Add(this.BtnApertura);
+            this.gbxCajas.Controls.Add(this.TxtConcepto);
+            this.gbxCajas.Controls.Add(this.label2);
+            this.gbxCajas.Controls.Add(this.label1);
+            this.gbxCajas.Controls.Add(this.lblNomProducto);
+            this.gbxCajas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxCajas.Location = new System.Drawing.Point(38, 31);
+            this.gbxCajas.Name = "gbxCajas";
+            this.gbxCajas.Size = new System.Drawing.Size(470, 189);
+            this.gbxCajas.TabIndex = 0;
+            this.gbxCajas.TabStop = false;
+            this.gbxCajas.Text = "Caja";
             // 
-            // label1
+            // lblsaldoActual
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(183, 34);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Saldo";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(91, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "Efectivo :";
-            // 
-            // TxtConcepto
-            // 
-            this.TxtConcepto.Location = new System.Drawing.Point(172, 66);
-            this.TxtConcepto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TxtConcepto.Name = "TxtConcepto";
-            this.TxtConcepto.Size = new System.Drawing.Size(83, 20);
-            this.TxtConcepto.TabIndex = 72;
-            this.TxtConcepto.Text = "0";
-            // 
-            // BtnApertura
-            // 
-            this.BtnApertura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnApertura.Location = new System.Drawing.Point(172, 163);
-            this.BtnApertura.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.BtnApertura.Name = "BtnApertura";
-            this.BtnApertura.Size = new System.Drawing.Size(135, 52);
-            this.BtnApertura.TabIndex = 73;
-            this.BtnApertura.Text = "Cerrar caja";
-            this.BtnApertura.UseVisualStyleBackColor = true;
-            this.BtnApertura.Click += new System.EventHandler(this.BtnApertura_Click);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(189, 114);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 13);
-            this.label3.TabIndex = 75;
-            this.label3.Text = "Saldo";
+            this.lblsaldoActual.AutoSize = true;
+            this.lblsaldoActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblsaldoActual.Location = new System.Drawing.Point(121, 99);
+            this.lblsaldoActual.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblsaldoActual.Name = "lblsaldoActual";
+            this.lblsaldoActual.Size = new System.Drawing.Size(55, 20);
+            this.lblsaldoActual.TabIndex = 82;
+            this.lblsaldoActual.Text = "Saldo";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(91, 114);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(41, 99);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 74;
+            this.label4.Size = new System.Drawing.Size(81, 20);
+            this.label4.TabIndex = 81;
             this.label4.Text = "Importe :";
+            // 
+            // BtnApertura
+            // 
+            this.BtnApertura.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnApertura.Location = new System.Drawing.Point(352, 132);
+            this.BtnApertura.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BtnApertura.Name = "BtnApertura";
+            this.BtnApertura.Size = new System.Drawing.Size(108, 41);
+            this.BtnApertura.TabIndex = 80;
+            this.BtnApertura.Text = "Cerrar caja";
+            this.BtnApertura.UseVisualStyleBackColor = true;
+            // 
+            // TxtConcepto
+            // 
+            this.TxtConcepto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtConcepto.Location = new System.Drawing.Point(125, 60);
+            this.TxtConcepto.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TxtConcepto.MaxLength = 12;
+            this.TxtConcepto.Name = "TxtConcepto";
+            this.TxtConcepto.Size = new System.Drawing.Size(204, 26);
+            this.TxtConcepto.TabIndex = 79;
+            this.TxtConcepto.Text = "0";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(38, 63);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(84, 20);
+            this.label2.TabIndex = 78;
+            this.label2.Text = "Efectivo :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(121, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 20);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Saldo";
+            // 
+            // lblNomProducto
+            // 
+            this.lblNomProducto.AutoSize = true;
+            this.lblNomProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNomProducto.Location = new System.Drawing.Point(7, 27);
+            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomProducto.Name = "lblNomProducto";
+            this.lblNomProducto.Size = new System.Drawing.Size(115, 20);
+            this.lblNomProducto.TabIndex = 76;
+            this.lblNomProducto.Text = "Saldo inicial :";
             // 
             // FrmCerrarCaja
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(536, 258);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.BtnApertura);
-            this.Controls.Add(this.TxtConcepto);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblNomProducto);
+            this.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Transaction_48px;
+            this.ClientSize = new System.Drawing.Size(536, 245);
+            this.Controls.Add(this.gbxCajas);
             this.Name = "FrmCerrarCaja";
             this.Text = "Cierre de caja";
             this.Load += new System.EventHandler(this.FrmCerrarCaja_Load);
+            this.gbxCajas.ResumeLayout(false);
+            this.gbxCajas.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label lblNomProducto;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox TxtConcepto;
-        private System.Windows.Forms.Button BtnApertura;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox gbxCajas;
+        private System.Windows.Forms.Label lblsaldoActual;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button BtnApertura;
+        private System.Windows.Forms.TextBox TxtConcepto;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblNomProducto;
+
     }
 }
