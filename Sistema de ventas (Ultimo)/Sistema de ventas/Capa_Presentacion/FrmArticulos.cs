@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.IO;
 using Capa_negocio;
 using Capa_Presentacion.DataSet;
+using System.Diagnostics;
 namespace Capa_Presentacion
 {
     public partial class FrmArticulos : Form
@@ -963,6 +964,61 @@ namespace Capa_Presentacion
         private void tabLista_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnExportarExcel_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SaveFileDialog fichero = new SaveFileDialog();
+                fichero.Filter = "Excel (*.xls)|*.xls";
+                fichero.FileName = "Listado de Productos - " + DateTime.Now.ToString("dd-MM-yyyy");
+                if (fichero.ShowDialog() == DialogResult.OK)
+                {
+                    Microsoft.Office.Interop.Excel.Application aplicacion;
+                    Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                    Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                    aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                    libros_trabajo = aplicacion.Workbooks.Add();
+                    hoja_trabajo =
+                        (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+
+
+                    //Recorremos el DataGridView rellenando la hoja de trabajo
+                    for (int i = 1; i < dataLista.Columns.Count; i++)
+                    {
+
+                        hoja_trabajo.Cells[1, i ] = dataLista.Columns[i].Name;
+                    }
+
+                    for (int i = 1; i < dataLista.Rows.Count; i++)
+                    {
+                        for (int j = 1; j < dataLista.Columns.Count; j++)
+                        {
+                            hoja_trabajo.Cells[i + 1, j ] = dataLista.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+
+                    //ajustar el tamaño de las celdas deacuerdo al tamaño de las columnas agregadas
+                    hoja_trabajo.Cells.Columns.AutoFit();
+                    //guardo el archivo con la ruta del archivo
+                    libros_trabajo.SaveAs(fichero.FileName,
+                        Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                    libros_trabajo.Close(true);
+                    aplicacion.Quit();
+                    if (MessageBox.Show("Desea abrir el Excel ?", "Abrir Excel"
+                        , MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                    {
+                        Process.Start(fichero.FileName);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("Error: " + ex.Message);
+            }
         }
         
        

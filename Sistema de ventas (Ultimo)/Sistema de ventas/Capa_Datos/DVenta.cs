@@ -302,17 +302,20 @@ using Capa_Datos;
         public DataTable MostrarDetalle(string TextoBuscar)
         {
             DataTable DtResultado = new DataTable("detalle_venta");
-            SqlConnection sqlcon = new SqlConnection();
+            SqlConnection sqlcon = new SqlConnection(Conexion.conexion);
             try
             {
-                sqlcon.ConnectionString = Conexion.conexion;
-                SqlCommand sqlcmd = new SqlCommand();
-                sqlcmd.Connection = sqlcon;
-                sqlcmd.CommandText = "spmostrar_detalle_venta";
-                sqlcmd.CommandType = CommandType.StoredProcedure;
 
-                SqlParameter partextobuscar = ProcAlmacenado.asignarParametros("@textobuscar", SqlDbType.Int, TextoBuscar );
+
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(sqlcon, "SP_DETALLEVENTA");
+
+                SqlParameter partextobuscar = ProcAlmacenado.asignarParametros("@textobuscar", SqlDbType.VarChar, TextoBuscar );
                 sqlcmd.Parameters.Add(partextobuscar);
+
+ 
+                //modo 2 mostrar
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 2);
+                sqlcmd.Parameters.Add(parModo);
 
                 SqlDataAdapter sqldat = new SqlDataAdapter(sqlcmd);
                 sqldat.Fill(DtResultado);
@@ -320,7 +323,7 @@ using Capa_Datos;
             }
             catch (Exception ex)
             {
-                DtResultado = null;
+                throw ex;
             }
             return DtResultado; 
         }

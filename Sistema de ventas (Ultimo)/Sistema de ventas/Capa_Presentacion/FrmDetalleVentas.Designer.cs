@@ -31,6 +31,12 @@
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.dataLista = new System.Windows.Forms.DataGridView();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPagarMovimiento = new System.Windows.Forms.Button();
             this.lblCodigo = new System.Windows.Forms.Label();
             this.lblFechaVenta = new System.Windows.Forms.Label();
@@ -39,18 +45,16 @@
             this.lblEstado = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cantidad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.subTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTipo_comprobante = new System.Windows.Forms.Label();
-            this.txtTipoComprobante = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
+            this.lblTipo_comprobante = new System.Windows.Forms.Label();
+            this.txtTipoComprobante = new System.Windows.Forms.TextBox();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
+            this.gbxHerramientas = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
+            this.gbxHerramientas.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtTotal
@@ -95,14 +99,49 @@
             this.Precio,
             this.Descuento,
             this.Cantidad,
-            this.subTotal});
+            this.Importe});
             this.dataLista.Location = new System.Drawing.Point(32, 162);
             this.dataLista.MultiSelect = false;
             this.dataLista.Name = "dataLista";
             this.dataLista.ReadOnly = true;
-            this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataLista.Size = new System.Drawing.Size(906, 384);
             this.dataLista.TabIndex = 11;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Producto
+            // 
+            this.Producto.HeaderText = "Producto";
+            this.Producto.Name = "Producto";
+            this.Producto.ReadOnly = true;
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            this.Precio.ReadOnly = true;
+            // 
+            // Descuento
+            // 
+            this.Descuento.HeaderText = "Descuento";
+            this.Descuento.Name = "Descuento";
+            this.Descuento.ReadOnly = true;
+            // 
+            // Cantidad
+            // 
+            this.Cantidad.HeaderText = "Cantidad";
+            this.Cantidad.Name = "Cantidad";
+            this.Cantidad.ReadOnly = true;
+            // 
+            // Importe
+            // 
+            this.Importe.HeaderText = "Importe";
+            this.Importe.Name = "Importe";
+            this.Importe.ReadOnly = true;
             // 
             // btnPagarMovimiento
             // 
@@ -178,6 +217,7 @@
             this.gbDetalleMovimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDetalleMovimento.Controls.Add(this.gbxHerramientas);
             this.gbDetalleMovimento.Controls.Add(this.lblRazonSocial);
             this.gbDetalleMovimento.Controls.Add(this.txtRazonSocial);
             this.gbDetalleMovimento.Controls.Add(this.lblTipo_comprobante);
@@ -201,41 +241,24 @@
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles ";
             // 
-            // Codigo
+            // lblRazonSocial
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
+            this.lblRazonSocial.AutoSize = true;
+            this.lblRazonSocial.Location = new System.Drawing.Point(472, 81);
+            this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblRazonSocial.Name = "lblRazonSocial";
+            this.lblRazonSocial.Size = new System.Drawing.Size(103, 20);
+            this.lblRazonSocial.TabIndex = 47;
+            this.lblRazonSocial.Text = "Razon Social";
             // 
-            // Producto
+            // txtRazonSocial
             // 
-            this.Producto.HeaderText = "Producto";
-            this.Producto.Name = "Producto";
-            this.Producto.ReadOnly = true;
-            // 
-            // Precio
-            // 
-            this.Precio.HeaderText = "Precio";
-            this.Precio.Name = "Precio";
-            this.Precio.ReadOnly = true;
-            // 
-            // Descuento
-            // 
-            this.Descuento.HeaderText = "Descuento";
-            this.Descuento.Name = "Descuento";
-            this.Descuento.ReadOnly = true;
-            // 
-            // Cantidad
-            // 
-            this.Cantidad.HeaderText = "Cantidad";
-            this.Cantidad.Name = "Cantidad";
-            this.Cantidad.ReadOnly = true;
-            // 
-            // subTotal
-            // 
-            this.subTotal.HeaderText = "SubTotal";
-            this.subTotal.Name = "subTotal";
-            this.subTotal.ReadOnly = true;
+            this.txtRazonSocial.Enabled = false;
+            this.txtRazonSocial.Location = new System.Drawing.Point(631, 78);
+            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtRazonSocial.Name = "txtRazonSocial";
+            this.txtRazonSocial.Size = new System.Drawing.Size(154, 26);
+            this.txtRazonSocial.TabIndex = 46;
             // 
             // lblTipo_comprobante
             // 
@@ -256,38 +279,55 @@
             this.txtTipoComprobante.Size = new System.Drawing.Size(154, 26);
             this.txtTipoComprobante.TabIndex = 44;
             // 
-            // lblRazonSocial
+            // btnExportarExcel
             // 
-            this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(472, 81);
-            this.lblRazonSocial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblRazonSocial.Name = "lblRazonSocial";
-            this.lblRazonSocial.Size = new System.Drawing.Size(103, 20);
-            this.lblRazonSocial.TabIndex = 47;
-            this.lblRazonSocial.Text = "Razon Social";
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 29;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
             // 
-            // txtRazonSocial
+            // btnCalculadora
             // 
-            this.txtRazonSocial.Enabled = false;
-            this.txtRazonSocial.Location = new System.Drawing.Point(631, 78);
-            this.txtRazonSocial.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtRazonSocial.Name = "txtRazonSocial";
-            this.txtRazonSocial.Size = new System.Drawing.Size(154, 26);
-            this.txtRazonSocial.TabIndex = 46;
+            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
+            this.btnCalculadora.TabIndex = 28;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            // 
+            // gbxHerramientas
+            // 
+            this.gbxHerramientas.Controls.Add(this.btnExportarExcel);
+            this.gbxHerramientas.Controls.Add(this.btnCalculadora);
+            this.gbxHerramientas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxHerramientas.Location = new System.Drawing.Point(829, 17);
+            this.gbxHerramientas.Name = "gbxHerramientas";
+            this.gbxHerramientas.Size = new System.Drawing.Size(127, 64);
+            this.gbxHerramientas.TabIndex = 48;
+            this.gbxHerramientas.TabStop = false;
+            this.gbxHerramientas.Text = "herramientas";
             // 
             // FrmDetalleVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1020, 741);
+            this.ClientSize = new System.Drawing.Size(1012, 733);
             this.Controls.Add(this.gbDetalleMovimento);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmDetalleVentas";
             this.Text = "Detalle de Ventas";
+            this.Load += new System.EventHandler(this.FrmDetalleVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();
             this.gbDetalleMovimento.ResumeLayout(false);
             this.gbDetalleMovimento.PerformLayout();
+            this.gbxHerramientas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -305,15 +345,18 @@
         private System.Windows.Forms.Label lblEstado;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.GroupBox gbDetalleMovimento;
+        private System.Windows.Forms.Label lblTipo_comprobante;
+        private System.Windows.Forms.TextBox txtTipoComprobante;
+        private System.Windows.Forms.Label lblRazonSocial;
+        private System.Windows.Forms.TextBox txtRazonSocial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descuento;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cantidad;
-        private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
-        private System.Windows.Forms.Label lblTipo_comprobante;
-        private System.Windows.Forms.TextBox txtTipoComprobante;
-        private System.Windows.Forms.Label lblRazonSocial;
-        private System.Windows.Forms.TextBox txtRazonSocial;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Importe;
+        private System.Windows.Forms.GroupBox gbxHerramientas;
+        private System.Windows.Forms.Button btnExportarExcel;
+        private System.Windows.Forms.Button btnCalculadora;
     }
 }

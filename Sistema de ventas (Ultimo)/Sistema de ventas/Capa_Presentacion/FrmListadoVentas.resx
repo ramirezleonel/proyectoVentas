@@ -135,34 +135,26 @@
   <metadata name="Estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="btnVisualizarGrafico.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAZlJREFUOE/t
+        Ur9Lw0AYPXUQFN1EkCJI3QSXYi/pJaVTMbTFtBJ0EAc3dXJ3cLUl19rNv0CotBFX0UUH/wHdFH9M+g8I
+        Vq3fd34BgxGjuAg+eLzvXu497pKwf0SG2BQjmjT2gUfAg1QtnaZH3wOv8WEameaKOS7FCxR2dNdwyI4O
+        CC1C+FGvGktTUkzAfKe5Rhv48GUhr/NBGhUwAAVtPA3wCXiPyl1zISmFqVWFRVs/Ajau69K4MLaMUbWG
+        q4GHZTfgT4PeAp/xxCqA6LAumoLAMiCeAnmpSXMNFMuuU+VUHPfoUh/n0pzH2Wo4Q3nPzqDiOgAI+WWn
+        mmsug+LVcH2VrKTHLM+O51vFVVSKsFyr6EBhB5WsN8DXKmNYl+IwsZ3oU55rzoJ3zuuZGK7DwuGFG6wb
+        gjvAE/i/BshVsOpWL42BcMGzs8jwQoDTcHomK9n+wt7MCpJsBQgcI9+Hc559pvhZoQ9/Y6FZ0uB97aKG
+        hcM8qmBMHR1LSKOEwzyqC76bqOEwj+r+QqHVLMXQQPV/h594VPebYOwVxSpwmaLCHagAAAAASUVORK5C
+        YII=
+</value>
+  </data>
   <metadata name="errorIcono.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>364, 44</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>54</value>
   </metadata>
-  <metadata name="ttMensajeAyuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>473, 44</value>
-  </metadata>
-  <metadata name="Codigo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Razon_social.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Fecha.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Tipo_comprobante.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Total.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="Estado.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnCerrar.ErrorImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAABGdBTUEAALGPC/xhBQAAAehJREFUeF7t
@@ -177,17 +169,7 @@
         C9YlOZ5nqSIEAAAAAElFTkSuQmCC
 </value>
   </data>
-  <data name="btnVisualizarGrafico.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABGdBTUEAALGPC/xhBQAAAZlJREFUOE/t
-        Ur9Lw0AYPXUQFN1EkCJI3QSXYi/pJaVTMbTFtBJ0EAc3dXJ3cLUl19rNv0CotBFX0UUH/wHdFH9M+g8I
-        Vq3fd34BgxGjuAg+eLzvXu497pKwf0SG2BQjmjT2gUfAg1QtnaZH3wOv8WEameaKOS7FCxR2dNdwyI4O
-        CC1C+FGvGktTUkzAfKe5Rhv48GUhr/NBGhUwAAVtPA3wCXiPyl1zISmFqVWFRVs/Ajau69K4MLaMUbWG
-        q4GHZTfgT4PeAp/xxCqA6LAumoLAMiCeAnmpSXMNFMuuU+VUHPfoUh/n0pzH2Wo4Q3nPzqDiOgAI+WWn
-        mmsug+LVcH2VrKTHLM+O51vFVVSKsFyr6EBhB5WsN8DXKmNYl+IwsZ3oU55rzoJ3zuuZGK7DwuGFG6wb
-        gjvAE/i/BshVsOpWL42BcMGzs8jwQoDTcHomK9n+wt7MCpJsBQgcI9+Hc559pvhZoQ9/Y6FZ0uB97aKG
-        hcM8qmBMHR1LSKOEwzyqC76bqOEwj+r+QqHVLMXQQPV/h594VPebYOwVxSpwmaLCHagAAAAASUVORK5C
-        YII=
-</value>
-  </data>
+  <metadata name="ttMensajeAyuda.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>473, 44</value>
+  </metadata>
 </root>

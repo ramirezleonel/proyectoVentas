@@ -51,6 +51,8 @@ namespace Capa_Presentacion
                    if(row["idcliente"].ToString()=="1"){
                        //si es consumidor final nota de ventas
                    cbTipoComprobante.SelectedIndex = 1;
+                   cbxCategoria.SelectedIndex = 2;
+
                    btnNuevo.Enabled = true;
                    txtNombreProducto.Enabled = true;
                    txtNombreProducto.Focus();
@@ -229,7 +231,7 @@ namespace Capa_Presentacion
                    if(txtIdCliente.Text=="1"){
 
                        cbTipoComprobante.SelectedIndex = 1;
-
+                       cbxCategoria.SelectedIndex = 2;
                    }
                    txtNombreProducto.Focus();
                 }
@@ -271,10 +273,12 @@ namespace Capa_Presentacion
             UtilityFrm.limpiarTextbox(txtRazonSocial,txtIdCliente);
             //deselecciona el combobox de tipo comprobante
             cbTipoComprobante.SelectedIndex = -1;
+            cbxCategoria.SelectedIndex = -1;
             btnNuevo.Enabled = false;
             btnProducto.Enabled = false;
             txtNombreProducto.Enabled = false;
             cbTipoComprobante.Enabled = false;
+            cbxCategoria.Enabled = false;
 
         }
         private void frmPventa_KeyDown(object sender, KeyEventArgs e)
@@ -722,7 +726,7 @@ namespace Capa_Presentacion
                 TxtPrecio.Enabled = true;
                 btnProducto.Enabled = true;
                 cbTipoComprobante.Enabled = true;
-            
+                cbxCategoria.Enabled = true;
             }
         }
 

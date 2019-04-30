@@ -70,13 +70,14 @@
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.panelHorizontal = new System.Windows.Forms.Panel();
+            this.lblSistemaVentas = new System.Windows.Forms.Label();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.btnGenerarCodigo = new System.Windows.Forms.Button();
-            this.lblSistemaVentas = new System.Windows.Forms.Label();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
             this.tabLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.grpboxCategoria.SuspendLayout();
@@ -109,6 +110,7 @@
             // tabLista
             // 
             this.tabLista.BackColor = System.Drawing.Color.White;
+            this.tabLista.Controls.Add(this.btnExportarExcel);
             this.tabLista.Controls.Add(this.rbCategoria);
             this.tabLista.Controls.Add(this.rdbCodigoBarra);
             this.tabLista.Controls.Add(this.rdbNombre);
@@ -558,6 +560,21 @@
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
             // 
+            // lblSistemaVentas
+            // 
+            this.lblSistemaVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSistemaVentas.AutoSize = true;
+            this.lblSistemaVentas.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSistemaVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSistemaVentas.Location = new System.Drawing.Point(11, 5);
+            this.lblSistemaVentas.Name = "lblSistemaVentas";
+            this.lblSistemaVentas.Size = new System.Drawing.Size(101, 23);
+            this.lblSistemaVentas.TabIndex = 7;
+            this.lblSistemaVentas.Text = "Productos";
+            this.lblSistemaVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -644,20 +661,16 @@
             this.btnGenerarCodigo.UseVisualStyleBackColor = false;
             this.btnGenerarCodigo.Click += new System.EventHandler(this.btnGenerarCodigo_Click);
             // 
-            // lblSistemaVentas
+            // btnExportarExcel
             // 
-            this.lblSistemaVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSistemaVentas.AutoSize = true;
-            this.lblSistemaVentas.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSistemaVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSistemaVentas.Location = new System.Drawing.Point(11, 5);
-            this.lblSistemaVentas.Name = "lblSistemaVentas";
-            this.lblSistemaVentas.Size = new System.Drawing.Size(101, 23);
-            this.lblSistemaVentas.TabIndex = 7;
-            this.lblSistemaVentas.Text = "Productos";
-            this.lblSistemaVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(899, 15);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 30;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
             // 
             // FrmArticulos
             // 
@@ -744,6 +757,7 @@
         private System.Windows.Forms.Button btnNuevoCodBar;
         private System.Windows.Forms.CheckBox cbxPesable;
         private System.Windows.Forms.Label lblSistemaVentas;
+        private System.Windows.Forms.Button btnExportarExcel;
 
     }
 }

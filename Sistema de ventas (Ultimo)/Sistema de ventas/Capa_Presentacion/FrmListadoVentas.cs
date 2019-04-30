@@ -108,11 +108,12 @@ namespace Capa_Presentacion
                         hoja_trabajo.Cells[1, i+1] = dataLista.Columns[i].Name;
                     }
 
-                    for (int i = 1; i < dataLista.Rows.Count; i++)
+                    for (int i = 0; i < dataLista.Rows.Count; i++)
                     {
                         for (int j = 0; j < dataLista.Columns.Count; j++)
                         {
-                            hoja_trabajo.Cells[i + 1, j + 1] = dataLista.Rows[i].Cells[j].Value.ToString();
+                            //se coloca 2 porque la primera celda pertenece al nombre de la columna y luego los datos
+                            hoja_trabajo.Cells[i + 2, j + 1] = dataLista.Rows[i].Cells[j].Value.ToString();
                         }
                     }
 
@@ -169,7 +170,7 @@ namespace Capa_Presentacion
                 DataTable dt = NegocioVenta.BuscarFechas(dtpFechaIni.Value.ToString("dd/MM/yyyy"), dtpFechaFin.Value.ToString("dd/MM/yyyy"));
                 foreach (DataRow venta in dt.Rows)
                 {
-                     dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["serie"], venta["correlativo"], venta["total"]);
+                     dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["total"]);
                 }
        
             }
@@ -187,28 +188,52 @@ namespace Capa_Presentacion
         private void btnTodos_Click(object sender, EventArgs e)
         {
             this.mostrar();
+            this.actualizarTotal();
         }
 
-        private void dataLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+       
 
+
+      
+
+        private void btnCalculadora_Click(object sender, EventArgs e)
+        {
+            //calculadora
+            Process proceso = new Process();
+            proceso.StartInfo.FileName = "calc.exe";
+            proceso.StartInfo.Arguments = "";
+            proceso.Start();
         }
 
-        private void dataLista_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void btnExportarExcel_Click(object sender, EventArgs e)
         {
-            if (dataLista.Rows.Count > 0)
-            {
-                DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+            exportarAExcel();
+        }
 
-                FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["Razon_social"].Value),
-                    date.ToShortDateString(),
-                     Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
-                    Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
-                venta.ShowDialog();
+        private void dataLista_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter){
+                if (dataLista.Rows.Count > 0)
+                {
+                    DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+
+                    FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["Razon_social"].Value),
+                        date.ToShortDateString(),
+                         Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
+                        Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
+                    venta.ShowDialog();
+                }
             }
+            this.buscarPorFecha();
         }
+
+        private void dataLista_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+
+        }
+
 
         //VENTANA Y PANEL SUPERIOR
 
@@ -309,22 +334,24 @@ namespace Capa_Presentacion
 
         }
 
-        private void btnCalculadora_Click(object sender, EventArgs e)
+        private void dataLista_CellMouseDoubleClick_1(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //calculadora
-            Process proceso = new Process();
-            proceso.StartInfo.FileName = "calc.exe";
-            proceso.StartInfo.Arguments = "";
-            proceso.Start();
+               if (dataLista.Rows.Count > 0)
+                {
+                    DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+
+                    FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["Razon_social"].Value),
+                        date.ToShortDateString(),
+                         Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
+                        Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
+                    venta.ShowDialog();
+                }
+             this.mostrar();
+           
+           
         }
-
-        private void btnExportarExcel_Click(object sender, EventArgs e)
-        {
-            exportarAExcel();
-        }
-
-
-
 
 
 

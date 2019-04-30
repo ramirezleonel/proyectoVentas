@@ -46,8 +46,12 @@
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
+            this.gbxHerramientas = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
+            this.gbxHerramientas.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnPagarMovimiento
@@ -197,6 +201,7 @@
             this.gbDetalleMovimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbDetalleMovimento.Controls.Add(this.gbxHerramientas);
             this.gbDetalleMovimento.Controls.Add(this.txtTotal);
             this.gbDetalleMovimento.Controls.Add(this.lblTotal);
             this.gbDetalleMovimento.Controls.Add(this.dataLista);
@@ -244,6 +249,40 @@
             this.lblTotal.TabIndex = 42;
             this.lblTotal.Text = "TOTAL";
             // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 29;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
+            // 
+            // btnCalculadora
+            // 
+            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
+            this.btnCalculadora.TabIndex = 28;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            // 
+            // gbxHerramientas
+            // 
+            this.gbxHerramientas.Controls.Add(this.btnExportarExcel);
+            this.gbxHerramientas.Controls.Add(this.btnCalculadora);
+            this.gbxHerramientas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxHerramientas.Location = new System.Drawing.Point(832, 20);
+            this.gbxHerramientas.Name = "gbxHerramientas";
+            this.gbxHerramientas.Size = new System.Drawing.Size(127, 64);
+            this.gbxHerramientas.TabIndex = 44;
+            this.gbxHerramientas.TabStop = false;
+            this.gbxHerramientas.Text = "herramientas";
+            // 
             // FrmDetallesDeStock
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -258,6 +297,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();
             this.gbDetalleMovimento.ResumeLayout(false);
             this.gbDetalleMovimento.PerformLayout();
+            this.gbxHerramientas.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,5 +322,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn subTotal;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.GroupBox gbxHerramientas;
+        private System.Windows.Forms.Button btnExportarExcel;
+        private System.Windows.Forms.Button btnCalculadora;
     }
 }

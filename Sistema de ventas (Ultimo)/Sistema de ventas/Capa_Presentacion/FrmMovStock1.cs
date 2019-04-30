@@ -936,32 +936,12 @@ namespace Capa_Presentacion
             txtPrecioCompra.Focus();
         }
 
-        private void dataLista_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataLista.Rows.Count > 0)
-            {
-                DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
-
-                FrmDetallesDeStock stock = new FrmDetallesDeStock(Convert.ToString(this.dataLista.CurrentRow.Cells["idmov_stock"].Value),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["movimiento"].Value),
-                    date.ToShortDateString(),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
-                    Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value),2)));
-                stock.ShowDialog();
-            }
-        }
 
         private void dataLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if(dataLista.Rows.Count>0){
-                DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+                abrirDetalleVenta();
 
-                FrmDetallesDeStock stock = new FrmDetallesDeStock(Convert.ToString(this.dataLista.CurrentRow.Cells["idmov_stock"].Value),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["movimiento"].Value),
-                    date.ToShortDateString(),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value)  ,
-                      Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
-                stock.ShowDialog();
             }
            
         }
@@ -970,17 +950,18 @@ namespace Capa_Presentacion
         {
             if (e.KeyCode == Keys.Enter&&dataLista.Rows.Count>0)
             {
-                DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
-
-                FrmDetallesDeStock stock = new FrmDetallesDeStock(Convert.ToString(this.dataLista.CurrentRow.Cells["idmov_stock"].Value),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["movimiento"].Value),
-                    date.ToShortDateString(),
-                    Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
-                      Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
-                stock.ShowDialog();
+                abrirDetalleVenta();
             }
         }
-
+        public void abrirDetalleVenta() {
+            DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+            FrmDetallesDeStock stock = new FrmDetallesDeStock(Convert.ToString(this.dataLista.CurrentRow.Cells["idmov_stock"].Value),
+                               date.ToShortDateString(),
+                               Convert.ToString(this.dataLista.CurrentRow.Cells["movimiento"].Value),
+                             Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
+                             Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
+            stock.ShowDialog();
+        }
         private void txtPrecioCompra_Leave(object sender, EventArgs e)
         {
             if(txtPrecioCompra.Text.Length>0){

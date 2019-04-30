@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMovStock1));
             this.btnImprimir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblTotal = new System.Windows.Forms.Label();
@@ -95,11 +94,11 @@
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.panelHorizontal = new System.Windows.Forms.Panel();
-            this.lblMovStock = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
@@ -112,10 +111,10 @@
             this.gbDetalleMovimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panelHorizontal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -182,7 +181,6 @@
             this.dataLista.Size = new System.Drawing.Size(965, 520);
             this.dataLista.TabIndex = 6;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
-            this.dataLista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentDoubleClick);
             this.dataLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellDoubleClick);
             this.dataLista.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataLista_KeyDown);
             // 
@@ -837,68 +835,27 @@
             // 
             this.panelHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
             this.panelHorizontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelHorizontal.Controls.Add(this.lblMovStock);
-            this.panelHorizontal.Controls.Add(this.btnMinimizar);
-            this.panelHorizontal.Controls.Add(this.btnCerrar);
             this.panelHorizontal.Controls.Add(this.btnMaximizar);
             this.panelHorizontal.Controls.Add(this.btnRestaurar);
+            this.panelHorizontal.Controls.Add(this.btnMinimizar);
+            this.panelHorizontal.Controls.Add(this.btnCerrar);
+            this.panelHorizontal.Controls.Add(this.lblSistemaVenta);
             this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
             this.panelHorizontal.Name = "panelHorizontal";
-            this.panelHorizontal.Size = new System.Drawing.Size(1028, 41);
-            this.panelHorizontal.TabIndex = 34;
-            this.panelHorizontal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHorizontal_Paint);
+            this.panelHorizontal.Size = new System.Drawing.Size(1028, 37);
+            this.panelHorizontal.TabIndex = 64;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
-            // 
-            // lblMovStock
-            // 
-            this.lblMovStock.AutoSize = true;
-            this.lblMovStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblMovStock.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMovStock.Location = new System.Drawing.Point(0, 0);
-            this.lblMovStock.Name = "lblMovStock";
-            this.lblMovStock.Size = new System.Drawing.Size(324, 32);
-            this.lblMovStock.TabIndex = 3;
-            this.lblMovStock.Text = "MOVIMIENTO DE STOCK";
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Location = new System.Drawing.Point(911, 6);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
-            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Location = new System.Drawing.Point(992, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
-            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(952, 6);
+            this.btnMaximizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.maximize_Checkbox_16px;
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(968, 5);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
             this.btnMaximizar.TabIndex = 5;
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -908,17 +865,61 @@
             // btnRestaurar
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRestaurar.Location = new System.Drawing.Point(952, 6);
+            this.btnRestaurar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Restore_Window_20px;
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(968, 5);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
             this.btnRestaurar.TabIndex = 2;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
             this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
             this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Minus_20px;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(935, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Delete_20px;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = null;
+            this.btnCerrar.Location = new System.Drawing.Point(1001, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
+            // 
+            // lblSistemaVenta
+            // 
+            this.lblSistemaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSistemaVenta.AutoSize = true;
+            this.lblSistemaVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSistemaVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSistemaVenta.Location = new System.Drawing.Point(3, 6);
+            this.lblSistemaVenta.Name = "lblSistemaVenta";
+            this.lblSistemaVenta.Size = new System.Drawing.Size(245, 23);
+            this.lblSistemaVenta.TabIndex = 3;
+            this.lblSistemaVenta.Text = "MOVIMIENTO DE STOCK    ";
+            this.lblSistemaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmMovStock1
             // 
@@ -950,10 +951,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
 
@@ -979,7 +980,7 @@
         private System.Windows.Forms.ToolTip ttMensajeAyuda;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Panel panelHorizontal;
-        private System.Windows.Forms.Label lblMovStock;
+        private System.Windows.Forms.Label lblSistemaVenta;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMaximizar;
