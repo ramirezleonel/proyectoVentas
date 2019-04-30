@@ -33,9 +33,6 @@
     <Reference Include="BarcodeLib">
       <HintPath>..\packages\BarcodeLib.1.1.0.0\lib\net20\BarcodeLib.dll</HintPath>
     </Reference>
-    <Reference Include="circle_progressbar">
-      <HintPath>..\packages\CircleProgressBar.1.0.1\lib\circle_progressbar.dll</HintPath>
-    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -538,8 +535,38 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access.Dao">
+      <Guid>{4AC9E1DA-5BAD-4AC7-86E3-24F4CDCECA28}</Guid>
+      <VersionMajor>12</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>7</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Microsoft Excel_20px.png" />
+    <None Include="Resources\List_20px.png" />
+    <None Include="Resources\Select All_20px.png" />
     <None Include="Resources\Restore Window_20px.png" />
     <None Include="Resources\Minus_20px.png" />
     <None Include="Resources\maximize Checkbox_16px.png" />
@@ -561,6 +588,9 @@
     <None Include="Resources\Add List_30px.png" />
     <None Include="Resources\Add List_15px.png" />
     <None Include="Resources\Delete_20px.png" />
+    <None Include="Resources\Increase_20px.png" />
+    <None Include="Resources\Label Printer_30px.png" />
+    <None Include="Resources\Label Printer_50px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

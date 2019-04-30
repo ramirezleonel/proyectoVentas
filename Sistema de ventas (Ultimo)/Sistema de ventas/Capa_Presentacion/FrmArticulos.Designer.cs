@@ -69,14 +69,14 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.lblClientes = new System.Windows.Forms.Label();
             this.panelHorizontal = new System.Windows.Forms.Panel();
-            this.lblSistemaVenta = new System.Windows.Forms.Label();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.btnGenerarCodigo = new System.Windows.Forms.Button();
+            this.lblSistemaVentas = new System.Windows.Forms.Label();
             this.tabLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.grpboxCategoria.SuspendLayout();
@@ -84,10 +84,10 @@
             this.tabControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panelHorizontal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // ttMensajeAyuda
@@ -123,7 +123,7 @@
             this.tabLista.Location = new System.Drawing.Point(4, 29);
             this.tabLista.Name = "tabLista";
             this.tabLista.Padding = new System.Windows.Forms.Padding(3);
-            this.tabLista.Size = new System.Drawing.Size(948, 519);
+            this.tabLista.Size = new System.Drawing.Size(948, 555);
             this.tabLista.TabIndex = 0;
             this.tabLista.Text = "Lista";
             this.tabLista.Click += new System.EventHandler(this.tabLista_Click);
@@ -181,7 +181,7 @@
             this.dataLista.Name = "dataLista";
             this.dataLista.ReadOnly = true;
             this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataLista.Size = new System.Drawing.Size(903, 306);
+            this.dataLista.Size = new System.Drawing.Size(903, 342);
             this.dataLista.TabIndex = 11;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.Click += new System.EventHandler(this.dataLista_Click_1);
@@ -508,7 +508,7 @@
             this.tabConfiguracion.Location = new System.Drawing.Point(4, 29);
             this.tabConfiguracion.Name = "tabConfiguracion";
             this.tabConfiguracion.Padding = new System.Windows.Forms.Padding(3);
-            this.tabConfiguracion.Size = new System.Drawing.Size(948, 519);
+            this.tabConfiguracion.Size = new System.Drawing.Size(948, 555);
             this.tabConfiguracion.TabIndex = 1;
             this.tabConfiguracion.Text = "Agregar o Cambiar";
             this.tabConfiguracion.UseVisualStyleBackColor = true;
@@ -524,10 +524,10 @@
             this.tabControl1.Controls.Add(this.tabConfiguracion);
             this.tabControl1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ItemSize = new System.Drawing.Size(45, 25);
-            this.tabControl1.Location = new System.Drawing.Point(12, 126);
+            this.tabControl1.Location = new System.Drawing.Point(12, 90);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(956, 552);
+            this.tabControl1.Size = new System.Drawing.Size(956, 588);
             this.tabControl1.TabIndex = 10;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected_1);
             // 
@@ -540,88 +540,32 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // lblClientes
-            // 
-            this.lblClientes.AutoSize = true;
-            this.lblClientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.lblClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblClientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblClientes.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.ForeColor = System.Drawing.Color.Snow;
-            this.lblClientes.Image = ((System.Drawing.Image)(resources.GetObject("lblClientes.Image")));
-            this.lblClientes.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblClientes.Location = new System.Drawing.Point(31, 61);
-            this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(217, 49);
-            this.lblClientes.TabIndex = 7;
-            this.lblClientes.Text = "Productos";
-            // 
             // panelHorizontal
             // 
             this.panelHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
             this.panelHorizontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelHorizontal.Controls.Add(this.lblSistemaVenta);
-            this.panelHorizontal.Controls.Add(this.btnMinimizar);
-            this.panelHorizontal.Controls.Add(this.btnCerrar);
+            this.panelHorizontal.Controls.Add(this.lblSistemaVentas);
             this.panelHorizontal.Controls.Add(this.btnMaximizar);
             this.panelHorizontal.Controls.Add(this.btnRestaurar);
+            this.panelHorizontal.Controls.Add(this.btnMinimizar);
+            this.panelHorizontal.Controls.Add(this.btnCerrar);
+            this.panelHorizontal.Controls.Add(this.lblSistemaVenta);
             this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
             this.panelHorizontal.Name = "panelHorizontal";
-            this.panelHorizontal.Size = new System.Drawing.Size(980, 41);
-            this.panelHorizontal.TabIndex = 33;
-            this.panelHorizontal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHorizontal_Paint);
+            this.panelHorizontal.Size = new System.Drawing.Size(980, 37);
+            this.panelHorizontal.TabIndex = 64;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
-            // 
-            // lblSistemaVenta
-            // 
-            this.lblSistemaVenta.AutoSize = true;
-            this.lblSistemaVenta.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblSistemaVenta.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSistemaVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblSistemaVenta.Location = new System.Drawing.Point(0, 0);
-            this.lblSistemaVenta.Name = "lblSistemaVenta";
-            this.lblSistemaVenta.Size = new System.Drawing.Size(337, 32);
-            this.lblSistemaVenta.TabIndex = 3;
-            this.lblSistemaVenta.Text = "GESTIÓN DE PRODUCTOS";
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Location = new System.Drawing.Point(864, 6);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
-            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Location = new System.Drawing.Point(945, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
-            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(905, 6);
+            this.btnMaximizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.maximize_Checkbox_16px;
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(920, 5);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
             this.btnMaximizar.TabIndex = 5;
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -631,17 +575,53 @@
             // btnRestaurar
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRestaurar.Location = new System.Drawing.Point(905, 6);
+            this.btnRestaurar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Restore_Window_20px;
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(920, 5);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
             this.btnRestaurar.TabIndex = 2;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
             this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
             this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Minus_20px;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(887, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Delete_20px;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = null;
+            this.btnCerrar.Location = new System.Drawing.Point(953, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
+            // 
+            // lblSistemaVenta
+            // 
+            this.lblSistemaVenta.Location = new System.Drawing.Point(0, 0);
+            this.lblSistemaVenta.Name = "lblSistemaVenta";
+            this.lblSistemaVenta.Size = new System.Drawing.Size(100, 23);
+            this.lblSistemaVenta.TabIndex = 6;
             // 
             // btnGenerarCodigo
             // 
@@ -652,17 +632,32 @@
             this.btnGenerarCodigo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CornflowerBlue;
             this.btnGenerarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGenerarCodigo.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarCodigo.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarCodigo.Image")));
+            this.btnGenerarCodigo.Image = global::Capa_Presentacion.Properties.Resources.Label_Printer_50px;
             this.btnGenerarCodigo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarCodigo.Location = new System.Drawing.Point(671, 61);
+            this.btnGenerarCodigo.Location = new System.Drawing.Point(710, 49);
             this.btnGenerarCodigo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnGenerarCodigo.Name = "btnGenerarCodigo";
-            this.btnGenerarCodigo.Size = new System.Drawing.Size(289, 67);
+            this.btnGenerarCodigo.Size = new System.Drawing.Size(258, 49);
             this.btnGenerarCodigo.TabIndex = 35;
             this.btnGenerarCodigo.Text = "Generar Etiquetas ";
             this.btnGenerarCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGenerarCodigo.UseVisualStyleBackColor = false;
             this.btnGenerarCodigo.Click += new System.EventHandler(this.btnGenerarCodigo_Click);
+            // 
+            // lblSistemaVentas
+            // 
+            this.lblSistemaVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSistemaVentas.AutoSize = true;
+            this.lblSistemaVentas.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSistemaVentas.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSistemaVentas.Location = new System.Drawing.Point(11, 5);
+            this.lblSistemaVentas.Name = "lblSistemaVentas";
+            this.lblSistemaVentas.Size = new System.Drawing.Size(101, 23);
+            this.lblSistemaVentas.TabIndex = 7;
+            this.lblSistemaVentas.Text = "Productos";
+            this.lblSistemaVentas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FrmArticulos
             // 
@@ -673,7 +668,6 @@
             this.ClientSize = new System.Drawing.Size(980, 700);
             this.Controls.Add(this.btnGenerarCodigo);
             this.Controls.Add(this.panelHorizontal);
-            this.Controls.Add(this.lblClientes);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
@@ -693,12 +687,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -728,7 +721,6 @@
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.ComboBox cbxCategoria;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.Label lblClientes;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Eliminar;
         private System.Windows.Forms.Panel panelHorizontal;
         private System.Windows.Forms.PictureBox btnMaximizar;
@@ -751,6 +743,7 @@
         private System.Windows.Forms.Label lblCantInicial;
         private System.Windows.Forms.Button btnNuevoCodBar;
         private System.Windows.Forms.CheckBox cbxPesable;
+        private System.Windows.Forms.Label lblSistemaVentas;
 
     }
 }

@@ -441,7 +441,7 @@
             this.pnlSeparacion.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pnlSeparacion.Location = new System.Drawing.Point(1, 36);
             this.pnlSeparacion.Name = "pnlSeparacion";
-            this.pnlSeparacion.Size = new System.Drawing.Size(1018, 2);
+            this.pnlSeparacion.Size = new System.Drawing.Size(1010, 2);
             this.pnlSeparacion.TabIndex = 0;
             // 
             // panelHorizontal
@@ -457,7 +457,7 @@
             this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
             this.panelHorizontal.Name = "panelHorizontal";
-            this.panelHorizontal.Size = new System.Drawing.Size(1020, 37);
+            this.panelHorizontal.Size = new System.Drawing.Size(1012, 37);
             this.panelHorizontal.TabIndex = 64;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
@@ -465,9 +465,9 @@
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
+            this.btnMaximizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.maximize_Checkbox_16px;
             this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMaximizar.Location = new System.Drawing.Point(960, 5);
+            this.btnMaximizar.Location = new System.Drawing.Point(952, 5);
             this.btnMaximizar.Name = "btnMaximizar";
             this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
             this.btnMaximizar.TabIndex = 5;
@@ -479,9 +479,9 @@
             // btnRestaurar
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
+            this.btnRestaurar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Restore_Window_20px;
             this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRestaurar.Location = new System.Drawing.Point(959, 5);
+            this.btnRestaurar.Location = new System.Drawing.Point(952, 5);
             this.btnRestaurar.Name = "btnRestaurar";
             this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
             this.btnRestaurar.TabIndex = 2;
@@ -494,9 +494,9 @@
             // btnMinimizar
             // 
             this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Minus_20px;
             this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMinimizar.Location = new System.Drawing.Point(927, 5);
+            this.btnMinimizar.Location = new System.Drawing.Point(919, 5);
             this.btnMinimizar.Name = "btnMinimizar";
             this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
             this.btnMinimizar.TabIndex = 1;
@@ -508,10 +508,10 @@
             // btnCerrar
             // 
             this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Delete_20px;
             this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
-            this.btnCerrar.Location = new System.Drawing.Point(993, 5);
+            this.btnCerrar.Location = new System.Drawing.Point(985, 5);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Size = new System.Drawing.Size(22, 25);
             this.btnCerrar.TabIndex = 0;
@@ -527,7 +527,7 @@
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1020, 733);
+            this.ClientSize = new System.Drawing.Size(1012, 733);
             this.Controls.Add(this.panelHorizontal);
             this.Controls.Add(this.grpboxConsulta);
             this.DoubleBuffered = true;

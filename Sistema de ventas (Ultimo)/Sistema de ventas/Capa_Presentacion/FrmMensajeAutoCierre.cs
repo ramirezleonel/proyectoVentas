@@ -19,7 +19,12 @@ namespace Capa_Presentacion
 
          System.Threading.Timer TiempoParaCierre;
         string Titulo;
-
+        /// <summary>
+        /// Crea un formulario de autocierre 
+        /// </summary>
+        /// <param name="texto">Texto que va a mostrar</param>
+        /// <param name="titulo">Titulo de la ventana</param>
+        /// <param name="tiempo">Tiempo que se va a mostrar</param>
         public FrmMensajeAutoCierre(string texto, string titulo, int tiempo)
         {
             InitializeComponent();
@@ -28,7 +33,12 @@ namespace Capa_Presentacion
                 null, tiempo, System.Threading.Timeout.Infinite);
             MessageBox.Show(texto, titulo);
         }
-
+        /// <summary>
+        /// Muestra la ventana de autocierre
+        /// </summary>
+        /// <param name="text"></param>
+        /// <param name="caption"></param>
+        /// <param name="timeout"></param>
         public static void Show(string text, string caption, int timeout)
         {
             new FrmMensajeAutoCierre(text, caption, timeout);

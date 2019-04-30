@@ -41,7 +41,7 @@ namespace SistemaVentas
         private void FrmInicio_Load(object sender, EventArgs e)
         {
             panelHorizontal.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
-
+            
             //posicion inicial
 
              InicialusuariosY = btnUsuarios.Location.Y;
@@ -130,21 +130,22 @@ namespace SistemaVentas
 
         //color panelprincipal 65; 39; 60
         //metodos
-        private void abrirMDIParent(Form formularioHijo) {
+        private  void abrirMDIParent(Form formularioHijo) {
 
             if (panelPrincipal.Controls.Count > 0)
             {
                 this.panelPrincipal.Controls.RemoveAt(0);
             }
                 //forma de mostrarse como ventana de nivel superior desactivada
-               
+            
                 formularioHijo.TopLevel = false;
                 formularioHijo.Dock= DockStyle.Fill;
                 this.panelPrincipal.Controls.Add(formularioHijo);
                 this.panelPrincipal.Tag = formularioHijo;
-                formularioHijo.Show();
-            
-        
+
+
+                Thread.Sleep(1000);
+               formularioHijo.Show();
         }
        
         //maximizar
@@ -406,8 +407,13 @@ namespace SistemaVentas
 
         private void btnProveedor_Click(object sender, EventArgs e)
         {
+            sgpProgresoFormulario.Visible = true;
             FrmProveedor proveedor = new FrmProveedor();
             abrirMDIParent(proveedor);
+          
+            
+            
+
         }
 
         private void btnClientes_Click(object sender, EventArgs e)
@@ -487,13 +493,49 @@ namespace SistemaVentas
 
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
+
+         
+            sgpProgresoFormulario.Visible = true;
+
+
+          //  backgroundWorker1.RunWorkerAsync();
+           
+            
+           // abrirMDIParent(usuario);
+
+
+            
+         
+            
+            
+        }
+
+        public void mostrarFormularioUsuario()
+        {
+            //espera
             FrmUsuario usuario = new FrmUsuario();
+            Thread.Sleep(1000);
             abrirMDIParent(usuario);
         }
 
+       
+
+        private void btnListaVenta_Click(object sender, EventArgs e)
+        {
+            FrmListadoVentas listadoVentas = new FrmListadoVentas();
+            listadoVentas.ShowDialog();
+        }
+
+     
+
+
+
+       
+
 
         //vuelve a la normalidad todos los botones en el caso de que se encuentren desplegados
-        public void volverAPosicionInicial() {
+        public void volverAPosicionInicial()
+        {
             isVentaDesplegado = false;
             isProductoDesplegado = false;
 
@@ -523,7 +565,7 @@ namespace SistemaVentas
             pnCaja.Location = new System.Drawing.Point(0, InicialcajaY);
             pnUsuarios.Location = new System.Drawing.Point(0, InicialusuariosY);
             pnStock.Location = new System.Drawing.Point(0, InicialstockY);
-        
+
         }
 
         private void btnGenerarVenta_Click(object sender, EventArgs e)
@@ -532,18 +574,10 @@ namespace SistemaVentas
             objventa.ShowDialog();
         }
 
-        private void btnListaVenta_Click(object sender, EventArgs e)
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            FrmListadoVentas listadoVentas = new FrmListadoVentas();
-            listadoVentas.ShowDialog();
+            mostrarFormularioUsuario();
         }
-       
-
-     
-
-       
-
-       
 
       
 

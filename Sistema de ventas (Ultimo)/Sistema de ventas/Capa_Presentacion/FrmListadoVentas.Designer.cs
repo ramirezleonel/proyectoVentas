@@ -34,25 +34,43 @@
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaIni = new System.Windows.Forms.DateTimePicker();
             this.dataLista = new System.Windows.Forms.DataGridView();
-            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Razon_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Correlativo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblFechaIni = new System.Windows.Forms.Label();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.lblTotal = new System.Windows.Forms.Label();
             this.gbxConsultasAvanzadas = new System.Windows.Forms.GroupBox();
-            this.btnTodos = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.gbxVisualizar = new System.Windows.Forms.GroupBox();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.lblSistemaVenta = new System.Windows.Forms.Label();
+            this.panelHorizontal = new System.Windows.Forms.Panel();
+            this.pnlSeparacion = new System.Windows.Forms.Panel();
+            this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Razon_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gbxHerramientas = new System.Windows.Forms.GroupBox();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnVisualizarGrafico = new System.Windows.Forms.Button();
+            this.btnVisualizarLista = new System.Windows.Forms.Button();
+            this.btnTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.gbxConsultasAvanzadas.SuspendLayout();
+            this.gbxVisualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
+            this.panelHorizontal.SuspendLayout();
+            this.gbxHerramientas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -96,67 +114,17 @@
             this.Razon_social,
             this.Fecha,
             this.Tipo_comprobante,
-            this.Serie,
-            this.Correlativo,
             this.Total,
             this.Estado});
-            this.dataLista.Location = new System.Drawing.Point(22, 133);
+            this.dataLista.Location = new System.Drawing.Point(22, 174);
             this.dataLista.MultiSelect = false;
             this.dataLista.Name = "dataLista";
             this.dataLista.ReadOnly = true;
             this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataLista.Size = new System.Drawing.Size(965, 450);
+            this.dataLista.Size = new System.Drawing.Size(965, 409);
             this.dataLista.TabIndex = 21;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentDoubleClick);
-            // 
-            // Codigo
-            // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
-            // 
-            // Razon_social
-            // 
-            this.Razon_social.HeaderText = "Razon_social";
-            this.Razon_social.Name = "Razon_social";
-            this.Razon_social.ReadOnly = true;
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
-            // 
-            // Tipo_comprobante
-            // 
-            this.Tipo_comprobante.HeaderText = "Tipo_comprobante";
-            this.Tipo_comprobante.Name = "Tipo_comprobante";
-            this.Tipo_comprobante.ReadOnly = true;
-            // 
-            // Serie
-            // 
-            this.Serie.HeaderText = "Serie";
-            this.Serie.Name = "Serie";
-            this.Serie.ReadOnly = true;
-            // 
-            // Correlativo
-            // 
-            this.Correlativo.HeaderText = "Correlativo";
-            this.Correlativo.Name = "Correlativo";
-            this.Correlativo.ReadOnly = true;
-            // 
-            // Total
-            // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
             // 
             // lblFechaIni
             // 
@@ -196,24 +164,238 @@
             // 
             // gbxConsultasAvanzadas
             // 
-            this.gbxConsultasAvanzadas.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.gbxConsultasAvanzadas.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxConsultasAvanzadas.Controls.Add(this.gbxHerramientas);
+            this.gbxConsultasAvanzadas.Controls.Add(this.gbxVisualizar);
             this.gbxConsultasAvanzadas.Controls.Add(this.lblFechaIni);
             this.gbxConsultasAvanzadas.Controls.Add(this.dtpFechaIni);
             this.gbxConsultasAvanzadas.Controls.Add(this.dtpFechaFin);
             this.gbxConsultasAvanzadas.Controls.Add(this.btnTodos);
             this.gbxConsultasAvanzadas.Controls.Add(this.label1);
             this.gbxConsultasAvanzadas.Controls.Add(this.btnBuscar);
-            this.gbxConsultasAvanzadas.Location = new System.Drawing.Point(22, 12);
+            this.gbxConsultasAvanzadas.Location = new System.Drawing.Point(22, 45);
             this.gbxConsultasAvanzadas.Name = "gbxConsultasAvanzadas";
-            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 102);
+            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 91);
             this.gbxConsultasAvanzadas.TabIndex = 62;
             this.gbxConsultasAvanzadas.TabStop = false;
             this.gbxConsultasAvanzadas.Text = "Consultas Avanzadas";
             // 
+            // gbxVisualizar
+            // 
+            this.gbxVisualizar.Controls.Add(this.btnVisualizarGrafico);
+            this.gbxVisualizar.Controls.Add(this.btnVisualizarLista);
+            this.gbxVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxVisualizar.Location = new System.Drawing.Point(595, 15);
+            this.gbxVisualizar.Name = "gbxVisualizar";
+            this.gbxVisualizar.Size = new System.Drawing.Size(359, 64);
+            this.gbxVisualizar.TabIndex = 25;
+            this.gbxVisualizar.TabStop = false;
+            this.gbxVisualizar.Text = "visualizador";
+            // 
+            // errorIcono
+            // 
+            this.errorIcono.ContainerControl = this;
+            // 
+            // ttMensajeAyuda
+            // 
+            this.ttMensajeAyuda.AutomaticDelay = 90;
+            // 
+            // lblSistemaVenta
+            // 
+            this.lblSistemaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSistemaVenta.AutoSize = true;
+            this.lblSistemaVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSistemaVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSistemaVenta.Location = new System.Drawing.Point(3, 6);
+            this.lblSistemaVenta.Name = "lblSistemaVenta";
+            this.lblSistemaVenta.Size = new System.Drawing.Size(157, 23);
+            this.lblSistemaVenta.TabIndex = 3;
+            this.lblSistemaVenta.Text = "LISTA DE VENTAS";
+            this.lblSistemaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelHorizontal
+            // 
+            this.panelHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
+            this.panelHorizontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelHorizontal.Controls.Add(this.btnMaximizar);
+            this.panelHorizontal.Controls.Add(this.btnRestaurar);
+            this.panelHorizontal.Controls.Add(this.btnMinimizar);
+            this.panelHorizontal.Controls.Add(this.btnCerrar);
+            this.panelHorizontal.Controls.Add(this.lblSistemaVenta);
+            this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
+            this.panelHorizontal.Name = "panelHorizontal";
+            this.panelHorizontal.Size = new System.Drawing.Size(1012, 37);
+            this.panelHorizontal.TabIndex = 64;
+            this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
+            this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
+            // 
+            // pnlSeparacion
+            // 
+            this.pnlSeparacion.Location = new System.Drawing.Point(0, 0);
+            this.pnlSeparacion.Name = "pnlSeparacion";
+            this.pnlSeparacion.Size = new System.Drawing.Size(200, 100);
+            this.pnlSeparacion.TabIndex = 0;
+            // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // Razon_social
+            // 
+            this.Razon_social.HeaderText = "Razon_social";
+            this.Razon_social.Name = "Razon_social";
+            this.Razon_social.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Tipo_comprobante
+            // 
+            this.Tipo_comprobante.HeaderText = "Tipo_comprobante";
+            this.Tipo_comprobante.Name = "Tipo_comprobante";
+            this.Tipo_comprobante.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // gbxHerramientas
+            // 
+            this.gbxHerramientas.Controls.Add(this.btnExportarExcel);
+            this.gbxHerramientas.Controls.Add(this.btnCalculadora);
+            this.gbxHerramientas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbxHerramientas.Location = new System.Drawing.Point(462, 15);
+            this.gbxHerramientas.Name = "gbxHerramientas";
+            this.gbxHerramientas.Size = new System.Drawing.Size(127, 64);
+            this.gbxHerramientas.TabIndex = 28;
+            this.gbxHerramientas.TabStop = false;
+            this.gbxHerramientas.Text = "herramientas";
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.maximize_Checkbox_16px;
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(952, 5);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMaximizar.TabIndex = 5;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
+            this.btnMaximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMaximizar_MouseMove);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Restore_Window_20px;
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(952, 5);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
+            this.btnRestaurar.TabIndex = 2;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
+            this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Minus_20px;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(919, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Delete_20px;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
+            this.btnCerrar.Location = new System.Drawing.Point(985, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
+            // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 29;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
+            // 
+            // btnCalculadora
+            // 
+            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
+            this.btnCalculadora.TabIndex = 28;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
+            // 
+            // btnVisualizarGrafico
+            // 
+            this.btnVisualizarGrafico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVisualizarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarGrafico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarGrafico.Image")));
+            this.btnVisualizarGrafico.Location = new System.Drawing.Point(17, 28);
+            this.btnVisualizarGrafico.Name = "btnVisualizarGrafico";
+            this.btnVisualizarGrafico.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizarGrafico.TabIndex = 27;
+            this.btnVisualizarGrafico.UseVisualStyleBackColor = true;
+            // 
+            // btnVisualizarLista
+            // 
+            this.btnVisualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarLista.Image = global::Capa_Presentacion.Properties.Resources.List_20px;
+            this.btnVisualizarLista.Location = new System.Drawing.Point(49, 28);
+            this.btnVisualizarLista.Name = "btnVisualizarLista";
+            this.btnVisualizarLista.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizarLista.TabIndex = 26;
+            this.btnVisualizarLista.UseVisualStyleBackColor = true;
+            // 
             // btnTodos
             // 
             this.btnTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.Image = ((System.Drawing.Image)(resources.GetObject("btnTodos.Image")));
+            this.btnTodos.Image = global::Capa_Presentacion.Properties.Resources.Select_All_20px;
             this.btnTodos.Location = new System.Drawing.Point(412, 57);
             this.btnTodos.Name = "btnTodos";
             this.btnTodos.Size = new System.Drawing.Size(26, 28);
@@ -232,24 +414,18 @@
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // errorIcono
-            // 
-            this.errorIcono.ContainerControl = this;
-            // 
-            // ttMensajeAyuda
-            // 
-            this.ttMensajeAyuda.AutomaticDelay = 90;
-            // 
             // FrmListadoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1012, 697);
+            this.Controls.Add(this.panelHorizontal);
             this.Controls.Add(this.gbxConsultasAvanzadas);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataLista);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmListadoVentas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -258,7 +434,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).EndInit();
             this.gbxConsultasAvanzadas.ResumeLayout(false);
             this.gbxConsultasAvanzadas.PerformLayout();
+            this.gbxVisualizar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
+            this.panelHorizontal.ResumeLayout(false);
+            this.panelHorizontal.PerformLayout();
+            this.gbxHerramientas.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -273,19 +457,30 @@
         private System.Windows.Forms.DataGridView dataLista;
         private System.Windows.Forms.Label lblFechaIni;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_social;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_comprobante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Serie;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Correlativo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         public System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.GroupBox gbxConsultasAvanzadas;
         private System.Windows.Forms.ErrorProvider errorIcono;
         private System.Windows.Forms.ToolTip ttMensajeAyuda;
+        private System.Windows.Forms.Panel panelHorizontal;
+        private System.Windows.Forms.Panel pnlSeparacion;
+        private System.Windows.Forms.PictureBox btnMaximizar;
+        private System.Windows.Forms.Label lblSistemaVenta;
+        private System.Windows.Forms.PictureBox btnRestaurar;
+        private System.Windows.Forms.PictureBox btnMinimizar;
+        private System.Windows.Forms.PictureBox btnCerrar;
+        private System.Windows.Forms.GroupBox gbxVisualizar;
+        private System.Windows.Forms.Button btnVisualizarGrafico;
+        private System.Windows.Forms.Button btnVisualizarLista;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Razon_social;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_comprobante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Total;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.GroupBox gbxHerramientas;
+        private System.Windows.Forms.Button btnCalculadora;
+        private System.Windows.Forms.Button btnExportarExcel;
 
     }
 }

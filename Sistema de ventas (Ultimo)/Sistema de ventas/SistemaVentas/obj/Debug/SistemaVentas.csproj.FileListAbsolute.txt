@@ -191,3 +191,5 @@ C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVent
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.csproj.GenerateResource.Cache
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.exe.manifest
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\obj\Debug\SistemaVentas.application
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\ProgressBar.dll
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\SistemaVentas\bin\Debug\ProgressBar.xml
