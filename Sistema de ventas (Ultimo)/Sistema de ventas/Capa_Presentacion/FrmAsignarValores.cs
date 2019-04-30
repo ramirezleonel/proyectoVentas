@@ -12,11 +12,11 @@ namespace Capa_Presentacion
 {
     public partial class FrmAsignarValores : Form
     {
-        private int cantidad = 0;
+        private decimal cantidad = Convert.ToDecimal("0,00");
         private Decimal precio = Convert.ToDecimal("0,00");
         
         //getter y setter
-        public int Cantidad
+        public decimal Cantidad
         {
             get { return cantidad; }
             set { cantidad = value; }
@@ -37,15 +37,27 @@ namespace Capa_Presentacion
         }
         private void txtValor_TextChanged(object sender, EventArgs e)
         {
+     
+            if (txtValor.Text.Length > 0 && txtValor.Text[0] == ',')
+            {
 
+                txtValor.Text = "";
+            }
+           
         }
 
         private void txtValor_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Enter){
+
+                if (txtValor.Text.Length > 0 && !txtValor.Text.Contains(","))
+                {
+                    txtValor.Text += ",00";
+
+                }
                 e.SuppressKeyPress = true;
                 btnGuardar.Focus();
-             
+                
             }
         }
 
@@ -84,7 +96,11 @@ namespace Capa_Presentacion
             else {
                 try
                 {
-                    this.cantidad = Convert.ToInt32(txtValor.Text);
+
+
+
+                    this.cantidad = Convert.ToDecimal(txtValor.Text);
+                   Cantidad= decimal.Round(this.cantidad,2);
                     this.Close();
                 }
                 catch (Exception ex)

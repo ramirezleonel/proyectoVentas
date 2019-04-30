@@ -107,17 +107,7 @@ namespace Capa_Presentacion
 
             decimal IVA= 21;
            
-            //LISTA DE PRODUCTOS SE LE ASIGNA EN EL MOMENTO QUE SE MUESTRA EL FORMULARIO
-
-            foreach (DataGridViewRow fila in listadoDeProducto.Rows)
-           {
-
-                //recorro la lista pasado por paramentro y asigno al datatable para generar la transaccion
-               dt.Rows.Add(fila.Cells["Codigo"].Value, fila.Cells["Precio"].Value, fila.Cells["Cantidad"].Value, fila.Cells["Descuento"].Value, fila.Cells["Importe"].Value);
-
-                
-               
-            }
+           
 
             /*IMPORTANTE HACER NOTA DE VENTA PARA IMPRIMIR*/
             //if (MessageBox.Show("Desea Imprimir Venta?", "Imprimir"
@@ -129,21 +119,52 @@ namespace Capa_Presentacion
             //else {
             //    this.Close();
             //}
-            
 
-           string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today , "V", "0000", "0000001",IVA, dt );
-            
-            if (Rta == "OK")
+            try
             {
-               Rta = Negociocaja.insertarmovcaja(4110107, Convert.ToSingle(txtTotalAPagar.Text), 0, Convert.ToString(DateTime.Today), "usuario", 1, "mañana", "Venta nro : " +  objventa.Idventa.ToString (), objventa.Idventa, true);
 
-               if (Rta == "ok")
-               {
-                   trans = Rta;
-                   this.Close();
-               }
-    
+                //LISTA DE PRODUCTOS SE LE ASIGNA EN EL MOMENTO QUE SE MUESTRA EL FORMULARIO
+
+                foreach (DataGridViewRow fila in listadoDeProducto.Rows)
+                {
+
+                    //recorro la lista pasado por paramentro y asigno al datatable para generar la transaccion
+                    dt.Rows.Add(fila.Cells["Codigo"].Value, fila.Cells["Precio"].Value, fila.Cells["Cantidad"].Value, fila.Cells["Descuento"].Value, fila.Cells["Importe"].Value);
+
+
+
+                }
+
+                string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today, "V", "0000", "0000001", IVA, dt);
+
+                if (Rta == "OK")
+                {
+                    Rta = Negociocaja.insertarmovcaja(4110107, Convert.ToSingle(txtTotalAPagar.Text), 0, Convert.ToString(DateTime.Today), "usuario", 1, "mañana", "Venta nro : " + objventa.Idventa.ToString(), objventa.Idventa, true);
+
+                    if (Rta == "ok")
+                    {
+                        trans = Rta;
+                        this.Close();
+                    }
+                    else {
+
+                        UtilityFrm.mensajeError("Error en la base de Datos 1");
+                    }
+
+                }
+                else
+                {
+
+                    UtilityFrm.mensajeError("Error en la base de Datos 2");
+                }
             }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError(ex.Message);
+            }
+
+           
 
 
 

@@ -91,7 +91,7 @@ using Capa_Datos;
 
         //Metodo
 
-        public string DisminuirStock(int idarticulo, int cantidad)
+        public string DisminuirStock(int idarticulo, decimal cantidad)
         {
             string rpta = "";
             SqlConnection sqlcon = new SqlConnection();
@@ -109,7 +109,7 @@ using Capa_Datos;
                 SqlParameter paridDetalleMovStock = ProcAlmacenado.asignarParametros("@iddetalle_movStock", SqlDbType.Int);
                 sqlcmd.Parameters.Add(paridDetalleMovStock);
 
-                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Int, cantidad );
+                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Decimal, cantidad );
                 sqlcmd.Parameters.Add(parcantidad);
 
                 SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 3);
@@ -150,12 +150,6 @@ using Capa_Datos;
 
                 SqlParameter partipocomprobante = ProcAlmacenado.asignarParametros("@tipo_comprobante", SqlDbType.VarChar, Venta.tipo_comprobante);
                 sqlcmd.Parameters.Add(partipocomprobante);
-
-                SqlParameter parserie = ProcAlmacenado.asignarParametros("@serie", SqlDbType.VarChar, Venta.serie);
-                sqlcmd.Parameters.Add(parserie);
-
-                SqlParameter parcorrelativo = ProcAlmacenado.asignarParametros("@correlativo", SqlDbType.VarChar, Venta.correlativo);
-                sqlcmd.Parameters.Add(parcorrelativo);
 
                 SqlParameter pariva = ProcAlmacenado.asignarParametros("@iva", SqlDbType.Decimal, Venta.iva);
                 sqlcmd.Parameters.Add(pariva);

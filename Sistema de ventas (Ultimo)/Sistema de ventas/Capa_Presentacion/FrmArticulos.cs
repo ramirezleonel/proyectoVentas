@@ -45,6 +45,20 @@ namespace Capa_Presentacion
       
          
         }
+
+
+        public void pintarProductoSinStock() {
+            decimal stock=0;
+            foreach (DataGridViewRow row in dataLista.Rows)
+            {
+                
+                stock =Convert.ToDecimal( row.Cells["stock_actual"].Value);
+                if(stock<0){
+                    row.DefaultCellStyle.ForeColor = Color.Red;
+                }
+            }
+        
+        }
         //VENTANA Y PANEL SUPERIOR
 
         private void btnMaximizar_Click(object sender, EventArgs e)
@@ -155,6 +169,7 @@ namespace Capa_Presentacion
                 //this.dataLista.Columns["precio"].ValueType = Type.GetType("System.Decimal");
                 //this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("###,##0.00");
                 this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("$###,##0.00");
+                pintarProductoSinStock();
             }
             catch (Exception ex)
             {
@@ -179,6 +194,7 @@ namespace Capa_Presentacion
             try
             {
                 this.dataLista.DataSource = NegocioArticulo.buscarNombre(this.txtNombre.Text);
+                pintarProductoSinStock();
             }
 
             catch (Exception ex)
@@ -217,6 +233,7 @@ namespace Capa_Presentacion
             try
             {
                 this.dataLista.DataSource = NegocioArticulo.buscarCodigoBarra(this.txtNombre.Text);
+                pintarProductoSinStock();
             }
 
             catch (Exception ex)
@@ -237,6 +254,7 @@ namespace Capa_Presentacion
             try
             {
                 this.dataLista.DataSource = NegocioArticulo.buscarCategoria(this.txtNombre.Text);
+                pintarProductoSinStock();
             }
 
             catch (Exception ex)
@@ -972,7 +990,7 @@ namespace Capa_Presentacion
             {
                 SaveFileDialog fichero = new SaveFileDialog();
                 fichero.Filter = "Excel (*.xls)|*.xls";
-                fichero.FileName = "Listado de Productos - " + DateTime.Now.ToString("dd-MM-yyyy");
+                fichero.FileName = "Listado de productos de " + DateTime.Now.ToString("dd-MM-yyyy");
                 if (fichero.ShowDialog() == DialogResult.OK)
                 {
                     Microsoft.Office.Interop.Excel.Application aplicacion;
@@ -983,19 +1001,27 @@ namespace Capa_Presentacion
                     hoja_trabajo =
                         (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
 
+                    hoja_trabajo.Cells.Rows[1].Font.Bold = true;
+                    hoja_trabajo.Cells.Rows[1].Font.Size = 15;
+                    hoja_trabajo.Cells[1, 1] = "Listado de productos : " + DateTime.Now;
+
+
+                    hoja_trabajo.Range[hoja_trabajo.Cells[1, 1], hoja_trabajo.Cells[1, 10]].Merge();
+
 
                     //Recorremos el DataGridView rellenando la hoja de trabajo
                     for (int i = 1; i < dataLista.Columns.Count; i++)
                     {
 
-                        hoja_trabajo.Cells[1, i ] = dataLista.Columns[i].Name;
+                        hoja_trabajo.Cells[2, i ] = dataLista.Columns[i].Name;
                     }
 
-                    for (int i = 1; i < dataLista.Rows.Count; i++)
+                    for (int i = 0; i < dataLista.Rows.Count-1; i++)
                     {
                         for (int j = 1; j < dataLista.Columns.Count; j++)
                         {
-                            hoja_trabajo.Cells[i + 1, j ] = dataLista.Rows[i].Cells[j].Value.ToString();
+                            //se coloca 2 porque la primera celda pertenece al nombre de la columna y luego los datos
+                            hoja_trabajo.Cells[i + 3, j ] = dataLista.Rows[i].Cells[j].Value;
                         }
                     }
 
@@ -1019,6 +1045,7 @@ namespace Capa_Presentacion
 
                 UtilityFrm.mensajeError("Error: " + ex.Message);
             }
+
         }
         
        

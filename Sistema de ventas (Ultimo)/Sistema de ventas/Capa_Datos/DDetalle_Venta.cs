@@ -13,7 +13,7 @@ namespace Capa_Datos
         private int idarticulo;
         private decimal precioVenta;
         private int iddetalle_venta;
-        private int cantidad;
+        private decimal cantidad;
         private int idventa;
         private decimal descuento;
         private decimal importe;
@@ -35,7 +35,7 @@ namespace Capa_Datos
             get { return idventa; }
             set { idventa = value; }
         }
-        public int Cantidad
+        public decimal Cantidad
         {
             get { return cantidad; }
             set { cantidad = value; }
@@ -87,7 +87,7 @@ namespace Capa_Datos
                 SqlParameter paridventa = ProcAlmacenado.asignarParametros("@idventa", SqlDbType.Int, Detalle_Venta.idventa);
                 sqlcmd.Parameters.Add(paridventa);
 
-                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Int, Detalle_Venta.cantidad);
+                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Decimal, Detalle_Venta.cantidad);
                 sqlcmd.Parameters.Add(parcantidad);
 
                 SqlParameter parImporte = ProcAlmacenado.asignarParametros("@importe", SqlDbType.Money, Detalle_Venta.Importe);

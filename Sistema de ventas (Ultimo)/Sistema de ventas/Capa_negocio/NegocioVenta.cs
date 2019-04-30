@@ -15,7 +15,7 @@ namespace Capa_negocio
         private int idarticulo;
         private int importe;
         private int idventa;
-        private int cantidad;
+        private decimal cantidad;
         private decimal subtotal;
         private decimal descuento;
         private decimal precio;
@@ -35,7 +35,7 @@ namespace Capa_negocio
 
        
 
-        public int Cantidad
+        public decimal Cantidad
         {
             get { return cantidad; }
             set { cantidad = value; }
@@ -96,7 +96,7 @@ namespace Capa_negocio
                //asigno los valores de los detalle de ventas a cada objeto detalle
                DDetalle_Venta detalle = new DDetalle_Venta();
                detalle.Idarticulo = Convert.ToInt32(row["codigo"].ToString());
-               detalle.Cantidad = Convert.ToInt32(row["cantidad"].ToString());
+               detalle.Cantidad = Convert.ToDecimal(row["cantidad"].ToString());
                detalle.PrecioVenta = Convert.ToDecimal(row["precio"].ToString());
                detalle.Descuento = Convert.ToDecimal(row["descuento"].ToString());
                detalle.Importe = Convert.ToDecimal(row["Importe"].ToString());
