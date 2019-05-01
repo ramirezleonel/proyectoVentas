@@ -52,9 +52,8 @@
             this.lblNomProducto = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.lblEgreso = new System.Windows.Forms.Label();
             this.panelHorizontal = new System.Windows.Forms.Panel();
-            this.lblMovStock = new System.Windows.Forms.Label();
+            this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
@@ -77,11 +76,11 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grpboxConsulta.Controls.Add(this.groupBox1);
             this.grpboxConsulta.Controls.Add(this.gbDetalleMovimento);
-            this.grpboxConsulta.Location = new System.Drawing.Point(19, 110);
+            this.grpboxConsulta.Location = new System.Drawing.Point(19, 64);
             this.grpboxConsulta.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.grpboxConsulta.Name = "grpboxConsulta";
             this.grpboxConsulta.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.grpboxConsulta.Size = new System.Drawing.Size(980, 596);
+            this.grpboxConsulta.Size = new System.Drawing.Size(980, 642);
             this.grpboxConsulta.TabIndex = 62;
             this.grpboxConsulta.TabStop = false;
             this.grpboxConsulta.Text = "Consulta De Precio";
@@ -93,7 +92,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.lblProducto);
             this.groupBox1.Controls.Add(this.txtProductoNombre);
-            this.groupBox1.Location = new System.Drawing.Point(22, 412);
+            this.groupBox1.Location = new System.Drawing.Point(22, 458);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(940, 151);
             this.groupBox1.TabIndex = 53;
@@ -169,7 +168,7 @@
             this.gbDetalleMovimento.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.gbDetalleMovimento.Name = "gbDetalleMovimento";
             this.gbDetalleMovimento.Padding = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.gbDetalleMovimento.Size = new System.Drawing.Size(940, 372);
+            this.gbDetalleMovimento.Size = new System.Drawing.Size(940, 418);
             this.gbDetalleMovimento.TabIndex = 40;
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles ";
@@ -259,7 +258,7 @@
             this.dataLista.ReadOnly = true;
             this.dataLista.RowHeadersWidth = 38;
             this.dataLista.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataLista.Size = new System.Drawing.Size(907, 236);
+            this.dataLista.Size = new System.Drawing.Size(907, 282);
             this.dataLista.TabIndex = 46;
             this.dataLista.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellContentClick);
             this.dataLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellDoubleClick);
@@ -343,87 +342,46 @@
             // 
             this.ttMensajeAyuda.AutomaticDelay = 400;
             // 
-            // lblEgreso
+            // lblSistemaVenta
             // 
-            this.lblEgreso.AutoSize = true;
-            this.lblEgreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.lblEgreso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblEgreso.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.lblEgreso.Font = new System.Drawing.Font("Century Gothic", 30F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEgreso.ForeColor = System.Drawing.Color.Snow;
-            this.lblEgreso.Image = global::Capa_Presentacion.Properties.Resources.fondo1;
-            this.lblEgreso.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.lblEgreso.Location = new System.Drawing.Point(19, 49);
-            this.lblEgreso.Name = "lblEgreso";
-            this.lblEgreso.Size = new System.Drawing.Size(393, 49);
-            this.lblEgreso.TabIndex = 32;
-            this.lblEgreso.Text = "Consulta de Precio";
+            this.lblSistemaVenta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+            | System.Windows.Forms.AnchorStyles.Left)
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSistemaVenta.AutoSize = true;
+            this.lblSistemaVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSistemaVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSistemaVenta.Location = new System.Drawing.Point(3, 6);
+            this.lblSistemaVenta.Name = "lblSistemaVenta";
+            this.lblSistemaVenta.Size = new System.Drawing.Size(186, 23);
+            this.lblSistemaVenta.TabIndex = 3;
+            this.lblSistemaVenta.Text = "Consultas";
+            this.lblSistemaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelHorizontal
             // 
             this.panelHorizontal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(170)))));
             this.panelHorizontal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelHorizontal.Controls.Add(this.lblMovStock);
-            this.panelHorizontal.Controls.Add(this.btnMinimizar);
-            this.panelHorizontal.Controls.Add(this.btnCerrar);
             this.panelHorizontal.Controls.Add(this.btnMaximizar);
             this.panelHorizontal.Controls.Add(this.btnRestaurar);
+            this.panelHorizontal.Controls.Add(this.btnMinimizar);
+            this.panelHorizontal.Controls.Add(this.btnCerrar);
+            this.panelHorizontal.Controls.Add(this.lblSistemaVenta);
             this.panelHorizontal.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHorizontal.Location = new System.Drawing.Point(0, 0);
             this.panelHorizontal.Name = "panelHorizontal";
-            this.panelHorizontal.Size = new System.Drawing.Size(1012, 41);
-            this.panelHorizontal.TabIndex = 63;
+            this.panelHorizontal.Size = new System.Drawing.Size(1012, 37);
+            this.panelHorizontal.TabIndex = 64;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
-            // 
-            // lblMovStock
-            // 
-            this.lblMovStock.AutoSize = true;
-            this.lblMovStock.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblMovStock.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMovStock.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lblMovStock.Location = new System.Drawing.Point(0, 0);
-            this.lblMovStock.Name = "lblMovStock";
-            this.lblMovStock.Size = new System.Drawing.Size(300, 32);
-            this.lblMovStock.TabIndex = 3;
-            this.lblMovStock.Text = "CONSULTA DE PRECIO";
-            // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimizar.Location = new System.Drawing.Point(895, 6);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(25, 25);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
-            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnCerrar.Location = new System.Drawing.Point(976, 6);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(25, 25);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
-            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaximizar.Location = new System.Drawing.Point(936, 6);
+            this.btnMaximizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.maximize_Checkbox_16px;
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(952, 5);
             this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(25, 25);
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
             this.btnMaximizar.TabIndex = 5;
             this.btnMaximizar.TabStop = false;
             this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
@@ -433,17 +391,47 @@
             // btnRestaurar
             // 
             this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRestaurar.Location = new System.Drawing.Point(936, 6);
+            this.btnRestaurar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Restore_Window_20px;
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(952, 5);
             this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(25, 25);
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
             this.btnRestaurar.TabIndex = 2;
             this.btnRestaurar.TabStop = false;
             this.btnRestaurar.Visible = false;
             this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
             this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
             this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Minus_20px;
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(919, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Delete_20px;
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
+            this.btnCerrar.Location = new System.Drawing.Point(985, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
+
             // 
             // FrmConsulta
             // 
@@ -452,7 +440,6 @@
             this.BackgroundImage = global::Capa_Presentacion.Properties.Resources.fondo1;
             this.ClientSize = new System.Drawing.Size(1012, 733);
             this.Controls.Add(this.panelHorizontal);
-            this.Controls.Add(this.lblEgreso);
             this.Controls.Add(this.grpboxConsulta);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -476,7 +463,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -504,9 +490,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
         private System.Windows.Forms.DataGridViewTextBoxColumn Categoria;
-        private System.Windows.Forms.Label lblEgreso;
         private System.Windows.Forms.Panel panelHorizontal;
-        private System.Windows.Forms.Label lblMovStock;
+        private System.Windows.Forms.Label lblSistemaVenta;
         private System.Windows.Forms.PictureBox btnMinimizar;
         private System.Windows.Forms.PictureBox btnCerrar;
         private System.Windows.Forms.PictureBox btnMaximizar;

@@ -28,46 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtPrecio = new System.Windows.Forms.TextBox();
-            this.lblPrecio = new System.Windows.Forms.Label();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.lblNombreProd = new System.Windows.Forms.Label();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtDescuento = new System.Windows.Forms.TextBox();
-            this.lblDescuento = new System.Windows.Forms.Label();
+            this.lblPrecio = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.txtKgReal = new System.Windows.Forms.TextBox();
+            this.lblKg = new System.Windows.Forms.Label();
+            this.txtPrecioxKg = new System.Windows.Forms.TextBox();
+            this.lblPrecioXKg = new System.Windows.Forms.Label();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.Location = new System.Drawing.Point(193, 86);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPrecio.MaxLength = 100;
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(244, 22);
-            this.txtPrecio.TabIndex = 1;
-            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
-            this.txtPrecio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrecio_KeyDown);
-            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
-            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(45, 90);
-            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(47, 16);
-            this.lblPrecio.TabIndex = 22;
-            this.lblPrecio.Text = "Precio";
             // 
             // txtNombreProducto
             // 
             this.txtNombreProducto.Location = new System.Drawing.Point(193, 32);
             this.txtNombreProducto.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreProducto.Name = "txtNombreProducto";
-            this.txtNombreProducto.ReadOnly = true;
-            this.txtNombreProducto.Size = new System.Drawing.Size(447, 22);
-            this.txtNombreProducto.TabIndex = 17;
+            this.txtNombreProducto.Size = new System.Drawing.Size(433, 22);
+            this.txtNombreProducto.TabIndex = 1;
+            this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
+            this.txtNombreProducto.Leave += new System.EventHandler(this.txtNombreProducto_Leave);
             // 
             // lblNombreProd
             // 
@@ -82,45 +63,102 @@
             // btnGuardar
             // 
             this.btnGuardar.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnGuardar.Location = new System.Drawing.Point(0, 182);
+            this.btnGuardar.Location = new System.Drawing.Point(0, 218);
             this.btnGuardar.Margin = new System.Windows.Forms.Padding(8, 6, 8, 6);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(654, 59);
-            this.btnGuardar.TabIndex = 14;
+            this.btnGuardar.Size = new System.Drawing.Size(669, 59);
+            this.btnGuardar.TabIndex = 4;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
-            // txtDescuento
+            // lblPrecio
             // 
-            this.txtDescuento.Location = new System.Drawing.Point(193, 138);
-            this.txtDescuento.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDescuento.MaxLength = 3;
-            this.txtDescuento.Name = "txtDescuento";
-            this.txtDescuento.Size = new System.Drawing.Size(244, 22);
-            this.txtDescuento.TabIndex = 2;
-            this.txtDescuento.Text = "0";
-            this.txtDescuento.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDescuento_KeyDown);
-            this.txtDescuento.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescuento_KeyPress);
+            this.lblPrecio.AutoSize = true;
+            this.lblPrecio.Location = new System.Drawing.Point(112, 133);
+            this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecio.Name = "lblPrecio";
+            this.lblPrecio.Size = new System.Drawing.Size(47, 16);
+            this.lblPrecio.TabIndex = 22;
+            this.lblPrecio.Text = "Precio";
             // 
-            // lblDescuento
+            // txtPrecio
             // 
-            this.lblDescuento.AutoSize = true;
-            this.lblDescuento.Location = new System.Drawing.Point(45, 142);
-            this.lblDescuento.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDescuento.Name = "lblDescuento";
-            this.lblDescuento.Size = new System.Drawing.Size(88, 16);
-            this.lblDescuento.TabIndex = 24;
-            this.lblDescuento.Text = "Descuento %";
+            this.txtPrecio.Location = new System.Drawing.Point(193, 130);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecio.MaxLength = 20;
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(244, 22);
+            this.txtPrecio.TabIndex = 3;
+            this.txtPrecio.TextChanged += new System.EventHandler(this.txtPrecio_TextChanged);
+            this.txtPrecio.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPrecio_KeyDown);
+            this.txtPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPrecio_KeyPress);
+            this.txtPrecio.Leave += new System.EventHandler(this.txtPrecio_Leave);
+            // 
+            // txtKgReal
+            // 
+            this.txtKgReal.Location = new System.Drawing.Point(193, 166);
+            this.txtKgReal.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKgReal.MaxLength = 25;
+            this.txtKgReal.Name = "txtKgReal";
+            this.txtKgReal.ReadOnly = true;
+            this.txtKgReal.Size = new System.Drawing.Size(244, 22);
+            this.txtKgReal.TabIndex = 23;
+            // 
+            // lblKg
+            // 
+            this.lblKg.AutoSize = true;
+            this.lblKg.Location = new System.Drawing.Point(103, 169);
+            this.lblKg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblKg.Name = "lblKg";
+            this.lblKg.Size = new System.Drawing.Size(56, 16);
+            this.lblKg.TabIndex = 24;
+            this.lblKg.Text = "Kg Real";
+            // 
+            // txtPrecioxKg
+            // 
+            this.txtPrecioxKg.Enabled = false;
+            this.txtPrecioxKg.Location = new System.Drawing.Point(193, 71);
+            this.txtPrecioxKg.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecioxKg.MaxLength = 25;
+            this.txtPrecioxKg.Name = "txtPrecioxKg";
+            this.txtPrecioxKg.ReadOnly = true;
+            this.txtPrecioxKg.Size = new System.Drawing.Size(244, 22);
+            this.txtPrecioxKg.TabIndex = 25;
+            // 
+            // lblPrecioXKg
+            // 
+            this.lblPrecioXKg.AutoSize = true;
+            this.lblPrecioXKg.Location = new System.Drawing.Point(89, 74);
+            this.lblPrecioXKg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecioXKg.Name = "lblPrecioXKg";
+            this.lblPrecioXKg.Size = new System.Drawing.Size(75, 16);
+            this.lblPrecioXKg.TabIndex = 26;
+            this.lblPrecioXKg.Text = "Precio x Kg";
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.Location = new System.Drawing.Point(634, 29);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 2;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // FrmAsignarPrecio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(654, 241);
-            this.Controls.Add(this.txtDescuento);
-            this.Controls.Add(this.lblDescuento);
+            this.ClientSize = new System.Drawing.Size(669, 277);
+            this.Controls.Add(this.btnProducto);
+            this.Controls.Add(this.txtPrecioxKg);
+            this.Controls.Add(this.lblPrecioXKg);
+            this.Controls.Add(this.txtKgReal);
+            this.Controls.Add(this.lblKg);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.txtNombreProducto);
@@ -143,12 +181,15 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtPrecio;
-        private System.Windows.Forms.Label lblPrecio;
         private System.Windows.Forms.TextBox txtNombreProducto;
         private System.Windows.Forms.Label lblNombreProd;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtDescuento;
-        private System.Windows.Forms.Label lblDescuento;
+        private System.Windows.Forms.Label lblPrecio;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.TextBox txtKgReal;
+        private System.Windows.Forms.Label lblKg;
+        private System.Windows.Forms.TextBox txtPrecioxKg;
+        private System.Windows.Forms.Label lblPrecioXKg;
+        private System.Windows.Forms.Button btnProducto;
     }
 }

@@ -53,7 +53,7 @@ namespace Capa_Presentacion
                    cbTipoComprobante.SelectedIndex = 1;
                    cbxCategoria.SelectedIndex = 2;
 
-                   btnNuevo.Enabled = true;
+                   btnAgregarPesable.Enabled = true;
                    txtNombreProducto.Enabled = true;
                    txtNombreProducto.Focus();
                    }
@@ -274,7 +274,7 @@ namespace Capa_Presentacion
             //deselecciona el combobox de tipo comprobante
             cbTipoComprobante.SelectedIndex = -1;
             cbxCategoria.SelectedIndex = -1;
-            btnNuevo.Enabled = false;
+            btnAgregarPesable.Enabled = false;
             btnProducto.Enabled = false;
             txtNombreProducto.Enabled = false;
             cbTipoComprobante.Enabled = false;
@@ -325,8 +325,12 @@ namespace Capa_Presentacion
                      
 
                   }
-                 
 
+
+              }
+              else if (e.KeyCode == Keys.F6)
+              {
+                  btnAgregarPesable.PerformClick();
               }
               else if (e.KeyCode == Keys.F11)
               {
@@ -334,8 +338,8 @@ namespace Capa_Presentacion
                   btnCalculadora.PerformClick();
               }
               else if (e.KeyCode == Keys.F12)
-              { 
-              //CONSULTA DE PRECIO
+              {
+                  //CONSULTA DE PRECIO
                   btnConsultas.PerformClick();
               }
               else if (e.KeyCode == Keys.Delete)
@@ -671,7 +675,7 @@ namespace Capa_Presentacion
             TxtDesc.Enabled = false;
             btnGuardar.Enabled = false;
             btnProducto.Enabled = false;
-            btnNuevo.Enabled = false;
+            btnAgregarPesable.Enabled = false;
             btnCancelar.Enabled = false;
             txtIdCliente.Focus();
             txtNombreProducto.Enabled = false;
@@ -817,12 +821,7 @@ namespace Capa_Presentacion
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
-        {
-            FrmAsignarPrecio asignarPrecio = new FrmAsignarPrecio();
-            asignarPrecio.ShowDialog();
-        }
-
+      
         private void txtIdCliente_TextChanged(object sender, EventArgs e)
         {
            
@@ -1074,6 +1073,13 @@ namespace Capa_Presentacion
                 }
                 
             }
+        }
+
+        private void btnAgregarPesable_Click(object sender, EventArgs e)
+        {
+            FrmAsignarPrecio asignarPrecio = new FrmAsignarPrecio();
+            asignarPrecio.ShowDialog();
+
         }
 
        

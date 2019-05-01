@@ -33,7 +33,6 @@
             this.lblTComprobante = new System.Windows.Forms.Label();
             this.cbTipoComprobante = new System.Windows.Forms.ComboBox();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
-            this.btnCliente = new System.Windows.Forms.Button();
             this.txtIdCliente = new System.Windows.Forms.TextBox();
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblRazonSocial = new System.Windows.Forms.Label();
@@ -48,7 +47,6 @@
             this.Descuento = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Importe = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
-            this.btnNuevo = new System.Windows.Forms.Button();
             this.lblNomProducto = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TxtCodigo = new System.Windows.Forms.TextBox();
@@ -59,7 +57,6 @@
             this.lblDesc = new System.Windows.Forms.Label();
             this.TxtDetalle = new System.Windows.Forms.TextBox();
             this.lblPrecioCompra = new System.Windows.Forms.Label();
-            this.btnProducto = new System.Windows.Forms.Button();
             this.txtNombreProducto = new System.Windows.Forms.TextBox();
             this.lblTotalPagar = new System.Windows.Forms.Label();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
@@ -67,14 +64,17 @@
             this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.panelHorizontal = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.btnConsultas = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.btnConsultas = new System.Windows.Forms.Button();
-            this.btnCalculadora = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.btnAgregarPesable = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.grpboxProveedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVenta)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
@@ -157,19 +157,6 @@
             this.txtTotalPagar.Size = new System.Drawing.Size(265, 40);
             this.txtTotalPagar.TabIndex = 59;
             this.txtTotalPagar.Text = "0,00";
-            // 
-            // btnCliente
-            // 
-            this.btnCliente.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(470, 26);
-            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(26, 28);
-            this.btnCliente.TabIndex = 57;
-            this.btnCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // txtIdCliente
             // 
@@ -312,7 +299,7 @@
             this.gbDetalleMovimento.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDetalleMovimento.Controls.Add(this.btnNuevo);
+            this.gbDetalleMovimento.Controls.Add(this.btnAgregarPesable);
             this.gbDetalleMovimento.Controls.Add(this.lblNomProducto);
             this.gbDetalleMovimento.Controls.Add(this.dataGridView1);
             this.gbDetalleMovimento.Controls.Add(this.TxtCodigo);
@@ -333,18 +320,6 @@
             this.gbDetalleMovimento.TabIndex = 40;
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles ";
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Image = global::Capa_Presentacion.Properties.Resources.Add_Shopping_Cart_15px;
-            this.btnNuevo.Location = new System.Drawing.Point(408, 22);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(26, 28);
-            this.btnNuevo.TabIndex = 4;
-            this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // lblNomProducto
             // 
@@ -399,7 +374,7 @@
             // TxtPrecio
             // 
             this.TxtPrecio.Enabled = false;
-            this.TxtPrecio.Location = new System.Drawing.Point(535, 67);
+            this.TxtPrecio.Location = new System.Drawing.Point(555, 66);
             this.TxtPrecio.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.TxtPrecio.Name = "TxtPrecio";
             this.TxtPrecio.ReadOnly = true;
@@ -413,7 +388,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(451, 70);
+            this.lblPrecio.Location = new System.Drawing.Point(486, 69);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(61, 20);
@@ -423,7 +398,7 @@
             // TxtDesc
             // 
             this.TxtDesc.Enabled = false;
-            this.TxtDesc.Location = new System.Drawing.Point(535, 111);
+            this.TxtDesc.Location = new System.Drawing.Point(555, 110);
             this.TxtDesc.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.TxtDesc.MaxLength = 3;
             this.TxtDesc.Name = "TxtDesc";
@@ -437,7 +412,7 @@
             // lblDesc
             // 
             this.lblDesc.AutoSize = true;
-            this.lblDesc.Location = new System.Drawing.Point(451, 114);
+            this.lblDesc.Location = new System.Drawing.Point(486, 113);
             this.lblDesc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesc.Name = "lblDesc";
             this.lblDesc.Size = new System.Drawing.Size(58, 20);
@@ -446,37 +421,24 @@
             // 
             // TxtDetalle
             // 
-            this.TxtDetalle.Location = new System.Drawing.Point(535, 23);
+            this.TxtDetalle.Location = new System.Drawing.Point(555, 22);
             this.TxtDetalle.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
             this.TxtDetalle.MaxLength = 10;
             this.TxtDetalle.Name = "TxtDetalle";
             this.TxtDetalle.ReadOnly = true;
-            this.TxtDetalle.Size = new System.Drawing.Size(404, 26);
+            this.TxtDetalle.Size = new System.Drawing.Size(383, 26);
             this.TxtDetalle.TabIndex = 55;
             this.TxtDetalle.TextChanged += new System.EventHandler(this.TxtDetalle_TextChanged);
             // 
             // lblPrecioCompra
             // 
             this.lblPrecioCompra.AutoSize = true;
-            this.lblPrecioCompra.Location = new System.Drawing.Point(451, 26);
+            this.lblPrecioCompra.Location = new System.Drawing.Point(480, 25);
             this.lblPrecioCompra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecioCompra.Name = "lblPrecioCompra";
             this.lblPrecioCompra.Size = new System.Drawing.Size(67, 20);
             this.lblPrecioCompra.TabIndex = 28;
             this.lblPrecioCompra.Text = "Detalle :";
-            // 
-            // btnProducto
-            // 
-            this.btnProducto.Enabled = false;
-            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnProducto.Location = new System.Drawing.Point(378, 22);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(26, 28);
-            this.btnProducto.TabIndex = 3;
-            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProducto.UseVisualStyleBackColor = true;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // txtNombreProducto
             // 
@@ -549,6 +511,62 @@
             this.label1.Text = "VENTAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(646, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 20);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Categoría";
+            // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategoria.Enabled = false;
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "H",
+            "I",
+            "J",
+            "K",
+            "R",
+            "X",
+            "M"});
+            this.cbxCategoria.Location = new System.Drawing.Point(732, 66);
+            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(180, 28);
+            this.cbxCategoria.TabIndex = 62;
+            // 
+            // btnConsultas
+            // 
+            this.btnConsultas.Image = global::Capa_Presentacion.Properties.Resources.Search_Property_20px;
+            this.btnConsultas.Location = new System.Drawing.Point(975, 47);
+            this.btnConsultas.Name = "btnConsultas";
+            this.btnConsultas.Size = new System.Drawing.Size(28, 28);
+            this.btnConsultas.TabIndex = 60;
+            this.btnConsultas.UseVisualStyleBackColor = true;
+            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            // 
+            // btnCalculadora
+            // 
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(941, 47);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(28, 28);
+            this.btnCalculadora.TabIndex = 58;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
+            // 
             // btnMaximizar
             // 
             this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -607,61 +625,42 @@
             this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
-            // btnConsultas
+            // btnCliente
             // 
-            this.btnConsultas.Image = global::Capa_Presentacion.Properties.Resources.Search_Property_20px;
-            this.btnConsultas.Location = new System.Drawing.Point(975, 47);
-            this.btnConsultas.Name = "btnConsultas";
-            this.btnConsultas.Size = new System.Drawing.Size(28, 28);
-            this.btnConsultas.TabIndex = 60;
-            this.btnConsultas.UseVisualStyleBackColor = true;
-            this.btnConsultas.Click += new System.EventHandler(this.btnConsultas_Click);
+            this.btnCliente.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(470, 26);
+            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(26, 28);
+            this.btnCliente.TabIndex = 57;
+            this.btnCliente.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // btnCalculadora
+            // btnAgregarPesable
             // 
-            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
-            this.btnCalculadora.Location = new System.Drawing.Point(941, 47);
-            this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(28, 28);
-            this.btnCalculadora.TabIndex = 58;
-            this.btnCalculadora.UseVisualStyleBackColor = true;
-            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
+            this.btnAgregarPesable.Enabled = false;
+            this.btnAgregarPesable.Image = global::Capa_Presentacion.Properties.Resources.Industrial_Scales_20px1;
+            this.btnAgregarPesable.Location = new System.Drawing.Point(410, 22);
+            this.btnAgregarPesable.Name = "btnAgregarPesable";
+            this.btnAgregarPesable.Size = new System.Drawing.Size(28, 28);
+            this.btnAgregarPesable.TabIndex = 65;
+            this.btnAgregarPesable.UseVisualStyleBackColor = true;
+            this.btnAgregarPesable.Click += new System.EventHandler(this.btnAgregarPesable_Click);
             // 
-            // label2
+            // btnProducto
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(646, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Categoría";
-            // 
-            // cbxCategoria
-            // 
-            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCategoria.Enabled = false;
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "R",
-            "X",
-            "M"});
-            this.cbxCategoria.Location = new System.Drawing.Point(732, 66);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(180, 28);
-            this.cbxCategoria.TabIndex = 62;
+            this.btnProducto.Enabled = false;
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.Location = new System.Drawing.Point(378, 22);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 3;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // frmPventa
             // 
@@ -727,7 +726,6 @@
         public System.Windows.Forms.TextBox txtTotalPagar;
         private System.Windows.Forms.Label lblNomProducto;
         private System.Windows.Forms.Button btnCalculadora;
-        private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
@@ -746,6 +744,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxCategoria;
+        private System.Windows.Forms.Button btnAgregarPesable;
 
     }
 }

@@ -154,7 +154,7 @@
             // btnBuscar
             // 
             this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Location = new System.Drawing.Point(583, 345);
+            this.btnBuscar.Location = new System.Drawing.Point(514, 285);
             this.btnBuscar.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(124, 37);
@@ -167,7 +167,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(732, 402);
+            this.ClientSize = new System.Drawing.Size(689, 339);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtImporte);

@@ -35,7 +35,7 @@ namespace Capa_Presentacion
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             Precio = Convert.ToDecimal (txtPrecio.Text);
-            Descuento = Convert.ToDecimal (txtDescuento.Text);
+         
             if (txtPrecio.Text == string.Empty || txtPrecio.Text == "0,00" || txtPrecio.Text == ",00" || txtPrecio.Text == ",0" || txtPrecio.Text == "0,0")
             {
                 UtilityFrm.mensajeError("el precio no puede ser 0");
@@ -70,32 +70,25 @@ namespace Capa_Presentacion
         {
             if (e.KeyCode == Keys.Enter)
             {
+              
+             
+                if (txtPrecio.Text.Length>0)
+                {
+                    decimal precioXKg = Convert.ToDecimal(txtPrecio.Text);
+                    decimal kgReal = precioXKg/Convert.ToDecimal( txtPrecioxKg.Text);
+                    txtKgReal.Text = kgReal.ToString();
+                    if (!txtPrecio.Text.Contains(","))
+                    {
+                        txtPrecio.Text += ",00";
+
+                    }
+                }
                 e.Handled = false;
                 e.SuppressKeyPress = true;
-                txtDescuento.Focus();
-                if (txtPrecio.Text==string.Empty)
-                {
-                    txtPrecio.Text += "0,00";
-
-                }
-                if (!txtPrecio.Text.Contains(","))
-                {
-                    txtPrecio.Text += ",00";
-
-                }
             }
         }
 
-        private void txtDescuento_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                e.Handled = false;
-                e.SuppressKeyPress = true;
-                btnGuardar.Focus();
-
-            }
-        }
+     
 
         private void txtPrecio_TextChanged(object sender, EventArgs e)
         {
@@ -149,18 +142,8 @@ namespace Capa_Presentacion
                 e.Handled = false;
 
             }
-            else if (e.KeyChar == '.' && !txtDescuento.Text.Contains(','))
-            {
-                e.Handled = true;
-                SendKeys.Send(",");
-
-
-            }
-            else if (e.KeyChar == ',' && !txtDescuento.Text.Contains(','))
-            {
-
-                e.Handled = false;
-            }
+         
+       
             else if (Char.IsControl(e.KeyChar))
             {
 
@@ -197,6 +180,46 @@ namespace Capa_Presentacion
         private void FrmAsignarPrecio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            FrmBusquedaAvaArticulo producto = new FrmBusquedaAvaArticulo();
+            producto.ShowDialog();
+            if (!producto.IsCerro)
+            {
+                //si no se cerro y se seleccionó un producto de la lista 
+                txtNombreProducto.Text = producto.NombreProducto;
+                txtPrecioxKg.Text =  producto.Precio.ToString();    
+            }
+           
+        }
+
+        private void txtNombreProducto_TextChanged(object sender, EventArgs e)
+        {
+            if (txtPrecioxKg.Text.Length > 0 && txtNombreProducto.Text.Length > 0)
+            {
+                txtPrecio.Enabled = true;
+
+            }
+            else {
+                txtPrecio.Enabled = false;
+                UtilityFrm.limpiarTextbox(txtPrecio);
+            }
+          
+        }
+
+        private void txtNombreProducto_Leave(object sender, EventArgs e)
+        {
+            if (txtPrecioxKg.Text.Length > 0 && txtNombreProducto.Text.Length > 0)
+            {
+                txtPrecio.Enabled = true;
+
+            }
+            else {
+                txtPrecio.Enabled = false;
+                UtilityFrm.limpiarTextbox(txtPrecio);
+            }
         }
     }
 }

@@ -121,6 +121,9 @@
   <data name="fondo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Plus_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Plus_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="fondo-azul-836335-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\fondo-azul-836335-1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,9 +145,6 @@
   <data name="delete_40623" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_40623.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Increase_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Increase_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Add List_30px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add List_30px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -156,6 +156,9 @@
   </data>
   <data name="imagen" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="View All_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\View All_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SoftIntegral" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\SoftIntegral.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -172,11 +175,14 @@
   <data name="agregar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\agregar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Plus_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Plus_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Industrial Scales_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Industrial Scales_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Add Shopping Cart_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Add Shopping Cart_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Microsoft Excel_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Microsoft Excel_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Search_48px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Search_48px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -202,8 +208,11 @@
   <data name="Minus_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Minus_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="fondo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fondo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="List_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\List_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Increase_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Increase_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add User Male_50px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add User Male_50px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -235,9 +244,6 @@
   <data name="search-magnifier-interface-symbol" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\search-magnifier-interface-symbol.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="limpiar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\limpiar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Plus_15px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Plus_15px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -250,14 +256,14 @@
   <data name="imagen1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imagen1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="List_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\List_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="limpiar4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\limpiar4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="printer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\printer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="View All_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\View All_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Add Shopping Cart_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Add Shopping Cart_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Add List_15px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Add List_15px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,7 +292,7 @@
   <data name="List View_15px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\List View_15px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Microsoft Excel_20px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Microsoft Excel_20px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Industrial Scales_20px1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Industrial Scales_20px1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

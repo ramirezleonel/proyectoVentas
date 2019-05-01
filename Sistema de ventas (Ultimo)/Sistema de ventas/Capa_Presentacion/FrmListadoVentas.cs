@@ -353,6 +353,31 @@ namespace Capa_Presentacion
            
         }
 
+        private void btnVisualizarLista_Click(object sender, EventArgs e)
+        {
+            if (dataLista.Visible == false && chartRankingVentas.Visible == true)
+            {
+                dataLista.Visible = true;
+                chartRankingVentas.Visible = false;
+            }
+        }
+
+        private void btnVisualizarGrafico_Click(object sender, EventArgs e)
+        {
+            if (dataLista.Visible == true&&chartRankingVentas.Visible==false)
+            {
+                dataLista.Visible = false;
+                chartRankingVentas.Series["Ventas"].Points.Clear();
+                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto1", 30);
+                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto2", 50);
+                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto3", 20);
+                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto4", 70);
+                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto5", 1000);
+                chartRankingVentas.Visible = true;
+     
+            }
+        }
+
 
 
     }

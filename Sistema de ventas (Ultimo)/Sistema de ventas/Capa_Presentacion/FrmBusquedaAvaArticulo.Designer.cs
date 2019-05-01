@@ -34,6 +34,7 @@
             this.rdbCodigoBarra = new System.Windows.Forms.RadioButton();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.lblTotal = new System.Windows.Forms.Label();
+            this.btnProducto = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,17 +104,30 @@
             // 
             this.lblTotal.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblTotal.AutoSize = true;
-            this.lblTotal.Location = new System.Drawing.Point(673, 108);
+            this.lblTotal.Location = new System.Drawing.Point(605, 107);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(21, 22);
             this.lblTotal.TabIndex = 25;
             this.lblTotal.Text = "0";
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducto.Location = new System.Drawing.Point(784, 66);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 26;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
             // 
             // FrmBusquedaAvaArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(874, 395);
+            this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.rdbCategoria);
@@ -147,5 +161,6 @@
         private System.Windows.Forms.RadioButton rdbCodigoBarra;
         private System.Windows.Forms.RadioButton rdbNombre;
         private System.Windows.Forms.Label lblTotal;
+        private System.Windows.Forms.Button btnProducto;
     }
 }

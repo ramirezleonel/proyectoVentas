@@ -15,7 +15,7 @@ namespace Capa_Presentacion
         private string nombreProducto;
         private int idProducto;
         private int stockActual;
-        private float precio;
+        private decimal precio;
         
         private bool isCerro=false;
 
@@ -62,7 +62,7 @@ namespace Capa_Presentacion
             this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["nombre"].Value);
             
             //convierte primero object a string y luego en float
-            this.precio = float.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
+            this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precio"].Value), 2);
             //this.precio = double.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
             this.stockActual = Convert.ToInt32(this.dataLista.CurrentRow.Cells["stock_actual"].Value);
             this.Close();
@@ -85,7 +85,7 @@ namespace Capa_Presentacion
             get { return stockActual; }
             set { stockActual = value; }
         }
-        public float Precio
+        public decimal Precio
         {
             get { return precio; }
             set { precio = value; }
@@ -107,7 +107,7 @@ namespace Capa_Presentacion
                 this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["nombre"].Value);
 
                 //convierte primero object a string y luego en float
-                this.precio = float.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
+                this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precio"].Value));
                 //this.precio = double.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
                 this.stockActual = Convert.ToInt32(this.dataLista.CurrentRow.Cells["stock_actual"].Value);
                 this.Close();

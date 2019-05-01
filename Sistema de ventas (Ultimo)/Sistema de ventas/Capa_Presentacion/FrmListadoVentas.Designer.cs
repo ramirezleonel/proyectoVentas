@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListadoVentas));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaIni = new System.Windows.Forms.DateTimePicker();
@@ -45,22 +49,23 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.gbxConsultasAvanzadas = new System.Windows.Forms.GroupBox();
             this.gbxHerramientas = new System.Windows.Forms.GroupBox();
-            this.btnExportarExcel = new System.Windows.Forms.Button();
-            this.btnCalculadora = new System.Windows.Forms.Button();
             this.gbxVisualizar = new System.Windows.Forms.GroupBox();
-            this.btnVisualizarGrafico = new System.Windows.Forms.Button();
-            this.btnVisualizarLista = new System.Windows.Forms.Button();
-            this.btnTodos = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.panelHorizontal = new System.Windows.Forms.Panel();
+            this.pnlSeparacion = new System.Windows.Forms.Panel();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.btnRestaurar = new System.Windows.Forms.PictureBox();
             this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.pnlSeparacion = new System.Windows.Forms.Panel();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnVisualizarGrafico = new System.Windows.Forms.Button();
+            this.btnVisualizarLista = new System.Windows.Forms.Button();
+            this.btnTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.chartRankingVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.gbxConsultasAvanzadas.SuspendLayout();
             this.gbxHerramientas.SuspendLayout();
@@ -71,6 +76,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRankingVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -229,29 +235,6 @@
             this.gbxHerramientas.TabStop = false;
             this.gbxHerramientas.Text = "herramientas";
             // 
-            // btnExportarExcel
-            // 
-            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
-            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
-            this.btnExportarExcel.Name = "btnExportarExcel";
-            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
-            this.btnExportarExcel.TabIndex = 29;
-            this.btnExportarExcel.UseVisualStyleBackColor = true;
-            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
-            // 
-            // btnCalculadora
-            // 
-            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
-            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
-            this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
-            this.btnCalculadora.TabIndex = 28;
-            this.btnCalculadora.UseVisualStyleBackColor = true;
-            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
-            // 
             // gbxVisualizar
             // 
             this.gbxVisualizar.Controls.Add(this.btnVisualizarGrafico);
@@ -263,51 +246,6 @@
             this.gbxVisualizar.TabIndex = 25;
             this.gbxVisualizar.TabStop = false;
             this.gbxVisualizar.Text = "visualizador";
-            // 
-            // btnVisualizarGrafico
-            // 
-            this.btnVisualizarGrafico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVisualizarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarGrafico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarGrafico.Image")));
-            this.btnVisualizarGrafico.Location = new System.Drawing.Point(17, 28);
-            this.btnVisualizarGrafico.Name = "btnVisualizarGrafico";
-            this.btnVisualizarGrafico.Size = new System.Drawing.Size(26, 28);
-            this.btnVisualizarGrafico.TabIndex = 27;
-            this.btnVisualizarGrafico.UseVisualStyleBackColor = true;
-            // 
-            // btnVisualizarLista
-            // 
-            this.btnVisualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarLista.Image = global::Capa_Presentacion.Properties.Resources.List_20px;
-            this.btnVisualizarLista.Location = new System.Drawing.Point(49, 28);
-            this.btnVisualizarLista.Name = "btnVisualizarLista";
-            this.btnVisualizarLista.Size = new System.Drawing.Size(26, 28);
-            this.btnVisualizarLista.TabIndex = 26;
-            this.btnVisualizarLista.UseVisualStyleBackColor = true;
-            // 
-            // btnTodos
-            // 
-            this.btnTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.Image = global::Capa_Presentacion.Properties.Resources.Select_All_20px;
-            this.btnTodos.Location = new System.Drawing.Point(412, 57);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(26, 28);
-            this.btnTodos.TabIndex = 24;
-            this.btnTodos.UseVisualStyleBackColor = true;
-            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnBuscar.Location = new System.Drawing.Point(380, 57);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(26, 28);
-            this.btnBuscar.TabIndex = 18;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // errorIcono
             // 
@@ -348,6 +286,13 @@
             this.panelHorizontal.TabIndex = 64;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
+            // 
+            // pnlSeparacion
+            // 
+            this.pnlSeparacion.Location = new System.Drawing.Point(0, 0);
+            this.pnlSeparacion.Name = "pnlSeparacion";
+            this.pnlSeparacion.Size = new System.Drawing.Size(200, 100);
+            this.pnlSeparacion.TabIndex = 0;
             // 
             // btnMaximizar
             // 
@@ -407,12 +352,94 @@
             this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
-            // pnlSeparacion
+            // btnExportarExcel
             // 
-            this.pnlSeparacion.Location = new System.Drawing.Point(0, 0);
-            this.pnlSeparacion.Name = "pnlSeparacion";
-            this.pnlSeparacion.Size = new System.Drawing.Size(200, 100);
-            this.pnlSeparacion.TabIndex = 0;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 29;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
+            // 
+            // btnCalculadora
+            // 
+            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
+            this.btnCalculadora.TabIndex = 28;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
+            // 
+            // btnVisualizarGrafico
+            // 
+            this.btnVisualizarGrafico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVisualizarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarGrafico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarGrafico.Image")));
+            this.btnVisualizarGrafico.Location = new System.Drawing.Point(17, 28);
+            this.btnVisualizarGrafico.Name = "btnVisualizarGrafico";
+            this.btnVisualizarGrafico.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizarGrafico.TabIndex = 27;
+            this.btnVisualizarGrafico.UseVisualStyleBackColor = true;
+            this.btnVisualizarGrafico.Click += new System.EventHandler(this.btnVisualizarGrafico_Click);
+            // 
+            // btnVisualizarLista
+            // 
+            this.btnVisualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarLista.Image = global::Capa_Presentacion.Properties.Resources.List_20px;
+            this.btnVisualizarLista.Location = new System.Drawing.Point(49, 28);
+            this.btnVisualizarLista.Name = "btnVisualizarLista";
+            this.btnVisualizarLista.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizarLista.TabIndex = 26;
+            this.btnVisualizarLista.UseVisualStyleBackColor = true;
+            this.btnVisualizarLista.Click += new System.EventHandler(this.btnVisualizarLista_Click);
+            // 
+            // btnTodos
+            // 
+            this.btnTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodos.Image = global::Capa_Presentacion.Properties.Resources.Select_All_20px;
+            this.btnTodos.Location = new System.Drawing.Point(412, 57);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(26, 28);
+            this.btnTodos.TabIndex = 24;
+            this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnBuscar.Location = new System.Drawing.Point(380, 57);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(26, 28);
+            this.btnBuscar.TabIndex = 18;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // chartRankingVentas
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartRankingVentas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRankingVentas.Legends.Add(legend1);
+            this.chartRankingVentas.Location = new System.Drawing.Point(42, 157);
+            this.chartRankingVentas.Name = "chartRankingVentas";
+            this.chartRankingVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Ventas";
+            this.chartRankingVentas.Series.Add(series1);
+            this.chartRankingVentas.Size = new System.Drawing.Size(933, 400);
+            this.chartRankingVentas.TabIndex = 65;
+            title1.Name = "Ventas";
+            this.chartRankingVentas.Titles.Add(title1);
+            this.chartRankingVentas.Visible = false;
             // 
             // FrmListadoVentas
             // 
@@ -424,6 +451,7 @@
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dataLista);
+            this.Controls.Add(this.chartRankingVentas);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -443,6 +471,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRankingVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -481,6 +510,7 @@
         private System.Windows.Forms.GroupBox gbxHerramientas;
         private System.Windows.Forms.Button btnCalculadora;
         private System.Windows.Forms.Button btnExportarExcel;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartRankingVentas;
 
     }
 }

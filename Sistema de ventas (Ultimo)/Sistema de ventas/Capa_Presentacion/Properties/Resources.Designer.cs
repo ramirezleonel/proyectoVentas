@@ -293,6 +293,26 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Industrial_Scales_20px {
+            get {
+                object obj = ResourceManager.GetObject("Industrial Scales_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Industrial_Scales_20px1 {
+            get {
+                object obj = ResourceManager.GetObject("Industrial Scales_20px1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Label_Printer_30px {
             get {
                 object obj = ResourceManager.GetObject("Label Printer_30px", resourceCulture);
