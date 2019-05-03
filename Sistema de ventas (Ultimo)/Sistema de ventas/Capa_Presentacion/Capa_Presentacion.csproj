@@ -115,6 +115,12 @@
     <Compile Include="FrmAsignarValores.Designer.cs">
       <DependentUpon>FrmAsignarValores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmAvanzadoArticulo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAvanzadoArticulo.Designer.cs">
+      <DependentUpon>FrmAvanzadoArticulo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBusquedaAvaArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAsignarValores.resx">
       <DependentUpon>FrmAsignarValores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAvanzadoArticulo.resx">
+      <DependentUpon>FrmAvanzadoArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBusquedaAvaArticulo.resx">
       <DependentUpon>FrmBusquedaAvaArticulo.cs</DependentUpon>

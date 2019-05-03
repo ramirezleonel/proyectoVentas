@@ -101,7 +101,7 @@ namespace Capa_Presentacion
             DataTable dt = new DataTable();
             dt.Columns.Add("Codigo", typeof(string));
             dt.Columns.Add("Precio", typeof(decimal));
-            dt.Columns.Add("Cantidad", typeof(string));
+            dt.Columns.Add("Cantidad", typeof(decimal));
             dt.Columns.Add("Descuento", typeof(decimal));
             dt.Columns.Add("Importe", typeof(decimal));
 
@@ -129,7 +129,8 @@ namespace Capa_Presentacion
                 {
 
                     //recorro la lista pasado por paramentro y asigno al datatable para generar la transaccion
-                    dt.Rows.Add(fila.Cells["Codigo"].Value, fila.Cells["Precio"].Value, fila.Cells["Cantidad"].Value, fila.Cells["Descuento"].Value, fila.Cells["Importe"].Value);
+                    //dt.Rows.Add(fila.Cells["Codigo"].Value, fila.Cells["Precio"].Value, fila.Cells["Cantidad"].Value, fila.Cells["Descuento"].Value, fila.Cells["Importe"].Value);
+                    dt.Rows.Add(fila.Cells["Codigo"].Value, fila.Cells["Precio"].Value,decimal.Parse( "1,3"), fila.Cells["Descuento"].Value, fila.Cells["Importe"].Value);
 
 
 

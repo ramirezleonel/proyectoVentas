@@ -144,12 +144,32 @@
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="ShockwaveFlashObjects" version="1.0.0.0" publicKeyToken="692FBEA5521E1304" language="neutral" />
+      <assemblyIdentity name="Microsoft.TeamFoundation.Client" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
     </dependentAssembly>
   </dependency>
   <dependency>
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
-      <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+      <assemblyIdentity name="Microsoft.TeamFoundation.Common" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.TeamFoundation.Controls" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.TeamFoundation.Diff" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.ExtensibilityHosting" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="ShockwaveFlashObjects" version="1.0.0.0" publicKeyToken="692FBEA5521E1304" language="neutral" />
     </dependentAssembly>
   </dependency>
   <dependency>
@@ -177,38 +197,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="39936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="40960">
       <assemblyIdentity name="Capa_Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>GiNp2iDVPkDfJ1Qyawc0Qw2A7HF7dZN3+UtqEKEa0qk=</dsig:DigestValue>
+        <dsig:DigestValue>QKA/aF9D7I5ige8GUKnl7RkIbBa3/jf4DxH8o60VT2g=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_negocio.dll" size="15872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_negocio.dll" size="16384">
       <assemblyIdentity name="Capa_negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MHUTOq62oiTy0bT2Fnc5FthpWGJnc8kLgVrrzmIqE4c=</dsig:DigestValue>
+        <dsig:DigestValue>zhYBo7r0W0DoRwIdwa8IbP6vyglVeIUtEIVtXauGZ58=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1831936">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1868800">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>v993AZUw2eZ7Vy3DRAfO0DgB3ed5nkp9jI0JltGYVew=</dsig:DigestValue>
+        <dsig:DigestValue>1Gtc003OCTeOwqLtu3QMzToDyBloOpuBtKfWJhNPuEg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -249,14 +269,50 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.SqlServer.Types.resources.dll" size="48216">
-      <assemblyIdentity name="Microsoft.SqlServer.Types.resources" version="11.0.0.0" publicKeyToken="89845DCD8080CC91" language="es" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.TeamFoundation.Client.resources.dll" size="220752">
+      <assemblyIdentity name="Microsoft.TeamFoundation.Client.resources" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="es" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>DoTuq5xRkGy/ib9FBhtk7+vcvxVMvzHN1bxkJjgpm4E=</dsig:DigestValue>
+        <dsig:DigestValue>8Bs+6NqHH5QrhrhuHlNFcjXwi6jkbRqPyYLZXEx2Uu0=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.TeamFoundation.Common.resources.dll" size="89680">
+      <assemblyIdentity name="Microsoft.TeamFoundation.Common.resources" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>7B6B2/dSnWjHkHTuSwYNxY8HJzEtO6N7UGjQF00Zflg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.TeamFoundation.Controls.resources.dll" size="462424">
+      <assemblyIdentity name="Microsoft.TeamFoundation.Controls.resources" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>kR1kFHh5IBwRXvhBG1eDwNJvwQt4UhtK8O8QDhhbPDM=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="es\Microsoft.TeamFoundation.Diff.resources.dll" size="19528">
+      <assemblyIdentity name="Microsoft.TeamFoundation.Diff.resources" version="11.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="es" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Yw+Relo8eYg2+QTeHjcQJGd2aAJ1xq87TT7NrUiM3qU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -273,14 +329,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11558912">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ProgressBar.dll" size="12800">
+      <assemblyIdentity name="ProgressBar" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>Bua45Cw0LX+J7zKVhbNEEer42CGxrotgu+ZWSPozS7g=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11591680">
       <assemblyIdentity name="SistemaVentas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fgQ5hte641xYHECjHIVJAvmUu9jDXNxwLy5b8uyWqeQ=</dsig:DigestValue>
+        <dsig:DigestValue>k/e1ebMhl3CE9blZF/jUuxpIo65QGtunWQfsoPpu+Zg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -401,13 +469,13 @@
       <dsig:DigestValue>KQZ9VcDq9cHLZgP/U6rqlTUlf6caOYOG/NujIYEwak8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SistemaVentas.exe.config" size="630">
+  <file name="SistemaVentas.exe.config" size="629">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>didv8SQ4NogWFVmBY3P2PVnc95tpdQGJdDuJg6/A6xI=</dsig:DigestValue>
+      <dsig:DigestValue>QdohjDAjL9P6UEXm903G5v2XYrHaCS1ft2DJ8I/bQ0U=</dsig:DigestValue>
     </hash>
   </file>
   <file name="softIntegralIcon.ico" size="268286">

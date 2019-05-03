@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_negocio;
+using System.Diagnostics;
 namespace Capa_Presentacion
 {
     public partial class FrmMovStock1 : Form
@@ -767,38 +768,9 @@ namespace Capa_Presentacion
                 this.tabControl1.SelectedTab = tabGenerar;
 
             }
-             else if (e.KeyCode == Keys.NumPad1&&tabControl1.SelectedIndex==2)
-             {
-
-                 this.tabControl1.SelectedTab = tabGenerar;
-
-             }
+             
         }
-        private void tabControl1_Selected(object sender, TabControlEventArgs e)
-        {
-            //cuando se cambia del tabGenerar al tabLista se produce el evento
-            if (tabControl1.SelectedIndex == 0 && btnIngreso.Enabled == false && btnEgreso.Enabled == false)
-            {
-                if (MessageBox.Show("Se Borrarán todos los Datos Agregados, ¿Seguro que desea Cancelar? ", "Movimiento Stock"
-                    , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
-                {
-                    limpiarTodo();
-                    tabControl1.SelectedIndex = 0;
-
-                }
-                else {
-
-                    tabControl1.SelectedIndex = 1;
-                }
-
-
-            }else if(tabControl1.SelectedIndex == 1){
-
-                btnIngreso.Focus();
-            }
-            
-           
-        }
+      
 
         private void btnGuardar_MouseHover(object sender, EventArgs e)
         {
@@ -808,29 +780,29 @@ namespace Capa_Presentacion
 
         private void dataLista_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnAnular.Enabled = true;
+           // btnAnular.Enabled = true;
         }
 
         private void btnAnular_Click(object sender, EventArgs e)
         {
             /*anular un movimiento,no se puede eliminar*/
               //si la respuesta es si elimina la fila actual
-                if (MessageBox.Show("Estás seguro de Anular un Movimiento,se modificará el Stock?", "Anular"
-                   , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
-                {
-            string respuesta = string.Empty;
-            respuesta = NegocioMovStock.anular(Convert.ToInt32(this.dataLista.CurrentRow.Cells[0].Value));
-            if (respuesta.Equals("ok"))
-            {
-                UtilityFrm.mensajeConfirm(dataLista.CurrentRow.Cells[3].Value.ToString() + " se anuló correctamente");
-            }
-            else
-            {
+            //if (MessageBox.Show("Estás seguro de Anular un Movimiento,se modificará el Stock?", "Anular"
+            //   , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+            //{
+            //    string respuesta = string.Empty;
+            //    respuesta = NegocioMovStock.anular(Convert.ToInt32(this.dataLista.CurrentRow.Cells[0].Value));
+            //    if (respuesta.Equals("ok"))
+            //    {
+            //        UtilityFrm.mensajeConfirm(dataLista.CurrentRow.Cells[3].Value.ToString() + " se anuló correctamente");
+            //    }
+            //    else
+            //    {
 
-                UtilityFrm.mensajeError("Error: " + respuesta);
-            }
+            //        UtilityFrm.mensajeError("Error: " + respuesta);
+            //    }
 
-          }
+            //}
 
         }
 
@@ -974,9 +946,109 @@ namespace Capa_Presentacion
             }
         }
 
-        
 
-    
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            //cuando se cambia del tabGenerar al tabLista se produce el evento
+            if (tabControl1.SelectedIndex == 0 && btnIngreso.Enabled == false && btnEgreso.Enabled == false)
+            {
+                if (MessageBox.Show("Se Borrarán todos los Datos Agregados, ¿Seguro que desea Cancelar? ", "Movimiento Stock"
+                    , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+                {
+                    limpiarTodo();
+                    tabControl1.SelectedIndex = 0;
+
+                }
+                else
+                {
+
+                    tabControl1.SelectedIndex = 1;
+                }
+
+
+            }
+            else if (tabControl1.SelectedIndex == 1)
+            {
+
+
+         
+                tabGenerar.Select();
+                tabGenerar.Focus();
+
+              
+              
+
+                btnIngreso.Focus();
+            }
+
+
+        }
+
+        private void btnImprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExportarExcel_Click(object sender, EventArgs e)
+        {
+            this.exportarAExcel();
+        }
+        public void exportarAExcel()
+        {
+            try
+            {
+                SaveFileDialog fichero = new SaveFileDialog();
+                fichero.Filter = "Excel (*.xls)|*.xls";
+                fichero.FileName = "Listado de Movimiento de Stock - " + DateTime.Now.ToString("dd-MM-yyyy");
+                if (fichero.ShowDialog() == DialogResult.OK)
+                {
+                    Microsoft.Office.Interop.Excel.Application aplicacion;
+                    Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
+                    Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
+                    aplicacion = new Microsoft.Office.Interop.Excel.Application();
+                    libros_trabajo = aplicacion.Workbooks.Add();
+                    hoja_trabajo =
+                        (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
+
+
+                    //Recorremos el DataGridView rellenando la hoja de trabajo
+                    for (int i = 0; i < dataLista.Columns.Count; i++)
+                    {
+
+                        hoja_trabajo.Cells[1, i + 1] = dataLista.Columns[i].Name;
+                    }
+
+                    for (int i = 0; i < dataLista.Rows.Count; i++)
+                    {
+                        for (int j = 0; j < dataLista.Columns.Count; j++)
+                        {
+                            //se coloca 2 porque la primera celda pertenece al nombre de la columna y luego los datos
+                            hoja_trabajo.Cells[i + 2, j + 1] = dataLista.Rows[i].Cells[j].Value.ToString();
+                        }
+                    }
+
+                    //ajustar el tamaño de las celdas deacuerdo al tamaño de las columnas agregadas
+                    hoja_trabajo.Cells.Columns.AutoFit();
+                    //guardo el archivo con la ruta del archivo
+                    libros_trabajo.SaveAs(fichero.FileName,
+                        Microsoft.Office.Interop.Excel.XlFileFormat.xlWorkbookNormal);
+                    libros_trabajo.Close(true);
+                    aplicacion.Quit();
+                    if (MessageBox.Show("Desea abrir el Excel ?", "Abrir Excel"
+                        , MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
+                    {
+                        Process.Start(fichero.FileName);
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("Error: " + ex.Message);
+            }
+
+        }
       
   }
 }

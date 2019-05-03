@@ -38,6 +38,10 @@
             this.txtPrecioxKg = new System.Windows.Forms.TextBox();
             this.lblPrecioXKg = new System.Windows.Forms.Label();
             this.btnProducto = new System.Windows.Forms.Button();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNombreProducto
@@ -48,6 +52,7 @@
             this.txtNombreProducto.Size = new System.Drawing.Size(433, 22);
             this.txtNombreProducto.TabIndex = 1;
             this.txtNombreProducto.TextChanged += new System.EventHandler(this.txtNombreProducto_TextChanged);
+            this.txtNombreProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombreProducto_KeyDown);
             this.txtNombreProducto.Leave += new System.EventHandler(this.txtNombreProducto_Leave);
             // 
             // lblNombreProd
@@ -75,7 +80,7 @@
             // lblPrecio
             // 
             this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(112, 133);
+            this.lblPrecio.Location = new System.Drawing.Point(112, 135);
             this.lblPrecio.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecio.Name = "lblPrecio";
             this.lblPrecio.Size = new System.Drawing.Size(47, 16);
@@ -84,7 +89,7 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(193, 130);
+            this.txtPrecio.Location = new System.Drawing.Point(193, 131);
             this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecio.MaxLength = 20;
             this.txtPrecio.Name = "txtPrecio";
@@ -97,7 +102,7 @@
             // 
             // txtKgReal
             // 
-            this.txtKgReal.Location = new System.Drawing.Point(193, 166);
+            this.txtKgReal.Location = new System.Drawing.Point(193, 164);
             this.txtKgReal.Margin = new System.Windows.Forms.Padding(4);
             this.txtKgReal.MaxLength = 25;
             this.txtKgReal.Name = "txtKgReal";
@@ -108,7 +113,7 @@
             // lblKg
             // 
             this.lblKg.AutoSize = true;
-            this.lblKg.Location = new System.Drawing.Point(103, 169);
+            this.lblKg.Location = new System.Drawing.Point(103, 168);
             this.lblKg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblKg.Name = "lblKg";
             this.lblKg.Size = new System.Drawing.Size(56, 16);
@@ -118,7 +123,7 @@
             // txtPrecioxKg
             // 
             this.txtPrecioxKg.Enabled = false;
-            this.txtPrecioxKg.Location = new System.Drawing.Point(193, 71);
+            this.txtPrecioxKg.Location = new System.Drawing.Point(193, 98);
             this.txtPrecioxKg.Margin = new System.Windows.Forms.Padding(4);
             this.txtPrecioxKg.MaxLength = 25;
             this.txtPrecioxKg.Name = "txtPrecioxKg";
@@ -129,7 +134,7 @@
             // lblPrecioXKg
             // 
             this.lblPrecioXKg.AutoSize = true;
-            this.lblPrecioXKg.Location = new System.Drawing.Point(89, 74);
+            this.lblPrecioXKg.Location = new System.Drawing.Point(84, 102);
             this.lblPrecioXKg.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecioXKg.Name = "lblPrecioXKg";
             this.lblPrecioXKg.Size = new System.Drawing.Size(75, 16);
@@ -148,12 +153,53 @@
             this.btnProducto.UseVisualStyleBackColor = true;
             this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Enabled = false;
+            this.txtCodigo.Location = new System.Drawing.Point(193, 65);
+            this.txtCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodigo.MaxLength = 20;
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(244, 22);
+            this.txtCodigo.TabIndex = 27;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Location = new System.Drawing.Point(107, 68);
+            this.lblCodigo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(52, 16);
+            this.lblCodigo.TabIndex = 28;
+            this.lblCodigo.Text = "Codigo";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dataGridView1.Location = new System.Drawing.Point(193, 64);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(433, 87);
+            this.dataGridView1.TabIndex = 37;
+            this.dataGridView1.Visible = false;
+            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            // 
             // FrmAsignarPrecio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(669, 277);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnProducto);
             this.Controls.Add(this.txtPrecioxKg);
             this.Controls.Add(this.lblPrecioXKg);
@@ -166,6 +212,7 @@
             this.Controls.Add(this.btnGuardar);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -174,6 +221,8 @@
             this.Text = "Asignar Precio";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAsignarPrecio_FormClosing);
             this.Load += new System.EventHandler(this.FrmAsignarPrecio_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAsignarPrecio_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,5 +240,8 @@
         private System.Windows.Forms.TextBox txtPrecioxKg;
         private System.Windows.Forms.Label lblPrecioXKg;
         private System.Windows.Forms.Button btnProducto;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

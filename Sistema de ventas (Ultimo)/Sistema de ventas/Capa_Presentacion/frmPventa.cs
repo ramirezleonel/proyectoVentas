@@ -347,6 +347,16 @@ namespace Capa_Presentacion
                   quitarProducto();
 
 
+              }else if(e.KeyCode==Keys.Escape){
+
+                  if (MessageBox.Show("Está seguro de cerrar la ventana de ventas?", "Cerrar"
+                         , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+                  {
+
+                      this.Close();
+                  }
+
+              
               }
               else if (e.KeyCode == Keys.Down && txtNombreProducto.Focused == true && dataGridView1.Visible == false)
               {
@@ -807,7 +817,7 @@ namespace Capa_Presentacion
                     }
                     else
                     {
-                        agregar_producto(objfrmbarticulo.IdProducto, asignarPrecio.Precio, asignarPrecio.Descuento);
+                        agregar_producto(objfrmbarticulo.IdProducto, asignarPrecio.Descuento, asignarPrecio.PrecioTotal);
                     }
                 }
 
@@ -1079,7 +1089,11 @@ namespace Capa_Presentacion
         {
             FrmAsignarPrecio asignarPrecio = new FrmAsignarPrecio();
             asignarPrecio.ShowDialog();
-
+            if(asignarPrecio.IsCerro==false){
+                //el cero pertenece al descuento
+                DGVenta.Rows.Add(asignarPrecio.Codigo, asignarPrecio.Producto, asignarPrecio.PrecioXKg, asignarPrecio.KgReal,0, asignarPrecio.PrecioTotal);
+                this.actualizarPrecioTotal();
+            }
         }
 
        

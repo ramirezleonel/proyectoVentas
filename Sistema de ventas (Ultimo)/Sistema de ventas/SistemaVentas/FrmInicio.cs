@@ -63,57 +63,83 @@ namespace SistemaVentas
                 {
                     lbl1.Visible = false;
                     lbl2.Visible = false;
+                    lbl3.Visible = false;
+                    lbl4.Visible = false;
+                    lbl5.Visible = false;
+                    lbl6.Visible = false;
+                    lbl7.Visible = false;
+                    lbl8.Visible = false;
                     lbl1.SendToBack();
                     lbl2.SendToBack();
+                    lbl3.SendToBack();
+                    lbl4.SendToBack();
+                    lbl5.SendToBack();
+                    lbl6.SendToBack();
+                    lbl7.SendToBack();
+                    lbl8.SendToBack();
                 }
                 else
                 {
-
                     lbl1.Visible = true;
                     lbl2.Visible = true;
+                    lbl3.Visible = true;
+                    lbl4.Visible = true;
+                    lbl5.Visible = true;
+                    lbl6.Visible = true;
+                    lbl7.Visible = true;
+                    lbl8.Visible = true;
                     lbl1.BringToFront();
                     lbl2.BringToFront();
+                    lbl3.BringToFront();
+                    lbl4.BringToFront();
+                    lbl5.BringToFront();
+                    lbl6.BringToFront();
+                    lbl7.BringToFront();
+                    lbl8.BringToFront();
                 }  
 
-            }
+            }else if(e.KeyCode==Keys.D1){
             //dependiendo del boton ingresa se presiona el boton automaticamente para abrir el formulario
 
             //
-            if(e.KeyCode==Keys.F1){
-              
+                btnProductos.PerformClick();
+                
+                btnListaProducto.Select();
+                btnListaProducto.Focus();
                 
 
             }
-            else if (e.KeyCode == Keys.NumPad2) {
+            else if (e.KeyCode == Keys.D2) {
 
                 btnVentas.PerformClick();
-
+                btnListaProducto.Select();
+                btnGenerarVenta.Focus();
             }
-            else if (e.KeyCode == Keys.NumPad3)
+            else if (e.KeyCode == Keys.D3)
             {
 
                 btnProveedor.PerformClick();
 
             }
-            else if (e.KeyCode == Keys.NumPad4)
+            else if (e.KeyCode == Keys.D4)
             {
                 btnClientes.PerformClick();
 
 
             }
-            else if (e.KeyCode == Keys.NumPad5)
+            else if (e.KeyCode == Keys.D5)
             {
                 btnCaja.PerformClick();
 
 
             }
-            else if (e.KeyCode == Keys.NumPad6)
+            else if (e.KeyCode == Keys.D6)
             {
                 btnUsuarios.PerformClick();
 
 
             }
-            else if (e.KeyCode == Keys.NumPad7)
+            else if (e.KeyCode == Keys.D7)
             {
                 btnStock.PerformClick();
 

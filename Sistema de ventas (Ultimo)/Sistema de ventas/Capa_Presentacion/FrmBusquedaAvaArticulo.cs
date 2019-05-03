@@ -23,11 +23,40 @@ namespace Capa_Presentacion
         public FrmBusquedaAvaArticulo()
         {
             InitializeComponent();
+            this.mostrar();
+        }
+        public FrmBusquedaAvaArticulo(Boolean pesable)
+        {
+            InitializeComponent();
+            if(pesable==true){
+                this.mostrarPesable();
+            }
+            
         }
 
+        private void mostrarPesable()
+        {
+
+            try
+            {
+                this.dataLista.DataSource = NegocioArticulo.mostrarPesable();
+                //this.dataLista.Columns["precio"].DefaultCellStyle.Format = "c3";
+                //this.dataLista.Columns["precio"].ValueType = Type.GetType("System.Decimal");
+                //this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("###,##0.00");
+                this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("$###,##0.00");
+            
+            }
+            catch (Exception ex)
+            {
+                UtilityFrm.mensajeError("error con la Base de datos: " + ex.Message);
+            }
+
+            //muestro el total de las categorias
+            lblTotal.Text = "Total de Registros: " + Convert.ToString(dataLista.RowCount);
+        }
         private void FrmBusquedaAvaArticulo_Load(object sender, EventArgs e)
         {
-            this.mostrar();
+           
         }
         /*Metodos Propios*/
         public void mostrar()
@@ -39,13 +68,7 @@ namespace Capa_Presentacion
                 //this.dataLista.Columns["precio"].ValueType = Type.GetType("System.Decimal");
                 //this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("###,##0.00");
                 this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("$###,##0.00");
-                this.dataLista.Columns[0].Width = 150;
-                this.dataLista.Columns[1].Width = 250;
-                this.dataLista.Columns[2].Width = 250;
-                this.dataLista.Columns[3].Width = 150;
-                this.dataLista.Columns[4].Width = 150;
-                this.dataLista.Columns[5].Width = 150;
-                this.dataLista.Columns[6].Width = 188;
+           
             }
             catch (Exception ex)
             {
@@ -123,6 +146,147 @@ namespace Capa_Presentacion
                 this.Close();
                 
             }
+        }
+
+        private void txtBuscar_TextChanged(object sender, EventArgs e)
+        {
+            //compara si el primer caracter es numero, si es true se cambia a codigo de barra
+            if (txtBuscar.Text != String.Empty)
+            {
+                if (Char.IsNumber(txtBuscar.Text, 0) && ((rdbNombre.Checked == true) || (rdbCategoria.Checked == true)))
+                {
+                    rdbCodigoBarra.Checked = true;
+
+                    this.BuscarCodigoBarraPesable();
+
+                }
+                else if (Char.IsLetter(txtBuscar.Text, 0) && ((rdbCodigo.Checked == true) || (rdbCodigoBarra.Checked == true)))
+                {
+
+                    rdbNombre.Checked = true;
+
+                    this.BuscarNombrePesable();
+                }
+                else if (rdbNombre.Checked == true) //segun el radiobutton que seleccione buscara
+                {
+                    this.BuscarNombrePesable();
+                }
+                else if (rdbCodigoBarra.Checked == true)
+                {
+
+                    if (txtBuscar.Text.Length > 13)
+                    {
+                        string prod = txtBuscar.Text;
+                        prod = prod.Remove(0, 13);
+                        txtBuscar.Text = "";
+
+                        txtBuscar.Text = prod.ToString();
+                        //se mueve hasta la ultima posicion
+                        txtBuscar.Select(txtBuscar.Text.Length, 0);
+                        // txtProducto.SelectAll();
+
+                    }
+                    this.BuscarCodigoBarraPesable();
+
+                }
+                else if (rdbCodigo.Checked == true)
+                {
+                    this.BuscarIdArticuloPesable();
+                }
+                else if (rdbCategoria.Checked == true)
+                {
+                    this.BuscarCategoriaPesable();
+                }
+
+            }
+            else {
+
+                this.mostrarPesable();
+            }
+           
+           
+              
+        }
+
+        private void BuscarIdArticuloPesable()
+        {
+            DataTable data = NegocioArticulo.mostrarPesableXbusqueda(txtBuscar.Text, "idarticulo");
+      
+
+            foreach (DataRow producto in data.Rows)
+            {
+                dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+            } 
+        }
+
+        private void BuscarCategoriaPesable()
+        {
+            DataTable data = NegocioArticulo.mostrarPesableXbusqueda(txtBuscar.Text, "categoria");
+           
+
+            foreach (DataRow producto in data.Rows)
+            {
+                dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+            }
+        }
+
+        private void BuscarNombrePesable()
+        {
+            try
+            {
+                dataLista.Rows.Clear();
+                DataTable data = NegocioArticulo.mostrarPesableXbusqueda(txtBuscar.Text, "nombre");
+
+
+                foreach (DataRow producto in data.Rows)
+                {
+                    UtilityFrm.mensajeConfirm("hola");
+                   // dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"]);
+                    //    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("error: "+ex.Message);
+            }
+           
+        }
+
+        private void BuscarCodigoBarraPesable()
+        {
+            DataTable data = NegocioArticulo.mostrarPesableXbusqueda(txtBuscar.Text, "codigo");
+        
+
+            foreach (DataRow producto in data.Rows)
+            {
+              //  dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+            }
+        }
+
+        private void btnProducto_Click(object sender, EventArgs e)
+        {
+            ////segun el radiobutton que seleccione buscara
+            //if (rdbNombre.Checked == true)
+            //{
+            //    this.BuscarNombrePesable();
+            //}
+            //else if (rdbCodigoBarra.Checked == true)
+            //{
+
+            //    txtBuscar.Multiline = true;
+            //    this.BuscarCodigoBarraPesable();
+
+            //}
+            //else if (rdbCodigo.Checked == true)
+            //{
+            //    this.BuscarIdArticuloPesable();
+            //}
+            //else
+            //{
+            //    this.BuscarCategoriaPesable();
+            //}
         }
     }
 }

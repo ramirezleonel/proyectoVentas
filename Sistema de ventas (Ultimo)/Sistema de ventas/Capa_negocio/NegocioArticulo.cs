@@ -106,6 +106,11 @@ namespace Capa_negocio
             return new DatosArticulo().mostrar();
         }
 
+        public static DataTable mostrarPesable()
+        {
+            //mostrar solo los productos pesables
+           return new DatosArticulo().mostrarPesable();
+        }
       //devuelve el valor de idArticulo
         public static int obtenerIdArticulo()
         {
@@ -182,7 +187,22 @@ namespace Capa_negocio
 
         }
 
+        public static DataTable mostrarPesableXbusqueda(string Producto, string tipoBusqueda)
+        {
+            DatosArticulo ObjArticulo = new DatosArticulo();
 
+
+           
+            if(tipoBusqueda=="idarticulo"){
+                ObjArticulo.IdArticulo = Convert.ToInt32(Producto);
+            }
+            ObjArticulo.IdArticulo =0;
+            //el nombre lo utilizo para los categoria y nombre de producto
+            ObjArticulo.Nombre = Producto;
+            ObjArticulo.Codigo = Producto;
+       
+            return  ObjArticulo.mostrarPesableXbusqueda(ObjArticulo,tipoBusqueda);
+        }
 
 
         public Boolean Sindatos
@@ -240,5 +260,7 @@ namespace Capa_negocio
             get { return precioCompra; }
             set { precioCompra = value; }
         }
+
+      
     }
 }

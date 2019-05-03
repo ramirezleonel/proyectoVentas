@@ -68,6 +68,12 @@
             this.panelPrincipal = new System.Windows.Forms.Panel();
             this.sgpProgresoFormulario = new Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lbl3 = new System.Windows.Forms.Label();
+            this.lbl4 = new System.Windows.Forms.Label();
+            this.lbl5 = new System.Windows.Forms.Label();
+            this.lbl6 = new System.Windows.Forms.Label();
+            this.lbl7 = new System.Windows.Forms.Label();
+            this.lbl8 = new System.Windows.Forms.Label();
             this.panelHorizontal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
@@ -244,7 +250,7 @@
             this.btnCategoria.Location = new System.Drawing.Point(47, 205);
             this.btnCategoria.Name = "btnCategoria";
             this.btnCategoria.Size = new System.Drawing.Size(252, 46);
-            this.btnCategoria.TabIndex = 21;
+            this.btnCategoria.TabIndex = 3;
             this.btnCategoria.Text = "Categorias";
             this.btnCategoria.UseVisualStyleBackColor = false;
             this.btnCategoria.Visible = false;
@@ -263,7 +269,7 @@
             this.btnListaProducto.Location = new System.Drawing.Point(47, 154);
             this.btnListaProducto.Name = "btnListaProducto";
             this.btnListaProducto.Size = new System.Drawing.Size(252, 46);
-            this.btnListaProducto.TabIndex = 23;
+            this.btnListaProducto.TabIndex = 2;
             this.btnListaProducto.Text = "Gestión de Productos";
             this.btnListaProducto.UseVisualStyleBackColor = false;
             this.btnListaProducto.Visible = false;
@@ -291,11 +297,15 @@
             // 
             this.panelVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
             this.panelVertical.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelVertical.Controls.Add(this.lbl8);
+            this.panelVertical.Controls.Add(this.lbl7);
+            this.panelVertical.Controls.Add(this.lbl6);
+            this.panelVertical.Controls.Add(this.lbl5);
+            this.panelVertical.Controls.Add(this.lbl4);
+            this.panelVertical.Controls.Add(this.lbl3);
             this.panelVertical.Controls.Add(this.pnListaVenta);
             this.panelVertical.Controls.Add(this.pnGenerarVenta);
             this.panelVertical.Controls.Add(this.btnListaVenta);
-            this.panelVertical.Controls.Add(this.btnProductos);
-            this.panelVertical.Controls.Add(this.btnGenerarVenta);
             this.panelVertical.Controls.Add(this.lbl2);
             this.panelVertical.Controls.Add(this.btnTecnico);
             this.panelVertical.Controls.Add(this.btnConsultas);
@@ -311,14 +321,16 @@
             this.panelVertical.Controls.Add(this.pnVentas);
             this.panelVertical.Controls.Add(this.pnProductos);
             this.panelVertical.Controls.Add(this.pictureBox1);
-            this.panelVertical.Controls.Add(this.btnVentas);
             this.panelVertical.Controls.Add(this.lbl1);
-            this.panelVertical.Controls.Add(this.btnListaProducto);
             this.panelVertical.Controls.Add(this.pnlistaProducto);
             this.panelVertical.Controls.Add(this.pnConsultas);
+            this.panelVertical.Controls.Add(this.pnCategoria);
+            this.panelVertical.Controls.Add(this.btnProductos);
+            this.panelVertical.Controls.Add(this.btnVentas);
+            this.panelVertical.Controls.Add(this.btnGenerarVenta);
             this.panelVertical.Controls.Add(this.btnCategoria);
             this.panelVertical.Controls.Add(this.btnProveedor);
-            this.panelVertical.Controls.Add(this.pnCategoria);
+            this.panelVertical.Controls.Add(this.btnListaProducto);
             this.panelVertical.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelVertical.Location = new System.Drawing.Point(0, 37);
             this.panelVertical.Name = "panelVertical";
@@ -356,7 +368,7 @@
             this.btnListaVenta.Location = new System.Drawing.Point(46, 257);
             this.btnListaVenta.Name = "btnListaVenta";
             this.btnListaVenta.Size = new System.Drawing.Size(252, 46);
-            this.btnListaVenta.TabIndex = 28;
+            this.btnListaVenta.TabIndex = 6;
             this.btnListaVenta.Text = "Lista de Venta";
             this.btnListaVenta.UseVisualStyleBackColor = false;
             this.btnListaVenta.Visible = false;
@@ -376,7 +388,7 @@
             this.btnProductos.Location = new System.Drawing.Point(4, 102);
             this.btnProductos.Name = "btnProductos";
             this.btnProductos.Size = new System.Drawing.Size(296, 46);
-            this.btnProductos.TabIndex = 4;
+            this.btnProductos.TabIndex = 1;
             this.btnProductos.Text = "Productos";
             this.btnProductos.UseVisualStyleBackColor = false;
             this.btnProductos.Click += new System.EventHandler(this.btnProductos_Click);
@@ -394,7 +406,7 @@
             this.btnGenerarVenta.Location = new System.Drawing.Point(46, 204);
             this.btnGenerarVenta.Name = "btnGenerarVenta";
             this.btnGenerarVenta.Size = new System.Drawing.Size(252, 46);
-            this.btnGenerarVenta.TabIndex = 30;
+            this.btnGenerarVenta.TabIndex = 5;
             this.btnGenerarVenta.Text = "Generar Venta";
             this.btnGenerarVenta.UseVisualStyleBackColor = false;
             this.btnGenerarVenta.Visible = false;
@@ -405,7 +417,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.BackColor = System.Drawing.Color.OldLace;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl2.Location = new System.Drawing.Point(274, 173);
+            this.lbl2.Location = new System.Drawing.Point(273, 173);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(28, 20);
             this.lbl2.TabIndex = 1;
@@ -426,7 +438,7 @@
             this.btnTecnico.Location = new System.Drawing.Point(11, 461);
             this.btnTecnico.Name = "btnTecnico";
             this.btnTecnico.Size = new System.Drawing.Size(288, 46);
-            this.btnTecnico.TabIndex = 27;
+            this.btnTecnico.TabIndex = 12;
             this.btnTecnico.Text = "Tecnico";
             this.btnTecnico.UseVisualStyleBackColor = false;
             this.btnTecnico.Visible = false;
@@ -473,7 +485,7 @@
             this.btnStock.Location = new System.Drawing.Point(3, 409);
             this.btnStock.Name = "btnStock";
             this.btnStock.Size = new System.Drawing.Size(296, 46);
-            this.btnStock.TabIndex = 25;
+            this.btnStock.TabIndex = 11;
             this.btnStock.Text = "Stock";
             this.btnStock.UseVisualStyleBackColor = false;
             this.btnStock.Click += new System.EventHandler(this.btnStock_Click);
@@ -492,7 +504,7 @@
             this.btnUsuarios.Location = new System.Drawing.Point(3, 357);
             this.btnUsuarios.Name = "btnUsuarios";
             this.btnUsuarios.Size = new System.Drawing.Size(296, 46);
-            this.btnUsuarios.TabIndex = 17;
+            this.btnUsuarios.TabIndex = 10;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.UseVisualStyleBackColor = false;
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
@@ -511,7 +523,7 @@
             this.btnCaja.Location = new System.Drawing.Point(3, 307);
             this.btnCaja.Name = "btnCaja";
             this.btnCaja.Size = new System.Drawing.Size(296, 46);
-            this.btnCaja.TabIndex = 15;
+            this.btnCaja.TabIndex = 9;
             this.btnCaja.Text = "Caja";
             this.btnCaja.UseVisualStyleBackColor = false;
             this.btnCaja.Click += new System.EventHandler(this.btnCaja_Click);
@@ -530,7 +542,7 @@
             this.btnClientes.Location = new System.Drawing.Point(3, 255);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Size = new System.Drawing.Size(296, 46);
-            this.btnClientes.TabIndex = 11;
+            this.btnClientes.TabIndex = 8;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
             this.btnClientes.Click += new System.EventHandler(this.btnClientes_Click);
@@ -560,7 +572,7 @@
             this.btnVentas.Location = new System.Drawing.Point(3, 153);
             this.btnVentas.Name = "btnVentas";
             this.btnVentas.Size = new System.Drawing.Size(296, 46);
-            this.btnVentas.TabIndex = 7;
+            this.btnVentas.TabIndex = 4;
             this.btnVentas.Text = "Ventas";
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
@@ -600,7 +612,7 @@
             this.btnProveedor.Location = new System.Drawing.Point(3, 204);
             this.btnProveedor.Name = "btnProveedor";
             this.btnProveedor.Size = new System.Drawing.Size(296, 46);
-            this.btnProveedor.TabIndex = 9;
+            this.btnProveedor.TabIndex = 7;
             this.btnProveedor.Text = "Proveedores";
             this.btnProveedor.UseVisualStyleBackColor = false;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
@@ -633,6 +645,78 @@
             // backgroundWorker1
             // 
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            // 
+            // lbl3
+            // 
+            this.lbl3.AutoSize = true;
+            this.lbl3.BackColor = System.Drawing.Color.OldLace;
+            this.lbl3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl3.Location = new System.Drawing.Point(272, 219);
+            this.lbl3.Name = "lbl3";
+            this.lbl3.Size = new System.Drawing.Size(28, 20);
+            this.lbl3.TabIndex = 32;
+            this.lbl3.Text = "(3)";
+            this.lbl3.Visible = false;
+            // 
+            // lbl4
+            // 
+            this.lbl4.AutoSize = true;
+            this.lbl4.BackColor = System.Drawing.Color.OldLace;
+            this.lbl4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl4.Location = new System.Drawing.Point(271, 269);
+            this.lbl4.Name = "lbl4";
+            this.lbl4.Size = new System.Drawing.Size(28, 20);
+            this.lbl4.TabIndex = 33;
+            this.lbl4.Text = "(4)";
+            this.lbl4.Visible = false;
+            // 
+            // lbl5
+            // 
+            this.lbl5.AutoSize = true;
+            this.lbl5.BackColor = System.Drawing.Color.OldLace;
+            this.lbl5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl5.Location = new System.Drawing.Point(271, 321);
+            this.lbl5.Name = "lbl5";
+            this.lbl5.Size = new System.Drawing.Size(28, 20);
+            this.lbl5.TabIndex = 34;
+            this.lbl5.Text = "(5)";
+            this.lbl5.Visible = false;
+            // 
+            // lbl6
+            // 
+            this.lbl6.AutoSize = true;
+            this.lbl6.BackColor = System.Drawing.Color.OldLace;
+            this.lbl6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl6.Location = new System.Drawing.Point(270, 371);
+            this.lbl6.Name = "lbl6";
+            this.lbl6.Size = new System.Drawing.Size(28, 20);
+            this.lbl6.TabIndex = 35;
+            this.lbl6.Text = "(6)";
+            this.lbl6.Visible = false;
+            // 
+            // lbl7
+            // 
+            this.lbl7.AutoSize = true;
+            this.lbl7.BackColor = System.Drawing.Color.OldLace;
+            this.lbl7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl7.Location = new System.Drawing.Point(270, 423);
+            this.lbl7.Name = "lbl7";
+            this.lbl7.Size = new System.Drawing.Size(28, 20);
+            this.lbl7.TabIndex = 36;
+            this.lbl7.Text = "(7)";
+            this.lbl7.Visible = false;
+            // 
+            // lbl8
+            // 
+            this.lbl8.AutoSize = true;
+            this.lbl8.BackColor = System.Drawing.Color.OldLace;
+            this.lbl8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl8.Location = new System.Drawing.Point(270, 475);
+            this.lbl8.Name = "lbl8";
+            this.lbl8.Size = new System.Drawing.Size(28, 20);
+            this.lbl8.TabIndex = 2;
+            this.lbl8.Text = "(8)";
+            this.lbl8.Visible = false;
             // 
             // FrmInicio
             // 
@@ -704,6 +788,12 @@
         private System.Windows.Forms.Button btnGenerarVenta;
         private Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress sgpProgresoFormulario;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.Label lbl8;
+        private System.Windows.Forms.Label lbl7;
+        private System.Windows.Forms.Label lbl6;
+        private System.Windows.Forms.Label lbl5;
+        private System.Windows.Forms.Label lbl4;
+        private System.Windows.Forms.Label lbl3;
 
        
     }

@@ -59,7 +59,7 @@ namespace Capa_Datos
         {
 
         }
-        public DDetalle_Venta(int iddetalle_venta, int idventa, int cantidad, decimal precio_venta, decimal descuento, decimal importe, int idarticulo)
+        public DDetalle_Venta(int iddetalle_venta, int idventa, decimal cantidad, decimal precio_venta, decimal descuento, decimal importe, int idarticulo)
         {
             this.iddetalle_venta = iddetalle_venta;
             this.idventa = idventa;
@@ -87,7 +87,7 @@ namespace Capa_Datos
                 SqlParameter paridventa = ProcAlmacenado.asignarParametros("@idventa", SqlDbType.Int, Detalle_Venta.idventa);
                 sqlcmd.Parameters.Add(paridventa);
 
-                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Decimal, Detalle_Venta.cantidad);
+                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Decimal, decimal.Parse("32,42"));
                 sqlcmd.Parameters.Add(parcantidad);
 
                 SqlParameter parImporte = ProcAlmacenado.asignarParametros("@importe", SqlDbType.Money, Detalle_Venta.Importe);

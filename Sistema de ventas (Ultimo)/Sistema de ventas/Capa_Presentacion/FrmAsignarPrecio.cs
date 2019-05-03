@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Capa_negocio;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,10 +14,12 @@ namespace Capa_Presentacion
     public partial class FrmAsignarPrecio : Form
     {
         private string producto;
-        private decimal  precio;
+        private decimal  precioTotal;
         private bool isCerro = false;
-
+        private decimal kgReal;
+        private decimal precioXKg;
         private decimal  descuento;
+        private int codigo;
 
         public FrmAsignarPrecio()
         {
@@ -34,13 +37,21 @@ namespace Capa_Presentacion
        
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-            Precio = Convert.ToDecimal (txtPrecio.Text);
-         
-            if (txtPrecio.Text == string.Empty || txtPrecio.Text == "0,00" || txtPrecio.Text == ",00" || txtPrecio.Text == ",0" || txtPrecio.Text == "0,0")
+            
+
+            if (txtNombreProducto.Text==string.Empty||txtPrecio.Text==string.Empty||txtKgReal.Text==string.Empty||txtPrecioxKg.Text==string.Empty)
             {
                 UtilityFrm.mensajeError("el precio no puede ser 0");
             }else{
-            this.Close();
+                PrecioTotal = Convert.ToDecimal(txtPrecio.Text);
+                Producto = txtNombreProducto.Text;
+                PrecioTotal = Convert.ToDecimal(txtPrecio.Text);
+                PrecioXKg = Convert.ToDecimal(txtPrecioxKg.Text);
+                KgReal = Convert.ToDecimal(txtKgReal.Text);
+                codigo = Convert.ToInt32(txtCodigo.Text);
+
+                this.Close();
+                
             this.isCerro = false;
             }
         }
@@ -50,12 +61,28 @@ namespace Capa_Presentacion
             get { return producto; }
             set { producto = value; }
         }
-        public decimal  Precio
+
+        public int Codigo
         {
-            get { return precio; }
-            set { precio = value; }
+            get { return codigo; }
+            set { codigo = value; }
         }
 
+        public decimal PrecioXKg
+        {
+            get { return precioXKg; }
+            set { precioXKg = value; }
+        }
+        public decimal  PrecioTotal
+        {
+            get { return precioTotal; }
+            set { precioTotal = value; }
+        }
+        public decimal KgReal
+        {
+            get { return kgReal; }
+            set { kgReal = value; }
+        }
         public decimal  Descuento
         {
             get { return descuento; }
@@ -75,13 +102,14 @@ namespace Capa_Presentacion
                 if (txtPrecio.Text.Length>0)
                 {
                     decimal precioXKg = Convert.ToDecimal(txtPrecio.Text);
-                    decimal kgReal = precioXKg/Convert.ToDecimal( txtPrecioxKg.Text);
+                    decimal kgReal =decimal.Round( precioXKg/Convert.ToDecimal( txtPrecioxKg.Text),3);
                     txtKgReal.Text = kgReal.ToString();
                     if (!txtPrecio.Text.Contains(","))
                     {
                         txtPrecio.Text += ",00";
-
+                        
                     }
+                    btnGuardar.Focus();
                 }
                 e.Handled = false;
                 e.SuppressKeyPress = true;
@@ -184,25 +212,30 @@ namespace Capa_Presentacion
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
-            FrmBusquedaAvaArticulo producto = new FrmBusquedaAvaArticulo();
+            FrmAvanzadoArticulo producto = new FrmAvanzadoArticulo(true);
             producto.ShowDialog();
             if (!producto.IsCerro)
             {
                 //si no se cerro y se seleccionó un producto de la lista 
                 txtNombreProducto.Text = producto.NombreProducto;
-                txtPrecioxKg.Text =  producto.Precio.ToString();    
+                txtPrecioxKg.Text =  producto.Precio.ToString();
+                txtPrecio.Enabled = true;
+                txtPrecio.Focus();
+                txtCodigo.Text = producto.IdProducto.ToString() ;
             }
            
         }
 
         private void txtNombreProducto_TextChanged(object sender, EventArgs e)
         {
-            if (txtPrecioxKg.Text.Length > 0 && txtNombreProducto.Text.Length > 0)
+            if (txtNombreProducto.Text.Length > 0&&IsNumeric(txtNombreProducto.Text)==false)
             {
+                dataGridView1.Visible = true;
                 txtPrecio.Enabled = true;
 
             }
             else {
+                dataGridView1.Visible = false;
                 txtPrecio.Enabled = false;
                 UtilityFrm.limpiarTextbox(txtPrecio);
             }
@@ -221,5 +254,186 @@ namespace Capa_Presentacion
                 UtilityFrm.limpiarTextbox(txtPrecio);
             }
         }
+
+        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            try
+            {
+
+
+                if (e.KeyCode == Keys.Enter)
+                {
+                    Buscar_producto(Convert.ToInt32(this.dataGridView1.CurrentRow.Cells["idarticulo"].Value), "poridarticulo");
+                    dataGridView1.Visible = false;
+                    txtNombreProducto.Focus();
+                }
+                else if (e.KeyCode == Keys.Up)
+                {
+                    //pasa de la lista al campo nombreProducto 
+                    if (dataGridView1.Rows.Count > 0 && dataGridView1.Rows[0].Selected)
+                    {
+                        txtNombreProducto.Focus();
+                        txtNombreProducto.SelectAll();
+
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("No hay datos asignados " + ex.Message);
+                dataGridView1.Visible = true;
+                txtNombreProducto.Focus();
+            }
+
+        }
+
+        private void Buscar_producto(int codproducto, string tipo)
+        {
+
+              NegocioArticulo objnart = new NegocioArticulo();
+      
+
+            objnart.extraerdatos(codproducto, tipo);
+
+            if (objnart.Sindatos == true)
+            {
+
+
+
+                txtNombreProducto.Text = objnart.Nombre;
+                txtPrecioxKg.Text = Convert.ToString(decimal.Round(objnart.Precio, 2));
+                txtCodigo.Text = Convert.ToString(objnart.IdArticulo);
+
+
+                bool encontrado = false;
+
+              
+
+
+               
+            }
+            else
+            {
+                // UtilityFrm.mensajeError( "No es una clave valida");
+
+                FrmMensajeAutoCierre.Show("No es una clave valida", "Error", 1000);
+
+
+
+
+                txtNombreProducto.SelectAll();
+
+            }
+        }
+
+        private void txtNombreProducto_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down && dataGridView1.Visible == true)
+            {
+                //si se preciona la tecla hacia abajo se pasa el foco a la grilla
+                dataGridView1.Focus();
+
+            }
+
+            if (e.KeyCode == Keys.Enter )
+            {
+
+
+                if (txtNombreProducto.Text.Length > 0)
+                {
+                    //se pasa el control permitiendo eliminar el beep
+                    e.SuppressKeyPress = true;
+
+                    try
+                    {
+                        //if (txtNombreProducto.TextLength == 13 && IsNumeric(txtNombreProducto.Text) == true)
+                        //{
+                        //    Buscar_producto(Convert.ToInt64(txtNombreProducto.Text), "porbarra");
+
+
+                        //}
+                        IsNumeric(txtNombreProducto.Text);
+                        if (IsNumeric(txtNombreProducto.Text) == true)
+                        {
+                            Buscar_producto(Convert.ToInt64(txtNombreProducto.Text), "poridarticulo");
+                        }
+                        txtPrecio.Focus();
+                        dataGridView1.Visible = false;
+
+                    }
+                    catch (Exception ex)
+                    {
+
+                        UtilityFrm.mensajeError("Error: " + ex.Message);
+                        dataGridView1.Visible = false;
+                    }
+
+                }
+                else {
+                    UtilityFrm.mensajeError("Error: El nombre de Producto o codigo está vacio");
+                
+                
+                }
+           
+                    
+
+
+             }
+               
+        }
+
+        public bool IsNumeric(string input)
+        {
+            long test;
+
+            return long.TryParse(input, out test);
+        }
+
+        public void Buscar_producto(long codproducto, string tipo)
+        {
+            NegocioArticulo objnart = new NegocioArticulo();
+     
+
+            objnart.extraerdatos(codproducto, tipo);
+
+            if (objnart.Sindatos == true)
+            {
+
+
+
+                txtNombreProducto.Text = objnart.Nombre;
+                txtPrecioxKg.Text = Convert.ToString(decimal.Round(objnart.Precio, 2));
+                txtCodigo.Text = Convert.ToString(objnart.IdArticulo);
+
+             
+
+                
+
+               
+            }
+            else
+            {
+                // UtilityFrm.mensajeError( "No es una clave valida");
+
+                FrmMensajeAutoCierre.Show("No es una clave valida", "Error", 1000);
+
+
+
+
+                txtNombreProducto.SelectAll();
+
+            }
+        }
+
+        private void FrmAsignarPrecio_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Escape){
+                this.Close();
+            
+            }
+        }
+
     }
 }

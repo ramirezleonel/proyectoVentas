@@ -16,6 +16,12 @@ namespace Capa_negocio
         private int importe;
         private int idventa;
         private decimal cantidad;
+
+        public decimal Cantidad
+        {
+            get { return cantidad; }
+            set { cantidad = value; }
+        }
         private decimal subtotal;
         private decimal descuento;
         private decimal precio;
@@ -35,12 +41,7 @@ namespace Capa_negocio
 
        
 
-        public decimal Cantidad
-        {
-            get { return cantidad; }
-            set { cantidad = value; }
-        }
-        
+      
 
         public decimal Subtotal
         {

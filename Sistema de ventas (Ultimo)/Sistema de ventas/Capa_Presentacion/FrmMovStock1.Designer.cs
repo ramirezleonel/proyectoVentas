@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnImprimir = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblTotal = new System.Windows.Forms.Label();
             this.txtIdArticulo = new System.Windows.Forms.TextBox();
@@ -100,6 +99,7 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnExportarExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.tabLista.SuspendLayout();
@@ -117,16 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnImprimir
-            // 
-            this.btnImprimir.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnImprimir.Location = new System.Drawing.Point(754, 37);
-            this.btnImprimir.Name = "btnImprimir";
-            this.btnImprimir.Size = new System.Drawing.Size(105, 40);
-            this.btnImprimir.TabIndex = 5;
-            this.btnImprimir.Text = "Imprimir";
-            this.btnImprimir.UseVisualStyleBackColor = true;
             // 
             // errorProvider1
             // 
@@ -187,6 +177,7 @@
             // tabLista
             // 
             this.tabLista.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabLista.Controls.Add(this.btnExportarExcel);
             this.tabLista.Controls.Add(this.btnTodos);
             this.tabLista.Controls.Add(this.label1);
             this.tabLista.Controls.Add(this.dtpFechaFin);
@@ -194,7 +185,6 @@
             this.tabLista.Controls.Add(this.dataLista);
             this.tabLista.Controls.Add(this.lblTotal);
             this.tabLista.Controls.Add(this.lblFechaIni);
-            this.tabLista.Controls.Add(this.btnImprimir);
             this.tabLista.Controls.Add(this.btnAnular);
             this.tabLista.Controls.Add(this.btnBuscar);
             this.tabLista.Location = new System.Drawing.Point(4, 29);
@@ -284,6 +274,8 @@
             // 
             this.tabGenerar.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.tabGenerar.Controls.Add(this.grpboxProveedor);
+            this.tabGenerar.Controls.Add(this.btnIngreso);
+            this.tabGenerar.Controls.Add(this.btnEgreso);
             this.tabGenerar.Location = new System.Drawing.Point(4, 29);
             this.tabGenerar.Name = "tabGenerar";
             this.tabGenerar.Padding = new System.Windows.Forms.Padding(3);
@@ -307,13 +299,11 @@
             this.grpboxProveedor.Controls.Add(this.txtIdProveedor);
             this.grpboxProveedor.Controls.Add(this.lblIdProveedor);
             this.grpboxProveedor.Controls.Add(this.dtpFechaGenerar);
-            this.grpboxProveedor.Controls.Add(this.btnEgreso);
-            this.grpboxProveedor.Controls.Add(this.btnIngreso);
             this.grpboxProveedor.Controls.Add(this.btnCancelar);
             this.grpboxProveedor.Controls.Add(this.btnGuardar);
-            this.grpboxProveedor.Location = new System.Drawing.Point(9, 6);
+            this.grpboxProveedor.Location = new System.Drawing.Point(16, 39);
             this.grpboxProveedor.Name = "grpboxProveedor";
-            this.grpboxProveedor.Size = new System.Drawing.Size(990, 666);
+            this.grpboxProveedor.Size = new System.Drawing.Size(983, 633);
             this.grpboxProveedor.TabIndex = 0;
             this.grpboxProveedor.TabStop = false;
             this.grpboxProveedor.Text = "Mov Stock";
@@ -323,7 +313,7 @@
             this.btnBuscarProv.Enabled = false;
             this.btnBuscarProv.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
             this.btnBuscarProv.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnBuscarProv.Location = new System.Drawing.Point(809, 23);
+            this.btnBuscarProv.Location = new System.Drawing.Point(608, 23);
             this.btnBuscarProv.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnBuscarProv.Name = "btnBuscarProv";
             this.btnBuscarProv.Size = new System.Drawing.Size(26, 28);
@@ -368,7 +358,7 @@
             this.dataListaMov.ReadOnly = true;
             this.dataListaMov.RowHeadersWidth = 38;
             this.dataListaMov.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataListaMov.Size = new System.Drawing.Size(974, 248);
+            this.dataListaMov.Size = new System.Drawing.Size(967, 215);
             this.dataListaMov.TabIndex = 16;
             this.dataListaMov.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dataListaMov_RowsAdded);
             this.dataListaMov.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataListaMov_RowsRemoved);
@@ -427,7 +417,7 @@
             this.gbRegistrarComprobante.Controls.Add(this.lblIVA);
             this.gbRegistrarComprobante.Location = new System.Drawing.Point(6, 106);
             this.gbRegistrarComprobante.Name = "gbRegistrarComprobante";
-            this.gbRegistrarComprobante.Size = new System.Drawing.Size(978, 83);
+            this.gbRegistrarComprobante.Size = new System.Drawing.Size(971, 83);
             this.gbRegistrarComprobante.TabIndex = 34;
             this.gbRegistrarComprobante.TabStop = false;
             this.gbRegistrarComprobante.Text = "Registar Comprobante";
@@ -566,7 +556,7 @@
             this.gbDetalleMovimento.Controls.Add(this.txtNombreProducto);
             this.gbDetalleMovimento.Location = new System.Drawing.Point(6, 195);
             this.gbDetalleMovimento.Name = "gbDetalleMovimento";
-            this.gbDetalleMovimento.Size = new System.Drawing.Size(978, 132);
+            this.gbDetalleMovimento.Size = new System.Drawing.Size(971, 138);
             this.gbDetalleMovimento.TabIndex = 33;
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles de Movimiento Stock";
@@ -610,9 +600,9 @@
             // btnCambiarPrecio
             // 
             this.btnCambiarPrecio.Enabled = false;
-            this.btnCambiarPrecio.Location = new System.Drawing.Point(417, 97);
+            this.btnCambiarPrecio.Location = new System.Drawing.Point(402, 97);
             this.btnCambiarPrecio.Name = "btnCambiarPrecio";
-            this.btnCambiarPrecio.Size = new System.Drawing.Size(263, 29);
+            this.btnCambiarPrecio.Size = new System.Drawing.Size(278, 29);
             this.btnCambiarPrecio.TabIndex = 12;
             this.btnCambiarPrecio.Text = "Nuevo Precio";
             this.btnCambiarPrecio.UseVisualStyleBackColor = true;
@@ -725,7 +715,7 @@
             // txtNombreProveedor
             // 
             this.txtNombreProveedor.Enabled = false;
-            this.txtNombreProveedor.Location = new System.Drawing.Point(603, 65);
+            this.txtNombreProveedor.Location = new System.Drawing.Point(402, 65);
             this.txtNombreProveedor.Name = "txtNombreProveedor";
             this.txtNombreProveedor.ReadOnly = true;
             this.txtNombreProveedor.Size = new System.Drawing.Size(195, 27);
@@ -734,7 +724,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(411, 69);
+            this.label3.Location = new System.Drawing.Point(210, 69);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 21);
             this.label3.TabIndex = 31;
@@ -743,7 +733,7 @@
             // txtIdProveedor
             // 
             this.txtIdProveedor.Enabled = false;
-            this.txtIdProveedor.Location = new System.Drawing.Point(603, 24);
+            this.txtIdProveedor.Location = new System.Drawing.Point(402, 24);
             this.txtIdProveedor.Name = "txtIdProveedor";
             this.txtIdProveedor.ReadOnly = true;
             this.txtIdProveedor.Size = new System.Drawing.Size(195, 27);
@@ -752,7 +742,7 @@
             // lblIdProveedor
             // 
             this.lblIdProveedor.AutoSize = true;
-            this.lblIdProveedor.Location = new System.Drawing.Point(411, 28);
+            this.lblIdProveedor.Location = new System.Drawing.Point(210, 28);
             this.lblIdProveedor.Name = "lblIdProveedor";
             this.lblIdProveedor.Size = new System.Drawing.Size(68, 21);
             this.lblIdProveedor.TabIndex = 28;
@@ -770,9 +760,9 @@
             // btnEgreso
             // 
             this.btnEgreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEgreso.Location = new System.Drawing.Point(203, 56);
+            this.btnEgreso.Location = new System.Drawing.Point(219, 4);
             this.btnEgreso.Name = "btnEgreso";
-            this.btnEgreso.Size = new System.Drawing.Size(184, 41);
+            this.btnEgreso.Size = new System.Drawing.Size(198, 35);
             this.btnEgreso.TabIndex = 3;
             this.btnEgreso.Text = "Generar Egreso (&2)";
             this.btnEgreso.UseVisualStyleBackColor = true;
@@ -781,9 +771,9 @@
             // btnIngreso
             // 
             this.btnIngreso.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnIngreso.Location = new System.Drawing.Point(13, 56);
+            this.btnIngreso.Location = new System.Drawing.Point(15, 4);
             this.btnIngreso.Name = "btnIngreso";
-            this.btnIngreso.Size = new System.Drawing.Size(184, 41);
+            this.btnIngreso.Size = new System.Drawing.Size(198, 35);
             this.btnIngreso.TabIndex = 2;
             this.btnIngreso.Text = "Generar Ingreso(&1)";
             this.btnIngreso.UseVisualStyleBackColor = true;
@@ -794,7 +784,7 @@
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(136, 617);
+            this.btnCancelar.Location = new System.Drawing.Point(136, 584);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(105, 40);
             this.btnCancelar.TabIndex = 18;
@@ -807,7 +797,7 @@
             this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnGuardar.Enabled = false;
             this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(19, 617);
+            this.btnGuardar.Location = new System.Drawing.Point(19, 584);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(105, 40);
             this.btnGuardar.TabIndex = 17;
@@ -921,6 +911,17 @@
             this.lblSistemaVenta.Text = "MOVIMIENTO DE STOCK    ";
             this.lblSistemaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnExportarExcel
+            // 
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(973, 9);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 30;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
+            // 
             // FrmMovStock1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -962,7 +963,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabLista;
@@ -1033,6 +1033,7 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnBuscarProv;
         private System.Windows.Forms.Button btnBuscarProd;
+        private System.Windows.Forms.Button btnExportarExcel;
 
     }
 }

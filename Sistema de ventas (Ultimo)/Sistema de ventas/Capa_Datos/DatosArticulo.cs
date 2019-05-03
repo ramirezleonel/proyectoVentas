@@ -381,6 +381,79 @@ namespace Capa_Datos
             }
             return dtResult;
         }
+
+        public DataTable mostrarPesable()
+        {
+            //Modo 5 para DB
+            SqlConnection cn = new SqlConnection(Conexion.conexion);
+            //le asigno en el constructor el nombre de la tabla
+            DataTable dtResult = new DataTable("articulo");
+            try
+            {
+                cn.Open();
+
+                SqlCommand comando = ProcAlmacenado.CrearProc(cn, "SP_ARTICULO");
+                //Modo 12 MOSTRAR pesables
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 12);
+                comando.Parameters.Add(parModo);
+                //Asigno al parametro @idcategoria, aunque no lo use
+                SqlParameter parIdArticulo = ProcAlmacenado.asignarParametros("@idarticulo", SqlDbType.Int);
+                comando.Parameters.Add(parIdArticulo);
+
+                //creo el objeto adapter del data provider le paso el sqlcommand
+                SqlDataAdapter datosResult = new SqlDataAdapter(comando);
+                //los resultados los actualizo en el datatable dtResult
+                datosResult.Fill(dtResult);
+
+            }
+            catch (Exception ex)
+            {
+                dtResult = null;
+                throw ex;
+            }
+            return dtResult;
+        }
+        public DataTable mostrarPesableXbusqueda(DatosArticulo articulo,string tipoDeBusqueda)
+        {
+            //Modo 13 para DB
+            SqlConnection cn = new SqlConnection(Conexion.conexion);
+            //le asigno en el constructor el nombre de la tabla
+            DataTable dtResult = new DataTable("articulo");
+            try
+            {
+                cn.Open();
+
+                SqlCommand comando = ProcAlmacenado.CrearProc(cn, "SP_ARTICULO");
+                //Modo 13 MOSTRAR pesables
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 13);
+                comando.Parameters.Add(parModo);
+                //tipo de busqueda si es por idarticulo,codigodebarra,categoria,nombre
+                SqlParameter parBuscarTexto = ProcAlmacenado.asignarParametros("@buscarTexto", SqlDbType.VarChar, tipoDeBusqueda);
+                comando.Parameters.Add(parBuscarTexto);
+
+                //Asigno al parametro @idcategoria, aunque no lo use
+                SqlParameter parIdArticulo = ProcAlmacenado.asignarParametros("@idarticulo", SqlDbType.Int,articulo.IdArticulo);
+                comando.Parameters.Add(parIdArticulo);
+
+                SqlParameter parCodigo = ProcAlmacenado.asignarParametros("@codigo", SqlDbType.VarChar, articulo.Codigo);
+                comando.Parameters.Add(parCodigo);
+
+                SqlParameter parNombre = ProcAlmacenado.asignarParametros("@nombre", SqlDbType.VarChar,articulo.Nombre);
+                comando.Parameters.Add(parNombre);
+
+                //creo el objeto adapter del data provider le paso el sqlcommand
+                SqlDataAdapter datosResult = new SqlDataAdapter(comando);
+                //los resultados los actualizo en el datatable dtResult
+                datosResult.Fill(dtResult);
+
+            }
+            catch (Exception ex)
+            {
+                dtResult = null;
+                throw ex;
+            }
+            return dtResult;
+        }
         public string actualizarPrecioStock(DatosArticulo articulos, ref SqlConnection con, ref SqlTransaction transaccion,string movStock)
         {
             //devuelve la cantidad actual
@@ -504,7 +577,7 @@ namespace Capa_Datos
             {
                 query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio FROM articulo WHERE codigo = @id";
             }
-
+          
 
             SqlCommand cmd = new SqlCommand(query, cn);
             cmd.Parameters.AddWithValue("@id", Convert.ToInt64(codArticulo));
@@ -516,6 +589,7 @@ namespace Capa_Datos
                 this.codigo = Convert.ToString(reader["codigo"]);
                 this.idArticulo = Convert.ToInt32(reader["idArticulo"]);
                 this.idCategoria = Convert.ToInt32(reader["idcategoria"]);
+                this.stockActual = Convert.ToInt32(reader["stock_actual"]);
                 this.nombre = Convert.ToString(reader["nombre"]);
                 this.descripcion = Convert.ToString(reader["descripcion"]);
                 this.precio = Convert.ToDecimal(reader["precio"]);
@@ -529,6 +603,7 @@ namespace Capa_Datos
         }
 
        
+
         public string editarPrecio(DatosArticulo articulo)
         {
             //modo 9 para DB
@@ -665,5 +740,7 @@ namespace Capa_Datos
             
             return respuesta;
         }
+
+      
     }
 }
