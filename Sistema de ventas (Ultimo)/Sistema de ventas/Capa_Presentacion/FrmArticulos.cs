@@ -25,7 +25,8 @@ namespace Capa_Presentacion
         }
         private void FrmArticulos_Load(object sender, EventArgs e)
         {
-         
+
+          
            llenarComboBoxCategoria();
            isEditar = false;
            isNuevo= false;
@@ -165,9 +166,8 @@ namespace Capa_Presentacion
             try
             {
                 this.dataLista.DataSource = NegocioArticulo.mostrar();
-                //this.dataLista.Columns["precio"].DefaultCellStyle.Format = "c3";
-                //this.dataLista.Columns["precio"].ValueType = Type.GetType("System.Decimal");
-                //this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("###,##0.00");
+                this.dataLista.Columns["precio_compra"].DefaultCellStyle.Format = String.Format("$###,##0.00");
+
                 this.dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("$###,##0.00");
                 pintarProductoSinStock();
             }
@@ -1009,21 +1009,42 @@ namespace Capa_Presentacion
                     hoja_trabajo.Range[hoja_trabajo.Cells[1, 1], hoja_trabajo.Cells[1, 10]].Merge();
 
 
+                    if (dataLista.Rows.Count > 0)
+                    {
+                        //le paso el formato adecuado para los valores decimales pasando desde la fila 3 hasta datalista.rows.count+1 osea hasta el ultimo elemento
+                        hoja_trabajo.Range[hoja_trabajo.Cells[3, 6], hoja_trabajo.Cells[dataLista.Rows.Count + 2, 7]].NumberFormat = "0,00";
+
+                        hoja_trabajo.Range[hoja_trabajo.Cells[3, 8], hoja_trabajo.Cells[dataLista.Rows.Count + 2, 8]].NumberFormat = "0,00";
+                        hoja_trabajo.Range[hoja_trabajo.Cells[3, 9], hoja_trabajo.Cells[dataLista.Rows.Count + 2, 9]].NumberFormat = "0,00";
+                        hoja_trabajo.Range[hoja_trabajo.Cells[3, 10], hoja_trabajo.Cells[dataLista.Rows.Count + 2, 10]].NumberFormat = "0,00";
+                    }
                     //Recorremos el DataGridView rellenando la hoja de trabajo
                     for (int i = 1; i < dataLista.Columns.Count; i++)
                     {
 
-                        hoja_trabajo.Cells[2, i ] = dataLista.Columns[i].Name;
+                        hoja_trabajo.Cells[2, i] = dataLista.Columns[i].Name;
                     }
 
-                    for (int i = 0; i < dataLista.Rows.Count-1; i++)
+
+                    for (int i = 0; i < dataLista.Rows.Count - 1; i++)
                     {
-                        for (int j = 1; j < dataLista.Columns.Count; j++)
-                        {
-                            //se coloca 2 porque la primera celda pertenece al nombre de la columna y luego los datos
-                            hoja_trabajo.Cells[i + 3, j ] = dataLista.Rows[i].Cells[j].Value;
-                        }
+
+                        hoja_trabajo.Cells[i + 3, 1] = dataLista.Rows[i].Cells["idarticulo"].Value.ToString();
+                        hoja_trabajo.Cells[i + 3, 2] = dataLista.Rows[i].Cells["codigo"].Value.ToString();
+                        hoja_trabajo.Cells[i + 3, 3] = dataLista.Rows[i].Cells["nombre"].Value.ToString();
+                        hoja_trabajo.Cells[i + 3, 4] = dataLista.Rows[i].Cells["descripcion"].Value.ToString();
+                        hoja_trabajo.Cells[i + 3, 5] = dataLista.Rows[i].Cells["idcategoria"].Value.ToString();
+                        hoja_trabajo.Cells[i + 3, 6] = dataLista.Rows[i].Cells["categoria"].Value.ToString();
+                        hoja_trabajo.Cells[i + 3, 7] = dataLista.Rows[i].Cells["stock_actual"].Value;
+                        hoja_trabajo.Cells[i + 3, 8] = dataLista.Rows[i].Cells["utilidad"].Value;
+                        hoja_trabajo.Cells[i + 3, 9] = dataLista.Rows[i].Cells["precio_compra"].Value;
+                        hoja_trabajo.Cells[i + 3, 10] =dataLista.Rows[i].Cells["precio"].Value;
+        
                     }
+
+
+         
+                   
 
                     //ajustar el tamaño de las celdas deacuerdo al tamaño de las columnas agregadas
                     hoja_trabajo.Cells.Columns.AutoFit();

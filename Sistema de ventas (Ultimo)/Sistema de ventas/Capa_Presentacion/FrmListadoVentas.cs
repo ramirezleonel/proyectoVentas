@@ -99,24 +99,33 @@ namespace Capa_Presentacion
                     libros_trabajo = aplicacion.Workbooks.Add();
                     hoja_trabajo =
                         (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);
-                
+     
+            
+                   if(dataLista.Rows.Count>0){
+                       //le paso el formato adecuado para los valores decimales pasando desde la fila 2 hasta datalista.rows.count+1 osea hasta el ultimo elemento
+                       hoja_trabajo.Range[hoja_trabajo.Cells[2, 5], hoja_trabajo.Cells[dataLista.Rows.Count+1, 5]].NumberFormat = "0,00";
                    
+                   }
                     //Recorremos el DataGridView rellenando la hoja de trabajo
                     for (int i = 0; i < dataLista.Columns.Count; i++)
                     {
                        
                         hoja_trabajo.Cells[1, i+1] = dataLista.Columns[i].Name;
+                       
                     }
 
+                   
                     for (int i = 0; i < dataLista.Rows.Count; i++)
                     {
-                        for (int j = 0; j < dataLista.Columns.Count; j++)
-                        {
-                            //se coloca 2 porque la primera celda pertenece al nombre de la columna y luego los datos
-                            hoja_trabajo.Cells[i + 2, j + 1] = dataLista.Rows[i].Cells[j].Value.ToString();
-                        }
-                    }
 
+                        hoja_trabajo.Cells[i + 2, 1] = dataLista.Rows[i].Cells["codigo"].Value.ToString();
+                        hoja_trabajo.Cells[i + 2, 2] = dataLista.Rows[i].Cells["razon_social"].Value.ToString();
+                        hoja_trabajo.Cells[i + 2, 3] = dataLista.Rows[i].Cells["fecha"].Value.ToString();
+                        hoja_trabajo.Cells[i + 2, 4] = dataLista.Rows[i].Cells["tipo_comprobante"].Value.ToString();
+                        hoja_trabajo.Cells[i + 2, 5] =  dataLista.Rows[i].Cells["total"].Value;
+                        hoja_trabajo.Cells[i + 2, 6] = dataLista.Rows[i].Cells["estado"].Value.ToString();
+               
+                    }
                     //ajustar el tamaño de las celdas deacuerdo al tamaño de las columnas agregadas
                     hoja_trabajo.Cells.Columns.AutoFit();
                     //guardo el archivo con la ruta del archivo
@@ -170,7 +179,19 @@ namespace Capa_Presentacion
                 DataTable dt = NegocioVenta.BuscarFechas(dtpFechaIni.Value.ToString("dd/MM/yyyy"), dtpFechaFin.Value.ToString("dd/MM/yyyy"));
                 foreach (DataRow venta in dt.Rows)
                 {
-                     dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["total"]);
+
+                    string estado = venta["estado"].ToString();
+
+                    if (estado.Equals("F"))
+                    {
+                        estado = "FACTURADO";
+
+                    }
+                    else if (estado.Equals("P"))
+                    {
+                        estado = "PENDIENTE";
+                    }
+                     dataLista.Rows.Add(venta["idventa"], venta["razon_social"], venta["fecha"], venta["tipo_comprobante"], venta["total"],venta["estado"]);
                 }
        
             }
@@ -210,24 +231,7 @@ namespace Capa_Presentacion
             exportarAExcel();
         }
 
-        private void dataLista_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode==Keys.Enter){
-                if (dataLista.Rows.Count > 0)
-                {
-                    DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
-
-                    FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
-                        Convert.ToString(this.dataLista.CurrentRow.Cells["razon_social"].Value),
-                        date.ToShortDateString(),
-                         Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
-                        Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
-                        Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
-                    venta.ShowDialog();
-                }
-            }
-            this.buscarPorFecha();
-        }
+       
 
         private void dataLista_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
@@ -347,10 +351,33 @@ namespace Capa_Presentacion
                         Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
                         Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
                     venta.ShowDialog();
+                  
                 }
-             this.mostrar();
            
            
+           
+        }
+        private void dataLista_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (dataLista.Rows.Count > 0)
+                {
+
+                    DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
+
+                    FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["razon_social"].Value),
+                        date.ToShortDateString(),
+                         Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
+                        Convert.ToString(Decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["total"].Value), 2)));
+                    venta.ShowDialog();
+                   
+                }
+
+            }
+
         }
 
         private void btnVisualizarLista_Click(object sender, EventArgs e)

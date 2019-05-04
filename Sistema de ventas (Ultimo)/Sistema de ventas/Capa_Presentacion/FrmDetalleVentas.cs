@@ -30,7 +30,7 @@ namespace Capa_Presentacion
         }
         private void FrmDetalleVentas_Load(object sender, EventArgs e)
         {
-            dataLista.Columns["cantidad"].DefaultCellStyle.Format = String.Format("###,##0.00");
+            dataLista.Columns["cantidad"].DefaultCellStyle.Format = String.Format("###,##0.000");
             dataLista.Columns["precio"].DefaultCellStyle.Format = String.Format("$###,##0.00");
             dataLista.Columns["descuento"].DefaultCellStyle.Format = String.Format("###,##0.00");
             dataLista.Columns["Importe"].DefaultCellStyle.Format = String.Format("$###,##0.00");
