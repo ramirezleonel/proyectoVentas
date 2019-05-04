@@ -128,3 +128,4 @@ C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presen
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Release\Capa_Presentacion.csproj.GenerateResource.Cache
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Release\Capa_Presentacion.dll
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Release\Capa_Presentacion.pdb
+C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Release\Capa_Presentacion.FrmAvanzadoArticulo.resources

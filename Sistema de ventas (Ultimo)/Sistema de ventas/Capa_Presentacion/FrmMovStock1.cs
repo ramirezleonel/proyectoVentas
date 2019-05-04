@@ -875,7 +875,7 @@ namespace Capa_Presentacion
 
         private void btnBuscarProd_Click(object sender, EventArgs e)
         {
-            FrmBusquedaAvaArticulo producto = new FrmBusquedaAvaArticulo();
+            FrmAvanzadoArticulo producto = new FrmAvanzadoArticulo();
             producto.ShowDialog();
             //si el usuario cierra la ventana isCerro es true, sino si selecciono algun articulo isCerro
             try

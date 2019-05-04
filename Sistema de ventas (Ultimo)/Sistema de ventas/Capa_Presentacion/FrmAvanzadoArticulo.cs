@@ -14,45 +14,58 @@ namespace Capa_Presentacion
     public partial class FrmAvanzadoArticulo : Form
     {
         private bool isCerro = false;
+        private bool isPesable = false;
+
+        
+
         private string nombreProducto;
 
+       
+        private int idProducto;
+      
+        private int stockActual;
+
+        
+        private decimal precio;
+
+
+
+
+        public bool IsPesable
+        {
+            get { return isPesable; }
+            set { isPesable = value; }
+        }
         public string NombreProducto
         {
             get { return nombreProducto; }
             set { nombreProducto = value; }
         }
-        private int idProducto;
-
         public int IdProducto
         {
             get { return idProducto; }
             set { idProducto = value; }
         }
-        private int stockActual;
-
         public int StockActual
         {
             get { return stockActual; }
             set { stockActual = value; }
         }
-        private decimal precio;
-
         public decimal Precio
         {
             get { return precio; }
             set { precio = value; }
         }
-        
+
         public bool IsCerro
         {
             get { return isCerro; }
             set { isCerro = value; }
         }
-
-
         public FrmAvanzadoArticulo()
         {
             InitializeComponent();
+            IsPesable = false;
             this.mostrar();
         }
 
@@ -67,7 +80,7 @@ namespace Capa_Presentacion
                 foreach (DataRow producto in data.Rows)
                 {
 
-                    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"]);
+                    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"], producto["stock_actual"]);
                     //    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
                 }
 
@@ -83,7 +96,7 @@ namespace Capa_Presentacion
         {
             InitializeComponent();
             if(pesable==true){
-
+                IsPesable = true;
                 mostrarPesable();
             }
             
@@ -93,22 +106,52 @@ namespace Capa_Presentacion
             //segun el radiobutton que seleccione buscara
             if (rdbNombre.Checked == true)
             {
-                this.BuscarNombrePesable();
+                if (IsPesable == true)
+                {
+                    this.BuscarNombrePesable();
+                }
+                else
+                {
+                    this.BuscarNombre();
+                }
             }
             else if (rdbCodigoBarra.Checked == true)
             {
 
                 txtProducto.Multiline = true;
-                this.BuscarCodigoBarra();
+                if (IsPesable == true)
+                {
+                    this.BuscarCodigoBarraPesable();
+
+                }
+                else
+                {
+                    this.BuscarCodigoBarra();
+                }
 
             }
             else if (rbCodigo.Checked == true)
             {
-                this.BuscarCodigo();
+                 if (IsPesable == true)
+                 {
+                    this.BuscarIdArticuloPesable();
+                 }
+                 else
+                 {
+                     this.BuscarIdArticulo();
+                 }
             }
             else
             {
-                this.BuscarCategoria();
+                if (IsPesable == true)
+                {
+                    this.BuscarCategoriaPesable();
+                }
+                else {
+
+                    this.BuscarCategoriaPesable();
+                
+                }
             }
         }
 
@@ -155,21 +198,45 @@ namespace Capa_Presentacion
                 if (Char.IsNumber(txtProducto.Text, 0) && ((rdbNombre.Checked == true) || (rbCategoria.Checked == true)))
                 {
                     rdbCodigoBarra.Checked = true;
+                    if (IsPesable == true)
+                    {
+                        this.BuscarCodigoBarraPesable();
 
-                    this.BuscarCodigoBarraPesable();
+                    }
+                    else {
+                        this.BuscarCodigoBarra();
+                    }
+                    
 
                 }
                 else if (Char.IsLetter(txtProducto.Text, 0) && ((rbCodigo.Checked == true) || (rdbCodigoBarra.Checked == true)))
                 {
 
                     rdbNombre.Checked = true;
+                    if (IsPesable == true)
+                    {
+                        this.BuscarNombrePesable();
 
-                    this.BuscarNombrePesable();
+                    }
+                    else
+                    {
+                        this.BuscarNombre();
+                    }
+                  
                 }
                 else if (rdbNombre.Checked == true) //segun el radiobutton que seleccione buscara
                 {
 
-                    this.BuscarNombrePesable();
+                    if (IsPesable == true)
+                    {
+                        this.BuscarNombrePesable();
+
+                    }
+                    else
+                    {
+                        this.BuscarNombre();
+                    }
+                    
                 }
                 else if (rdbCodigoBarra.Checked == true)
                 {
@@ -186,16 +253,44 @@ namespace Capa_Presentacion
                         // txtProducto.SelectAll();
 
                     }
-                    this.BuscarCodigoBarraPesable();
+                    if (IsPesable == true)
+                    {
+                        this.BuscarCodigoBarraPesable();
+
+                    }
+                    else
+                    {
+                        this.BuscarCodigoBarra();
+                    }
+                  
 
                 }
                 else if (rbCodigo.Checked == true)
                 {
-                    this.BuscarCodigoPesable();
+                    if (IsPesable == true)
+                    {
+                        this.BuscarIdArticuloPesable();
+
+                    }
+                    else
+                    {
+                        this.BuscarIdArticulo();
+                    }
+                    
                 }
                 else if (rbCategoria.Checked == true)
                 {
-                    this.BuscarCategoriaPesable();
+
+                    if (IsPesable == true)
+                    {
+                        this.BuscarCategoriaPesable();
+
+                    }
+                    else
+                    {
+                        this.BuscarCategoria();
+                    }
+                  
                 }
 
 
@@ -217,7 +312,97 @@ namespace Capa_Presentacion
             
         }
 
-       
+        //No pesables
+        private void BuscarCodigoBarra()
+        {
+            try
+            {
+                dataLista.Rows.Clear();
+                DataTable data = NegocioArticulo.buscarCodigoBarra(txtProducto.Text);
+
+
+                foreach (DataRow producto in data.Rows)
+                {
+
+                    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"]);
+                    //    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("error: " + ex.Message);
+            }
+        }
+        private void BuscarIdArticulo()
+        {
+            try
+            {
+                dataLista.Rows.Clear();
+                DataTable data = NegocioArticulo.buscarIdProducto(txtProducto.Text);
+
+
+                foreach (DataRow producto in data.Rows)
+                {
+
+                    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"]);
+                    //    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("error: " + ex.Message);
+            }
+        }
+        private void BuscarCategoria()
+        {
+            try
+            {
+                dataLista.Rows.Clear();
+                DataTable data = NegocioArticulo.buscarCategoria(txtProducto.Text);
+
+
+                foreach (DataRow producto in data.Rows)
+                {
+
+                    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"]);
+                    //    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("error: " + ex.Message);
+            }
+        }
+        private void BuscarNombre()
+        {
+            try
+            {
+                dataLista.Rows.Clear();
+                DataTable data = NegocioArticulo.buscarNombre(txtProducto.Text);
+
+
+                foreach (DataRow producto in data.Rows)
+                {
+
+                    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"]);
+                    //    dataLista.Rows.Add(producto["idarticulo"], producto["codigo"], producto["nombre"], producto["precio"], producto["categoria"]);
+                }
+
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("error: " + ex.Message);
+            }
+        }
+
+        //Pesables
         private void BuscarCategoriaPesable()
         {
             try
@@ -240,8 +425,7 @@ namespace Capa_Presentacion
                 UtilityFrm.mensajeError("error: " + ex.Message);
             }
         }
-        
-        private void BuscarCodigoPesable()
+        private void BuscarIdArticuloPesable()
         {
             try
             {
@@ -284,8 +468,6 @@ namespace Capa_Presentacion
                 UtilityFrm.mensajeError("error: " + ex.Message);
             }
         }
-
-       
         private void BuscarCodigoBarraPesable()
         {
             try
@@ -308,18 +490,7 @@ namespace Capa_Presentacion
                 UtilityFrm.mensajeError("error: " + ex.Message);
             }
         }
-        private void BuscarCodigoBarra()
-        {
-
-        }
-        private void BuscarCodigo()
-        {
-
-        }
-        private void BuscarCategoria()
-        {
-
-        }
+      
         private void dataLista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -374,10 +545,10 @@ namespace Capa_Presentacion
         public void productoSeleccionado() {
 
             this.idProducto = Convert.ToInt32(this.dataLista.CurrentRow.Cells["codigo"].Value);
-            this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["nombre"].Value);
+            this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["producto"].Value);
 
             //convierte primero object a string y luego en float
-            this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precio"].Value), 2);
+            this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precioProducto"].Value), 2);
             //this.precio = double.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
             this.stockActual = Convert.ToInt32(this.dataLista.CurrentRow.Cells["stock_actual"].Value);
             this.Close();

@@ -219,9 +219,9 @@ namespace Capa_Presentacion
             {
                 if (cliente.IsCerro)
                 {
-                    txtIdCliente.Text = string.Empty;
-                    txtRazonSocial.Text = string.Empty;
+                    clienteIncorrecto();
                     txtIdCliente.Focus();
+                   
                 }
                 else
                 {
@@ -232,6 +232,7 @@ namespace Capa_Presentacion
 
                        cbTipoComprobante.SelectedIndex = 1;
                        cbxCategoria.SelectedIndex = 2;
+                      
                    }
                    txtNombreProducto.Focus();
                 }
@@ -279,6 +280,7 @@ namespace Capa_Presentacion
             txtNombreProducto.Enabled = false;
             cbTipoComprobante.Enabled = false;
             cbxCategoria.Enabled = false;
+           
 
         }
         private void frmPventa_KeyDown(object sender, KeyEventArgs e)
@@ -380,7 +382,7 @@ namespace Capa_Presentacion
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
-
+            
 
             Negociocaja objcaja = new Negociocaja();
             FrmGuardarVenta venta = new FrmGuardarVenta(decimal.Round(Convert.ToDecimal( txtTotalPagar.Text),2),Convert.ToInt32( txtIdCliente.Text));
@@ -394,6 +396,7 @@ namespace Capa_Presentacion
             else
             {
                 venta.ListadoDeProducto = DGVenta;
+                venta.Tipo_comprobante = cbTipoComprobante.SelectedItem.ToString();
                 venta.ShowDialog();
                 if (venta.Trans == "ok")
                 {
@@ -406,6 +409,7 @@ namespace Capa_Presentacion
                     TxtDesc.Enabled = true;
                     TxtPrecio.Enabled = true;
                     btnProducto.Enabled = true;
+                    btnAgregarPesable.Enabled = true;
                     txtNombreProducto.Focus();
                    
                 }
@@ -739,6 +743,7 @@ namespace Capa_Presentacion
                 TxtDesc.Enabled = true;
                 TxtPrecio.Enabled = true;
                 btnProducto.Enabled = true;
+                btnAgregarPesable.Enabled = true;
                 cbTipoComprobante.Enabled = true;
                 cbxCategoria.Enabled = true;
             }

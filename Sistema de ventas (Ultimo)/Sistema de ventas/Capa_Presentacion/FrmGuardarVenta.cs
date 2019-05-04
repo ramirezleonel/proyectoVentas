@@ -19,7 +19,19 @@ namespace Capa_Presentacion
         private DataGridView listadoDeProducto;
         private bool isCerro = false;
         private decimal totalAPagar = 0;
+        private string tipo_comprobante="";
+        private string categoria = "";
 
+        public string Categoria
+        {
+            get { return categoria; }
+            set { categoria = value; }
+        }
+        public string Tipo_comprobante
+        {
+            get { return tipo_comprobante; }
+            set { tipo_comprobante = value; }
+        }
         public bool IsCerro
         {
             get { return isCerro; }
@@ -136,7 +148,7 @@ namespace Capa_Presentacion
 
                 }
 
-                string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today, "V", "0000", "0000001", IVA, dt);
+                string Rta = NegocioVenta.Insertar(this.idCliente, DateTime.Today, Tipo_comprobante, "0000", "0000001", IVA, dt);
 
                 if (Rta == "OK")
                 {
@@ -289,5 +301,7 @@ namespace Capa_Presentacion
                 this.Close();
             }
         }
+
+        
     }
 }

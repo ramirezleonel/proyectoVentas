@@ -36,15 +36,15 @@
             this.rdbCodigoBarra = new System.Windows.Forms.RadioButton();
             this.rdbNombre = new System.Windows.Forms.RadioButton();
             this.dataLista = new System.Windows.Forms.DataGridView();
-            this.btnProducto = new System.Windows.Forms.Button();
-            this.lblNomProducto = new System.Windows.Forms.Label();
-            this.txtProducto = new System.Windows.Forms.TextBox();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CodigoDeBarra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Producto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock_actual = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnProducto = new System.Windows.Forms.Button();
+            this.lblNomProducto = new System.Windows.Forms.Label();
+            this.txtProducto = new System.Windows.Forms.TextBox();
             this.gbDetalleMovimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.SuspendLayout();
@@ -140,7 +140,7 @@
             this.dataLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -165,39 +165,6 @@
             this.dataLista.TabIndex = 46;
             this.dataLista.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataLista_CellDoubleClick);
             this.dataLista.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataLista_KeyDown);
-            // 
-            // btnProducto
-            // 
-            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(558, 72);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(26, 28);
-            this.btnProducto.TabIndex = 10;
-            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProducto.UseVisualStyleBackColor = true;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
-            // lblNomProducto
-            // 
-            this.lblNomProducto.AutoSize = true;
-            this.lblNomProducto.Location = new System.Drawing.Point(46, 76);
-            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNomProducto.Name = "lblNomProducto";
-            this.lblNomProducto.Size = new System.Drawing.Size(73, 20);
-            this.lblNomProducto.TabIndex = 26;
-            this.lblNomProducto.Text = "Producto";
-            // 
-            // txtProducto
-            // 
-            this.txtProducto.Location = new System.Drawing.Point(125, 73);
-            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtProducto.Name = "txtProducto";
-            this.txtProducto.Size = new System.Drawing.Size(412, 26);
-            this.txtProducto.TabIndex = 1;
-            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
-            this.txtProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProducto_KeyDown);
             // 
             // Codigo
             // 
@@ -247,6 +214,39 @@
             this.Stock_actual.HeaderText = "Stock_actual";
             this.Stock_actual.Name = "Stock_actual";
             this.Stock_actual.ReadOnly = true;
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducto.Location = new System.Drawing.Point(558, 72);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 10;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
+            // 
+            // lblNomProducto
+            // 
+            this.lblNomProducto.AutoSize = true;
+            this.lblNomProducto.Location = new System.Drawing.Point(46, 76);
+            this.lblNomProducto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNomProducto.Name = "lblNomProducto";
+            this.lblNomProducto.Size = new System.Drawing.Size(73, 20);
+            this.lblNomProducto.TabIndex = 26;
+            this.lblNomProducto.Text = "Producto";
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Location = new System.Drawing.Point(125, 73);
+            this.txtProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(412, 26);
+            this.txtProducto.TabIndex = 1;
+            this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
+            this.txtProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProducto_KeyDown);
             // 
             // FrmAvanzadoArticulo
             // 
