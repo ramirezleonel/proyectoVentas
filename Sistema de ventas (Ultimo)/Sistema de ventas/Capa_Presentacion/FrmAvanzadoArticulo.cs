@@ -324,15 +324,7 @@ namespace Capa_Presentacion
         {
             try
             {
-                this.idProducto = Convert.ToInt32(this.dataLista.CurrentRow.Cells["idarticulo"].Value);
-                this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["nombre"].Value);
-
-                //convierte primero object a string y luego en float
-                this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precio"].Value), 2);
-                //this.precio = double.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
-                this.stockActual = Convert.ToInt32(this.dataLista.CurrentRow.Cells["stock_actual"].Value);
-                this.Close();
-                this.isCerro = false;
+                productoSeleccionado();
             
             }
             catch (Exception ex)
@@ -365,15 +357,7 @@ namespace Capa_Presentacion
 
                     try
                     {
-                        this.idProducto = Convert.ToInt32(this.dataLista.CurrentRow.Cells["idarticulo"].Value);
-                        this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["nombre"].Value);
-
-                        //convierte primero object a string y luego en float
-                        this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precio"].Value), 2);
-                        //this.precio = double.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
-                        this.stockActual = Convert.ToInt32(this.dataLista.CurrentRow.Cells["stock_actual"].Value);
-                        this.Close();
-                        this.isCerro = false;
+                        productoSeleccionado();
 
                     }
                     catch (Exception ex)
@@ -386,6 +370,18 @@ namespace Capa_Presentacion
 
 
             }
+        }
+        public void productoSeleccionado() {
+
+            this.idProducto = Convert.ToInt32(this.dataLista.CurrentRow.Cells["codigo"].Value);
+            this.nombreProducto = Convert.ToString(this.dataLista.CurrentRow.Cells["nombre"].Value);
+
+            //convierte primero object a string y luego en float
+            this.precio = decimal.Round(Convert.ToDecimal(this.dataLista.CurrentRow.Cells["precio"].Value), 2);
+            //this.precio = double.Parse(Convert.ToString(this.dataLista.CurrentRow.Cells["precio"].Value));
+            this.stockActual = Convert.ToInt32(this.dataLista.CurrentRow.Cells["stock_actual"].Value);
+            this.Close();
+            this.isCerro = false;
         }
 
         private void txtProducto_KeyDown(object sender, KeyEventArgs e)

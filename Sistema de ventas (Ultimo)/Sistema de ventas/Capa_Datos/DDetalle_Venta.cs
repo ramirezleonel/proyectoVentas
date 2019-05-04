@@ -87,7 +87,7 @@ namespace Capa_Datos
                 SqlParameter paridventa = ProcAlmacenado.asignarParametros("@idventa", SqlDbType.Int, Detalle_Venta.idventa);
                 sqlcmd.Parameters.Add(paridventa);
 
-                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Decimal, decimal.Parse("32,42"));
+                SqlParameter parcantidad = ProcAlmacenado.asignarParametros("@cantidad", SqlDbType.Money,Detalle_Venta.Cantidad);
                 sqlcmd.Parameters.Add(parcantidad);
 
                 SqlParameter parImporte = ProcAlmacenado.asignarParametros("@importe", SqlDbType.Money, Detalle_Venta.Importe);

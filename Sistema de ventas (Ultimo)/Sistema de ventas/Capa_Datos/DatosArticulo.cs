@@ -571,11 +571,11 @@ namespace Capa_Datos
 
             if (tipo == "poridarticulo")
             {
-                query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio FROM articulo WHERE idarticulo = @id";
+                query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE idarticulo = @id";
             }
             if (tipo == "porbarra")
             {
-                query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio FROM articulo WHERE codigo = @id";
+                query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE codigo = @id";
             }
           
 

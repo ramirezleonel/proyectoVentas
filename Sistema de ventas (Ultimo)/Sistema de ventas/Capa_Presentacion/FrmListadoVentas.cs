@@ -218,7 +218,7 @@ namespace Capa_Presentacion
                     DateTime date = Convert.ToDateTime(this.dataLista.CurrentRow.Cells["fecha"].Value);
 
                     FrmDetalleVentas venta = new FrmDetalleVentas(Convert.ToString(this.dataLista.CurrentRow.Cells["codigo"].Value),
-                        Convert.ToString(this.dataLista.CurrentRow.Cells["Razon_social"].Value),
+                        Convert.ToString(this.dataLista.CurrentRow.Cells["razon_social"].Value),
                         date.ToShortDateString(),
                          Convert.ToString(this.dataLista.CurrentRow.Cells["tipo_comprobante"].Value),
                         Convert.ToString(this.dataLista.CurrentRow.Cells["estado"].Value),
