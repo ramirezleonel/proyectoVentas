@@ -574,6 +574,10 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Remove Image_20px.png" />
+    <None Include="Resources\Save_20px.png" />
+    <None Include="Resources\More1_20px.png" />
+    <None Include="Resources\More_20px.png" />
     <None Include="Resources\Microsoft Excel_20px.png" />
     <None Include="Resources\List_20px.png" />
     <None Include="Resources\Select All_20px.png" />
@@ -603,6 +607,9 @@
     <None Include="Resources\Label Printer_50px.png" />
     <None Include="Resources\Industrial Scales_20px.png" />
     <None Include="Resources\Industrial Scales_20px1.png" />
+    <None Include="Resources\Edit Property_20px.png" />
+    <None Include="Resources\Delete File_20px.png" />
+    <None Include="Resources\Add Image_20px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

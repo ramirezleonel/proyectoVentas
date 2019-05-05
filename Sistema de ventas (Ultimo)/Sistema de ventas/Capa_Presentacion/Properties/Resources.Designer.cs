@@ -73,6 +73,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Add_Image_20px {
+            get {
+                object obj = ResourceManager.GetObject("Add Image_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Add_List_15px {
             get {
                 object obj = ResourceManager.GetObject("Add List_15px", resourceCulture);
@@ -183,6 +193,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Chart_20px {
+            get {
+                object obj = ResourceManager.GetObject("Chart_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ColorProyecto {
             get {
                 object obj = ResourceManager.GetObject("ColorProyecto", resourceCulture);
@@ -206,6 +226,26 @@ namespace Capa_Presentacion.Properties {
         internal static System.Drawing.Bitmap delete_40623 {
             get {
                 object obj = ResourceManager.GetObject("delete_40623", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Delete_File_20px {
+            get {
+                object obj = ResourceManager.GetObject("Delete File_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Edit_Property_20px {
+            get {
+                object obj = ResourceManager.GetObject("Edit Property_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -473,6 +513,26 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap More_20px {
+            get {
+                object obj = ResourceManager.GetObject("More_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap More1_20px {
+            get {
+                object obj = ResourceManager.GetObject("More1_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap pantallaPrincipal {
             get {
                 object obj = ResourceManager.GetObject("pantallaPrincipal", resourceCulture);
@@ -513,6 +573,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Remove_Image_20px {
+            get {
+                object obj = ResourceManager.GetObject("Remove Image_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Restore_Window_20px {
             get {
                 object obj = ResourceManager.GetObject("Restore Window_20px", resourceCulture);
@@ -526,6 +596,16 @@ namespace Capa_Presentacion.Properties {
         internal static System.Drawing.Bitmap safe_box_icon_icons_com_65038 {
             get {
                 object obj = ResourceManager.GetObject("safe-box_icon-icons.com_65038", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_20px {
+            get {
+                object obj = ResourceManager.GetObject("Save_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

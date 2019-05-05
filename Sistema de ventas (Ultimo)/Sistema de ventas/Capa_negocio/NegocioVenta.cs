@@ -164,6 +164,10 @@ namespace Capa_negocio
 
 
         }
+        public static DataTable MostrarRanking5Productos(){
+
+            return new Dventa().mostrarRanking5Productos();
+        }
         public string [,] Matrizventa = new string [100,100];
 
 

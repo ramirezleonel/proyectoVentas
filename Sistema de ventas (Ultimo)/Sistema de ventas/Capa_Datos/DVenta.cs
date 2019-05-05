@@ -255,6 +255,33 @@ using Capa_Datos;
             catch (Exception ex)
             {
                 DtResultado = null;
+                throw ex;
+            }
+            return DtResultado;
+        }
+
+        public DataTable mostrarRanking5Productos()
+        {
+            DataTable DtResultado = new DataTable("venta");
+            SqlConnection cn = new SqlConnection(Conexion.conexion);
+
+            try
+            {
+                cn.Open();
+
+                SqlCommand sqlcmd = ProcAlmacenado.CrearProc(cn, "SP_VENTA");
+                //Modo 7 Mostrar
+                SqlParameter parModo = ProcAlmacenado.asignarParametros("modo", SqlDbType.Int, 7);
+                sqlcmd.Parameters.Add(parModo);
+
+
+                SqlDataAdapter sqldat = new SqlDataAdapter(sqlcmd);
+                sqldat.Fill(DtResultado);
+            }
+            catch (Exception ex)
+            {
+                DtResultado = null;
+                throw ex;
             }
             return DtResultado;
         }

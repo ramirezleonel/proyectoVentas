@@ -29,54 +29,56 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListadoVentas));
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,0");
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListadoVentas));
             this.label1 = new System.Windows.Forms.Label();
             this.dtpFechaFin = new System.Windows.Forms.DateTimePicker();
             this.dtpFechaIni = new System.Windows.Forms.DateTimePicker();
             this.dataLista = new System.Windows.Forms.DataGridView();
-            this.lblFechaIni = new System.Windows.Forms.Label();
-            this.txtTotal = new System.Windows.Forms.TextBox();
-            this.lblTotal = new System.Windows.Forms.Label();
-            this.gbxConsultasAvanzadas = new System.Windows.Forms.GroupBox();
-            this.gbxHerramientas = new System.Windows.Forms.GroupBox();
-            this.btnExportarExcel = new System.Windows.Forms.Button();
-            this.btnCalculadora = new System.Windows.Forms.Button();
-            this.gbxVisualizar = new System.Windows.Forms.GroupBox();
-            this.btnVisualizarGrafico = new System.Windows.Forms.Button();
-            this.btnVisualizarLista = new System.Windows.Forms.Button();
-            this.btnTodos = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
-            this.lblSistemaVenta = new System.Windows.Forms.Label();
-            this.panelHorizontal = new System.Windows.Forms.Panel();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
-            this.pnlSeparacion = new System.Windows.Forms.Panel();
-            this.chartRankingVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.razon_social = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo_comprobante = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblFechaIni = new System.Windows.Forms.Label();
+            this.txtTotal = new System.Windows.Forms.TextBox();
+            this.lblTotal = new System.Windows.Forms.Label();
+            this.gbxConsultasAvanzadas = new System.Windows.Forms.GroupBox();
+            this.gbxHerramientas = new System.Windows.Forms.GroupBox();
+            this.gbxVisualizar = new System.Windows.Forms.GroupBox();
+            this.errorIcono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
+            this.lblSistemaVenta = new System.Windows.Forms.Label();
+            this.panelHorizontal = new System.Windows.Forms.Panel();
+            this.pnlSeparacion = new System.Windows.Forms.Panel();
+            this.chartRankingVentas = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.btnExportarExcel = new System.Windows.Forms.Button();
+            this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnVisualizadorTorta = new System.Windows.Forms.Button();
+            this.btnVisualizarGrafico = new System.Windows.Forms.Button();
+            this.btnVisualizarLista = new System.Windows.Forms.Button();
+            this.btnTodos = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.gbxConsultasAvanzadas.SuspendLayout();
             this.gbxHerramientas.SuspendLayout();
             this.gbxVisualizar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.panelHorizontal.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRankingVentas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRankingVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -132,6 +134,42 @@
             this.dataLista.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataLista_CellMouseDoubleClick_1);
             this.dataLista.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataLista_KeyDown);
             // 
+            // Codigo
+            // 
+            this.Codigo.HeaderText = "Codigo";
+            this.Codigo.Name = "Codigo";
+            this.Codigo.ReadOnly = true;
+            // 
+            // razon_social
+            // 
+            this.razon_social.HeaderText = "Razon_social";
+            this.razon_social.Name = "razon_social";
+            this.razon_social.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Tipo_comprobante
+            // 
+            this.Tipo_comprobante.HeaderText = "Tipo_comprobante";
+            this.Tipo_comprobante.Name = "Tipo_comprobante";
+            this.Tipo_comprobante.ReadOnly = true;
+            // 
+            // Total
+            // 
+            this.Total.HeaderText = "Total";
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
             // lblFechaIni
             // 
             this.lblFechaIni.AutoSize = true;
@@ -182,7 +220,7 @@
             this.gbxConsultasAvanzadas.Controls.Add(this.btnBuscar);
             this.gbxConsultasAvanzadas.Location = new System.Drawing.Point(22, 45);
             this.gbxConsultasAvanzadas.Name = "gbxConsultasAvanzadas";
-            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 91);
+            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 106);
             this.gbxConsultasAvanzadas.TabIndex = 62;
             this.gbxConsultasAvanzadas.TabStop = false;
             this.gbxConsultasAvanzadas.Text = "Consultas Avanzadas";
@@ -199,31 +237,9 @@
             this.gbxHerramientas.TabStop = false;
             this.gbxHerramientas.Text = "herramientas";
             // 
-            // btnExportarExcel
-            // 
-            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
-            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
-            this.btnExportarExcel.Name = "btnExportarExcel";
-            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
-            this.btnExportarExcel.TabIndex = 29;
-            this.btnExportarExcel.UseVisualStyleBackColor = true;
-            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
-            // 
-            // btnCalculadora
-            // 
-            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
-            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
-            this.btnCalculadora.Name = "btnCalculadora";
-            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
-            this.btnCalculadora.TabIndex = 28;
-            this.btnCalculadora.UseVisualStyleBackColor = true;
-            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
-            // 
             // gbxVisualizar
             // 
+            this.gbxVisualizar.Controls.Add(this.btnVisualizadorTorta);
             this.gbxVisualizar.Controls.Add(this.btnVisualizarGrafico);
             this.gbxVisualizar.Controls.Add(this.btnVisualizarLista);
             this.gbxVisualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -233,53 +249,6 @@
             this.gbxVisualizar.TabIndex = 25;
             this.gbxVisualizar.TabStop = false;
             this.gbxVisualizar.Text = "visualizador";
-            // 
-            // btnVisualizarGrafico
-            // 
-            this.btnVisualizarGrafico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnVisualizarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarGrafico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarGrafico.Image")));
-            this.btnVisualizarGrafico.Location = new System.Drawing.Point(17, 28);
-            this.btnVisualizarGrafico.Name = "btnVisualizarGrafico";
-            this.btnVisualizarGrafico.Size = new System.Drawing.Size(26, 28);
-            this.btnVisualizarGrafico.TabIndex = 27;
-            this.btnVisualizarGrafico.UseVisualStyleBackColor = true;
-            this.btnVisualizarGrafico.Click += new System.EventHandler(this.btnVisualizarGrafico_Click);
-            // 
-            // btnVisualizarLista
-            // 
-            this.btnVisualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVisualizarLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVisualizarLista.Image = global::Capa_Presentacion.Properties.Resources.List_20px;
-            this.btnVisualizarLista.Location = new System.Drawing.Point(49, 28);
-            this.btnVisualizarLista.Name = "btnVisualizarLista";
-            this.btnVisualizarLista.Size = new System.Drawing.Size(26, 28);
-            this.btnVisualizarLista.TabIndex = 26;
-            this.btnVisualizarLista.UseVisualStyleBackColor = true;
-            this.btnVisualizarLista.Click += new System.EventHandler(this.btnVisualizarLista_Click);
-            // 
-            // btnTodos
-            // 
-            this.btnTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTodos.Image = global::Capa_Presentacion.Properties.Resources.Select_All_20px;
-            this.btnTodos.Location = new System.Drawing.Point(412, 57);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(26, 28);
-            this.btnTodos.TabIndex = 24;
-            this.btnTodos.UseVisualStyleBackColor = true;
-            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnBuscar.Location = new System.Drawing.Point(380, 57);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(26, 28);
-            this.btnBuscar.TabIndex = 18;
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // errorIcono
             // 
@@ -320,6 +289,42 @@
             this.panelHorizontal.TabIndex = 64;
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
+            // 
+            // pnlSeparacion
+            // 
+            this.pnlSeparacion.Location = new System.Drawing.Point(0, 0);
+            this.pnlSeparacion.Name = "pnlSeparacion";
+            this.pnlSeparacion.Size = new System.Drawing.Size(200, 100);
+            this.pnlSeparacion.TabIndex = 0;
+            // 
+            // chartRankingVentas
+            // 
+            this.chartRankingVentas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.chartRankingVentas.BackColor = System.Drawing.Color.Transparent;
+            this.chartRankingVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.chartRankingVentas.BorderlineWidth = 15;
+            chartArea1.Area3DStyle.Enable3D = true;
+            chartArea1.Name = "ChartArea1";
+            this.chartRankingVentas.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartRankingVentas.Legends.Add(legend1);
+            this.chartRankingVentas.Location = new System.Drawing.Point(42, 157);
+            this.chartRankingVentas.Name = "chartRankingVentas";
+            this.chartRankingVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
+            series1.Legend = "Legend1";
+            series1.Name = "Ventas";
+            series1.Points.Add(dataPoint1);
+            series1.YValuesPerPoint = 2;
+            this.chartRankingVentas.Series.Add(series1);
+            this.chartRankingVentas.Size = new System.Drawing.Size(933, 497);
+            this.chartRankingVentas.TabIndex = 65;
+            title1.Name = "Ventas";
+            this.chartRankingVentas.Titles.Add(title1);
+            this.chartRankingVentas.Visible = false;
             // 
             // btnMaximizar
             // 
@@ -379,67 +384,86 @@
             this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
             this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
-            // pnlSeparacion
+            // btnExportarExcel
             // 
-            this.pnlSeparacion.Location = new System.Drawing.Point(0, 0);
-            this.pnlSeparacion.Name = "pnlSeparacion";
-            this.pnlSeparacion.Size = new System.Drawing.Size(200, 100);
-            this.pnlSeparacion.TabIndex = 0;
+            this.btnExportarExcel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExportarExcel.Image = global::Capa_Presentacion.Properties.Resources.Microsoft_Excel_20px;
+            this.btnExportarExcel.Location = new System.Drawing.Point(42, 28);
+            this.btnExportarExcel.Name = "btnExportarExcel";
+            this.btnExportarExcel.Size = new System.Drawing.Size(26, 28);
+            this.btnExportarExcel.TabIndex = 29;
+            this.btnExportarExcel.UseVisualStyleBackColor = true;
+            this.btnExportarExcel.Click += new System.EventHandler(this.btnExportarExcel_Click);
             // 
-            // chartRankingVentas
+            // btnCalculadora
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chartRankingVentas.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chartRankingVentas.Legends.Add(legend1);
-            this.chartRankingVentas.Location = new System.Drawing.Point(42, 157);
-            this.chartRankingVentas.Name = "chartRankingVentas";
-            this.chartRankingVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Excel;
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Ventas";
-            this.chartRankingVentas.Series.Add(series1);
-            this.chartRankingVentas.Size = new System.Drawing.Size(933, 400);
-            this.chartRankingVentas.TabIndex = 65;
-            title1.Name = "Ventas";
-            this.chartRankingVentas.Titles.Add(title1);
-            this.chartRankingVentas.Visible = false;
+            this.btnCalculadora.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnCalculadora.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCalculadora.Image = global::Capa_Presentacion.Properties.Resources.Calculator_20px;
+            this.btnCalculadora.Location = new System.Drawing.Point(10, 28);
+            this.btnCalculadora.Name = "btnCalculadora";
+            this.btnCalculadora.Size = new System.Drawing.Size(26, 28);
+            this.btnCalculadora.TabIndex = 28;
+            this.btnCalculadora.UseVisualStyleBackColor = true;
+            this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
             // 
-            // Codigo
+            // btnVisualizadorTorta
             // 
-            this.Codigo.HeaderText = "Codigo";
-            this.Codigo.Name = "Codigo";
-            this.Codigo.ReadOnly = true;
+            this.btnVisualizadorTorta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizadorTorta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizadorTorta.Image = global::Capa_Presentacion.Properties.Resources.Chart_20px;
+            this.btnVisualizadorTorta.Location = new System.Drawing.Point(49, 28);
+            this.btnVisualizadorTorta.Name = "btnVisualizadorTorta";
+            this.btnVisualizadorTorta.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizadorTorta.TabIndex = 28;
+            this.btnVisualizadorTorta.UseVisualStyleBackColor = true;
             // 
-            // razon_social
+            // btnVisualizarGrafico
             // 
-            this.razon_social.HeaderText = "Razon_social";
-            this.razon_social.Name = "razon_social";
-            this.razon_social.ReadOnly = true;
+            this.btnVisualizarGrafico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnVisualizarGrafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarGrafico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarGrafico.Image = ((System.Drawing.Image)(resources.GetObject("btnVisualizarGrafico.Image")));
+            this.btnVisualizarGrafico.Location = new System.Drawing.Point(17, 28);
+            this.btnVisualizarGrafico.Name = "btnVisualizarGrafico";
+            this.btnVisualizarGrafico.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizarGrafico.TabIndex = 27;
+            this.btnVisualizarGrafico.UseVisualStyleBackColor = true;
+            this.btnVisualizarGrafico.Click += new System.EventHandler(this.btnVisualizarGrafico_Click);
             // 
-            // Fecha
+            // btnVisualizarLista
             // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            this.Fecha.ReadOnly = true;
+            this.btnVisualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizarLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizarLista.Image = global::Capa_Presentacion.Properties.Resources.List_20px;
+            this.btnVisualizarLista.Location = new System.Drawing.Point(81, 28);
+            this.btnVisualizarLista.Name = "btnVisualizarLista";
+            this.btnVisualizarLista.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizarLista.TabIndex = 26;
+            this.btnVisualizarLista.UseVisualStyleBackColor = true;
+            this.btnVisualizarLista.Click += new System.EventHandler(this.btnVisualizarLista_Click);
             // 
-            // Tipo_comprobante
+            // btnTodos
             // 
-            this.Tipo_comprobante.HeaderText = "Tipo_comprobante";
-            this.Tipo_comprobante.Name = "Tipo_comprobante";
-            this.Tipo_comprobante.ReadOnly = true;
+            this.btnTodos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTodos.Image = global::Capa_Presentacion.Properties.Resources.Select_All_20px;
+            this.btnTodos.Location = new System.Drawing.Point(412, 57);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(26, 28);
+            this.btnTodos.TabIndex = 24;
+            this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
-            // Total
+            // btnBuscar
             // 
-            this.Total.HeaderText = "Total";
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            // 
-            // Estado
-            // 
-            this.Estado.HeaderText = "Estado";
-            this.Estado.Name = "Estado";
-            this.Estado.ReadOnly = true;
+            this.btnBuscar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnBuscar.Location = new System.Drawing.Point(380, 57);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(26, 28);
+            this.btnBuscar.TabIndex = 18;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // FrmListadoVentas
             // 
@@ -450,8 +474,8 @@
             this.Controls.Add(this.gbxConsultasAvanzadas);
             this.Controls.Add(this.txtTotal);
             this.Controls.Add(this.lblTotal);
-            this.Controls.Add(this.dataLista);
             this.Controls.Add(this.chartRankingVentas);
+            this.Controls.Add(this.dataLista);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -467,11 +491,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).EndInit();
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartRankingVentas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chartRankingVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -511,6 +535,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Tipo_comprobante;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.Button btnVisualizadorTorta;
 
     }
 }

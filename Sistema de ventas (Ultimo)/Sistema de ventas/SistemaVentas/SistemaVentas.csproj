@@ -237,6 +237,8 @@
     <None Include="Resources\maximize Checkbox_16px.png" />
     <None Include="Resources\Minus_20px.png" />
     <None Include="Resources\Restore Window_20px.png" />
+    <None Include="Resources\Services_50px.png" />
+    <None Include="Resources\Automation1_50px.png" />
     <Content Include="softIntegralIcon.ico" />
     <None Include="Resources\agregar.png" />
     <Content Include="FISCAL.OCX" />

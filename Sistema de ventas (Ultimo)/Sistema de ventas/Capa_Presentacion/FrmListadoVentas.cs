@@ -386,6 +386,8 @@ namespace Capa_Presentacion
             {
                 dataLista.Visible = true;
                 chartRankingVentas.Visible = false;
+                txtTotal.Visible = true;
+                lblTotal.Visible = true;
             }
         }
 
@@ -394,14 +396,32 @@ namespace Capa_Presentacion
             if (dataLista.Visible == true&&chartRankingVentas.Visible==false)
             {
                 dataLista.Visible = false;
-                chartRankingVentas.Series["Ventas"].Points.Clear();
-                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto1", 30);
-                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto2", 50);
-                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto3", 20);
-                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto4", 70);
-                chartRankingVentas.Series["Ventas"].Points.AddXY("Producto5", 1000);
-                chartRankingVentas.Visible = true;
+                txtTotal.Visible = false;
+                lblTotal.Visible = false;
+                DataTable dt=NegocioVenta.MostrarRanking5Productos();
+                if (dt.Rows.Count > 0)
+                {
+                    chartRankingVentas.Series["Ventas"].Points.Clear();
+                    foreach (DataRow row in dt.Rows)
+                    {
+                        chartRankingVentas.Series["Ventas"].Points.AddXY(row["nombre"], row["cantidad"]); 
+                    }
+                    
+                    
+                   //ejemplo: chartRankingVentas.Series["Ventas"].Points.AddXY("Producto2", 50);
+                    //chartRankingVentas.Series["Ventas"].Points.AddXY("Producto3", 20);
+                    //chartRankingVentas.Series["Ventas"].Points.AddXY("Producto4", 70);
+                    //chartRankingVentas.Series["Ventas"].Points.AddXY("Producto5", 1000);
+                    chartRankingVentas.Visible = true;
      
+                }
+                else {
+
+                    UtilityFrm.mensajeError("No existen ventas en este momento");
+                    chartRankingVentas.Visible = true;
+                }
+
+               
             }
         }
 
