@@ -610,6 +610,8 @@
     <None Include="Resources\Edit Property_20px.png" />
     <None Include="Resources\Delete File_20px.png" />
     <None Include="Resources\Add Image_20px.png" />
+    <None Include="Resources\Chart_20px.png" />
+    <None Include="Resources\Area Chart_20px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

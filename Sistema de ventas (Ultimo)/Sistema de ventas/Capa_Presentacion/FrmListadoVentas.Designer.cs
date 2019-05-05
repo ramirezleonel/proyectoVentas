@@ -32,7 +32,6 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, "0,0");
             System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmListadoVentas));
             this.label1 = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.btnExportarExcel = new System.Windows.Forms.Button();
             this.btnCalculadora = new System.Windows.Forms.Button();
+            this.btnVisualizadorArea = new System.Windows.Forms.Button();
             this.btnVisualizadorTorta = new System.Windows.Forms.Button();
             this.btnVisualizarGrafico = new System.Windows.Forms.Button();
             this.btnVisualizarLista = new System.Windows.Forms.Button();
@@ -220,7 +220,7 @@
             this.gbxConsultasAvanzadas.Controls.Add(this.btnBuscar);
             this.gbxConsultasAvanzadas.Location = new System.Drawing.Point(22, 45);
             this.gbxConsultasAvanzadas.Name = "gbxConsultasAvanzadas";
-            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 106);
+            this.gbxConsultasAvanzadas.Size = new System.Drawing.Size(965, 91);
             this.gbxConsultasAvanzadas.TabIndex = 62;
             this.gbxConsultasAvanzadas.TabStop = false;
             this.gbxConsultasAvanzadas.Text = "Consultas Avanzadas";
@@ -239,6 +239,7 @@
             // 
             // gbxVisualizar
             // 
+            this.gbxVisualizar.Controls.Add(this.btnVisualizadorArea);
             this.gbxVisualizar.Controls.Add(this.btnVisualizadorTorta);
             this.gbxVisualizar.Controls.Add(this.btnVisualizarGrafico);
             this.gbxVisualizar.Controls.Add(this.btnVisualizarLista);
@@ -304,7 +305,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.chartRankingVentas.BackColor = System.Drawing.Color.Transparent;
             this.chartRankingVentas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.chartRankingVentas.BorderlineWidth = 15;
+            this.chartRankingVentas.BorderlineWidth = 3;
             chartArea1.Area3DStyle.Enable3D = true;
             chartArea1.Name = "ChartArea1";
             this.chartRankingVentas.ChartAreas.Add(chartArea1);
@@ -312,13 +313,9 @@
             this.chartRankingVentas.Legends.Add(legend1);
             this.chartRankingVentas.Location = new System.Drawing.Point(42, 157);
             this.chartRankingVentas.Name = "chartRankingVentas";
-            this.chartRankingVentas.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pyramid;
             series1.Legend = "Legend1";
             series1.Name = "Ventas";
-            series1.Points.Add(dataPoint1);
-            series1.YValuesPerPoint = 2;
             this.chartRankingVentas.Series.Add(series1);
             this.chartRankingVentas.Size = new System.Drawing.Size(933, 497);
             this.chartRankingVentas.TabIndex = 65;
@@ -407,6 +404,18 @@
             this.btnCalculadora.UseVisualStyleBackColor = true;
             this.btnCalculadora.Click += new System.EventHandler(this.btnCalculadora_Click);
             // 
+            // btnVisualizadorArea
+            // 
+            this.btnVisualizadorArea.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVisualizadorArea.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVisualizadorArea.Image = global::Capa_Presentacion.Properties.Resources.Area_Chart_20px;
+            this.btnVisualizadorArea.Location = new System.Drawing.Point(81, 28);
+            this.btnVisualizadorArea.Name = "btnVisualizadorArea";
+            this.btnVisualizadorArea.Size = new System.Drawing.Size(26, 28);
+            this.btnVisualizadorArea.TabIndex = 30;
+            this.btnVisualizadorArea.UseVisualStyleBackColor = true;
+            this.btnVisualizadorArea.Click += new System.EventHandler(this.btnVisualizadorArea_Click);
+            // 
             // btnVisualizadorTorta
             // 
             this.btnVisualizadorTorta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -415,8 +424,9 @@
             this.btnVisualizadorTorta.Location = new System.Drawing.Point(49, 28);
             this.btnVisualizadorTorta.Name = "btnVisualizadorTorta";
             this.btnVisualizadorTorta.Size = new System.Drawing.Size(26, 28);
-            this.btnVisualizadorTorta.TabIndex = 28;
+            this.btnVisualizadorTorta.TabIndex = 29;
             this.btnVisualizadorTorta.UseVisualStyleBackColor = true;
+            this.btnVisualizadorTorta.Click += new System.EventHandler(this.btnVisualizadorTorta_Click);
             // 
             // btnVisualizarGrafico
             // 
@@ -436,7 +446,7 @@
             this.btnVisualizarLista.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVisualizarLista.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVisualizarLista.Image = global::Capa_Presentacion.Properties.Resources.List_20px;
-            this.btnVisualizarLista.Location = new System.Drawing.Point(81, 28);
+            this.btnVisualizarLista.Location = new System.Drawing.Point(113, 28);
             this.btnVisualizarLista.Name = "btnVisualizarLista";
             this.btnVisualizarLista.Size = new System.Drawing.Size(26, 28);
             this.btnVisualizarLista.TabIndex = 26;
@@ -536,6 +546,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
         private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
         private System.Windows.Forms.Button btnVisualizadorTorta;
+        private System.Windows.Forms.Button btnVisualizadorArea;
 
     }
 }

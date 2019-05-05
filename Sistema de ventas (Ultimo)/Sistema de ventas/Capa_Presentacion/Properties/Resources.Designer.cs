@@ -153,6 +153,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Area_Chart_20px {
+            get {
+                object obj = ResourceManager.GetObject("Area Chart_20px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Broom_15px {
             get {
                 object obj = ResourceManager.GetObject("Broom_15px", resourceCulture);

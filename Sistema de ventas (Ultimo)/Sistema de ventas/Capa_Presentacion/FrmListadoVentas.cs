@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Windows.Forms.DataVisualization.Charting;
 namespace Capa_Presentacion
 {
     public partial class FrmListadoVentas : Form
@@ -39,6 +39,9 @@ namespace Capa_Presentacion
             this.ttMensajeAyuda.SetToolTip(this.btnTodos, "Listar todas las ventas");
             //mensaje de ayuda del boton exportar excel
             this.ttMensajeAyuda.SetToolTip(this.btnExportarExcel,"Exportar a excel");
+            this.ttMensajeAyuda.SetToolTip(this.btnVisualizadorTorta, "Visualizar en forma de Pastel los 5 productos mas vendidos");
+            this.ttMensajeAyuda.SetToolTip(this.btnVisualizadorArea, "Visualizar en forma de area los 5 productos mas vendidos");
+            this.ttMensajeAyuda.SetToolTip(this.btnVisualizarGrafico, "Visualizar en forma de columnas los 5 productos mas vendidos");
         }
 
         public void mostrar()
@@ -393,38 +396,82 @@ namespace Capa_Presentacion
 
         private void btnVisualizarGrafico_Click(object sender, EventArgs e)
         {
+            chartRankingVentas.Series["Ventas"].ChartType = SeriesChartType.Column;
+         
             if (dataLista.Visible == true&&chartRankingVentas.Visible==false)
             {
                 dataLista.Visible = false;
                 txtTotal.Visible = false;
                 lblTotal.Visible = false;
-                DataTable dt=NegocioVenta.MostrarRanking5Productos();
+                mostrarRanking5Producto();
+               
+            }
+        }
+
+        private void btnVisualizadorTorta_Click(object sender, EventArgs e)
+        {
+            chartRankingVentas.Series["Ventas"].ChartType = SeriesChartType.Pie;
+            if (dataLista.Visible == true && chartRankingVentas.Visible == false)
+            {
+                dataLista.Visible = false;
+                txtTotal.Visible = false;
+                lblTotal.Visible = false;
+      
+                mostrarRanking5Producto();
+
+            }
+        }
+
+        private void btnVisualizadorArea_Click(object sender, EventArgs e)
+        {
+            chartRankingVentas.Series["Ventas"].ChartType = SeriesChartType.Area; 
+            if (dataLista.Visible == true && chartRankingVentas.Visible == false)
+            {
+                dataLista.Visible = false;
+                txtTotal.Visible = false;
+                lblTotal.Visible = false;
+
+
+                mostrarRanking5Producto();
+
+            }
+        }
+        public void mostrarRanking5Producto(){
+            try
+            {
+                DataTable dt = NegocioVenta.MostrarRanking5Productos();
                 if (dt.Rows.Count > 0)
                 {
                     chartRankingVentas.Series["Ventas"].Points.Clear();
+
                     foreach (DataRow row in dt.Rows)
                     {
-                        chartRankingVentas.Series["Ventas"].Points.AddXY(row["nombre"], row["cantidad"]); 
+                        chartRankingVentas.Series["Ventas"].Points.AddXY(row["nombre"], row["cantidad"]);
                     }
-                    
-                    
-                   //ejemplo: chartRankingVentas.Series["Ventas"].Points.AddXY("Producto2", 50);
+
+
+                    //ejemplo: chartRankingVentas.Series["Ventas"].Points.AddXY("Producto2", 50);
                     //chartRankingVentas.Series["Ventas"].Points.AddXY("Producto3", 20);
                     //chartRankingVentas.Series["Ventas"].Points.AddXY("Producto4", 70);
                     //chartRankingVentas.Series["Ventas"].Points.AddXY("Producto5", 1000);
                     chartRankingVentas.Visible = true;
-     
+
                 }
-                else {
+                else
+                {
 
                     UtilityFrm.mensajeError("No existen ventas en este momento");
                     chartRankingVentas.Visible = true;
                 }
 
-               
             }
-        }
+            catch (Exception ex)
+            {
 
+                UtilityFrm.mensajeError("Error: "+ex.Message);
+            }
+           
+        }
 
 
     }
