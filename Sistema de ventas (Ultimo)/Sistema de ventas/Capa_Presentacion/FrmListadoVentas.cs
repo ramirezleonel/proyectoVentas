@@ -39,8 +39,11 @@ namespace Capa_Presentacion
             this.ttMensajeAyuda.SetToolTip(this.btnTodos, "Listar todas las ventas");
             //mensaje de ayuda del boton exportar excel
             this.ttMensajeAyuda.SetToolTip(this.btnExportarExcel,"Exportar a excel");
+            //mensaje de ayuda del boton torta
             this.ttMensajeAyuda.SetToolTip(this.btnVisualizadorTorta, "Visualizar en forma de Pastel los 5 productos mas vendidos");
+            //mensaje de ayuda del boton area
             this.ttMensajeAyuda.SetToolTip(this.btnVisualizadorArea, "Visualizar en forma de area los 5 productos mas vendidos");
+            //mensaje de ayuda del boton grafico
             this.ttMensajeAyuda.SetToolTip(this.btnVisualizarGrafico, "Visualizar en forma de columnas los 5 productos mas vendidos");
         }
 

@@ -186,7 +186,38 @@ namespace Capa_negocio
             this.sindatos = ObjArticulo.Sindatos; 
 
         }
+        public static NegocioArticulo extraerdatosPesable(long codArticulo, string tipo)
+        {
+            DatosArticulo ObjArticulo = new DatosArticulo();
+            NegocioArticulo articulo = new NegocioArticulo();
 
+            ObjArticulo.ExtraerDatos(codArticulo, tipo,true);
+
+            articulo.IdArticulo = ObjArticulo.IdArticulo;
+            articulo.Nombre = ObjArticulo.Nombre;
+            articulo.Codigo = ObjArticulo.Codigo;
+            articulo.Descripcion = ObjArticulo.Descripcion;
+            articulo.IdCategoria = ObjArticulo.IdCategoria;
+            articulo.Precio = ObjArticulo.Precio;
+            articulo.Sindatos = ObjArticulo.Sindatos;
+            return articulo;
+        }
+        public static NegocioArticulo extraerdatosPesable(string nombre, string tipo)
+        {
+            DatosArticulo objArticulo = new DatosArticulo();
+           NegocioArticulo articulo = new NegocioArticulo();
+            //true porque es pesable
+            objArticulo.ExtraerDatos(nombre, tipo,true);
+                articulo.IdArticulo = objArticulo.IdArticulo;
+             articulo.Nombre = objArticulo.Nombre;
+            articulo.Codigo = objArticulo.Codigo;
+             articulo.Descripcion = objArticulo.Descripcion;
+             articulo.IdCategoria = objArticulo.IdCategoria;
+             articulo.Precio = objArticulo.Precio;
+             articulo.Sindatos = objArticulo.Sindatos;
+             return articulo;
+
+        }
         public static DataTable mostrarPesableXbusqueda(string Producto, string tipoBusqueda)
         {
             DatosArticulo ObjArticulo = new DatosArticulo();

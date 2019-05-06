@@ -28,9 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
-            this.btnLimpiar = new System.Windows.Forms.Button();
             this.rbCodigo = new System.Windows.Forms.RadioButton();
             this.rbCategoria = new System.Windows.Forms.RadioButton();
             this.rdbCodigoBarra = new System.Windows.Forms.RadioButton();
@@ -42,9 +40,10 @@
             this.PrecioProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Categoria = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stock_actual = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnProducto = new System.Windows.Forms.Button();
             this.lblNomProducto = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.gbDetalleMovimento.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataLista)).BeginInit();
             this.SuspendLayout();
@@ -71,17 +70,6 @@
             this.gbDetalleMovimento.TabIndex = 54;
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Detalles ";
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.Image = global::Capa_Presentacion.Properties.Resources.Broom_15px;
-            this.btnLimpiar.Location = new System.Drawing.Point(593, 72);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(28, 28);
-            this.btnLimpiar.TabIndex = 52;
-            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.UseVisualStyleBackColor = true;
             // 
             // rbCodigo
             // 
@@ -138,14 +126,6 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataLista.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataLista.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataLista.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataLista.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -215,19 +195,6 @@
             this.Stock_actual.Name = "Stock_actual";
             this.Stock_actual.ReadOnly = true;
             // 
-            // btnProducto
-            // 
-            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProducto.Location = new System.Drawing.Point(558, 72);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(26, 28);
-            this.btnProducto.TabIndex = 10;
-            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProducto.UseVisualStyleBackColor = true;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
             // lblNomProducto
             // 
             this.lblNomProducto.AutoSize = true;
@@ -248,6 +215,30 @@
             this.txtProducto.TextChanged += new System.EventHandler(this.txtProducto_TextChanged);
             this.txtProducto.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtProducto_KeyDown);
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Image = global::Capa_Presentacion.Properties.Resources.Broom_15px;
+            this.btnLimpiar.Location = new System.Drawing.Point(593, 72);
+            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(28, 28);
+            this.btnLimpiar.TabIndex = 52;
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnProducto
+            // 
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnProducto.Location = new System.Drawing.Point(558, 72);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 10;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
+            // 
             // FrmAvanzadoArticulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -258,6 +249,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FrmAvanzadoArticulo";
             this.Text = "FrmAvanzadoArticulo";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAvanzadoArticulo_FormClosing);
             this.Load += new System.EventHandler(this.FrmAvanzadoArticulo_Load);
             this.gbDetalleMovimento.ResumeLayout(false);
             this.gbDetalleMovimento.PerformLayout();

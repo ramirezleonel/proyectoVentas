@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             this.grpboxProveedor = new System.Windows.Forms.GroupBox();
+            this.cbxCategoria = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.lblTComprobante = new System.Windows.Forms.Label();
             this.cbTipoComprobante = new System.Windows.Forms.ComboBox();
             this.txtTotalPagar = new System.Windows.Forms.TextBox();
@@ -64,8 +66,6 @@
             this.lblSistemaVenta = new System.Windows.Forms.Label();
             this.panelHorizontal = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbxCategoria = new System.Windows.Forms.ComboBox();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.btnCalculadora = new System.Windows.Forms.Button();
             this.btnMaximizar = new System.Windows.Forms.PictureBox();
@@ -116,6 +116,31 @@
             this.grpboxProveedor.TabStop = false;
             this.grpboxProveedor.Text = "Punto de venta";
             // 
+            // cbxCategoria
+            // 
+            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxCategoria.Enabled = false;
+            this.cbxCategoria.FormattingEnabled = true;
+            this.cbxCategoria.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C"});
+            this.cbxCategoria.Location = new System.Drawing.Point(732, 66);
+            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxCategoria.Name = "cbxCategoria";
+            this.cbxCategoria.Size = new System.Drawing.Size(180, 28);
+            this.cbxCategoria.TabIndex = 62;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(685, 69);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(39, 20);
+            this.label2.TabIndex = 61;
+            this.label2.Text = "Tipo";
+            // 
             // lblTComprobante
             // 
             this.lblTComprobante.AutoSize = true;
@@ -134,10 +159,7 @@
             this.cbTipoComprobante.Items.AddRange(new object[] {
             "PRESUPUESTO",
             "NOTA DE VENTA",
-            "FACTURA",
-            "NOTAS DE DEBITO",
-            "NOTAS DE CREDITO",
-            "REMITO"});
+            "FACTURA"});
             this.cbTipoComprobante.Location = new System.Drawing.Point(732, 26);
             this.cbTipoComprobante.Margin = new System.Windows.Forms.Padding(4);
             this.cbTipoComprobante.Name = "cbTipoComprobante";
@@ -510,42 +532,6 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "VENTAS";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(646, 69);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 20);
-            this.label2.TabIndex = 61;
-            this.label2.Text = "Categoría";
-            // 
-            // cbxCategoria
-            // 
-            this.cbxCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbxCategoria.Enabled = false;
-            this.cbxCategoria.FormattingEnabled = true;
-            this.cbxCategoria.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G",
-            "H",
-            "I",
-            "J",
-            "K",
-            "R",
-            "X",
-            "M"});
-            this.cbxCategoria.Location = new System.Drawing.Point(732, 66);
-            this.cbxCategoria.Margin = new System.Windows.Forms.Padding(4);
-            this.cbxCategoria.Name = "cbxCategoria";
-            this.cbxCategoria.Size = new System.Drawing.Size(180, 28);
-            this.cbxCategoria.TabIndex = 62;
             // 
             // btnConsultas
             // 

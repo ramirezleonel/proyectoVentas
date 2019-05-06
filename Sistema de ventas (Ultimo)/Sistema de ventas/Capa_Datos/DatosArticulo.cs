@@ -560,10 +560,11 @@ namespace Capa_Datos
         }
         //select  IDENT_CURRENT('articulo')+1
         //metodo que trae los datos de la consulta por codigo de articulo o por codigo de barra
-        
+
+
         public void ExtraerDatos(long codArticulo, string tipo)
         {
-            this.sindatos = false; 
+            this.sindatos = false;
             string query;
             query = "";
             SqlConnection cn = new SqlConnection(Conexion.conexion);
@@ -577,7 +578,7 @@ namespace Capa_Datos
             {
                 query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE codigo = @id";
             }
-          
+
 
             SqlCommand cmd = new SqlCommand(query, cn);
             cmd.Parameters.AddWithValue("@id", Convert.ToInt64(codArticulo));
@@ -593,7 +594,54 @@ namespace Capa_Datos
                 this.nombre = Convert.ToString(reader["nombre"]);
                 this.descripcion = Convert.ToString(reader["descripcion"]);
                 this.precio = Convert.ToDecimal(reader["precio"]);
-                this.sindatos = true; 
+                this.sindatos = true;
+            }
+
+
+            cn.Close();
+
+
+        }
+
+
+
+
+        public void ExtraerDatos(long codArticulo, string tipo,bool pesable)
+        {
+            this.sindatos = false;
+            string query;
+            query = "";
+            SqlConnection cn = new SqlConnection(Conexion.conexion);
+            cn.Open();
+            if(pesable==true){
+
+                if (tipo == "poridarticulo")
+                {
+                    query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE idarticulo = @id and pesable=1";
+                }
+                if (tipo == "porbarra")
+                {
+                    query = "SELECT idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE codigo = @id  and pesable=1";
+                }
+            }
+           
+
+
+            SqlCommand cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@id", Convert.ToInt64(codArticulo));
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+
+                this.codigo = Convert.ToString(reader["codigo"]);
+                this.idArticulo = Convert.ToInt32(reader["idArticulo"]);
+                this.idCategoria = Convert.ToInt32(reader["idcategoria"]);
+                this.stockActual = Convert.ToInt32(reader["stock_actual"]);
+                this.nombre = Convert.ToString(reader["nombre"]);
+                this.descripcion = Convert.ToString(reader["descripcion"]);
+                this.precio = Convert.ToDecimal(reader["precio"]);
+                this.sindatos = true;
             }
 
 
@@ -604,6 +652,47 @@ namespace Capa_Datos
 
        
 
+        public  void ExtraerDatos(string nombre, string tipo,bool pesable)
+        {
+            this.sindatos = false;
+            string query;
+            query = "";
+            SqlConnection cn = new SqlConnection(Conexion.conexion);
+            cn.Open();
+
+            if (tipo == "pornombre" && pesable == false)
+            {
+                query = "SELECT top 1 idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE nombre = @nombre and estado=1";
+            }
+            else if (tipo == "pornombre"&&pesable==true) {
+                query = "SELECT top 1 idarticulo,codigo ,nombre ,descripcion ,idcategoria ,precio,stock_actual FROM articulo WHERE nombre = @nombre and estado=1 and pesable=1";
+            
+            }
+
+            SqlCommand cmd = new SqlCommand(query, cn);
+            cmd.Parameters.AddWithValue("@nombre", nombre);
+
+           
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            if (reader.Read())
+            {
+
+                this.codigo = Convert.ToString(reader["codigo"]);
+                this.idArticulo = Convert.ToInt32(reader["idArticulo"]);
+                this.idCategoria = Convert.ToInt32(reader["idcategoria"]);
+                this.stockActual = Convert.ToInt32(reader["stock_actual"]);
+                this.nombre = Convert.ToString(reader["nombre"]);
+                this.descripcion = Convert.ToString(reader["descripcion"]);
+                this.precio = Convert.ToDecimal(reader["precio"]);
+                this.sindatos = true;
+            }
+
+
+            cn.Close();
+
+
+        }
         public string editarPrecio(DatosArticulo articulo)
         {
             //modo 9 para DB

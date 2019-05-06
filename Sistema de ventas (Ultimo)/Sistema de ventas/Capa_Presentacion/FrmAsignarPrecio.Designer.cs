@@ -37,11 +37,9 @@
             this.lblKg = new System.Windows.Forms.Label();
             this.txtPrecioxKg = new System.Windows.Forms.TextBox();
             this.lblPrecioXKg = new System.Windows.Forms.Label();
-            this.btnProducto = new System.Windows.Forms.Button();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnProducto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtNombreProducto
@@ -141,18 +139,6 @@
             this.lblPrecioXKg.TabIndex = 26;
             this.lblPrecioXKg.Text = "Precio x Kg";
             // 
-            // btnProducto
-            // 
-            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
-            this.btnProducto.Location = new System.Drawing.Point(634, 29);
-            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.btnProducto.Name = "btnProducto";
-            this.btnProducto.Size = new System.Drawing.Size(26, 28);
-            this.btnProducto.TabIndex = 2;
-            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnProducto.UseVisualStyleBackColor = true;
-            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
-            // 
             // txtCodigo
             // 
             this.txtCodigo.Enabled = false;
@@ -173,23 +159,17 @@
             this.lblCodigo.TabIndex = 28;
             this.lblCodigo.Text = "Codigo";
             // 
-            // dataGridView1
+            // btnProducto
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.dataGridView1.Location = new System.Drawing.Point(193, 64);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(433, 87);
-            this.dataGridView1.TabIndex = 37;
-            this.dataGridView1.Visible = false;
-            this.dataGridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGridView1_KeyDown);
+            this.btnProducto.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnProducto.Location = new System.Drawing.Point(634, 29);
+            this.btnProducto.Margin = new System.Windows.Forms.Padding(4, 7, 4, 7);
+            this.btnProducto.Name = "btnProducto";
+            this.btnProducto.Size = new System.Drawing.Size(26, 28);
+            this.btnProducto.TabIndex = 2;
+            this.btnProducto.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnProducto.UseVisualStyleBackColor = true;
+            this.btnProducto.Click += new System.EventHandler(this.btnProducto_Click);
             // 
             // FrmAsignarPrecio
             // 
@@ -197,7 +177,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(669, 277);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtCodigo);
             this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.btnProducto);
@@ -222,7 +201,6 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmAsignarPrecio_FormClosing);
             this.Load += new System.EventHandler(this.FrmAsignarPrecio_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmAsignarPrecio_KeyDown);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,6 +220,5 @@
         private System.Windows.Forms.Button btnProducto;
         private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblCodigo;
-        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

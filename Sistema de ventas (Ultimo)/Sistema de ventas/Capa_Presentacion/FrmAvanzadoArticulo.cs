@@ -571,6 +571,11 @@ namespace Capa_Presentacion
             }
         }
 
+        private void FrmAvanzadoArticulo_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            isCerro = true;
+        }
+
 
 
 

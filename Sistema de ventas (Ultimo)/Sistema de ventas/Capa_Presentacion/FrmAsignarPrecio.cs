@@ -32,28 +32,31 @@ namespace Capa_Presentacion
 
             InitializeComponent();
             txtNombreProducto.Text = this.Producto;
+
+          
         }
 
-       
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void FrmAsignarPrecio_Load(object sender, EventArgs e)
         {
+
+            txtNombreProducto.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtNombreProducto.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtNombreProducto.AutoCompleteCustomSource = this.mostrarProductosPesables();
             
+        }
 
-            if (txtNombreProducto.Text==string.Empty||txtPrecio.Text==string.Empty||txtKgReal.Text==string.Empty||txtPrecioxKg.Text==string.Empty)
-            {
-                UtilityFrm.mensajeError("el precio no puede ser 0");
-            }else{
-                PrecioTotal = Convert.ToDecimal(txtPrecio.Text);
-                Producto = txtNombreProducto.Text;
-                PrecioTotal = Convert.ToDecimal(txtPrecio.Text);
-                PrecioXKg = Convert.ToDecimal(txtPrecioxKg.Text);
-                KgReal = Convert.ToDecimal(txtKgReal.Text);
-                codigo = Convert.ToInt32(txtCodigo.Text);
+        public AutoCompleteStringCollection mostrarProductosPesables() {
 
-                this.Close();
-                
-            this.isCerro = false;
-            }
+            DataTable dt = NegocioArticulo.mostrarPesable();
+          AutoCompleteStringCollection autoCompleteStringCol = new AutoCompleteStringCollection();
+
+         
+          foreach (DataRow row in dt.Rows)
+          {
+              autoCompleteStringCol.Add(row["nombre"].ToString());
+          }
+          return autoCompleteStringCol;
+            
         }
         //propiedades
         public string Producto
@@ -92,6 +95,30 @@ namespace Capa_Presentacion
         {
             get { return isCerro; }
             set { isCerro = value; }
+        }
+
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+
+
+            if (txtNombreProducto.Text == string.Empty || txtPrecio.Text == string.Empty || txtKgReal.Text == string.Empty || txtPrecioxKg.Text == string.Empty)
+            {
+                UtilityFrm.mensajeError("el precio no puede ser 0");
+            }
+            else
+            {
+                PrecioTotal = Convert.ToDecimal(txtPrecio.Text);
+                Producto = txtNombreProducto.Text;
+                PrecioTotal = Convert.ToDecimal(txtPrecio.Text);
+                PrecioXKg = Convert.ToDecimal(txtPrecioxKg.Text);
+                KgReal = Convert.ToDecimal(txtKgReal.Text);
+                codigo = Convert.ToInt32(txtCodigo.Text);
+
+                this.Close();
+
+                this.isCerro = false;
+            }
         }
         private void txtPrecio_KeyDown(object sender, KeyEventArgs e)
         {
@@ -205,10 +232,7 @@ namespace Capa_Presentacion
             this.isCerro = true;
         }
 
-        private void FrmAsignarPrecio_Load(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void btnProducto_Click(object sender, EventArgs e)
         {
@@ -228,14 +252,16 @@ namespace Capa_Presentacion
 
         private void txtNombreProducto_TextChanged(object sender, EventArgs e)
         {
-            if (txtNombreProducto.Text.Length > 0&&IsNumeric(txtNombreProducto.Text)==false)
-            {
-                dataGridView1.Visible = true;
-                txtPrecio.Enabled = true;
 
+            if (txtNombreProducto.Text.Length > 0 && IsNumeric(txtNombreProducto.Text) == false)
+            {
+              
+                txtPrecio.Enabled = true;
+                
             }
-            else {
-                dataGridView1.Visible = false;
+            else
+            {
+               
                 txtPrecio.Enabled = false;
                 UtilityFrm.limpiarTextbox(txtPrecio);
             }
@@ -255,39 +281,6 @@ namespace Capa_Presentacion
             }
         }
 
-        private void dataGridView1_KeyDown(object sender, KeyEventArgs e)
-        {
-            try
-            {
-
-
-                if (e.KeyCode == Keys.Enter)
-                {
-                    Buscar_producto(Convert.ToInt32(this.dataGridView1.CurrentRow.Cells["idarticulo"].Value), "poridarticulo");
-                    dataGridView1.Visible = false;
-                    txtNombreProducto.Focus();
-                }
-                else if (e.KeyCode == Keys.Up)
-                {
-                    //pasa de la lista al campo nombreProducto 
-                    if (dataGridView1.Rows.Count > 0 && dataGridView1.Rows[0].Selected)
-                    {
-                        txtNombreProducto.Focus();
-                        txtNombreProducto.SelectAll();
-
-                    }
-                }
-
-            }
-            catch (Exception ex)
-            {
-
-                UtilityFrm.mensajeError("No hay datos asignados " + ex.Message);
-                dataGridView1.Visible = true;
-                txtNombreProducto.Focus();
-            }
-
-        }
 
         private void Buscar_producto(int codproducto, string tipo)
         {
@@ -330,57 +323,68 @@ namespace Capa_Presentacion
 
         private void txtNombreProducto_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Down && dataGridView1.Visible == true)
+            //if (e.KeyCode == Keys.Down && dataGridView1.Visible == true)
+            //{
+            //    //si se preciona la tecla hacia abajo se pasa el foco a la grilla
+            //    dataGridView1.Focus();
+
+            //}
+
+            if (e.KeyCode == Keys.Enter)
             {
-                //si se preciona la tecla hacia abajo se pasa el foco a la grilla
-                dataGridView1.Focus();
-
-            }
-
-            if (e.KeyCode == Keys.Enter )
-            {
-
 
                 if (txtNombreProducto.Text.Length > 0)
                 {
+
                     //se pasa el control permitiendo eliminar el beep
                     e.SuppressKeyPress = true;
 
                     try
                     {
-                        //if (txtNombreProducto.TextLength == 13 && IsNumeric(txtNombreProducto.Text) == true)
-                        //{
-                        //    Buscar_producto(Convert.ToInt64(txtNombreProducto.Text), "porbarra");
+                        if (txtNombreProducto.TextLength == 13 && IsNumeric(txtNombreProducto.Text) == true)
+                        {
+                            Buscar_producto(Convert.ToInt64(txtNombreProducto.Text), "porbarra");
 
 
-                        //}
+                        }
                         IsNumeric(txtNombreProducto.Text);
                         if (IsNumeric(txtNombreProducto.Text) == true)
                         {
                             Buscar_producto(Convert.ToInt64(txtNombreProducto.Text), "poridarticulo");
                         }
-                        txtPrecio.Focus();
-                        dataGridView1.Visible = false;
+                        else if (IsNumeric(txtNombreProducto.Text) == false)
+                        {
+                            Buscar_producto(txtNombreProducto.Text, "pornombre");
+
+                            //NegocioArticulo art= NegocioArticulo.extraerdatosPesable(txtNombreProducto.Text, "pornombre");
+                            //txtPrecioxKg.Text = Convert.ToString(decimal.Round(art.Precio, 2));
+
+                            //txtCodigo.Text = art.IdArticulo.ToString();
+                        }
+                        
+
 
                     }
                     catch (Exception ex)
                     {
 
                         UtilityFrm.mensajeError("Error: " + ex.Message);
-                        dataGridView1.Visible = false;
+
                     }
 
-                }
-                else {
-                    UtilityFrm.mensajeError("Error: El nombre de Producto o codigo está vacio");
                 
-                
-                }
-           
-                    
+            }
+            else
+            {
+
+                UtilityFrm.mensajeError("Error: El nombre de Producto o codigo está vacio");
 
 
-             }
+            }
+
+            }
+
+             
                
         }
 
@@ -393,20 +397,20 @@ namespace Capa_Presentacion
 
         public void Buscar_producto(long codproducto, string tipo)
         {
-            NegocioArticulo objnart = new NegocioArticulo();
-     
+           
 
-            objnart.extraerdatos(codproducto, tipo);
 
-            if (objnart.Sindatos == true)
+            NegocioArticulo art=NegocioArticulo.extraerdatosPesable(codproducto, tipo);
+
+            if (art.Sindatos == true)
             {
 
 
 
-                txtNombreProducto.Text = objnart.Nombre;
-                txtPrecioxKg.Text = Convert.ToString(decimal.Round(objnart.Precio, 2));
-                txtCodigo.Text = Convert.ToString(objnart.IdArticulo);
-
+                txtNombreProducto.Text = art.Nombre;
+                txtPrecioxKg.Text = Convert.ToString(decimal.Round(art.Precio, 2));
+                txtCodigo.Text = Convert.ToString(art.IdArticulo);
+                txtPrecio.Focus();
              
 
                 
@@ -426,7 +430,41 @@ namespace Capa_Presentacion
 
             }
         }
+        public void Buscar_producto(string nombre, string tipo)
+        {
 
+
+            NegocioArticulo art= NegocioArticulo.extraerdatosPesable(txtNombreProducto.Text, "pornombre");
+        
+
+            if (art.Sindatos == true)
+            {
+
+
+
+                txtNombreProducto.Text = art.Nombre;
+                txtPrecioxKg.Text = Convert.ToString(decimal.Round(art.Precio, 2));
+                txtCodigo.Text = Convert.ToString(art.IdArticulo);
+
+                txtPrecio.Focus();
+
+
+
+
+            }
+            else
+            {
+                // UtilityFrm.mensajeError( "No es una clave valida");
+
+                FrmMensajeAutoCierre.Show("No es una clave valida", "Error", 1000);
+
+
+
+
+                txtNombreProducto.SelectAll();
+
+            }
+        }
         private void FrmAsignarPrecio_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyCode==Keys.Escape){
