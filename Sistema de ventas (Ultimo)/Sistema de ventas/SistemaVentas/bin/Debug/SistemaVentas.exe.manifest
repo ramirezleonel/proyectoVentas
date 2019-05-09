@@ -228,7 +228,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>n3kiRyEfMwiwgxna4EyjS+08t948lI+5t/OGKBPWVLc=</dsig:DigestValue>
+        <dsig:DigestValue>bgiHL7KgoZSdbgRLIOEv9209mWsWSXCICHdaJz5IXgs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -341,14 +341,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11598848">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11599360">
       <assemblyIdentity name="SistemaVentas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>MJIylh1U8i2H4KhaMLKB9fWVvVVGTM5KGPojqRoSZAI=</dsig:DigestValue>
+        <dsig:DigestValue>PBS7tRm0UCPbsCrwgiq5bE9691mGeLPKNdGpGpuUZ24=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

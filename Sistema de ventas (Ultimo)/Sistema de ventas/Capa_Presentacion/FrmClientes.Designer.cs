@@ -470,6 +470,7 @@
             this.ClientSize = new System.Drawing.Size(900, 700);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblClientes);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmClientes";
             this.Text = "Clientes";

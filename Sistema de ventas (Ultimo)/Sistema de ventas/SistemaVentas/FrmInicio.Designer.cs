@@ -31,7 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInicio));
             this.panelHorizontal = new System.Windows.Forms.Panel();
             this.pnlSeparacion = new System.Windows.Forms.Panel();
+            this.btnMaximizar = new System.Windows.Forms.PictureBox();
             this.lblSistemaVenta = new System.Windows.Forms.Label();
+            this.btnRestaurar = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
+            this.btnCerrar = new System.Windows.Forms.PictureBox();
             this.pnProductos = new System.Windows.Forms.Panel();
             this.pnVentas = new System.Windows.Forms.Panel();
             this.pnProveedor = new System.Windows.Forms.Panel();
@@ -43,6 +47,7 @@
             this.pnCategoria = new System.Windows.Forms.Panel();
             this.pnlistaProducto = new System.Windows.Forms.Panel();
             this.panelVertical = new System.Windows.Forms.Panel();
+            this.pnConfig = new System.Windows.Forms.Panel();
             this.lbl8 = new System.Windows.Forms.Label();
             this.lbl7 = new System.Windows.Forms.Label();
             this.lbl6 = new System.Windows.Forms.Label();
@@ -53,36 +58,31 @@
             this.pnGenerarVenta = new System.Windows.Forms.Panel();
             this.btnListaVenta = new System.Windows.Forms.Button();
             this.lbl2 = new System.Windows.Forms.Label();
+            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnConsultas = new System.Windows.Forms.Button();
             this.pnStock = new System.Windows.Forms.Panel();
-            this.lbl1 = new System.Windows.Forms.Label();
-            this.pnConsultas = new System.Windows.Forms.Panel();
-            this.btnGenerarVenta = new System.Windows.Forms.Button();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pnConfig = new System.Windows.Forms.Panel();
-            this.panelPrincipal = new System.Windows.Forms.Panel();
-            this.sgpProgresoFormulario = new Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress();
-            this.btnConfiguracion = new System.Windows.Forms.Button();
             this.btnStock = new System.Windows.Forms.Button();
             this.btnUsuarios = new System.Windows.Forms.Button();
             this.btnCaja = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl1 = new System.Windows.Forms.Label();
+            this.pnConsultas = new System.Windows.Forms.Panel();
             this.btnProductos = new System.Windows.Forms.Button();
             this.btnVentas = new System.Windows.Forms.Button();
+            this.btnGenerarVenta = new System.Windows.Forms.Button();
             this.btnProveedor = new System.Windows.Forms.Button();
-            this.btnMaximizar = new System.Windows.Forms.PictureBox();
-            this.btnRestaurar = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
-            this.btnCerrar = new System.Windows.Forms.PictureBox();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.panelPrincipal = new System.Windows.Forms.Panel();
+            this.sgpProgresoFormulario = new Microsoft.TeamFoundation.Controls.WinForms.SpinningProgress();
             this.panelHorizontal.SuspendLayout();
-            this.panelVertical.SuspendLayout();
-            this.panelPrincipal.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).BeginInit();
+            this.panelVertical.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelHorizontal
@@ -100,7 +100,6 @@
             this.panelHorizontal.Name = "panelHorizontal";
             this.panelHorizontal.Size = new System.Drawing.Size(1028, 37);
             this.panelHorizontal.TabIndex = 0;
-            this.panelHorizontal.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHorizontal_Paint);
             this.panelHorizontal.DoubleClick += new System.EventHandler(this.panelHorizontal_DoubleClick);
             this.panelHorizontal.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panelHorizontal_MouseMove);
             // 
@@ -115,6 +114,20 @@
             this.pnlSeparacion.Name = "pnlSeparacion";
             this.pnlSeparacion.Size = new System.Drawing.Size(1026, 2);
             this.pnlSeparacion.TabIndex = 0;
+            // 
+            // btnMaximizar
+            // 
+            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
+            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMaximizar.Location = new System.Drawing.Point(960, 5);
+            this.btnMaximizar.Name = "btnMaximizar";
+            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMaximizar.TabIndex = 5;
+            this.btnMaximizar.TabStop = false;
+            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
+            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
+            this.btnMaximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMaximizar_MouseMove);
             // 
             // lblSistemaVenta
             // 
@@ -131,6 +144,50 @@
             this.lblSistemaVenta.Text = "SISTEMA DE VENTAS";
             this.lblSistemaVenta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSistemaVenta.Click += new System.EventHandler(this.lblSistemaVenta_Click);
+            // 
+            // btnRestaurar
+            // 
+            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
+            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnRestaurar.Location = new System.Drawing.Point(959, 5);
+            this.btnRestaurar.Name = "btnRestaurar";
+            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
+            this.btnRestaurar.TabIndex = 2;
+            this.btnRestaurar.TabStop = false;
+            this.btnRestaurar.Visible = false;
+            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
+            this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
+            this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
+            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnMinimizar.Location = new System.Drawing.Point(927, 5);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
+            this.btnMinimizar.TabIndex = 1;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
+            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
+            // 
+            // btnCerrar
+            // 
+            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
+            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
+            this.btnCerrar.Location = new System.Drawing.Point(993, 5);
+            this.btnCerrar.Name = "btnCerrar";
+            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
+            this.btnCerrar.TabIndex = 0;
+            this.btnCerrar.TabStop = false;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
+            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
+            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
             // 
             // pnProductos
             // 
@@ -281,6 +338,14 @@
             this.panelVertical.Size = new System.Drawing.Size(300, 686);
             this.panelVertical.TabIndex = 1;
             // 
+            // pnConfig
+            // 
+            this.pnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.pnConfig.Location = new System.Drawing.Point(-2, 460);
+            this.pnConfig.Name = "pnConfig";
+            this.pnConfig.Size = new System.Drawing.Size(5, 46);
+            this.pnConfig.TabIndex = 27;
+            // 
             // lbl8
             // 
             this.lbl8.AutoSize = true;
@@ -402,6 +467,24 @@
             this.lbl2.Text = "(2)";
             this.lbl2.Visible = false;
             // 
+            // btnConfiguracion
+            // 
+            this.btnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
+            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConfiguracion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfiguracion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
+            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnConfiguracion.Location = new System.Drawing.Point(3, 460);
+            this.btnConfiguracion.Name = "btnConfiguracion";
+            this.btnConfiguracion.Size = new System.Drawing.Size(296, 46);
+            this.btnConfiguracion.TabIndex = 12;
+            this.btnConfiguracion.Text = "Configuración";
+            this.btnConfiguracion.UseVisualStyleBackColor = false;
+            // 
             // btnConsultas
             // 
             this.btnConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -428,102 +511,6 @@
             this.pnStock.Name = "pnStock";
             this.pnStock.Size = new System.Drawing.Size(5, 46);
             this.pnStock.TabIndex = 26;
-            // 
-            // lbl1
-            // 
-            this.lbl1.AutoSize = true;
-            this.lbl1.BackColor = System.Drawing.Color.OldLace;
-            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(274, 121);
-            this.lbl1.Name = "lbl1";
-            this.lbl1.Size = new System.Drawing.Size(28, 20);
-            this.lbl1.TabIndex = 0;
-            this.lbl1.Text = "(1)";
-            this.lbl1.Visible = false;
-            // 
-            // pnConsultas
-            // 
-            this.pnConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.pnConsultas.Location = new System.Drawing.Point(42, 256);
-            this.pnConsultas.Name = "pnConsultas";
-            this.pnConsultas.Size = new System.Drawing.Size(5, 46);
-            this.pnConsultas.TabIndex = 23;
-            this.pnConsultas.Visible = false;
-            // 
-            // btnGenerarVenta
-            // 
-            this.btnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnGenerarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnGenerarVenta.FlatAppearance.BorderSize = 0;
-            this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnGenerarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGenerarVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGenerarVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnGenerarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGenerarVenta.Location = new System.Drawing.Point(46, 204);
-            this.btnGenerarVenta.Name = "btnGenerarVenta";
-            this.btnGenerarVenta.Size = new System.Drawing.Size(252, 46);
-            this.btnGenerarVenta.TabIndex = 5;
-            this.btnGenerarVenta.Text = "Generar Venta";
-            this.btnGenerarVenta.UseVisualStyleBackColor = false;
-            this.btnGenerarVenta.Visible = false;
-            this.btnGenerarVenta.Click += new System.EventHandler(this.btnGenerarVenta_Click);
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            // 
-            // pnConfig
-            // 
-            this.pnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.pnConfig.Location = new System.Drawing.Point(-2, 460);
-            this.pnConfig.Name = "pnConfig";
-            this.pnConfig.Size = new System.Drawing.Size(5, 46);
-            this.pnConfig.TabIndex = 27;
-            // 
-            // panelPrincipal
-            // 
-            this.panelPrincipal.BackColor = System.Drawing.Color.LightSteelBlue;
-            this.panelPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPrincipal.BackgroundImage")));
-            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelPrincipal.Controls.Add(this.sgpProgresoFormulario);
-            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrincipal.Location = new System.Drawing.Point(300, 37);
-            this.panelPrincipal.Name = "panelPrincipal";
-            this.panelPrincipal.Size = new System.Drawing.Size(728, 686);
-            this.panelPrincipal.TabIndex = 2;
-            // 
-            // sgpProgresoFormulario
-            // 
-            this.sgpProgresoFormulario.BackColor = System.Drawing.Color.Transparent;
-            this.sgpProgresoFormulario.InnerRadius = 8;
-            this.sgpProgresoFormulario.IsSpinning = true;
-            this.sgpProgresoFormulario.Location = new System.Drawing.Point(240, 229);
-            this.sgpProgresoFormulario.Name = "sgpProgresoFormulario";
-            this.sgpProgresoFormulario.OuterRadius = 9;
-            this.sgpProgresoFormulario.Size = new System.Drawing.Size(199, 101);
-            this.sgpProgresoFormulario.TabIndex = 0;
-            this.sgpProgresoFormulario.Visible = false;
-            // 
-            // btnConfiguracion
-            // 
-            this.btnConfiguracion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
-            this.btnConfiguracion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnConfiguracion.FlatAppearance.BorderSize = 0;
-            this.btnConfiguracion.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
-            this.btnConfiguracion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConfiguracion.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConfiguracion.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnConfiguracion.Image = ((System.Drawing.Image)(resources.GetObject("btnConfiguracion.Image")));
-            this.btnConfiguracion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnConfiguracion.Location = new System.Drawing.Point(3, 460);
-            this.btnConfiguracion.Name = "btnConfiguracion";
-            this.btnConfiguracion.Size = new System.Drawing.Size(296, 46);
-            this.btnConfiguracion.TabIndex = 12;
-            this.btnConfiguracion.Text = "Configuración";
-            this.btnConfiguracion.UseVisualStyleBackColor = false;
-            this.btnConfiguracion.Click += new System.EventHandler(this.btnTecnico_Click);
             // 
             // btnStock
             // 
@@ -612,6 +599,27 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
+            // lbl1
+            // 
+            this.lbl1.AutoSize = true;
+            this.lbl1.BackColor = System.Drawing.Color.OldLace;
+            this.lbl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Location = new System.Drawing.Point(274, 121);
+            this.lbl1.Name = "lbl1";
+            this.lbl1.Size = new System.Drawing.Size(28, 20);
+            this.lbl1.TabIndex = 0;
+            this.lbl1.Text = "(1)";
+            this.lbl1.Visible = false;
+            // 
+            // pnConsultas
+            // 
+            this.pnConsultas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.pnConsultas.Location = new System.Drawing.Point(42, 256);
+            this.pnConsultas.Name = "pnConsultas";
+            this.pnConsultas.Size = new System.Drawing.Size(5, 46);
+            this.pnConsultas.TabIndex = 23;
+            this.pnConsultas.Visible = false;
+            // 
             // btnProductos
             // 
             this.btnProductos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -650,6 +658,25 @@
             this.btnVentas.UseVisualStyleBackColor = false;
             this.btnVentas.Click += new System.EventHandler(this.btnVentas_Click);
             // 
+            // btnGenerarVenta
+            // 
+            this.btnGenerarVenta.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
+            this.btnGenerarVenta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnGenerarVenta.FlatAppearance.BorderSize = 0;
+            this.btnGenerarVenta.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(180)))));
+            this.btnGenerarVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGenerarVenta.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarVenta.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnGenerarVenta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGenerarVenta.Location = new System.Drawing.Point(46, 204);
+            this.btnGenerarVenta.Name = "btnGenerarVenta";
+            this.btnGenerarVenta.Size = new System.Drawing.Size(252, 46);
+            this.btnGenerarVenta.TabIndex = 5;
+            this.btnGenerarVenta.Text = "Generar Venta";
+            this.btnGenerarVenta.UseVisualStyleBackColor = false;
+            this.btnGenerarVenta.Visible = false;
+            this.btnGenerarVenta.Click += new System.EventHandler(this.btnGenerarVenta_Click);
+            // 
             // btnProveedor
             // 
             this.btnProveedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(32)))), ((int)(((byte)(40)))));
@@ -669,63 +696,36 @@
             this.btnProveedor.UseVisualStyleBackColor = false;
             this.btnProveedor.Click += new System.EventHandler(this.btnProveedor_Click);
             // 
-            // btnMaximizar
+            // backgroundWorker1
             // 
-            this.btnMaximizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMaximizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaximizar.BackgroundImage")));
-            this.btnMaximizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMaximizar.Location = new System.Drawing.Point(960, 5);
-            this.btnMaximizar.Name = "btnMaximizar";
-            this.btnMaximizar.Size = new System.Drawing.Size(22, 25);
-            this.btnMaximizar.TabIndex = 5;
-            this.btnMaximizar.TabStop = false;
-            this.btnMaximizar.Click += new System.EventHandler(this.btnMaximizar_Click);
-            this.btnMaximizar.MouseLeave += new System.EventHandler(this.btnMaximizar_MouseLeave);
-            this.btnMaximizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMaximizar_MouseMove);
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
-            // btnRestaurar
+            // panelPrincipal
             // 
-            this.btnRestaurar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRestaurar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRestaurar.BackgroundImage")));
-            this.btnRestaurar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnRestaurar.Location = new System.Drawing.Point(959, 5);
-            this.btnRestaurar.Name = "btnRestaurar";
-            this.btnRestaurar.Size = new System.Drawing.Size(22, 25);
-            this.btnRestaurar.TabIndex = 2;
-            this.btnRestaurar.TabStop = false;
-            this.btnRestaurar.Visible = false;
-            this.btnRestaurar.Click += new System.EventHandler(this.btnRestaurar_Click);
-            this.btnRestaurar.MouseLeave += new System.EventHandler(this.btnRestaurar_MouseLeave);
-            this.btnRestaurar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnRestaurar_MouseMove);
+            this.panelPrincipal.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.panelPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelPrincipal.BackgroundImage")));
+            this.panelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelPrincipal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelPrincipal.Controls.Add(this.sgpProgresoFormulario);
+            this.panelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrincipal.Location = new System.Drawing.Point(300, 37);
+            this.panelPrincipal.Name = "panelPrincipal";
+            this.panelPrincipal.Size = new System.Drawing.Size(728, 686);
+            this.panelPrincipal.TabIndex = 2;
             // 
-            // btnMinimizar
+            // sgpProgresoFormulario
             // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.BackgroundImage")));
-            this.btnMinimizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnMinimizar.Location = new System.Drawing.Point(927, 5);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(22, 25);
-            this.btnMinimizar.TabIndex = 1;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            this.btnMinimizar.MouseLeave += new System.EventHandler(this.btnMinimizar_MouseLeave);
-            this.btnMinimizar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnMinimizar_MouseMove);
-            // 
-            // btnCerrar
-            // 
-            this.btnCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCerrar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.BackgroundImage")));
-            this.btnCerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnCerrar.ErrorImage = ((System.Drawing.Image)(resources.GetObject("btnCerrar.ErrorImage")));
-            this.btnCerrar.Location = new System.Drawing.Point(993, 5);
-            this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(22, 25);
-            this.btnCerrar.TabIndex = 0;
-            this.btnCerrar.TabStop = false;
-            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
-            this.btnCerrar.MouseLeave += new System.EventHandler(this.btnCerrar_MouseLeave);
-            this.btnCerrar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btnCerrar_MouseMove);
+            this.sgpProgresoFormulario.BackColor = System.Drawing.Color.Transparent;
+            this.sgpProgresoFormulario.InnerRadius = 8;
+            this.sgpProgresoFormulario.IsSpinning = true;
+            this.sgpProgresoFormulario.Location = new System.Drawing.Point(240, 229);
+            this.sgpProgresoFormulario.Name = "sgpProgresoFormulario";
+            this.sgpProgresoFormulario.OuterRadius = 9;
+            this.sgpProgresoFormulario.Size = new System.Drawing.Size(199, 101);
+            this.sgpProgresoFormulario.TabIndex = 0;
+            this.sgpProgresoFormulario.Visible = false;
             // 
             // FrmInicio
             // 
@@ -735,6 +735,7 @@
             this.Controls.Add(this.panelPrincipal);
             this.Controls.Add(this.panelVertical);
             this.Controls.Add(this.panelHorizontal);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.KeyPreview = true;
             this.Name = "FrmInicio";
@@ -744,14 +745,14 @@
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.FrmInicio_KeyDown);
             this.panelHorizontal.ResumeLayout(false);
             this.panelHorizontal.PerformLayout();
-            this.panelVertical.ResumeLayout(false);
-            this.panelVertical.PerformLayout();
-            this.panelPrincipal.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMaximizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnRestaurar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCerrar)).EndInit();
+            this.panelVertical.ResumeLayout(false);
+            this.panelVertical.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelPrincipal.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

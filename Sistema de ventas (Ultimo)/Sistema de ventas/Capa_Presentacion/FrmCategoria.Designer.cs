@@ -204,7 +204,7 @@
             this.tabAgregarOcambiar.Location = new System.Drawing.Point(4, 29);
             this.tabAgregarOcambiar.Name = "tabAgregarOcambiar";
             this.tabAgregarOcambiar.Padding = new System.Windows.Forms.Padding(3);
-            this.tabAgregarOcambiar.Size = new System.Drawing.Size(833, 526);
+            this.tabAgregarOcambiar.Size = new System.Drawing.Size(847, 526);
             this.tabAgregarOcambiar.TabIndex = 1;
             this.tabAgregarOcambiar.Text = "Agregar o cambiar";
             this.tabAgregarOcambiar.UseVisualStyleBackColor = true;
@@ -226,7 +226,7 @@
             this.grpboxCategoria.Controls.Add(this.btnNuevo);
             this.grpboxCategoria.Location = new System.Drawing.Point(20, 26);
             this.grpboxCategoria.Name = "grpboxCategoria";
-            this.grpboxCategoria.Size = new System.Drawing.Size(774, 470);
+            this.grpboxCategoria.Size = new System.Drawing.Size(788, 470);
             this.grpboxCategoria.TabIndex = 0;
             this.grpboxCategoria.TabStop = false;
             this.grpboxCategoria.Text = "Categorias";
@@ -367,6 +367,7 @@
             this.ClientSize = new System.Drawing.Size(879, 657);
             this.Controls.Add(this.lblClientes);
             this.Controls.Add(this.tabControl1);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

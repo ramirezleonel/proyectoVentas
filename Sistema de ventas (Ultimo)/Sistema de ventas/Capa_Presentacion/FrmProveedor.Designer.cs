@@ -468,6 +468,7 @@
             this.ClientSize = new System.Drawing.Size(933, 700);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblProveedor);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmProveedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

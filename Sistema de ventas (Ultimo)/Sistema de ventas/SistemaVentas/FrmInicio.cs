@@ -28,19 +28,23 @@ namespace SistemaVentas
         int InicialConfiguracionY;
         public FrmInicio()
         {
+            
             //le paso al delegado threadStart el metodo abrirformulario
             Thread t = new Thread(new ThreadStart(abrirFormulario));
             t.Start();
             //Thread.Sleep(1000);
             Thread.Sleep(3000);
-
+            Control.CheckForIllegalCrossThreadCalls = false; 
+            
             InitializeComponent();
             t.Abort();
         }
 
         private void FrmInicio_Load(object sender, EventArgs e)
         {
+
            
+            // FrmUsuario usuario = new FrmUsuario();
             
             panelHorizontal.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
             
@@ -116,22 +120,49 @@ namespace SistemaVentas
         //metodos
         private  void abrirMDIParent(Form formularioHijo) {
 
-            if (panelPrincipal.Controls.Count > 0)
-            {
-                this.panelPrincipal.Controls.RemoveAt(0);
-            }
-                //forma de mostrarse como ventana de nivel superior desactivada
+           
             
-                formularioHijo.TopLevel = false;
-                formularioHijo.Dock= DockStyle.Fill;
-                this.panelPrincipal.Controls.Add(formularioHijo);
-                this.panelPrincipal.Tag = formularioHijo;
+            Thread TypingThread = new Thread(delegate()
+            {
 
 
-                Thread.Sleep(1000);
-               formularioHijo.Show();
+                // Cambiar el estado de los botones dentro del hilo TypingThread
+                // Esto no generará excepciones de nuevo !
+                if (panelPrincipal.InvokeRequired)
+                {
+                    panelPrincipal.Invoke(new MethodInvoker(delegate
+                    {
+                        
+                        //le paso como delegado para que no tire excepcion a la hora de llamar desde otro hilo el formulario hijo
+                        //forma de mostrarse como ventana de nivel superior desactivada
+                        cerrarPanelPrincipal();
+                        formularioHijo.TopLevel = false;
+                        formularioHijo.Dock = DockStyle.Fill;
+
+
+                        this.panelPrincipal.Controls.Add(formularioHijo);
+                        this.panelPrincipal.Tag = formularioHijo;
+
+
+                        
+                        formularioHijo.Show();
+                    }));
+                }
+            });
+            TypingThread.Start();
+          
         }
-       
+        public void cerrarPanelPrincipal() {
+
+            //le paso como delegado para que no tire excepcion a la hora de llamar desde otro hilo el formulario hijo
+            if (panelPrincipal.Controls.Count == 2)
+            {
+                //this.panelPrincipal.Controls.RemoveAt(0);
+                panelPrincipal.Controls.RemoveAt(1);
+            }
+
+            
+        }
         //maximizar
             //this.btnRestaurar.Visible = true;
             //this.btnMax.Visible = false;
@@ -438,15 +469,9 @@ namespace SistemaVentas
             }
         }
 
-        private void btnIngreso_Click(object sender, EventArgs e)
-        {
-           
-        }
+     
 
-        private void panelHorizontal_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
 
       
 
@@ -472,24 +497,37 @@ namespace SistemaVentas
 
         }
 
-        private void btnTecnico_Click(object sender, EventArgs e)
+        private static void btnTecnico_Click(object sender, EventArgs e)
         {
             FrmConfig configuracion = new FrmConfig();
             configuracion.ShowDialog();
 
         }
+       
 
+
+      
         private void btnUsuarios_Click(object sender, EventArgs e)
         {
 
-            FrmUsuario usuario = new FrmUsuario();
-         
-            sgpProgresoFormulario.Visible = true;
-            abrirMDIParent(usuario);
-
-          //  backgroundWorker1.RunWorkerAsync();
-           
             
+            sgpProgresoFormulario.Visible = true;
+    
+               
+                //abrirMDIParent(usuario);
+               // backgroundWorker2.RunWorkerAsync();
+
+
+
+           
+            backgroundWorker1.RunWorkerAsync();
+          //  backgroundWorker1.RunWorkerAsync();
+          
+          
+           // FrmUsuario usuario = new FrmUsuario();
+
+
+           //abrirMDIParent(usuario);
            // 
 
 
@@ -499,13 +537,13 @@ namespace SistemaVentas
             
         }
 
-        public void mostrarFormularioUsuario()
-        {
-            //espera
-            FrmUsuario usuario = new FrmUsuario();
-            Thread.Sleep(1000);
-            abrirMDIParent(usuario);
-        }
+        //public void mostrarFormularioUsuario()
+        //{
+        //    //espera
+        //    FrmUsuario usuario = new FrmUsuario();
+        //    Thread.Sleep(1000);
+        //    abrirMDIParent(usuario);
+        //}
 
        
 
@@ -566,8 +604,25 @@ namespace SistemaVentas
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-            mostrarFormularioUsuario();
+
+            
+            FrmUsuario usuario = new FrmUsuario();
+
+            Thread.Sleep(500);
+            abrirMDIParent(usuario);
+
+           
         }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            sgpProgresoFormulario.Visible = false;
+        }
+
+       
+
+       
+       
 
       
 

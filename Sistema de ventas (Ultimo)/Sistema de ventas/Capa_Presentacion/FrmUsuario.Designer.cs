@@ -34,6 +34,12 @@
             this.ttMensajeAyuda = new System.Windows.Forms.ToolTip(this.components);
             this.lblClientes = new System.Windows.Forms.Label();
             this.gbDetalleMovimento = new System.Windows.Forms.GroupBox();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.txtConfirmar = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtContraseña = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.btnListar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -41,12 +47,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblNomUsuario = new System.Windows.Forms.Label();
             this.txtProducto = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtContraseña = new System.Windows.Forms.TextBox();
-            this.txtConfirmar = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.errorIcono)).BeginInit();
             this.gbDetalleMovimento.SuspendLayout();
             this.SuspendLayout();
@@ -107,6 +107,72 @@
             this.gbDetalleMovimento.TabIndex = 40;
             this.gbDetalleMovimento.TabStop = false;
             this.gbDetalleMovimento.Text = "Cuentas";
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnCancelar.Enabled = false;
+            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(465, 372);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(105, 40);
+            this.btnCancelar.TabIndex = 72;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnGuardar.Enabled = false;
+            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Location = new System.Drawing.Point(351, 372);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(105, 40);
+            this.btnGuardar.TabIndex = 73;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // txtConfirmar
+            // 
+            this.txtConfirmar.Enabled = false;
+            this.txtConfirmar.Location = new System.Drawing.Point(240, 314);
+            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtConfirmar.Name = "txtConfirmar";
+            this.txtConfirmar.PasswordChar = '*';
+            this.txtConfirmar.Size = new System.Drawing.Size(179, 26);
+            this.txtConfirmar.TabIndex = 71;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(57, 317);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(165, 20);
+            this.label3.TabIndex = 70;
+            this.label3.Text = "Confirmar Contraseña";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.Enabled = false;
+            this.txtContraseña.Location = new System.Drawing.Point(240, 253);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.PasswordChar = '*';
+            this.txtContraseña.Size = new System.Drawing.Size(179, 26);
+            this.txtContraseña.TabIndex = 69;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(130, 256);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(92, 20);
+            this.label2.TabIndex = 68;
+            this.label2.Text = "Contraseña";
             // 
             // btnListar
             // 
@@ -175,72 +241,6 @@
             this.txtProducto.Size = new System.Drawing.Size(179, 26);
             this.txtProducto.TabIndex = 1;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(130, 256);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 20);
-            this.label2.TabIndex = 68;
-            this.label2.Text = "Contraseña";
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Enabled = false;
-            this.txtContraseña.Location = new System.Drawing.Point(240, 253);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.PasswordChar = '*';
-            this.txtContraseña.Size = new System.Drawing.Size(179, 26);
-            this.txtContraseña.TabIndex = 69;
-            // 
-            // txtConfirmar
-            // 
-            this.txtConfirmar.Enabled = false;
-            this.txtConfirmar.Location = new System.Drawing.Point(240, 314);
-            this.txtConfirmar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtConfirmar.Name = "txtConfirmar";
-            this.txtConfirmar.PasswordChar = '*';
-            this.txtConfirmar.Size = new System.Drawing.Size(179, 26);
-            this.txtConfirmar.TabIndex = 71;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(57, 317);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(165, 20);
-            this.label3.TabIndex = 70;
-            this.label3.Text = "Confirmar Contraseña";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCancelar.Enabled = false;
-            this.btnCancelar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCancelar.Location = new System.Drawing.Point(465, 372);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(105, 40);
-            this.btnCancelar.TabIndex = 72;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnGuardar.Enabled = false;
-            this.btnGuardar.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.Location = new System.Drawing.Point(351, 372);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(105, 40);
-            this.btnGuardar.TabIndex = 73;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
             // FrmUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +250,7 @@
             this.ClientSize = new System.Drawing.Size(636, 546);
             this.Controls.Add(this.gbDetalleMovimento);
             this.Controls.Add(this.lblClientes);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmUsuario";
             this.Text = "Usuario";
