@@ -18,6 +18,8 @@ namespace SistemaVentas
         Boolean isVentaDesplegado = false;
         Boolean isProductoDesplegado = false;
 
+        //para pasarle al MDIPARENTS en el caso de que se necesite
+        private Form ObjetoFormulario=null;
         int InicialusuariosY;
         int InicialproveedorY;
         int InicialclientesY;
@@ -26,6 +28,8 @@ namespace SistemaVentas
         int InicialconsultasY;
         int InicialVentasY;
         int InicialConfiguracionY;
+
+        /*CONSTRUCTOR*/
         public FrmInicio()
         {
             
@@ -40,6 +44,7 @@ namespace SistemaVentas
             t.Abort();
         }
 
+        /*EVENTOS DE FORMULARIO*/
         private void FrmInicio_Load(object sender, EventArgs e)
         {
 
@@ -60,7 +65,6 @@ namespace SistemaVentas
             InicialVentasY = btnVentas.Location.Y;
             InicialConfiguracionY = btnConfiguracion.Location.Y;
         }
-
         private void FrmInicio_KeyDown(object sender, KeyEventArgs e)
         {
            
@@ -108,8 +112,6 @@ namespace SistemaVentas
 
             }
         }
-
-
         public void abrirFormulario()
         {
 
@@ -117,61 +119,9 @@ namespace SistemaVentas
         }
 
         //color panelprincipal 65; 39; 60
-        //metodos
-        private  void abrirMDIParent(Form formularioHijo) {
-
-           
-            
-            Thread TypingThread = new Thread(delegate()
-            {
-
-
-                // Cambiar el estado de los botones dentro del hilo TypingThread
-                // Esto no generará excepciones de nuevo !
-                if (panelPrincipal.InvokeRequired)
-                {
-                    panelPrincipal.Invoke(new MethodInvoker(delegate
-                    {
-                        
-                        //le paso como delegado para que no tire excepcion a la hora de llamar desde otro hilo el formulario hijo
-                        //forma de mostrarse como ventana de nivel superior desactivada
-                        cerrarPanelPrincipal();
-                        formularioHijo.TopLevel = false;
-                        formularioHijo.Dock = DockStyle.Fill;
-
-
-                        this.panelPrincipal.Controls.Add(formularioHijo);
-                        this.panelPrincipal.Tag = formularioHijo;
-
-
-                        
-                        formularioHijo.Show();
-                    }));
-                }
-            });
-            TypingThread.Start();
-          
-        }
-        public void cerrarPanelPrincipal() {
-
-            //le paso como delegado para que no tire excepcion a la hora de llamar desde otro hilo el formulario hijo
-            if (panelPrincipal.Controls.Count == 2)
-            {
-                //this.panelPrincipal.Controls.RemoveAt(0);
-                panelPrincipal.Controls.RemoveAt(1);
-            }
-
-            
-        }
-        //maximizar
-            //this.btnRestaurar.Visible = true;
-            //this.btnMax.Visible = false;
-            //this.WindowState = FormWindowState.Maximized;
-
-   
-
+        
        
-      
+
 
         //VENTANA Y PANEL SUPERIOR
         private void btnRestaurar_Click(object sender, EventArgs e)
@@ -241,43 +191,148 @@ namespace SistemaVentas
         {
             btnCerrar.BackColor = Color.Red;
         }
-
         private void btnCerrar_MouseLeave(object sender, EventArgs e)
         {
             btnCerrar.BackColor=Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
-
         private void btnRestaurar_MouseMove(object sender, MouseEventArgs e)
         {
             btnRestaurar.BackColor = Color.FromArgb(65, 39, 60);
         }
-
         private void btnRestaurar_MouseLeave(object sender, EventArgs e)
         {
             btnRestaurar.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
-       
-
         private void btnMaximizar_MouseMove(object sender, MouseEventArgs e)
         {
             btnMaximizar.BackColor = Color.FromArgb(65, 39, 60);
         }
-
         private void btnMaximizar_MouseLeave(object sender, EventArgs e)
         {
             btnMaximizar.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
-
         private void btnMinimizar_MouseMove(object sender, MouseEventArgs e)
         {
             btnMinimizar.BackColor = Color.FromArgb(65, 39, 60);
         }
-
         private void btnMinimizar_MouseLeave(object sender, EventArgs e)
         {
             btnMinimizar.BackColor = Color.FromArgb(ComponentesFormularios.ColorPanelSuperiorVioleta());
         }
+        private void lblSistemaVenta_Click(object sender, EventArgs e)
+        {
+            if (btnRestaurar.Visible == false || btnMaximizar.Visible == true)
+            {
+                //maximizar
+                this.btnRestaurar.Visible = true;
+                this.btnMaximizar.Visible = false;
+                this.WindowState = FormWindowState.Maximized;
 
+            }
+            else
+            {
+                //maximizar
+                this.btnRestaurar.Visible = false;
+                this.btnMaximizar.Visible = true;
+                this.WindowState = FormWindowState.Normal;
+            }
+        }
+
+
+        /*BOTONES*/
+        private void btnGenerarVenta_Click(object sender, EventArgs e)
+        {
+            cerrarPanelPrincipal();
+            frmPventa objventa = new frmPventa();
+            objventa.ShowDialog();
+        }
+        private void btnCaja_Click(object sender, EventArgs e)
+        {
+            cerrarPanelPrincipal();
+            FrmCaja caja = new FrmCaja();
+            caja.ShowDialog();
+        }
+        private void btnConsultas_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                cerrarPanelPrincipal();
+                FrmConsulta precio = new FrmConsulta();
+                precio.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("error "+ex);
+            }
+            
+
+        }
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+
+            ObjetoFormulario = new FrmUsuario();
+            sgpProgresoFormulario.Visible = true;
+            //ejecuto en segundo plano el cierre de la ventana actual desplegada
+            //y la carga de la nueva
+            backgroundWorker1.RunWorkerAsync();
+        }
+        private void btnListaVenta_Click(object sender, EventArgs e)
+        {
+            cerrarPanelPrincipal(); 
+            FrmListadoVentas listadoVentas = new FrmListadoVentas();
+            listadoVentas.ShowDialog();
+        }
+        private void btnConfiguracion_Click(object sender, EventArgs e)
+        {
+
+            ObjetoFormulario = new FrmConfig();
+            sgpProgresoFormulario.Visible = true;
+            //ejecuto en segundo plano el cierre de la ventana actual desplegada
+            //y la carga de la nueva
+            backgroundWorker1.RunWorkerAsync();
+        }
+        private void btnClientes_Click(object sender, EventArgs e)
+        {
+            ObjetoFormulario = new FrmClientes();
+            sgpProgresoFormulario.Visible = true;
+            //ejecuto en segundo plano el cierre de la ventana actual desplegada
+            //y la carga de la nueva
+            backgroundWorker1.RunWorkerAsync();
+        }
+        private void btnStock_Click(object sender, EventArgs e)
+        {
+
+            cerrarPanelPrincipal();
+            FrmMovStock1 stock = new FrmMovStock1();
+            stock.ShowDialog();
+            //abrirMDIParent(stock);
+        }
+        private void btnProveedor_Click(object sender, EventArgs e)
+        {
+            ObjetoFormulario = new FrmProveedor();
+            sgpProgresoFormulario.Visible = true;
+            //ejecuto en segundo plano el cierre de la ventana actual desplegada
+            //y la carga de la nueva
+            backgroundWorker1.RunWorkerAsync();
+        }
+        private void btnListaProducto_Click(object sender, EventArgs e)
+        {
+            cerrarPanelPrincipal();
+            FrmArticulos articulos = new FrmArticulos();
+            //FrmProducto articulos = new FrmProducto();
+            //abrirMDIParent(articulos);
+            articulos.ShowDialog();
+
+        }
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            ObjetoFormulario = new FrmCategoria();
+            sgpProgresoFormulario.Visible = true;
+            //ejecuto en segundo plano el cierre de la ventana actual desplegada
+            //y la carga de la nueva
+            backgroundWorker1.RunWorkerAsync();
+        }
 
         //BOTONES LATERAL IZQUIERDO
         int usuariosY;
@@ -296,9 +351,10 @@ namespace SistemaVentas
             int movimiento = 155;
             if (btnCategoria.Visible == false && btnListaProducto.Visible == false)
             {
-                
-                if(isVentaDesplegado==true){
-                //si se encuentra desplegado se vuelve al Lugar Inicial
+
+                if (isVentaDesplegado == true)
+                {
+                    //si se encuentra desplegado se vuelve al Lugar Inicial
                     volverAPosicionInicial();
 
                 }
@@ -324,7 +380,7 @@ namespace SistemaVentas
                 //al hacer click en producto se desplaza los submenus
                 //sumo la posicion actual más un valor preciso para abarcar la posicion exacta
                 //botones
-                btnVentas.Location = new System.Drawing.Point(0, (ventasY+movimiento));
+                btnVentas.Location = new System.Drawing.Point(0, (ventasY + movimiento));
                 btnProveedor.Location = new System.Drawing.Point(0, (proveedorY + movimiento));
                 btnClientes.Location = new System.Drawing.Point(0, (clientesY + movimiento));
                 btnCaja.Location = new System.Drawing.Point(0, (cajaY + movimiento));
@@ -332,21 +388,20 @@ namespace SistemaVentas
                 btnStock.Location = new System.Drawing.Point(0, (stockY + movimiento));
                 btnConfiguracion.Location = new System.Drawing.Point(0, (configuracionY + movimiento));
                 //paneles
-                pnVentas.Location=new System.Drawing.Point(0, (ventasY+movimiento));
-                pnProveedor.Location=new System.Drawing.Point(0, (proveedorY+movimiento));
-                pnClientes.Location=new System.Drawing.Point(0, (clientesY + movimiento));
-                pnCaja.Location=new System.Drawing.Point(0, (cajaY + movimiento));
+                pnVentas.Location = new System.Drawing.Point(0, (ventasY + movimiento));
+                pnProveedor.Location = new System.Drawing.Point(0, (proveedorY + movimiento));
+                pnClientes.Location = new System.Drawing.Point(0, (clientesY + movimiento));
+                pnCaja.Location = new System.Drawing.Point(0, (cajaY + movimiento));
                 pnUsuarios.Location = new System.Drawing.Point(0, (usuariosY + movimiento));
                 pnStock.Location = new System.Drawing.Point(0, (stockY + movimiento));
                 pnConfig.Location = new System.Drawing.Point(0, (configuracionY + movimiento));
             }
-            else {
+            else
+            {
                 volverAPosicionInicial();
-          
+
             }
         }
-
-     
         private void btnVentas_Click(object sender, EventArgs e)
         {
 
@@ -355,7 +410,7 @@ namespace SistemaVentas
 
             if (btnGenerarVenta.Visible == false && btnListaVenta.Visible == false)
             {
-              
+
                 if (isProductoDesplegado == true)
                 {
                     //si se encuentra desplegado se vuelve al Lugar Inicial
@@ -378,7 +433,7 @@ namespace SistemaVentas
                 pnGenerarVenta.Visible = true;
                 pnListaVenta.Visible = true;
                 pnConfig.Visible = true;
-               
+
 
                 //al hacer click en producto se desplaza los submenus
                 //sumo la posicion actual más un valor preciso para abarcar la posicion exacta
@@ -407,159 +462,58 @@ namespace SistemaVentas
             }
 
 
-            
-        }
-        private void btnListaProducto_Click(object sender, EventArgs e)
-        {
-            FrmArticulos articulos = new FrmArticulos();
-            //FrmProducto articulos = new FrmProducto();
-            //abrirMDIParent(articulos);
-            articulos.ShowDialog();
-            
-        }
-
-        private void btnCategoria_Click(object sender, EventArgs e)
-        {
-            FrmCategoria categoria = new FrmCategoria();
-            abrirMDIParent(categoria);
-        }
-
-        private void btnProveedor_Click(object sender, EventArgs e)
-        {
-            sgpProgresoFormulario.Visible = true;
-            FrmProveedor proveedor = new FrmProveedor();
-            abrirMDIParent(proveedor);
-          
-            
-            
 
         }
 
-        private void btnClientes_Click(object sender, EventArgs e)
+        /*METODOS PROPIOS*/
+        //metodos
+        private void abrirMDIParent(Form formularioHijo)
         {
-            FrmClientes clientes = new FrmClientes();
-            abrirMDIParent(clientes);
-        }
 
-        private void btnStock_Click(object sender, EventArgs e)
-        {
-           
-                     
-            FrmMovStock1 stock = new FrmMovStock1();
-            stock.ShowDialog();
-            //abrirMDIParent(stock);
-        }
 
-        private void lblSistemaVenta_Click(object sender, EventArgs e)
-        {
-            if (btnRestaurar.Visible == false || btnMaximizar.Visible == true)
-            {
-                //maximizar
-                this.btnRestaurar.Visible = true;
-                this.btnMaximizar.Visible = false;
-                this.WindowState = FormWindowState.Maximized;
 
-            }
-            else
-            {
-                //maximizar
-                this.btnRestaurar.Visible = false;
-                this.btnMaximizar.Visible = true;
-                this.WindowState = FormWindowState.Normal;
-            }
-        }
-
-     
-
-       
-
-      
-
-        private void btnCaja_Click(object sender, EventArgs e)
-        {
-            FrmCaja caja = new FrmCaja();
-            caja.ShowDialog();
-        }
-
-        private void btnConsultas_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                FrmConsulta precio = new FrmConsulta();
-                precio.ShowDialog();
-            }
-            catch (Exception ex)
+            Thread TypingThread = new Thread(delegate()
             {
 
-                UtilityFrm.mensajeError("error "+ex);
+
+                // Cambiar el estado de los botones dentro del hilo TypingThread
+                // Esto no generará excepciones de nuevo !
+                if (panelPrincipal.InvokeRequired)
+                {
+                    panelPrincipal.Invoke(new MethodInvoker(delegate
+                    {
+
+                        //le paso como delegado para que no tire excepcion a la hora de llamar desde otro hilo el formulario hijo
+                        //forma de mostrarse como ventana de nivel superior desactivada
+
+                        formularioHijo.TopLevel = false;
+                        formularioHijo.Dock = DockStyle.Fill;
+
+
+                        this.panelPrincipal.Controls.Add(formularioHijo);
+                        this.panelPrincipal.Tag = formularioHijo;
+
+
+
+                        formularioHijo.Show();
+                    }));
+                }
+            });
+            TypingThread.Start();
+
+        }
+        public void cerrarPanelPrincipal()
+        {
+
+            //pregunto por el segundo elemento porque el primero es el progress
+            if (panelPrincipal.Controls.Count == 2)
+            {
+
+                panelPrincipal.Controls.RemoveAt(1);
             }
-            
+
 
         }
-
-        private static void btnTecnico_Click(object sender, EventArgs e)
-        {
-            FrmConfig configuracion = new FrmConfig();
-            configuracion.ShowDialog();
-
-        }
-       
-
-
-      
-        private void btnUsuarios_Click(object sender, EventArgs e)
-        {
-
-            
-            sgpProgresoFormulario.Visible = true;
-    
-               
-                //abrirMDIParent(usuario);
-               // backgroundWorker2.RunWorkerAsync();
-
-
-
-           
-            backgroundWorker1.RunWorkerAsync();
-          //  backgroundWorker1.RunWorkerAsync();
-          
-          
-           // FrmUsuario usuario = new FrmUsuario();
-
-
-           //abrirMDIParent(usuario);
-           // 
-
-
-            
-         
-            
-            
-        }
-
-        //public void mostrarFormularioUsuario()
-        //{
-        //    //espera
-        //    FrmUsuario usuario = new FrmUsuario();
-        //    Thread.Sleep(1000);
-        //    abrirMDIParent(usuario);
-        //}
-
-       
-
-        private void btnListaVenta_Click(object sender, EventArgs e)
-        {
-            FrmListadoVentas listadoVentas = new FrmListadoVentas();
-            listadoVentas.ShowDialog();
-        }
-
-     
-
-
-
-       
-
-
         //vuelve a la normalidad todos los botones en el caso de que se encuentren desplegados
         public void volverAPosicionInicial()
         {
@@ -596,28 +550,23 @@ namespace SistemaVentas
             pnConfig.Location = new System.Drawing.Point(0, (InicialConfiguracionY));
         }
 
-        private void btnGenerarVenta_Click(object sender, EventArgs e)
-        {
-            frmPventa objventa = new frmPventa();
-            objventa.ShowDialog();
-        }
-
+        
+        /*METODOS ASYNC*/
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
+            //genera de manera async los formularios 
 
-            
-            FrmUsuario usuario = new FrmUsuario();
-
+            cerrarPanelPrincipal();
             Thread.Sleep(500);
-            abrirMDIParent(usuario);
-
+            abrirMDIParent(ObjetoFormulario);
            
         }
-
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
             sgpProgresoFormulario.Visible = false;
         }
+
+        
 
        
 

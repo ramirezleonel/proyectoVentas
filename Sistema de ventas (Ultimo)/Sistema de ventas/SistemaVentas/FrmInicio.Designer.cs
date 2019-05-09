@@ -484,6 +484,7 @@
             this.btnConfiguracion.TabIndex = 12;
             this.btnConfiguracion.Text = "Configuración";
             this.btnConfiguracion.UseVisualStyleBackColor = false;
+            this.btnConfiguracion.Click += new System.EventHandler(this.btnConfiguracion_Click);
             // 
             // btnConsultas
             // 
