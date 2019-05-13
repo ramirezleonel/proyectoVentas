@@ -719,12 +719,12 @@
             // sgpProgresoFormulario
             // 
             this.sgpProgresoFormulario.BackColor = System.Drawing.Color.Transparent;
-            this.sgpProgresoFormulario.InnerRadius = 8;
+            this.sgpProgresoFormulario.InnerRadius = 30;
             this.sgpProgresoFormulario.IsSpinning = true;
-            this.sgpProgresoFormulario.Location = new System.Drawing.Point(240, 229);
+            this.sgpProgresoFormulario.Location = new System.Drawing.Point(306, 261);
             this.sgpProgresoFormulario.Name = "sgpProgresoFormulario";
-            this.sgpProgresoFormulario.OuterRadius = 9;
-            this.sgpProgresoFormulario.Size = new System.Drawing.Size(199, 101);
+            this.sgpProgresoFormulario.OuterRadius = 20;
+            this.sgpProgresoFormulario.Size = new System.Drawing.Size(67, 80);
             this.sgpProgresoFormulario.TabIndex = 0;
             this.sgpProgresoFormulario.Visible = false;
             // 

@@ -162,7 +162,7 @@ namespace Capa_Presentacion
 
         private void txtPrecioVenta_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter&&txtPrecioCompra.Text!="0")
             {
                
                
@@ -172,8 +172,15 @@ namespace Capa_Presentacion
                         txtPrecioVenta.Text += ",00";
 
                     }
-                    e.Handled = false;
+
+                    precioCompra = Convert.ToDecimal(txtPrecioCompra.Text);
+                    precioVenta = Convert.ToDecimal(txtPrecioVenta.Text);
+                    decimal ganancia = precioVenta - precioCompra;
+                    decimal utilidad = decimal.Round((ganancia * 100) / precioCompra,2);
+                    txtUtilidad.Text = utilidad.ToString();
+                e.Handled = false;
                     e.SuppressKeyPress = true;
+                    
                     btnGuardar.Focus(); 
                 
             }

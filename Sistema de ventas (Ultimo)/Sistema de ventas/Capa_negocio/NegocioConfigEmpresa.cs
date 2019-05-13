@@ -30,7 +30,7 @@ namespace Capa_negocio
         }
 
 
-        public static string modificar(string razonSocial, string condicionFrenteIVA, Int64 cuit)
+        public static string modificar(string razonSocial, string condicionFrenteIVA, Int64 cuit, Byte[] logo)
         {
 
 
@@ -38,7 +38,8 @@ namespace Capa_negocio
             empresa.Cuit = cuit;
             empresa.CondicionFrenteIVA = condicionFrenteIVA;
             empresa.RazonSocial = razonSocial;
-            return empresa.agregarEmpresa(empresa);
+            empresa.Logo = logo;
+            return empresa.ModificarEmpresa(empresa);
 
 
         }

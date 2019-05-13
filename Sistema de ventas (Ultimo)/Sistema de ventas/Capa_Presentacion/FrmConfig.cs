@@ -14,6 +14,7 @@ namespace Capa_Presentacion
 {
     public partial class FrmConfig : Form
     {
+        private bool datos=false;
         public FrmConfig()
         {
             InitializeComponent();
@@ -33,13 +34,22 @@ namespace Capa_Presentacion
                 DataTable dt = NegocioConfigEmpresa.mostrar();
                 if (dt.Rows.Count == 1)
                 {
-
+                    //si hay datos el boolean datos se pone a true
+                    datos = true;
                     foreach (DataRow item in dt.Rows)
                     {
                        txtRazonSocial.Text=item["razon_social"].ToString();
                        txtCuit.Text = item["cuit"].ToString();
                        cbxCondicionFrenteIVA.Text = item["condicion_frente_iva"].ToString();
-                        
+                       string imagen1 = item["logo"].ToString();
+                       if (item["logo"].ToString() != "" && item["logo"].ToString() != "null")
+                       {
+                            byte[] imagen = (byte[])(item["logo"]);
+                          
+                            MemoryStream ms = new MemoryStream(imagen);
+                            pbxLogo.Image = Image.FromStream(ms);           
+                        }
+                       
                     }
 
                 }
@@ -82,10 +92,14 @@ namespace Capa_Presentacion
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            activarControles();
-            btnEditar.Enabled = false;
-            btnGuardar.Enabled = true;
-            btnCancelar.Enabled = true;
+            if (MessageBox.Show("Seguro que desea Modificar los datos de su empresa? , esto podria ocasionar un cambio al momento de efectuar la venta", "Modificar"
+                , MessageBoxButtons.YesNo, MessageBoxIcon.Hand) == DialogResult.Yes)
+            {
+                activarControles();
+                btnEditar.Enabled = false;
+                btnGuardar.Enabled = true;
+                btnCancelar.Enabled = true;
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -106,18 +120,67 @@ namespace Capa_Presentacion
                 btnGuardar.Enabled = false;
                 btnCancelar.Enabled = false;
                 MemoryStream ms= new MemoryStream();
-                pbxLogo.Image.Save(ms,ImageFormat.Jpeg);
+                long cuit = txtCuit.Text == string.Empty ? 0 : Convert.ToInt64(txtCuit.Text);
+                string respuesta;
 
-               string respuesta= NegocioConfigEmpresa.agregar(txtRazonSocial.Text, cbxCondicionFrenteIVA.SelectedText, Convert.ToInt64( txtCuit.Text),ms.GetBuffer());
-               if (respuesta.Equals("ok"))
-               {
-                   UtilityFrm.mensajeConfirm("Se Agregó Correctamente");
-               }
-               else {
+                if (datos == true)
+                {
+                    if (pbxLogo.Image != null)
+                    {
+                        pbxLogo.Image.Save(ms, ImageFormat.Jpeg);
 
-                   UtilityFrm.mensajeError(respuesta);
-               
-               }
+                        respuesta = NegocioConfigEmpresa.modificar(txtRazonSocial.Text, "", cuit, ms.GetBuffer());
+                    }
+                    else
+                    {
+                        respuesta = NegocioConfigEmpresa.modificar(txtRazonSocial.Text, "", cuit, null);
+
+
+                    }
+
+
+                    if (respuesta.Equals("ok"))
+                    {
+                        UtilityFrm.mensajeConfirm("Se Agregó Correctamente");
+                        datos = true;
+                    }
+                    else
+                    {
+
+                        UtilityFrm.mensajeError(respuesta);
+                        
+                    }
+
+                }
+                else
+                {
+                    if (pbxLogo.Image != null)
+                    {
+                        pbxLogo.Image.Save(ms, ImageFormat.Jpeg);
+
+                        respuesta = NegocioConfigEmpresa.agregar(txtRazonSocial.Text, "", cuit, ms.GetBuffer());
+
+                    }
+                    else
+                    {
+                        respuesta = NegocioConfigEmpresa.agregar(txtRazonSocial.Text, "", cuit, null);
+
+
+                    }
+
+
+                    if (respuesta.Equals("ok"))
+                    {
+                        UtilityFrm.mensajeConfirm("Se Agregó Correctamente");
+                        datos = true;
+                    }
+                    else
+                    {
+
+                        UtilityFrm.mensajeError(respuesta);
+                      
+                    }
+                }
             }
             catch (Exception ex)
             {
@@ -147,7 +210,8 @@ namespace Capa_Presentacion
 
         private void btnEliminarLogo_Click(object sender, EventArgs e)
         {
-
+            pbxLogo.Image.Dispose();
+            pbxLogo.Image = null;
         }
     }
 }

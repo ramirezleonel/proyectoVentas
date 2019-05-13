@@ -557,7 +557,7 @@ namespace SistemaVentas
             //genera de manera async los formularios 
 
             cerrarPanelPrincipal();
-            Thread.Sleep(500);
+            Thread.Sleep(600);
             abrirMDIParent(ObjetoFormulario);
            
         }

@@ -124,7 +124,7 @@ namespace Capa_Datos
            }
            catch (Exception ex)
            {
-               respuesta = "error conexion: " + ex.Message;
+               throw ex;
 
            }
            return respuesta;
@@ -133,7 +133,7 @@ namespace Capa_Datos
 
        public string ModificarEmpresa(DatosConfigEmpresa configEmpresa)
        {
-           string mensaje = "";
+           string respuesta = "";
            //Modo 1 para DB
            SqlConnection cn = new SqlConnection(Conexion.conexion);
            //le asigno en el constructor el nombre de la tabla
@@ -143,7 +143,7 @@ namespace Capa_Datos
                cn.Open();
 
                SqlCommand comando = ProcAlmacenado.CrearProc(cn, "SP_CONFIG_EMPRESA");
-               //Modo 1 MOSTRAR
+               //Modo 2 modificar
                SqlParameter parModo = ProcAlmacenado.asignarParametros("@modo", SqlDbType.Int, 2);
                comando.Parameters.Add(parModo);
 
@@ -166,13 +166,25 @@ namespace Capa_Datos
                //los resultados los actualizo en el datatable dtResult
                datosResult.Fill(dtResult);
 
+
+               if (comando.ExecuteNonQuery() == 1)
+               {
+                   respuesta = "ok";
+               }
+               else
+               {
+
+                   respuesta = "error";
+               }
+               cn.Close();
+
            }
            catch (Exception ex)
            {
                dtResult = null;
                throw ex;
            }
-           return mensaje;
+           return respuesta;
        }
 
 
