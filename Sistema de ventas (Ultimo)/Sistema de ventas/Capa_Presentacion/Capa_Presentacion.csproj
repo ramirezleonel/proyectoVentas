@@ -574,6 +574,7 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\Synchronize_20px.png" />
     <None Include="Resources\Remove Image_20px.png" />
     <None Include="Resources\Save_20px.png" />
     <None Include="Resources\More1_20px.png" />
@@ -612,6 +613,7 @@
     <None Include="Resources\Add Image_20px.png" />
     <None Include="Resources\Chart_20px.png" />
     <None Include="Resources\Area Chart_20px.png" />
+    <None Include="Resources\Database Backup_100px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

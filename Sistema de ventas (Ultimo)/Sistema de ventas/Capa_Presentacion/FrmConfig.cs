@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Capa_negocio;
 using System.IO;
 using System.Drawing.Imaging;
+using System.Configuration;
 namespace Capa_Presentacion
 {
     public partial class FrmConfig : Form
@@ -212,6 +213,48 @@ namespace Capa_Presentacion
         {
             pbxLogo.Image.Dispose();
             pbxLogo.Image = null;
+        }
+
+        private void txtRuta_TextChanged(object sender, EventArgs e)
+        {
+            if (txtRuta.Text.Length > 0)
+            {
+                btnSincronizar.Enabled = true;
+            }
+            else {
+
+               btnSincronizar.Enabled = false;
+            
+            }
+        }
+       
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FolderBrowserDialog browser = new FolderBrowserDialog();
+                string tempPath = "";
+
+                if (browser.ShowDialog() == DialogResult.OK)
+                {
+                    tempPath = browser.SelectedPath;
+                    txtRuta.Text = tempPath; // prints path
+                }
+                else {
+                    txtRuta.Text = "";
+                
+                }
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("Error al intentar sincronizar: "+ex.Message +" "+ex.StackTrace);
+            }
+        }
+
+        private void btnSincronizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

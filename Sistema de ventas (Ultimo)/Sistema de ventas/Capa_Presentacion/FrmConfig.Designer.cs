@@ -43,8 +43,24 @@
             this.txtRazonSocial = new System.Windows.Forms.TextBox();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblClientes = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabEmpresa = new System.Windows.Forms.TabPage();
+            this.tabBackup = new System.Windows.Forms.TabPage();
+            this.gbxCopiaSeguridad = new System.Windows.Forms.GroupBox();
+            this.pbxBaseDatos = new System.Windows.Forms.PictureBox();
+            this.lblSincronizacion = new System.Windows.Forms.Label();
+            this.lblUltimaVez = new System.Windows.Forms.Label();
+            this.btnSincronizar = new System.Windows.Forms.Button();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.txtRuta = new System.Windows.Forms.TextBox();
+            this.lblGuardarComo = new System.Windows.Forms.Label();
             this.gbxTareas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
+            this.tabControl1.SuspendLayout();
+            this.tabEmpresa.SuspendLayout();
+            this.tabBackup.SuspendLayout();
+            this.gbxCopiaSeguridad.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBaseDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxTareas
@@ -65,9 +81,9 @@
             this.gbxTareas.Controls.Add(this.label2);
             this.gbxTareas.Controls.Add(this.txtRazonSocial);
             this.gbxTareas.Controls.Add(this.lblNombre);
-            this.gbxTareas.Location = new System.Drawing.Point(24, 83);
+            this.gbxTareas.Location = new System.Drawing.Point(10, 27);
             this.gbxTareas.Name = "gbxTareas";
-            this.gbxTareas.Size = new System.Drawing.Size(595, 451);
+            this.gbxTareas.Size = new System.Drawing.Size(568, 401);
             this.gbxTareas.TabIndex = 35;
             this.gbxTareas.TabStop = false;
             this.gbxTareas.Text = "Datos de Empresa";
@@ -77,7 +93,7 @@
             this.btnEliminarLogo.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Remove_Image_20px;
             this.btnEliminarLogo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnEliminarLogo.Enabled = false;
-            this.btnEliminarLogo.Location = new System.Drawing.Point(255, 306);
+            this.btnEliminarLogo.Location = new System.Drawing.Point(240, 283);
             this.btnEliminarLogo.Name = "btnEliminarLogo";
             this.btnEliminarLogo.Size = new System.Drawing.Size(30, 28);
             this.btnEliminarLogo.TabIndex = 64;
@@ -87,7 +103,7 @@
             // pbxLogo
             // 
             this.pbxLogo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pbxLogo.Location = new System.Drawing.Point(215, 220);
+            this.pbxLogo.Location = new System.Drawing.Point(197, 197);
             this.pbxLogo.Name = "pbxLogo";
             this.pbxLogo.Size = new System.Drawing.Size(80, 80);
             this.pbxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,9 +115,9 @@
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditar.Image = global::Capa_Presentacion.Properties.Resources.Edit_Property_20px;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(274, 393);
+            this.btnEditar.Location = new System.Drawing.Point(253, 340);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(97, 38);
+            this.btnEditar.Size = new System.Drawing.Size(96, 38);
             this.btnEditar.TabIndex = 62;
             this.btnEditar.Text = "Modificar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -114,9 +130,9 @@
             this.btnCancelar.Enabled = false;
             this.btnCancelar.Image = global::Capa_Presentacion.Properties.Resources.Delete_File_20px;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(480, 393);
+            this.btnCancelar.Location = new System.Drawing.Point(458, 340);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(97, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(96, 38);
             this.btnCancelar.TabIndex = 60;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -129,9 +145,9 @@
             this.btnGuardar.Enabled = false;
             this.btnGuardar.Image = global::Capa_Presentacion.Properties.Resources.Save_20px;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(377, 393);
+            this.btnGuardar.Location = new System.Drawing.Point(355, 340);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(97, 38);
+            this.btnGuardar.Size = new System.Drawing.Size(96, 38);
             this.btnGuardar.TabIndex = 59;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -161,15 +177,15 @@
             "Pequeño Contribuyente Eventual",
             "Monotributista Social",
             "Pequeño Contribuyente Eventual Social"});
-            this.cbxCondicionFrenteIVA.Location = new System.Drawing.Point(215, 165);
+            this.cbxCondicionFrenteIVA.Location = new System.Drawing.Point(197, 142);
             this.cbxCondicionFrenteIVA.Name = "cbxCondicionFrenteIVA";
-            this.cbxCondicionFrenteIVA.Size = new System.Drawing.Size(238, 28);
+            this.cbxCondicionFrenteIVA.Size = new System.Drawing.Size(279, 28);
             this.cbxCondicionFrenteIVA.TabIndex = 56;
             // 
             // lblCondicion_frenteIva
             // 
             this.lblCondicion_frenteIva.AutoSize = true;
-            this.lblCondicion_frenteIva.Location = new System.Drawing.Point(32, 165);
+            this.lblCondicion_frenteIva.Location = new System.Drawing.Point(14, 142);
             this.lblCondicion_frenteIva.Name = "lblCondicion_frenteIva";
             this.lblCondicion_frenteIva.Size = new System.Drawing.Size(177, 20);
             this.lblCondicion_frenteIva.TabIndex = 55;
@@ -180,17 +196,17 @@
             this.txtCuit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCuit.Location = new System.Drawing.Point(215, 112);
+            this.txtCuit.Location = new System.Drawing.Point(197, 89);
             this.txtCuit.MaxLength = 13;
             this.txtCuit.Name = "txtCuit";
             this.txtCuit.ReadOnly = true;
-            this.txtCuit.Size = new System.Drawing.Size(244, 26);
+            this.txtCuit.Size = new System.Drawing.Size(279, 26);
             this.txtCuit.TabIndex = 55;
             // 
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(163, 112);
+            this.lblCuit.Location = new System.Drawing.Point(145, 89);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(46, 20);
             this.lblCuit.TabIndex = 56;
@@ -201,7 +217,7 @@
             this.btnAgregarImagen.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Add_Image_20px;
             this.btnAgregarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.btnAgregarImagen.Enabled = false;
-            this.btnAgregarImagen.Location = new System.Drawing.Point(219, 306);
+            this.btnAgregarImagen.Location = new System.Drawing.Point(204, 283);
             this.btnAgregarImagen.Name = "btnAgregarImagen";
             this.btnAgregarImagen.Size = new System.Drawing.Size(30, 28);
             this.btnAgregarImagen.TabIndex = 48;
@@ -211,7 +227,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(164, 220);
+            this.label2.Location = new System.Drawing.Point(146, 197);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 20);
             this.label2.TabIndex = 52;
@@ -221,16 +237,16 @@
             // 
             this.txtRazonSocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRazonSocial.Location = new System.Drawing.Point(215, 59);
+            this.txtRazonSocial.Location = new System.Drawing.Point(197, 36);
             this.txtRazonSocial.Name = "txtRazonSocial";
             this.txtRazonSocial.ReadOnly = true;
-            this.txtRazonSocial.Size = new System.Drawing.Size(275, 26);
+            this.txtRazonSocial.Size = new System.Drawing.Size(279, 26);
             this.txtRazonSocial.TabIndex = 46;
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(109, 59);
+            this.lblNombre.Location = new System.Drawing.Point(91, 36);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(100, 20);
             this.lblNombre.TabIndex = 47;
@@ -252,14 +268,138 @@
             this.lblClientes.TabIndex = 36;
             this.lblClientes.Text = "Configuración";
             // 
+            // tabControl1
+            // 
+            this.tabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tabControl1.Controls.Add(this.tabEmpresa);
+            this.tabControl1.Controls.Add(this.tabBackup);
+            this.tabControl1.Location = new System.Drawing.Point(24, 82);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(603, 482);
+            this.tabControl1.TabIndex = 66;
+            // 
+            // tabEmpresa
+            // 
+            this.tabEmpresa.Controls.Add(this.gbxTareas);
+            this.tabEmpresa.Location = new System.Drawing.Point(4, 29);
+            this.tabEmpresa.Name = "tabEmpresa";
+            this.tabEmpresa.Padding = new System.Windows.Forms.Padding(3);
+            this.tabEmpresa.Size = new System.Drawing.Size(595, 449);
+            this.tabEmpresa.TabIndex = 0;
+            this.tabEmpresa.Text = "Empresa";
+            this.tabEmpresa.UseVisualStyleBackColor = true;
+            // 
+            // tabBackup
+            // 
+            this.tabBackup.Controls.Add(this.gbxCopiaSeguridad);
+            this.tabBackup.Location = new System.Drawing.Point(4, 29);
+            this.tabBackup.Name = "tabBackup";
+            this.tabBackup.Padding = new System.Windows.Forms.Padding(3);
+            this.tabBackup.Size = new System.Drawing.Size(595, 449);
+            this.tabBackup.TabIndex = 1;
+            this.tabBackup.Text = "Backup";
+            this.tabBackup.UseVisualStyleBackColor = true;
+            // 
+            // gbxCopiaSeguridad
+            // 
+            this.gbxCopiaSeguridad.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxCopiaSeguridad.Controls.Add(this.pbxBaseDatos);
+            this.gbxCopiaSeguridad.Controls.Add(this.lblSincronizacion);
+            this.gbxCopiaSeguridad.Controls.Add(this.lblUltimaVez);
+            this.gbxCopiaSeguridad.Controls.Add(this.btnSincronizar);
+            this.gbxCopiaSeguridad.Controls.Add(this.btnBuscar);
+            this.gbxCopiaSeguridad.Controls.Add(this.txtRuta);
+            this.gbxCopiaSeguridad.Controls.Add(this.lblGuardarComo);
+            this.gbxCopiaSeguridad.Location = new System.Drawing.Point(13, 24);
+            this.gbxCopiaSeguridad.Name = "gbxCopiaSeguridad";
+            this.gbxCopiaSeguridad.Size = new System.Drawing.Size(568, 401);
+            this.gbxCopiaSeguridad.TabIndex = 36;
+            this.gbxCopiaSeguridad.TabStop = false;
+            this.gbxCopiaSeguridad.Text = "Copia de Seguridad";
+            // 
+            // pbxBaseDatos
+            // 
+            this.pbxBaseDatos.Image = global::Capa_Presentacion.Properties.Resources.Database_Backup_100px;
+            this.pbxBaseDatos.Location = new System.Drawing.Point(21, 45);
+            this.pbxBaseDatos.Name = "pbxBaseDatos";
+            this.pbxBaseDatos.Size = new System.Drawing.Size(107, 113);
+            this.pbxBaseDatos.TabIndex = 52;
+            this.pbxBaseDatos.TabStop = false;
+            // 
+            // lblSincronizacion
+            // 
+            this.lblSincronizacion.AutoSize = true;
+            this.lblSincronizacion.Location = new System.Drawing.Point(261, 239);
+            this.lblSincronizacion.Name = "lblSincronizacion";
+            this.lblSincronizacion.Size = new System.Drawing.Size(55, 20);
+            this.lblSincronizacion.TabIndex = 51;
+            this.lblSincronizacion.Text = "Nunca";
+            // 
+            // lblUltimaVez
+            // 
+            this.lblUltimaVez.AutoSize = true;
+            this.lblUltimaVez.Location = new System.Drawing.Point(53, 239);
+            this.lblUltimaVez.Name = "lblUltimaVez";
+            this.lblUltimaVez.Size = new System.Drawing.Size(191, 20);
+            this.lblUltimaVez.TabIndex = 50;
+            this.lblUltimaVez.Text = "Ultima vez sincronizado ...";
+            // 
+            // btnSincronizar
+            // 
+            this.btnSincronizar.Enabled = false;
+            this.btnSincronizar.Image = global::Capa_Presentacion.Properties.Resources.Synchronize_20px;
+            this.btnSincronizar.Location = new System.Drawing.Point(464, 235);
+            this.btnSincronizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnSincronizar.Name = "btnSincronizar";
+            this.btnSincronizar.Size = new System.Drawing.Size(27, 28);
+            this.btnSincronizar.TabIndex = 49;
+            this.btnSincronizar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSincronizar.UseVisualStyleBackColor = true;
+            this.btnSincronizar.Click += new System.EventHandler(this.btnSincronizar_Click);
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Image = global::Capa_Presentacion.Properties.Resources.Search_15px;
+            this.btnBuscar.Location = new System.Drawing.Point(465, 189);
+            this.btnBuscar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(26, 28);
+            this.btnBuscar.TabIndex = 48;
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // txtRuta
+            // 
+            this.txtRuta.Location = new System.Drawing.Point(181, 190);
+            this.txtRuta.Name = "txtRuta";
+            this.txtRuta.ReadOnly = true;
+            this.txtRuta.Size = new System.Drawing.Size(279, 26);
+            this.txtRuta.TabIndex = 46;
+            this.txtRuta.TextChanged += new System.EventHandler(this.txtRuta_TextChanged);
+            // 
+            // lblGuardarComo
+            // 
+            this.lblGuardarComo.AutoSize = true;
+            this.lblGuardarComo.Location = new System.Drawing.Point(53, 193);
+            this.lblGuardarComo.Name = "lblGuardarComo";
+            this.lblGuardarComo.Size = new System.Drawing.Size(111, 20);
+            this.lblGuardarComo.TabIndex = 47;
+            this.lblGuardarComo.Text = "Guardar como";
+            // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Capa_Presentacion.Properties.Resources.fondo;
-            this.ClientSize = new System.Drawing.Size(643, 570);
+            this.ClientSize = new System.Drawing.Size(651, 589);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.lblClientes);
-            this.Controls.Add(this.gbxTareas);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -270,6 +410,12 @@
             this.gbxTareas.ResumeLayout(false);
             this.gbxTareas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).EndInit();
+            this.tabControl1.ResumeLayout(false);
+            this.tabEmpresa.ResumeLayout(false);
+            this.tabBackup.ResumeLayout(false);
+            this.gbxCopiaSeguridad.ResumeLayout(false);
+            this.gbxCopiaSeguridad.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxBaseDatos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -292,6 +438,17 @@
         private System.Windows.Forms.Button btnEliminarLogo;
         private System.Windows.Forms.PictureBox pbxLogo;
         private System.Windows.Forms.Label lblClientes;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabEmpresa;
+        private System.Windows.Forms.TabPage tabBackup;
+        private System.Windows.Forms.GroupBox gbxCopiaSeguridad;
+        private System.Windows.Forms.TextBox txtRuta;
+        private System.Windows.Forms.Label lblGuardarComo;
+        private System.Windows.Forms.Button btnSincronizar;
+        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Label lblSincronizacion;
+        private System.Windows.Forms.Label lblUltimaVez;
+        private System.Windows.Forms.PictureBox pbxBaseDatos;
 
     }
 }

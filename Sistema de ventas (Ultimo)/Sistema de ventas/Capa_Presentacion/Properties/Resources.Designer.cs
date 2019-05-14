@@ -223,6 +223,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Database_Backup_100px {
+            get {
+                object obj = ResourceManager.GetObject("Database Backup_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Delete_20px {
             get {
                 object obj = ResourceManager.GetObject("Delete_20px", resourceCulture);
@@ -696,6 +706,16 @@ namespace Capa_Presentacion.Properties {
         internal static System.Drawing.Bitmap sweep {
             get {
                 object obj = ResourceManager.GetObject("sweep", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Synchronize_20px {
+            get {
+                object obj = ResourceManager.GetObject("Synchronize_20px", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
