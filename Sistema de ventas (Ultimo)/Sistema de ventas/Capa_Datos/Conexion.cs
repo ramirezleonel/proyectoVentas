@@ -12,7 +12,10 @@ namespace Capa_Datos
        
         //public static string conexion = "Data Source=LEOX;Initial Catalog=db_ventas;Integrated Security=true";
        //public static string conexion = Properties.Settings.Default.conexioBD;
-   
+     public Conexion() {
+
+         addnewstring("los pibes");
+     }
 
        public static void addnewstring(string cadenadeconexion)
        {
@@ -26,6 +29,8 @@ namespace Capa_Datos
 
 
        public static string getConexion() {
+
+
            if (ConfigurationManager.ConnectionStrings["string.name"].ConnectionString != null)
            {
                conexion = ConfigurationManager.ConnectionStrings["string.name"].ConnectionString;

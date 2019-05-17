@@ -351,7 +351,7 @@ namespace Capa_Datos
         }
         public DataTable mostrar()
         {
-            
+        
             //Modo 5 para DB
             SqlConnection cn = new SqlConnection(Conexion.conexion);
             //le asigno en el constructor el nombre de la tabla
@@ -748,6 +748,7 @@ namespace Capa_Datos
 
             //modo 9 para DB
             SqlConnection cn = new SqlConnection(Conexion.conexion);
+            
             string respuesta = "";
             try
             {

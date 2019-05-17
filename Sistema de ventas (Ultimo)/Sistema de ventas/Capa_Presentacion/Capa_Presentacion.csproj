@@ -44,6 +44,7 @@
       <HintPath>..\packages\PlaceholderTextBox.1.3.1\lib\PlaceholderTextBox.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Drawing" />
@@ -453,7 +454,6 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app.config" />
     <None Include="DataSet\DetalleVentas.xsc">
       <DependentUpon>DetalleVentas.xsd</DependentUpon>
     </None>

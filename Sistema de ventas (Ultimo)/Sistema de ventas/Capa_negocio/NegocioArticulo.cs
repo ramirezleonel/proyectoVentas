@@ -10,6 +10,7 @@ namespace Capa_negocio
 {
     public class NegocioArticulo
     {
+        
         //campos
         private int idArticulo;
         private string nombre;
@@ -65,6 +66,7 @@ namespace Capa_negocio
         }
         public static string editarPrecio(int idArticulo, decimal precio,decimal precioCompra,decimal utilidad)
         {
+           
             DatosArticulo dArticulo = new DatosArticulo(idArticulo, precio,precioCompra,utilidad);
             return dArticulo.editarPrecio(dArticulo);
         }

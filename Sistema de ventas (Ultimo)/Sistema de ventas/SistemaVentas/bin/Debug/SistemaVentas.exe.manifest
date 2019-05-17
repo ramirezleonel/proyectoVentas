@@ -197,14 +197,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="48640">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Datos.dll" size="49152">
       <assemblyIdentity name="Capa_Datos" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>x/yA1BUElz/joH4Vd2xl+2V9gFdD0xZkMV5lISEemhM=</dsig:DigestValue>
+        <dsig:DigestValue>8hA50cAqC6IHJg7b2p+oejlyZ4qIqU5JGuD/7rm0x10=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -216,19 +216,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>3z0M0GpA/gizzn5ByDItSeQaAxSLqQpERg7bZD9X9KM=</dsig:DigestValue>
+        <dsig:DigestValue>zCB2lwV2JUWGNlsW30nUel7IlLMKK91FgYqKB4oF0ig=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1923072">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Capa_Presentacion.dll" size="1927168">
       <assemblyIdentity name="Capa_Presentacion" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>NMNABJQVByqB6vT194fLBlrEANrbhBNkC1E9rEaBDZY=</dsig:DigestValue>
+        <dsig:DigestValue>3DuszYvkA/gCY3XYkkq1NJb3aE/uM+ckp44sm41BisA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -341,14 +341,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11599872">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SistemaVentas.exe" size="11599360">
       <assemblyIdentity name="SistemaVentas" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>fgf3sYjD0ftTaGZWzhiRsgmCV0EJtnPiACryTNF84CQ=</dsig:DigestValue>
+        <dsig:DigestValue>/qc3WluNPUDTsds9fuz4zkKLO7fI6qNIAYSyU0/35Ps=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -469,13 +469,13 @@
       <dsig:DigestValue>KQZ9VcDq9cHLZgP/U6rqlTUlf6caOYOG/NujIYEwak8=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SistemaVentas.exe.config" size="629">
+  <file name="SistemaVentas.exe.config" size="639">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>QdohjDAjL9P6UEXm903G5v2XYrHaCS1ft2DJ8I/bQ0U=</dsig:DigestValue>
+      <dsig:DigestValue>I4cxXP2z+u3lCX/TiZnCibAIi3RNAQeSRaCHFoSrWho=</dsig:DigestValue>
     </hash>
   </file>
   <file name="softIntegralIcon.ico" size="268286">

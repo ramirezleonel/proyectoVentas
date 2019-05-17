@@ -283,7 +283,6 @@ C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presen
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.csproj.GenerateResource.Cache
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.dll
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\obj\Debug\Capa_Presentacion.pdb
-C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll.config
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.dll
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\Capa_Presentacion.pdb
 C:\Users\LEOX\Downloads\Sistema de ventas (Ultimo)\Sistema de ventas\Capa_Presentacion\bin\Debug\BarcodeLib.dll

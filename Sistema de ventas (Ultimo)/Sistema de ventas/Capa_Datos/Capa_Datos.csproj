@@ -49,6 +49,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="DatosArticulo.cs" />
+    <Compile Include="DatosBackup.cs" />
     <Compile Include="DatosCaja.cs" />
     <Compile Include="DatosCategoria.cs" />
     <Compile Include="DatosCliente.cs" />

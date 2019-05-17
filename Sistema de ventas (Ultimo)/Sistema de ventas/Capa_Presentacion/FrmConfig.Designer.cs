@@ -339,6 +339,7 @@
             this.lblSincronizacion.Size = new System.Drawing.Size(55, 20);
             this.lblSincronizacion.TabIndex = 51;
             this.lblSincronizacion.Text = "Nunca";
+            this.lblSincronizacion.Visible = false;
             // 
             // lblUltimaVez
             // 

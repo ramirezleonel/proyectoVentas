@@ -11,22 +11,40 @@ using Capa_negocio;
 using System.IO;
 using System.Drawing.Imaging;
 using System.Configuration;
+
 namespace Capa_Presentacion
 {
     public partial class FrmConfig : Form
     {
         private bool datos=false;
+       // public static string pathBackup = ConfigurationManager.AppSettings.Get("pathBackup");
         public FrmConfig()
         {
             InitializeComponent();
+
+            
+          
         }
         private void FrmConfig_Load(object sender, EventArgs e)
         {
             this.mostrarDatos();
-           
+
            
         }
 
+        public static void cambiarPath() {
+
+            //Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            //config.AppSettings.Settings.Remove("pathBackup");
+            ////config.AppSettings.Settings.Add(new KeyValueConfigurationElement("pathBackup","prueba"));
+         
+            //config.Save(ConfigurationSaveMode.Modified);
+
+
+        
+        }
+
+     
         private void mostrarDatos()
         {
  
@@ -254,7 +272,32 @@ namespace Capa_Presentacion
 
         private void btnSincronizar_Click(object sender, EventArgs e)
         {
+            if(txtRuta.Text.Length>0&&txtRuta.Text!=""){
+                try
+                {
+                    string respuesta= NegocioBackup.backupBaseDeDatos(txtRuta.Text);
 
+                    if (respuesta == "ok")
+                    {
+                        UtilityFrm.mensajeConfirm("El backup se realizó correctamente");
+
+                    }
+                    else {
+                        UtilityFrm.mensajeError("Error :"+respuesta);
+                    
+                    }
+                }
+                catch (Exception ex)
+                {
+
+                    UtilityFrm.mensajeError("Error: "+ex.Message+" "+ex.StackTrace);
+                }
+               
+            }
+
+            
         }
+
+       
     }
 }
