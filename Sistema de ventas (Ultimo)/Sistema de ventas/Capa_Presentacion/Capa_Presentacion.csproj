@@ -614,6 +614,7 @@
     <None Include="Resources\Chart_20px.png" />
     <None Include="Resources\Area Chart_20px.png" />
     <None Include="Resources\Database Backup_100px.png" />
+    <None Include="Resources\Credit Card_96px.png" />
     <Content Include="Resources\limpiar4.png" />
     <None Include="Resources\User Male_50px.png" />
   </ItemGroup>

@@ -275,9 +275,9 @@ namespace Capa_Presentacion
         }
         public void llenarComboBoxTarjeta() {
 
-            this.cbxTarjeta.DataSource = NegocioFormaDePago.mostrarTarjetas();
+            this.cbxTarjeta.DataSource = NegocioTarjeta.mostrar();
             //valor real de la DB
-            this.cbxTarjeta.ValueMember = "cod_forma_pago";
+            this.cbxTarjeta.ValueMember = "cod_tarjeta";
             //lo que se muestra
             this.cbxTarjeta.DisplayMember = "nombre";
         }

@@ -223,6 +223,16 @@ namespace Capa_Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Credit_Card_96px {
+            get {
+                object obj = ResourceManager.GetObject("Credit Card_96px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Database_Backup_100px {
             get {
                 object obj = ResourceManager.GetObject("Database Backup_100px", resourceCulture);

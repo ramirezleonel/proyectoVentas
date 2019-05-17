@@ -58,6 +58,7 @@
     <Compile Include="DatosFormaDePago.cs" />
     <Compile Include="DatosMovStock.cs" />
     <Compile Include="DatosProveedor.cs" />
+    <Compile Include="DatosTarjeta.cs" />
     <Compile Include="DatosUnidades.cs" />
     <Compile Include="DatosUsuario.cs" />
     <Compile Include="DDetalle_Venta.cs" />

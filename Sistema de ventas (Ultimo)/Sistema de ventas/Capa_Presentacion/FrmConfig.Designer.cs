@@ -54,6 +54,14 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.txtRuta = new System.Windows.Forms.TextBox();
             this.lblGuardarComo = new System.Windows.Forms.Label();
+            this.tabTarjetas = new System.Windows.Forms.TabPage();
+            this.gbxAgregarTarjetas = new System.Windows.Forms.GroupBox();
+            this.cbxTipoTarjeta = new System.Windows.Forms.ComboBox();
+            this.lblTipo = new System.Windows.Forms.Label();
+            this.txtNombTarjeta = new System.Windows.Forms.TextBox();
+            this.lblNombreTarjeta = new System.Windows.Forms.Label();
+            this.pbxTarjetas = new System.Windows.Forms.PictureBox();
+            this.btnGuardarTarjeta = new System.Windows.Forms.Button();
             this.gbxTareas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxLogo)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -61,6 +69,9 @@
             this.tabBackup.SuspendLayout();
             this.gbxCopiaSeguridad.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBaseDatos)).BeginInit();
+            this.tabTarjetas.SuspendLayout();
+            this.gbxAgregarTarjetas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTarjetas)).BeginInit();
             this.SuspendLayout();
             // 
             // gbxTareas
@@ -185,7 +196,7 @@
             // lblCondicion_frenteIva
             // 
             this.lblCondicion_frenteIva.AutoSize = true;
-            this.lblCondicion_frenteIva.Location = new System.Drawing.Point(14, 142);
+            this.lblCondicion_frenteIva.Location = new System.Drawing.Point(14, 146);
             this.lblCondicion_frenteIva.Name = "lblCondicion_frenteIva";
             this.lblCondicion_frenteIva.Size = new System.Drawing.Size(177, 20);
             this.lblCondicion_frenteIva.TabIndex = 55;
@@ -206,7 +217,7 @@
             // lblCuit
             // 
             this.lblCuit.AutoSize = true;
-            this.lblCuit.Location = new System.Drawing.Point(145, 89);
+            this.lblCuit.Location = new System.Drawing.Point(145, 92);
             this.lblCuit.Name = "lblCuit";
             this.lblCuit.Size = new System.Drawing.Size(46, 20);
             this.lblCuit.TabIndex = 56;
@@ -246,7 +257,7 @@
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(91, 36);
+            this.lblNombre.Location = new System.Drawing.Point(91, 39);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(100, 20);
             this.lblNombre.TabIndex = 47;
@@ -275,6 +286,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabEmpresa);
             this.tabControl1.Controls.Add(this.tabBackup);
+            this.tabControl1.Controls.Add(this.tabTarjetas);
             this.tabControl1.Location = new System.Drawing.Point(24, 82);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -334,7 +346,7 @@
             // lblSincronizacion
             // 
             this.lblSincronizacion.AutoSize = true;
-            this.lblSincronizacion.Location = new System.Drawing.Point(261, 239);
+            this.lblSincronizacion.Location = new System.Drawing.Point(244, 239);
             this.lblSincronizacion.Name = "lblSincronizacion";
             this.lblSincronizacion.Size = new System.Drawing.Size(55, 20);
             this.lblSincronizacion.TabIndex = 51;
@@ -354,7 +366,7 @@
             // 
             this.btnSincronizar.Enabled = false;
             this.btnSincronizar.Image = global::Capa_Presentacion.Properties.Resources.Synchronize_20px;
-            this.btnSincronizar.Location = new System.Drawing.Point(464, 235);
+            this.btnSincronizar.Location = new System.Drawing.Point(496, 189);
             this.btnSincronizar.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
             this.btnSincronizar.Name = "btnSincronizar";
             this.btnSincronizar.Size = new System.Drawing.Size(27, 28);
@@ -393,6 +405,106 @@
             this.lblGuardarComo.TabIndex = 47;
             this.lblGuardarComo.Text = "Guardar como";
             // 
+            // tabTarjetas
+            // 
+            this.tabTarjetas.Controls.Add(this.gbxAgregarTarjetas);
+            this.tabTarjetas.Location = new System.Drawing.Point(4, 29);
+            this.tabTarjetas.Name = "tabTarjetas";
+            this.tabTarjetas.Padding = new System.Windows.Forms.Padding(3);
+            this.tabTarjetas.Size = new System.Drawing.Size(595, 449);
+            this.tabTarjetas.TabIndex = 2;
+            this.tabTarjetas.Text = "Tarjetas";
+            this.tabTarjetas.UseVisualStyleBackColor = true;
+            // 
+            // gbxAgregarTarjetas
+            // 
+            this.gbxAgregarTarjetas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gbxAgregarTarjetas.Controls.Add(this.btnGuardarTarjeta);
+            this.gbxAgregarTarjetas.Controls.Add(this.cbxTipoTarjeta);
+            this.gbxAgregarTarjetas.Controls.Add(this.lblTipo);
+            this.gbxAgregarTarjetas.Controls.Add(this.txtNombTarjeta);
+            this.gbxAgregarTarjetas.Controls.Add(this.lblNombreTarjeta);
+            this.gbxAgregarTarjetas.Controls.Add(this.pbxTarjetas);
+            this.gbxAgregarTarjetas.Location = new System.Drawing.Point(13, 24);
+            this.gbxAgregarTarjetas.Name = "gbxAgregarTarjetas";
+            this.gbxAgregarTarjetas.Size = new System.Drawing.Size(568, 401);
+            this.gbxAgregarTarjetas.TabIndex = 37;
+            this.gbxAgregarTarjetas.TabStop = false;
+            this.gbxAgregarTarjetas.Text = "Agregar Tarjetas";
+            // 
+            // cbxTipoTarjeta
+            // 
+            this.cbxTipoTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cbxTipoTarjeta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxTipoTarjeta.FormattingEnabled = true;
+            this.cbxTipoTarjeta.Items.AddRange(new object[] {
+            "Debito",
+            "Credito"});
+            this.cbxTipoTarjeta.Location = new System.Drawing.Point(220, 178);
+            this.cbxTipoTarjeta.Name = "cbxTipoTarjeta";
+            this.cbxTipoTarjeta.Size = new System.Drawing.Size(279, 28);
+            this.cbxTipoTarjeta.TabIndex = 60;
+            this.cbxTipoTarjeta.SelectedIndexChanged += new System.EventHandler(this.cbxTipoTarjeta_SelectedIndexChanged);
+            // 
+            // lblTipo
+            // 
+            this.lblTipo.AutoSize = true;
+            this.lblTipo.Location = new System.Drawing.Point(88, 181);
+            this.lblTipo.Name = "lblTipo";
+            this.lblTipo.Size = new System.Drawing.Size(114, 20);
+            this.lblTipo.TabIndex = 59;
+            this.lblTipo.Text = "Tipo de Tarjeta";
+            // 
+            // txtNombTarjeta
+            // 
+            this.txtNombTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNombTarjeta.Enabled = false;
+            this.txtNombTarjeta.Location = new System.Drawing.Point(220, 230);
+            this.txtNombTarjeta.Name = "txtNombTarjeta";
+            this.txtNombTarjeta.Size = new System.Drawing.Size(279, 26);
+            this.txtNombTarjeta.TabIndex = 57;
+            this.txtNombTarjeta.TextChanged += new System.EventHandler(this.txtNombTarjeta_TextChanged);
+            this.txtNombTarjeta.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNombTarjeta_KeyDown);
+            // 
+            // lblNombreTarjeta
+            // 
+            this.lblNombreTarjeta.AutoSize = true;
+            this.lblNombreTarjeta.Location = new System.Drawing.Point(61, 233);
+            this.lblNombreTarjeta.Name = "lblNombreTarjeta";
+            this.lblNombreTarjeta.Size = new System.Drawing.Size(140, 20);
+            this.lblNombreTarjeta.TabIndex = 58;
+            this.lblNombreTarjeta.Text = "Nombre de Tarjeta";
+            // 
+            // pbxTarjetas
+            // 
+            this.pbxTarjetas.BackgroundImage = global::Capa_Presentacion.Properties.Resources.Credit_Card_96px;
+            this.pbxTarjetas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pbxTarjetas.Location = new System.Drawing.Point(21, 45);
+            this.pbxTarjetas.Name = "pbxTarjetas";
+            this.pbxTarjetas.Size = new System.Drawing.Size(107, 113);
+            this.pbxTarjetas.TabIndex = 52;
+            this.pbxTarjetas.TabStop = false;
+            // 
+            // btnGuardarTarjeta
+            // 
+            this.btnGuardarTarjeta.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnGuardarTarjeta.Enabled = false;
+            this.btnGuardarTarjeta.Image = global::Capa_Presentacion.Properties.Resources.Save_20px;
+            this.btnGuardarTarjeta.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGuardarTarjeta.Location = new System.Drawing.Point(403, 340);
+            this.btnGuardarTarjeta.Name = "btnGuardarTarjeta";
+            this.btnGuardarTarjeta.Size = new System.Drawing.Size(96, 38);
+            this.btnGuardarTarjeta.TabIndex = 61;
+            this.btnGuardarTarjeta.Text = "Guardar";
+            this.btnGuardarTarjeta.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnGuardarTarjeta.UseVisualStyleBackColor = true;
+            this.btnGuardarTarjeta.Click += new System.EventHandler(this.btnGuardarTarjeta_Click);
+            // 
             // FrmConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -417,6 +529,10 @@
             this.gbxCopiaSeguridad.ResumeLayout(false);
             this.gbxCopiaSeguridad.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxBaseDatos)).EndInit();
+            this.tabTarjetas.ResumeLayout(false);
+            this.gbxAgregarTarjetas.ResumeLayout(false);
+            this.gbxAgregarTarjetas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxTarjetas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -450,6 +566,14 @@
         private System.Windows.Forms.Label lblSincronizacion;
         private System.Windows.Forms.Label lblUltimaVez;
         private System.Windows.Forms.PictureBox pbxBaseDatos;
+        private System.Windows.Forms.TabPage tabTarjetas;
+        private System.Windows.Forms.GroupBox gbxAgregarTarjetas;
+        private System.Windows.Forms.ComboBox cbxTipoTarjeta;
+        private System.Windows.Forms.Label lblTipo;
+        private System.Windows.Forms.TextBox txtNombTarjeta;
+        private System.Windows.Forms.Label lblNombreTarjeta;
+        private System.Windows.Forms.PictureBox pbxTarjetas;
+        private System.Windows.Forms.Button btnGuardarTarjeta;
 
     }
 }

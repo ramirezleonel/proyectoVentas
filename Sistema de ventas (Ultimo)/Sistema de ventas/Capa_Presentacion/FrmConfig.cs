@@ -17,7 +17,7 @@ namespace Capa_Presentacion
     public partial class FrmConfig : Form
     {
         private bool datos=false;
-       // public static string pathBackup = ConfigurationManager.AppSettings.Get("pathBackup");
+
         public FrmConfig()
         {
             InitializeComponent();
@@ -28,23 +28,35 @@ namespace Capa_Presentacion
         private void FrmConfig_Load(object sender, EventArgs e)
         {
             this.mostrarDatos();
-
+            this.cargarTarjetas();
            
         }
 
-        public static void cambiarPath() {
+        public void cargarTarjetas() {
 
-            //Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
-            //config.AppSettings.Settings.Remove("pathBackup");
-            ////config.AppSettings.Settings.Add(new KeyValueConfigurationElement("pathBackup","prueba"));
-         
-            //config.Save(ConfigurationSaveMode.Modified);
 
+            txtNombTarjeta.AutoCompleteMode = AutoCompleteMode.SuggestAppend;
+            txtNombTarjeta.AutoCompleteSource = AutoCompleteSource.CustomSource;
+            txtNombTarjeta.AutoCompleteCustomSource = mostrarTarjetas();
 
         
         }
 
-     
+        public AutoCompleteStringCollection mostrarTarjetas()
+        {
+
+            DataTable dt = NegocioTarjeta.mostrar();
+            AutoCompleteStringCollection autoCompleteStringCol = new AutoCompleteStringCollection();
+
+
+            foreach (DataRow row in dt.Rows)
+            {
+                autoCompleteStringCol.Add(row["nombre"].ToString());
+            }
+            return autoCompleteStringCol;
+
+        }
+
         private void mostrarDatos()
         {
  
@@ -61,6 +73,13 @@ namespace Capa_Presentacion
                        txtCuit.Text = item["cuit"].ToString();
                        cbxCondicionFrenteIVA.Text = item["condicion_frente_iva"].ToString();
                        string imagen1 = item["logo"].ToString();
+
+
+                       if (item["path_backup"].ToString() != null || item["path_backup"].ToString() != "")
+                       {
+                           txtRuta.Text = item["path_backup"].ToString();
+                           sincronizarBackup(txtRuta.Text);
+                        }
                        if (item["logo"].ToString() != "" && item["logo"].ToString() != "null")
                        {
                             byte[] imagen = (byte[])(item["logo"]);
@@ -148,7 +167,7 @@ namespace Capa_Presentacion
                     {
                         pbxLogo.Image.Save(ms, ImageFormat.Jpeg);
 
-                        respuesta = NegocioConfigEmpresa.modificar(txtRazonSocial.Text, "", cuit, ms.GetBuffer());
+                        respuesta = NegocioConfigEmpresa.modificar(txtRazonSocial.Text, cbxCondicionFrenteIVA.SelectedItem.ToString(), cuit, ms.GetBuffer());
                     }
                     else
                     {
@@ -177,7 +196,7 @@ namespace Capa_Presentacion
                     {
                         pbxLogo.Image.Save(ms, ImageFormat.Jpeg);
 
-                        respuesta = NegocioConfigEmpresa.agregar(txtRazonSocial.Text, "", cuit, ms.GetBuffer());
+                        respuesta = NegocioConfigEmpresa.agregar(txtRazonSocial.Text, cbxCondicionFrenteIVA.SelectedItem.ToString(), cuit, ms.GetBuffer());
 
                     }
                     else
@@ -251,12 +270,24 @@ namespace Capa_Presentacion
             try
             {
                 FolderBrowserDialog browser = new FolderBrowserDialog();
+                browser.RootFolder = Environment.SpecialFolder.MyComputer;
                 string tempPath = "";
 
                 if (browser.ShowDialog() == DialogResult.OK)
                 {
                     tempPath = browser.SelectedPath;
                     txtRuta.Text = tempPath; // prints path
+                    if (File.Exists(tempPath + "\\backup.bak"))
+                    {
+                        sincronizarBackup(tempPath + "\\backup.bak");
+
+                    }
+                    else {
+                        lblSincronizacion.Visible = true;
+                        lblSincronizacion.Text = "Nunca";
+                    
+                    }
+            
                 }
                 else {
                     txtRuta.Text = "";
@@ -269,7 +300,12 @@ namespace Capa_Presentacion
                 UtilityFrm.mensajeError("Error al intentar sincronizar: "+ex.Message +" "+ex.StackTrace);
             }
         }
+        public void sincronizarBackup(string path) {
 
+            DateTime dt = File.GetLastWriteTime(path);
+            lblSincronizacion.Visible = true;
+            lblSincronizacion.Text = dt.ToLongDateString() + " a las " + dt.ToShortTimeString() + " hs";
+        }
         private void btnSincronizar_Click(object sender, EventArgs e)
         {
             if(txtRuta.Text.Length>0&&txtRuta.Text!=""){
@@ -280,7 +316,7 @@ namespace Capa_Presentacion
                     if (respuesta == "ok")
                     {
                         UtilityFrm.mensajeConfirm("El backup se realizó correctamente");
-
+                        sincronizarBackup(txtRuta.Text + "\\backup.bak");
                     }
                     else {
                         UtilityFrm.mensajeError("Error :"+respuesta);
@@ -296,6 +332,61 @@ namespace Capa_Presentacion
             }
 
             
+        }
+
+        private void cbxTipoTarjeta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(cbxTipoTarjeta.SelectedItem.ToString()!=""){
+                txtNombTarjeta.Enabled = true;
+            }
+        }
+
+        private void btnGuardarTarjeta_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+                if(txtNombTarjeta.Text!=string.Empty&& cbxTipoTarjeta.SelectedItem.ToString()!=string.Empty){
+                    //forma de pago 4 tarjeta de credito - 8 tarjeta de debito
+                    int codFormaPago =cbxTipoTarjeta.SelectedItem.ToString()!="Credito"? 4 :8;
+                    string respuesta= NegocioTarjeta.insertar(txtNombTarjeta.Text,codFormaPago);
+                    if (respuesta == "ok")
+                    {
+
+                        UtilityFrm.mensajeConfirm("La tarjeta ha sido agregada correctamente");
+                    }
+                    else {
+                        UtilityFrm.mensajeConfirm("Ha ocurrido un error cuando intentó agregar tarjeta");
+                    }
+                }
+              
+            }
+            catch (Exception ex)
+            {
+
+                UtilityFrm.mensajeError("Error: "+ex.Message);
+            }
+            
+        }
+
+        private void txtNombTarjeta_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNombTarjeta.Text.Length > 0)
+            {
+                btnGuardarTarjeta.Enabled = true;
+
+            }
+            else {
+                btnGuardarTarjeta.Enabled = false;
+            }
+           
+        }
+
+        private void txtNombTarjeta_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode==Keys.Enter){
+                btnGuardarTarjeta.Focus();
+            }
         }
 
        
